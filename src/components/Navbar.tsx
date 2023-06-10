@@ -39,12 +39,10 @@ const NavbarComponent = ({ name, href }: NavbarComponentProps) => {
 
 export default function Navbar() {
     return (
-        <div className="flex justify-center font-semibold text-sm">
+        <div className="flex justify-center font-semibold text-sm sticky top-5">
             {NAVBAR_COMPONENT_DETAILS.map((componentDetails, i) => (
                 <>
                     <NavbarComponent key={i} {...componentDetails} />
-
-                    <p>-</p>
                 </>
             ))}
         </div>
