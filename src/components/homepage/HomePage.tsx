@@ -1,5 +1,3 @@
-import NextButton from "~/components/Button";
-
 export default function HomePage() {
     return (
         <>

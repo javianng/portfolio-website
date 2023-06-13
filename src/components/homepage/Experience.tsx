@@ -1,4 +1,5 @@
-import NextButton from "../Button";
+import { MapPinIcon } from '@heroicons/react/24/outline'
+import Tag from "../common/Tag";
 
 const DETAILS = [
     {
@@ -9,14 +10,15 @@ const DETAILS = [
         color: "#E50171",
         location: "Vietnam, Ho Chi Minh City",
         detail: <>
-            <span>
-                - Collaborate with the development team to design and implement website and product features<br />
-                - Write clean, efficient, and maintainable code using modern programming languages<br />
-                - Participate in code reviews and testing to ensure the quality of the product<br />
-                - Work closely with designers to ensure the user interface is responsive and user-friendly<br />
-                - Help troubleshoot and debug any issues that arise during development<br />
-                - Stay up-to-date with emerging trends and technologies in web development (especially with travel tech)<br />
-            </span>
+            <ul className='ml-3 list-disc'>
+                <li>Collaborate with the development team to design and implement website and product features
+                </li>
+                <li>Write clean, efficient, and maintainable code using modern programming languages</li>
+                <li>Participate in code reviews and testing to ensure the quality of the product</li>
+                <li>Work closely with designers to ensure the user interface is responsive and user-friendly</li>
+                <li>Help troubleshoot and debug any issues that arise during development</li>
+                <li>Stay up-to-date with emerging trends and technologies in web development (especially with travel tech)</li>
+            </ul>
         </>,
         tags: ["TypeScript", "Node.js", "Front-End Development", "React.js"]
     },
@@ -27,7 +29,7 @@ type CardProps = {
     title: string;
     company_organisation: string;
     duration: string;
-    color?: string;
+    color: string;
     location: string;
     detail: JSX.Element;
     tags: string[];
@@ -38,16 +40,21 @@ export function Card({ id, title, company_organisation, duration, color, locatio
         return (
             <div className="mb-8 flex justify-between items-center w-full left-timeline">
                 <div className="order-1 w-5/12"></div>
-                <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                <div className="flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
                     <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
                 </div>
-                <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bg-[${color}] bg-gray-400`}>
+                <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bg-[${color}]`}>
                     <h3 className="mb-2 font-bold text-white text-xl">{title}</h3>
                     <h4 className="font-semibold text-white text-sm">{company_organisation} | {duration}</h4>
-                    <h4 className="mb-1 font-semibold text-white text-sm">{location}</h4>
-                    <p className="text-sm leading-snug tracking-wide text-white text-opacity-100">{detail}</p>
+                    <div className='flex items-center mb-1'>
+                        <MapPinIcon className='h-4 text-white mr-1' />
+                        <h4 className=" font-semibold text-white text-sm"> {location} </h4>
+                    </div>
+                    <div className="text-sm leading-snug tracking-wide text-white text-opacity-100">{detail}</div>
 
-                    {/* {tags.map(tag => <p>{tag}</p>)} */}
+                    <div className="mt-3 flex flex-wrap gap-1">
+                        {tags.map(tag => <Tag tagName={tag} />)}
+                    </div>
                 </div>
             </div>
         )
@@ -55,14 +62,21 @@ export function Card({ id, title, company_organisation, duration, color, locatio
     return (
         <div className="mb-8 flex justify-between flex-row-reverse items-center w-full right-timeline">
             <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+            <div className="flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
                 <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
             </div>
-            <div className={`order-1  rounded-lg shadow-xl w-5/12 px-6 py-4 bg-[${color}] bg-red-400`}>
+            <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bg-[${color}]`}>
                 <h3 className="mb-2 font-bold text-white text-xl">{title}</h3>
                 <h4 className="font-semibold text-white text-sm">{company_organisation} | {duration}</h4>
-                <h4 className="mb-1 font-semibold text-white text-sm">{location}</h4>
-                <p className="text-sm leading-snug tracking-wide text-white text-opacity-100">{detail}</p>
+                <div className='flex items-center mb-1'>
+                    <MapPinIcon className='h-4 text-white mr-1' />
+                    <h4 className=" font-semibold text-white text-sm"> {location} </h4>
+                </div>
+                <div className="text-sm leading-snug tracking-wide text-white text-opacity-100">{detail}</div>
+
+                <div className="mt-3 flex flex-wrap gap-1">
+                    {tags.map(tag => <Tag tagName={tag} />)}
+                </div>
             </div>
         </div>
     )

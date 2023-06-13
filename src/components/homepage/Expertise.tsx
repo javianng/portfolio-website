@@ -1,8 +1,6 @@
 import { ComputerDesktopIcon } from '@heroicons/react/24/outline'
 import { CpuChipIcon } from '@heroicons/react/24/outline'
 import { PresentationChartLineIcon } from '@heroicons/react/24/outline'
-import { spawn } from 'child_process';
-import NextButton from '../Button';
 
 const EXPERTISE_COMPONENT_DETAILS = [
     {

@@ -1,5 +1,3 @@
-import NextButton from "../Button";
-
 export default function Work() {
     return (
         <>
