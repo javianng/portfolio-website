@@ -7,7 +7,7 @@ const DETAILS = [
         title: "Software Developer Intern",
         company_organisation: "LFG",
         duration: "May 2023 - Present", // duration format to be e.g. January 2023 - Present 
-        class_name: "bg-[#E50171] order-1 rounded-lg shadow-xl w-5/12 px-6 py-4",
+        bg_color: "bg-[#E50171]",
         location: "Vietnam, Ho Chi Minh City",
         detail: <>
             <ul className='ml-3 list-disc'>
@@ -29,13 +29,13 @@ type CardProps = {
     title: string;
     company_organisation: string;
     duration: string;
-    class_name: string;
+    bg_color: string;
     location: string;
     detail: JSX.Element;
     tags: string[];
 }
 
-export function Card({ id, title, company_organisation, duration, class_name, location, detail, tags }: CardProps) {
+export function Card({ id, title, company_organisation, duration, bg_color, location, detail, tags }: CardProps) {
     if (id % 2 == 1) {
         return (
             <div className="mb-8 flex justify-between items-center w-full left-timeline">
@@ -43,7 +43,7 @@ export function Card({ id, title, company_organisation, duration, class_name, lo
                 <div className="flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
                     <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
                 </div>
-                <div className={class_name}>
+                <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
                     <h3 className="mb-2 font-bold text-white text-xl">{title}</h3>
                     <h4 className="font-semibold text-white text-sm">{company_organisation} | {duration}</h4>
                     <div className='flex items-center mb-1'>
@@ -65,7 +65,7 @@ export function Card({ id, title, company_organisation, duration, class_name, lo
             <div className="flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
                 <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
             </div>
-            <div className={class_name}>
+            <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
                 <h3 className="mb-2 font-bold text-white text-xl">{title}</h3>
                 <h4 className="font-semibold text-white text-sm">{company_organisation} | {duration}</h4>
                 <div className='flex items-center mb-1'>

@@ -4,37 +4,37 @@ import { PresentationChartLineIcon } from '@heroicons/react/24/outline'
 
 const EXPERTISE_COMPONENT_DETAILS = [
     {
-        name: <span className='decoration-slate-700 underline decoration-solid decoration-8'>Frontend Development</span>,
-        color: "",
+        name: "Frontend Development",
+        color: "decoration-gray-300",
         subtitle: "ReactJS, NextJS",
         description: "Ipsum velit tempor consequat veniam consequat ex esse ex velit qui nisi nostrud.",
         icon: <ComputerDesktopIcon />,
     },
     {
-        name: <span className='decoration-slate-700 underline decoration-solid decoration-8'>Backend Development</span>,
-        color: "",
+        name: "Backend Development",
+        color: "decoration-red-300",
         subtitle: "Prisma",
         description: "Ipsum velit tempor consequat veniam consequat ex esse ex velit qui nisi nostrud.",
         icon: <CpuChipIcon />,
     },
     {
-        name: <span className='decoration-slate-700 underline decoration-solid decoration-8'>Data Analytics</span>,
-        color: "",
+        name: "Data Analytics",
+        color: "decoration-grey-400",
         subtitle: "amet",
         description: "Ipsum velit tempor consequat veniam consequat ex esse ex velit qui nisi nostrud.",
         icon: <PresentationChartLineIcon />,
     },
 ];
 
-type NavbarComponentProps = {
-    name: JSX.Element;
+type ExpertiseComponentProps = {
+    name: string;
     color: string;
     subtitle: string;
     description: string;
     icon: JSX.Element;
 };
 
-const ExpertiseComponent = ({ name, color, subtitle, description, icon }: NavbarComponentProps) => {
+const ExpertiseComponent = ({ name, color, subtitle, description, icon }: ExpertiseComponentProps) => {
     return (
         <div className="tracking-tight p-3 border-black border-2">
             <div className='px-3 py-8'>
@@ -44,7 +44,7 @@ const ExpertiseComponent = ({ name, color, subtitle, description, icon }: Navbar
                     </div>
                     <div>
                         <div className='m-2'></div>
-                        <h2 className="text-4xl font-bold mb-2">
+                        <h2 className={`${color} text-4xl font-bold mb-2 underline decoration-solid decoration-8`}>
                             {name}
                         </h2>
                         <h3 className="text-4xl font-bold">
