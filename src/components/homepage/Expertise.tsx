@@ -1,40 +1,48 @@
 import { ComputerDesktopIcon } from '@heroicons/react/24/outline'
 import { CpuChipIcon } from '@heroicons/react/24/outline'
 import { PresentationChartLineIcon } from '@heroicons/react/24/outline'
+import { DevicePhoneMobileIcon } from '@heroicons/react/24/outline'
 
 const EXPERTISE_COMPONENT_DETAILS = [
     {
-        name: <span className='decoration-slate-700 underline decoration-solid decoration-8'>Frontend Development</span>,
-        color: "",
+        name: "Frontend Development",
+        color: "decoration-[#2C49D8]",
         subtitle: "ReactJS, NextJS",
-        description: "Ipsum velit tempor consequat veniam consequat ex esse ex velit qui nisi nostrud.",
+        description: "Deeply passionate about UI/UX and have actively developed my skills in HTML, CSS, JS, React, and NextJS frameworks.",
         icon: <ComputerDesktopIcon />,
     },
     {
-        name: <span className='decoration-slate-700 underline decoration-solid decoration-8'>Backend Development</span>,
-        color: "",
+        name: "Backend Development",
+        color: "decoration-[#515AC9]",
         subtitle: "Prisma",
-        description: "Ipsum velit tempor consequat veniam consequat ex esse ex velit qui nisi nostrud.",
+        description: "Experienced with working on backend development.",
         icon: <CpuChipIcon />,
     },
     {
-        name: <span className='decoration-slate-700 underline decoration-solid decoration-8'>Data Analytics</span>,
-        color: "",
-        subtitle: "amet",
-        description: "Ipsum velit tempor consequat veniam consequat ex esse ex velit qui nisi nostrud.",
+        name: "Data Analytics",
+        color: "decoration-[#FF6B2B]",
+        subtitle: "Python, R",
+        description: "Analytical and detailed oriented, with knowledge and practical experience in data analytics.",
         icon: <PresentationChartLineIcon />,
+    },
+    {
+        name: "Software Development",
+        color: "decoration-[#DE058D]",
+        subtitle: "Java, JavaScript, TypeScript",
+        description: "Knowledge in both functional and object-oriented programming languages.",
+        icon: <DevicePhoneMobileIcon />,
     },
 ];
 
-type NavbarComponentProps = {
-    name: JSX.Element;
+type ExpertiseComponentProps = {
+    name: string;
     color: string;
     subtitle: string;
     description: string;
     icon: JSX.Element;
 };
 
-const ExpertiseComponent = ({ name, color, subtitle, description, icon }: NavbarComponentProps) => {
+const ExpertiseComponent = ({ name, color, subtitle, description, icon }: ExpertiseComponentProps) => {
     return (
         <div className="tracking-tight p-3 border-black border-2">
             <div className='px-3 py-8'>
@@ -44,7 +52,7 @@ const ExpertiseComponent = ({ name, color, subtitle, description, icon }: Navbar
                     </div>
                     <div>
                         <div className='m-2'></div>
-                        <h2 className="text-4xl font-bold mb-2">
+                        <h2 className={`${color} text-4xl font-bold mb-2 underline decoration-solid decoration-8`}>
                             {name}
                         </h2>
                         <h3 className="text-4xl font-bold">
