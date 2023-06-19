@@ -1,28 +1,36 @@
 import { ComputerDesktopIcon } from '@heroicons/react/24/outline'
 import { CpuChipIcon } from '@heroicons/react/24/outline'
 import { PresentationChartLineIcon } from '@heroicons/react/24/outline'
+import { DevicePhoneMobileIcon } from '@heroicons/react/24/outline'
 
 const EXPERTISE_COMPONENT_DETAILS = [
     {
         name: "Frontend Development",
-        color: "decoration-gray-300",
+        color: "decoration-[#2C49D8]",
         subtitle: "ReactJS, NextJS",
-        description: "Ipsum velit tempor consequat veniam consequat ex esse ex velit qui nisi nostrud.",
+        description: "Deeply passionate about UI/UX and have actively developed my skills in HTML, CSS, JS, React, and NextJS frameworks.",
         icon: <ComputerDesktopIcon />,
     },
     {
         name: "Backend Development",
-        color: "decoration-red-300",
+        color: "decoration-[#515AC9]",
         subtitle: "Prisma",
-        description: "Ipsum velit tempor consequat veniam consequat ex esse ex velit qui nisi nostrud.",
+        description: "Experienced with working on backend development.",
         icon: <CpuChipIcon />,
     },
     {
         name: "Data Analytics",
-        color: "decoration-grey-400",
-        subtitle: "amet",
-        description: "Ipsum velit tempor consequat veniam consequat ex esse ex velit qui nisi nostrud.",
+        color: "decoration-[#FF6B2B]",
+        subtitle: "Python, R",
+        description: "Analytical and detailed oriented, with knowledge and practical experience in data analytics.",
         icon: <PresentationChartLineIcon />,
+    },
+    {
+        name: "Software Development",
+        color: "decoration-[#DE058D]",
+        subtitle: "Java, JavaScript, TypeScript",
+        description: "Knowledge in both functional and object-oriented programming languages.",
+        icon: <DevicePhoneMobileIcon />,
     },
 ];
 
