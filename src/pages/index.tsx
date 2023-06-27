@@ -13,7 +13,7 @@ import NextButton from "~/components/Button";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="">
       <div className="m-4">
         <Navbar />
         <HomePage />
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
 
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
