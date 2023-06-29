@@ -1,22 +1,24 @@
 import Image, { StaticImageData } from 'next/image'
 
-type DataAnalyticsCardProp = {
+type ProjectCardProp = {
     title: string;
     image: string | StaticImageData;
     description: string;
-    link: string;
     color: string;
+    id: string;
+    modalContent: JSX.Element;
 };
 
-export default function DataAnalyticsCard({
+export default function ProjectCard({
     title,
     image,
     description,
-    link,
     color,
-}: DataAnalyticsCardProp) {
+    id,
+    modalContent,
+}: ProjectCardProp) {
     return (
-        <div className="w-96 h-[30rem] border-slate-950 border-2">
+        <div className="w-96 h-[31rem] border-slate-950 border-2">
             <div className='p-3'>
                 <div className='flex'>
                     <div className='grid grid-cols-1'>
@@ -40,10 +42,17 @@ export default function DataAnalyticsCard({
                                 {description}
                             </p>
 
-                            <div className="flex justify-end w-full">
-                                <button className="bg-slate-500 hover:bg-slate-700 text-white py-1 mt-2 px-4 rounded-lg">
-                                    Learn More
-                                </button>
+                            <div className="flex justify-end w-full pt-2">
+                                <label htmlFor={id} className="btn">Learn More</label>
+                                <input type="checkbox" id={id} className="modal-toggle" />
+                                <div className="modal">
+                                    <div className="modal-box w-11/12 h-fit max-h-[5/6vh] max-w-none overflow-scroll">
+                                        {modalContent}
+                                        <div className="modal-action">
+                                            <label htmlFor={id} className="btn">Close</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>

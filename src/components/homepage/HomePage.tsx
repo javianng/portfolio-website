@@ -1,7 +1,7 @@
 export default function HomePage() {
     return (
         <>
-            <div className="bg-gray-200 h-[90vh] items-center justify-center align-middle flex w-full rounded-lg shadow-md">
+            <div className="bg-gray-200 h-[90vh] items-center justify-center align-middle flex w-full card">
                 <div>
                     <div className="flex gap-x-3 items-center">
                         <div className="bg-black w-[5vh] h-[5vh] rounded-full hover:animate-ping delay-200"></div>

@@ -40,7 +40,7 @@ export function Card({ id, title, company_organisation, duration, bg_color, loca
         return (
             <div className="mb-8 flex justify-between items-center w-full left-timeline">
                 <div className="order-1 w-5/12"></div>
-                <div className="flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                <div className="flex items-center order-1 bg-gray-800 w-8 h-8 card">
                     <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
                 </div>
                 <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
@@ -62,7 +62,7 @@ export function Card({ id, title, company_organisation, duration, bg_color, loca
     return (
         <div className="mb-8 flex justify-between flex-row-reverse items-center w-full right-timeline">
             <div className="order-1 w-5/12"></div>
-            <div className="flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+            <div className="flex items-center order-1 bg-gray-800 w-8 h-8 card">
                 <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
             </div>
             <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
@@ -88,7 +88,7 @@ export default function Experience() {
             <h1 className="flex justify-center text-7xl font-bold mb-9 text-center">
                 Professional<br />Experience
             </h1>
-            <div className="container rounded-lg bg-gray-200 mx-auto w-full h-full">
+            <div className="card bg-gray-200 mx-auto w-full h-full">
                 <div className="relative wrap overflow-hidden p-10 h-full">
                     <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2"></div>
                     {DETAILS.map((cardDetails, i) => (
