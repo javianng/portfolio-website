@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
+import LearnMoreButton from './LearnMoreButton';
 
 type DataAnalyticsCardProp = {
     title: string;
@@ -41,9 +42,7 @@ export default function DataAnalyticsCard({
                             </p>
 
                             <div className="flex justify-end w-full">
-                                <button className="bg-slate-500 hover:bg-slate-700 text-white py-1 mt-2 px-4 rounded-lg">
-                                    Learn More
-                                </button>
+                                <LearnMoreButton />
                             </div>
 
                         </div>

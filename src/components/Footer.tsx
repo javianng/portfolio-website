@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-        <div className="bg-black h-[20vh] items-end justify-center align-middle flex">
+        <footer className="bg-black h-[20vh] items-end justify-center align-middle flex">
             <p className="text-white mb-2">&#169; This page was built by Javian Ng in 2023.</p>
-        </div>
+        </footer>
     )
 }

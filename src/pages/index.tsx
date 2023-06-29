@@ -9,42 +9,43 @@ import Work from "~/components/homepage/Work";
 import Contact from "~/components/homepage/Contact";
 import Experience from "~/components/homepage/Experience";
 import NextButton from "~/components/Button";
-import DataAnalyticsCard from "~/components/common/DataAnalyticsCard";
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <>
       <div className="m-4">
         <Navbar />
-        <HomePage />
+        <main>
+          <HomePage />
 
-        <div className="flex justify-center h-[10vh] mt-5">
-          <NextButton url="apple" />
-        </div>
+          <div className="flex justify-center h-[10vh] mt-5">
+            <NextButton url="apple" />
+          </div>
 
-        <Expertise />
+          <Expertise />
 
-        <div className="flex justify-center h-[10vh] mt-5">
-          <NextButton url="apple" />
-        </div>
+          <div className="flex justify-center h-[10vh] mt-5">
+            <NextButton url="apple" />
+          </div>
 
-        <Work />
+          <Work />
 
-        <div className="flex justify-center h-[10vh] mt-5">
-          <NextButton url="apple" />
-        </div>
+          <div className="flex justify-center h-[10vh] mt-5">
+            <NextButton url="apple" />
+          </div>
 
-        <Experience />
+          <Experience />
 
-        <div className="flex justify-center h-[10vh] mt-5">
-          <NextButton url="apple" />
-        </div>
+          <div className="flex justify-center h-[10vh] mt-5">
+            <NextButton url="apple" />
+          </div>
 
-        <Contact />
+          <Contact />
+        </main>
 
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
