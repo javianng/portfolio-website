@@ -8,6 +8,7 @@ import Expertise from "~/components/homepage/Expertise";
 import Work from "~/components/homepage/Work";
 import Contact from "~/components/homepage/Contact";
 import Experience from "~/components/homepage/Experience";
+
 import NextButton from "~/components/Button";
 
 const Home: NextPage = () => {

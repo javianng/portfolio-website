@@ -43,7 +43,7 @@ const ShowcasedProject = (
         <hr className="mb-3 border-black" />
 
 
-        <div className="bg-gray-200 rounded-lg shadow-md relative">
+        <div className="bg-gray-200 card">
             <div id="Project Description" className="p-4">
                 <p className="overflow-hidden text-ellipsis line-clamp-2">
                     Exercitation mollit minim voluptate veniam id amet irure velit.
