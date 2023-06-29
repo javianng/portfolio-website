@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 
-type DataAnalyticsCardProp = {
+type ProjectCardProp = {
     title: string;
     image: string | StaticImageData;
     description: string;
@@ -9,14 +9,14 @@ type DataAnalyticsCardProp = {
     modalContent: JSX.Element;
 };
 
-export default function DataAnalyticsCard({
+export default function ProjectCard({
     title,
     image,
     description,
     color,
     id,
     modalContent,
-}: DataAnalyticsCardProp) {
+}: ProjectCardProp) {
     return (
         <div className="w-96 h-[31rem] border-slate-950 border-2">
             <div className='p-3'>

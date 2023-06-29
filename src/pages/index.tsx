@@ -5,7 +5,7 @@ import Footer from "~/components/Footer";
 
 import HomePage from "~/components/homepage/HomePage";
 import Expertise from "~/components/homepage/Expertise";
-import Work from "~/components/homepage/Work";
+import Work from "~/components/homepage/Work/Work";
 import Contact from "~/components/homepage/Contact";
 import Experience from "~/components/homepage/Experience";
 
