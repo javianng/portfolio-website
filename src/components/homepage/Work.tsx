@@ -8,29 +8,37 @@ const PROJECT_DETAILS = [
         title: "Officia quis nisi excepteur adipisicing.",
         image: test,
         description: "Amet dolore est aute reprehenderit dolor consequat irure. Velit adipisicing sunt velit amet mollit cillum. Irure dolore nulla officia veniam pariatur ad anim eu minim qui laborum quis labore sit. Eiusmod duis est aliqua est laborum enim mollit officia voluptate sint.",
-        link: "",
         color: "decoration-[#2C49D8]",
+        id: "1",
+        modalContent:
+            <>
+                <h3 className="font-bold text-lg"> Hello!</h3>
+                <p className="py-4">Aliquip amet ipsum in irure nulla cillum culpa duis duis. Aliquip ea culpa et tempor labore mollit est et sunt. Excepteur eiusmod nulla minim cupidatat ex culpa irure quis velit pariatur. Qui aliqua tempor nisi elit consectetur magna nisi dolor in duis laboris ullamco. Sit id eiusmod minim ad irure cillum tempor do ut est adipisicing elit cillum aute amet. Elit qui dolor ipsum aliquip sunt pariatur consequat aute labore non qui do minim. Aliquip amet ipsum in irure nulla cillum culpa duis duis. Aliquip ea culpa et tempor labore mollit est et sunt. Excepteur eiusmod nulla minim cupidatat ex culpa irure quis velit pariatur. Qui aliqua tempor nisi elit consectetur magna nisi dolor in duis laboris ullamco. Sit id eiusmod minim ad irure cillum tempor do ut est adipisicing elit cillum aute amet. Elit qui dolor ipsum aliquip sunt pariatur consequat aute labore non qui do minim.Aliquip amet ipsum in irure nulla cillum culpa duis duis. Aliquip ea culpa et tempor labore mollit est et sunt. Excepteur eiusmod nulla minim cupidatat ex culpa irure quis velit pariatur. Qui aliqua tempor nisi elit consectetur magna nisi dolor in duis laboris ullamco. Sit id eiusmod minim ad irure cillum tempor do ut est adipisicing elit cillum aute amet. Elit qui dolor ipsum aliquip sunt pariatur consequat aute labore non qui do minim.Aliquip amet ipsum in irure nulla cillum culpa duis duis. Aliquip ea culpa et tempor labore mollit est et sunt. Excepteur eiusmod nulla minim cupidatat ex culpa irure quis velit pariatur. Qui aliqua tempor nisi elit consectetur magna nisi dolor in duis laboris ullamco. Sit id eiusmod minim ad irure cillum tempor do ut est adipisicing elit cillum aute amet. Elit qui dolor ipsum aliquip sunt pariatur consequat aute labore non qui do minim.Aliquip amet ipsum in irure nulla cillum culpa duis duis. Aliquip ea culpa et tempor labore mollit est et sunt. Excepteur eiusmod nulla minim cupidatat ex culpa irure quis velit pariatur. Qui aliqua tempor nisi elit consectetur magna nisi dolor in duis laboris ullamco. Sit id eiusmod minim ad irure cillum tempor do ut est adipisicing elit cillum aute amet. Elit qui dolor ipsum aliquip sunt pariatur consequat aute labore non qui do minim.Aliquip amet ipsum in irure nulla cillum culpa duis duis. Aliquip ea culpa et tempor labore mollit est et sunt. Excepteur eiusmod nulla minim cupidatat ex culpa irure quis velit pariatur. Qui aliqua tempor nisi elit consectetur magna nisi dolor in duis laboris ullamco. Sit id eiusmod minim ad irure cillum tempor do ut est adipisicing elit cillum aute amet. Elit qui dolor ipsum aliquip sunt pariatur consequat aute labore non qui do minim.</p>
+            </>,
     },
     {
         title: "Officia quis nisi excepteur adipisicing.",
         image: test,
         description: "Amet dolore est aute reprehenderit dolor consequat irure. Velit adipisicing sunt velit amet mollit cillum. Irure dolore nulla officia veniam pariatur ad anim eu minim qui laborum quis labore sit. Eiusmod duis est aliqua est laborum enim mollit officia voluptate sint.",
-        link: "",
-        color: "decoration-[#515AC9]",
+        color: "decoration-[#2C49D8]",
+        id: "4",
+        modalContent: <><h3 className="font-bold text-lg"> Hello!</h3><p className="py-4">This modal works with a hidden checkbox!</p></>,
     },
     {
         title: "Officia quis nisi excepteur adipisicing.",
         image: test,
-        description: "Amet dolore est aute reprehenderit dolor consequat irure. Velit adipisicing sunt velit amet mollit cillum. Irure dolore nulla official",
-        link: "",
-        color: "decoration-[#FF6B2B]",
+        description: "Amet dolore est aute reprehenderit dolor consequat irure. Velit adipisicing sunt velit amet mollit cillum. Irure dolore nulla officia veniam pariatur ad anim eu minim qui laborum quis labore sit. Eiusmod duis est aliqua est laborum enim mollit officia voluptate sint.",
+        color: "decoration-[#2C49D8]",
+        id: "3",
+        modalContent: <><h3 className="font-bold text-lg"> Hello!</h3><p className="py-4">This modal works with a hidden checkbox!</p></>,
     },
     {
         title: "Officia quis nisi excepteur adipisicing.",
         image: test,
-        description: "Amet dolore est aute reprehenderit dolor consequat irure. Velit adipisicing sunt velit amet mollit cillum. Irure dolore nulla",
-        link: "",
-        color: "decoration-[#DE058D]",
+        description: "Amet dolore est aute reprehenderit dolor consequat irure. Velit adipisicing sunt velit amet mollit cillum. Irure dolore nulla officia veniam pariatur ad anim eu minim qui laborum quis labore sit. Eiusmod duis est aliqua est laborum enim mollit officia voluptate sint.",
+        color: "decoration-[#2C49D8]",
+        id: "2",
+        modalContent: <><h3 className="font-bold text-lg"> Hello!</h3><p className="py-4">This modal works with a hidden checkbox!</p></>,
     },
 ];
 
@@ -93,13 +101,12 @@ export default function Work() {
                             </p>
                         </div>
                         {ShowcasedProject}
-
                     </div>
                     <h2 className="text-3xl font-semibold py-4">
                         Check out my other <span className=" underline underline-offset-4 decoration-slate-400">Projects</span>
                     </h2>
-                    <div className="flex overflow-scroll">
-                        <div className="flex gap-6 pt-4">
+                    <div className="flex overflow-scroll h-fit">
+                        <div className="flex gap-6 my-4">
                             {PROJECT_DETAILS.map((componentDetails, i) => (
                                 <>
                                     <DataAnalyticsCard key={i} {...componentDetails} />
