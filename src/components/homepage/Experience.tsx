@@ -74,7 +74,7 @@ export function Card({ id, title, company_organisation, duration, bg_color, loca
                 <div className="text-sm leading-snug tracking-wide text-white text-opacity-100">{detail}</div>
 
                 <div className="mt-3 flex flex-wrap gap-1">
-                    {tags.map((tag, i) => <Tag key={i} tagName={tag} />)}
+                    {tags.map((tag, i) => <div className='badge badge-ghost'> {tag} </div>)}
                 </div>
             </div>
         </div>
