@@ -18,7 +18,7 @@ export default function ProjectCard({
     modalContent,
 }: ProjectCardProp) {
     return (
-        <div className="w-96 h-[31rem] border-slate-950 border-2">
+        <div className="carousel-item w-96 h-[31rem] border-slate-950 border-2">
             <div className='p-3'>
                 <div className='flex'>
                     <div className='grid grid-cols-1'>
