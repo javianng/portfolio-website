@@ -40,7 +40,7 @@ export function Card({ id, title, company_organisation, duration, bg_color, loca
         return (
             <div className="mb-8 flex justify-between items-center w-full left-timeline">
                 <div className="order-1 w-5/12"></div>
-                <div className="flex items-center order-1 bg-brand-200 w-8 h-8 card">
+                <div className="flex items-center order-1 bg-brand-300 w-8 h-8 card">
                     <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
                 </div>
                 <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
@@ -62,7 +62,7 @@ export function Card({ id, title, company_organisation, duration, bg_color, loca
     return (
         <div className="mb-8 flex justify-between flex-row-reverse items-center w-full right-timeline">
             <div className="order-1 w-5/12"></div>
-            <div className="flex items-center order-1 bg-brand-200 w-8 h-8 card">
+            <div className="flex items-center order-1 bg-brand-300 w-8 h-8 card">
                 <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
             </div>
             <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
