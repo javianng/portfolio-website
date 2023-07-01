@@ -6,12 +6,13 @@ type NextButtonType = {
 
 export default function NextButton({ url }: NextButtonType) {
     return (
-        <button
+        <a
             type="button"
             className="flex justify-center items-center
                     animate-bounce"
+            href={url}
         >
             <ArrowDownIcon className="w-7 animate-pulse" />
-        </button >
+        </a >
     )
 }

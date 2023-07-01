@@ -24,19 +24,19 @@ const Home: NextPage = () => {
           <Expertise />
 
           <div className="flex justify-center h-[10vh] mt-5">
-            <NextButton url="apple" />
+            <NextButton url="#Work" />
           </div>
 
           <Work />
 
           <div className="flex justify-center h-[10vh] mt-5">
-            <NextButton url="apple" />
+            <NextButton url="#Experience" />
           </div>
 
           <Experience />
 
           <div className="flex justify-center h-[10vh] mt-5">
-            <NextButton url="apple" />
+            <NextButton url="#Contact" />
           </div>
 
           <Contact />
