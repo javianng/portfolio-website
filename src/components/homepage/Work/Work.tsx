@@ -24,7 +24,7 @@ const ShowcasedProject = (
         <hr className="mb-3 border-black" />
 
 
-        <div className="bg-gray-200 card">
+        <div className="bg-brand-100 card">
             <div id="Project Description" className="p-4">
                 <p className="overflow-hidden text-ellipsis line-clamp-2">
                     {ShowcasedProjectCaption}
@@ -42,7 +42,7 @@ const ShowcasedProject = (
                     </p>
 
                     <div className="flex justify-end w-full pt-2">
-                        <label htmlFor="0" className="btn">Learn More</label>
+                        <label htmlFor="0" className="btn bg-brand-50">Learn More</label>
                         <input type="checkbox" id="0" className="modal-toggle" />
                         <div className="modal">
                             <div className="modal-box w-11/12 h-fit max-h-[5/6vh] max-w-none overflow-scroll">
@@ -134,7 +134,7 @@ export default function Work() {
                         {ShowcasedProject}
                     </div>
                     <h2 className="text-3xl font-semibold py-4">
-                        Check out my other <span className=" underline underline-offset-4 decoration-slate-400">Projects</span>
+                        Check out my other <span className=" underline underline-offset-4 decoration-brand-100">Projects</span>
                     </h2>
                     <div className="flex overflow-scroll h-fit">
                         <div className="flex gap-6 my-4">

@@ -1,23 +1,56 @@
+import React from 'react'
+import Wave from 'react-wavify'
+
 export default function HomePage() {
     return (
         <>
-            <div className="bg-gray-200 h-[90vh] items-center justify-center align-middle flex w-full card">
-                <div>
-                    <div className="flex gap-x-3 items-center">
-                        <div className="bg-black w-[5vh] h-[5vh] rounded-full hover:animate-ping delay-200"></div>
-                        <div className="bg-black w-[4vh] h-[4vh] rounded-full"></div>
-                        <div className="bg-black w-[3vh] h-[3vh] rounded-full"></div>
-                        <div className="bg-black w-[2vh] h-[2vh] rounded-full"></div>
-                        <div className="bg-black w-[1vh] h-[1vh] rounded-full"></div>
-                        <div className="bg-black w-full h-1"></div>
-                    </div>
+            <div className='h-[90vh] relative bg-[#E7F6F2]'>
+                <div className='h-[50vh] justify-end items-center flex flex-col'>
                     <p className="font-bold text-8xl">
                         JAVIAN NG
                     </p>
-                    <p className="font-semibold text-l text-end">
+                    <p className="font-semibold text-l">
                         SOFTWARE DEVELOPER & BUSINESS ANALYST
                     </p>
                 </div>
+
+                {/* Waves Animation */}
+
+                <div className='h-[40vh] w-full absolute'>
+                    <Wave
+                        className='w-full absolute h-[40vh]'
+                        fill='#2C3333'
+                        paused={false}
+                        options={{
+                            height: 1,
+                            amplitude: 150,
+                            speed: 0.05,
+                            points: 3
+                        }}
+                    />
+                    <Wave
+                        className='w-full absolute h-[40vh] opacity-50'
+                        fill='#A5C9CA'
+                        paused={false}
+                        options={{
+                            height: 50,
+                            amplitude: 130,
+                            speed: 0.15,
+                            points: 3
+                        }}
+                    />
+                    <Wave
+                        className='w-full absolute h-[40vh] opacity-50'
+                        fill='#E7F6F2'
+                        paused={false}
+                        options={{
+                            height: 70,
+                            amplitude: 120,
+                            speed: 0.10,
+                            points: 3
+                        }}
+                    />
+                </div >
             </div>
         </>
     )
