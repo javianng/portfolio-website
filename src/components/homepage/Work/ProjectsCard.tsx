@@ -43,7 +43,7 @@ export default function ProjectCard({
                             </p>
 
                             <div className="flex justify-end w-full pt-2">
-                                <label htmlFor={id} className="btn">Learn More</label>
+                                <label htmlFor={id} className="btn bg-brand-50">Learn More</label>
                                 <input type="checkbox" id={id} className="modal-toggle" />
                                 <div className="modal">
                                     <div className="modal-box w-11/12 h-fit max-h-[5/6vh] max-w-none overflow-scroll">
