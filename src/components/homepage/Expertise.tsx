@@ -14,7 +14,7 @@ const EXPERTISE_COMPONENT_DETAILS = [
     {
         name: "Backend Development",
         color: "decoration-brand-200",
-        subtitle: "Prisma",
+        subtitle: "Prisma, SQL",
         description: "Experienced with working on backend development.",
         icon: <CpuChipIcon />,
     },
