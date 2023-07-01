@@ -4,7 +4,10 @@ import Wave from 'react-wavify'
 export default function HomePage() {
     return (
         <>
-            <div className='h-[90vh] relative bg-[#E7F6F2]'>
+            <div
+                id='Home'
+                className='h-[90vh] relative bg-brand-50'
+            >
                 <div className='h-[50vh] justify-end items-center flex flex-col'>
                     <p className="font-bold text-8xl">
                         JAVIAN NG

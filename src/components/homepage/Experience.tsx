@@ -85,7 +85,10 @@ export function Card({ id, title, company_organisation, duration, bg_color, loca
 export default function Experience() {
     return (
         <>
-            <h1 className="flex justify-center text-7xl font-bold mb-9 text-center">
+            <h1
+                className="flex justify-center text-7xl font-bold mb-9 text-center"
+                id='Experience'
+            >
                 Professional<br />Experience
             </h1>
             <div className="bg-brand-50 mx-auto w-full h-full">

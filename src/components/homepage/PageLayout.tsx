@@ -15,7 +15,7 @@ const PageLayout = (props: PageLayoutProps) => {
         children,
         title = "Javian Ng",
         description = "Developer, Business Analyst, Car Enthusiast",
-        className = "text-[#2C3333]"
+        className = "text-brand-300"
     } = props;
 
     return (
