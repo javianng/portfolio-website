@@ -29,13 +29,13 @@ export default function ProjectCard({
                             <h1 className={`${color} font-bold text-center underline underline-offset-8 text-lg my-2 py-1 text-ellipsis overflow-hidden line-clamp-1 decoration-4`}>
                                 {title}
                             </h1>
-                            <div className='h-44 object-contain flex'>
+                            <div className='h-44 flex'>
                                 <Image
                                     src={image}
                                     width={500}
                                     height={500}
                                     alt={''}
-                                    className="rounded-lg object-none"
+                                    className="rounded-lg object-contain"
                                 />
                             </div>
                             <p className='py-2 h-32 text-ellipsis overflow-hidden line-clamp-5'>
