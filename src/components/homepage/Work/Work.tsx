@@ -5,7 +5,7 @@ import { ShowcasedProjectTitle, ShowcasedProjectCaption, ShowcasedProjectDescrip
 
 // Resources
 
-import DataAnalysisCropRecommendation from "./Modals/DataAnalysisCropRecommendation";
+import DataAnalysisCropRecommendation from "./Modals/DataAnalytics/DataAnalysisCropRecommendation";
 import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png"
 
 const ShowcasedProject = (
