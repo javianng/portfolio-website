@@ -1,5 +1,10 @@
+// Images
 import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png"
+import HTML5WebsitePreview from "src/assets/projectDocuments/HTML5Website/HTML5WebsitePreview.png"
+
+// Modals
 import DataAnalysisCropRecommendation from "./Modals/DataAnalysisCropRecommendation";
+import HTML5Website from "./Modals/HTML5Website";
 
 export const PROJECT_DETAILS = [
     {
@@ -10,5 +15,14 @@ export const PROJECT_DETAILS = [
         id: "1",
         modalContent:
             <DataAnalysisCropRecommendation />
+    },
+    {
+        title: "HTML 5 Website",
+        image: HTML5WebsitePreview,
+        description: "In this project, I experiment with HTML5 to build a portfolio page that is solely powered by HTML. I then host it on Github Pages. This is my very first step into web development and I hope to impart CSS and Javascript components into future web projects.",
+        color: "decoration-brand-100",
+        id: "2",
+        modalContent:
+            <HTML5Website />
     },
 ];
