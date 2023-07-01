@@ -11,7 +11,10 @@ export default function Contact() {
                 >
                     <div className="flex mb-4">
                         <div className='w-1/2'>
-                            <h1 className="text-8xl font-bold mb-9 ">
+                            <h1
+                                className="text-8xl font-bold mb-9"
+                                id="Contact"
+                            >
                                 My Contact
                             </h1>
                             <p>

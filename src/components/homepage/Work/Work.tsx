@@ -106,7 +106,10 @@ const PROJECT_DETAILS = [
 
 const Description = (
     <div>
-        <h1 className="text-8xl font-bold pb-9">
+        <h1
+            className="text-8xl font-bold pb-9"
+            id="Work"
+        >
             My<br />Work
         </h1>
         <p>
@@ -122,13 +125,8 @@ const Description = (
 export default function Work() {
     return (
         <>
-            <div
-                id="myworksection"
-                className='flex justify-center'
-            >
-                <div className="
-                    w-11/12 max-w-5xl"
-                >
+            <div className='flex justify-center'>
+                <div className="w-11/12 max-w-5xl">
                     <div className="grid grid-cols-2 pb-4 gap-8">
                         {Description}
                         {ShowcasedProject}
@@ -146,7 +144,7 @@ export default function Work() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

@@ -1,23 +1,23 @@
 const NAVBAR_COMPONENT_DETAILS = [
     {
         name: "HOME",
-        href: ""
+        href: "#Home"
     },
     {
         name: "EXPERTISE",
-        href: ""
+        href: "#Expertise"
     },
     {
         name: "WORK",
-        href: ""
+        href: "#Work"
     },
     {
         name: "EXPERIENCE",
-        href: ""
+        href: "#Experience"
     },
     {
         name: "CONTACT",
-        href: ""
+        href: "#Contact"
     },
 ];
 

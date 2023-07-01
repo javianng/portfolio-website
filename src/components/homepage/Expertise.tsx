@@ -81,7 +81,9 @@ const ExpertiseComponent = ({ name, color, subtitle, description, icon }: Expert
 export default function Expertise() {
     return (
         <>
-            <h1 className="flex justify-center text-8xl font-bold mb-9"
+            <h1
+                className="flex justify-center text-8xl font-bold mb-9"
+                id='Expertise'
             >
                 My Expertise
             </h1>

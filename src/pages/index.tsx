@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           <HomePage />
 
           <div className="flex justify-center h-[10vh] mt-5">
-            <NextButton url="apple" />
+            <NextButton url="#Expertise" />
           </div>
 
           <Expertise />
