@@ -1,7 +1,6 @@
 import { type NextPage } from "next";
 
-import Navbar from "~/components/Navbar";
-import Footer from "~/components/Footer";
+import PageLayout from "~/components/homepage/PageLayout";
 
 import HomePage from "~/components/homepage/HomePage";
 import Expertise from "~/components/homepage/Expertise";
@@ -13,9 +12,8 @@ import NextButton from "~/components/Button";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <PageLayout>
       <div className="m-4">
-        <Navbar />
         <main>
           <HomePage />
 
@@ -45,8 +43,7 @@ const Home: NextPage = () => {
         </main>
 
       </div>
-      <Footer />
-    </>
+    </PageLayout>
   );
 };
 

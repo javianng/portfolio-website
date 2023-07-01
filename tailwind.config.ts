@@ -3,7 +3,16 @@ import { type Config } from "tailwindcss";
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          50: "#E7F6F2",
+          100: "#395B64",
+          200: "#A5C9CA",
+          300: "#2C3333",
+        }
+      }
+    },
   },
   plugins: [
     require("daisyui")
