@@ -7,10 +7,12 @@ import { ShowcasedProjectTitle, ShowcasedProjectCaption, ShowcasedProjectDescrip
 
 import DataAnalysisCropRecommendation from "./Modals/DataAnalytics/DataAnalysisCropRecommendation";
 import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png"
+import NextButton from '~/components/common/Button';
+import PageContainer from '~/components/common/PageContainer';
 
 const ShowcasedProject = (
-    <div id="Showcased Project" className="h-fit">
-        <h2 id="Project Title" className="font-semibold text-3xl overflow-hidden text-ellipsis line-clamp-2">
+    <div className="h-fit">
+        <h2 className="font-semibold text-3xl overflow-hidden text-ellipsis line-clamp-2">
             {ShowcasedProjectTitle}
         </h2>
         <hr className="mt-3 mb-1 border-black" />
@@ -75,27 +77,22 @@ const Description = (
 
 export default function Work() {
     return (
-        <>
-            <div className='flex justify-center'>
-                <div className="w-11/12 max-w-5xl">
-                    <div className="grid grid-cols-2 pb-4 gap-8">
-                        {Description}
-                        {ShowcasedProject}
-                    </div>
-                    <h2 className="text-3xl font-semibold py-4">
-                        Check out my other <span className=" underline underline-offset-4 decoration-brand-100">Projects</span>
-                    </h2>
-                    <div className="flex overflow-scroll h-fit">
-                        <div className="flex gap-6 my-4">
-                            {PROJECT_DETAILS.map((componentDetails, i) => (
-                                <>
-                                    <ProjectCard key={i} {...componentDetails} />
-                                </>
-                            ))}
-                        </div>
-                    </div>
+        <PageContainer>
+            <div className="grid grid-cols-2 pb-4 gap-8">
+                {Description}
+                {ShowcasedProject}
+            </div>
+            <h2 className="text-3xl font-semibold py-4">
+                Check out my other <span className=" underline underline-offset-4 decoration-brand-100">Projects</span>
+            </h2>
+            <div className="flex overflow-scroll h-fit">
+                <div className="flex gap-6 my-4">
+                    {PROJECT_DETAILS.map((componentDetails, i) => (
+                        <ProjectCard key={i} {...componentDetails} />
+                    ))}
                 </div>
-            </div >
-        </>
+            </div>
+            <NextButton url="#Experience" />
+        </PageContainer>
     )
 }
