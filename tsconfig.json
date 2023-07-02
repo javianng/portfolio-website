@@ -34,7 +34,7 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    "src/components/homepage/Work/Modals/.TemplateModal.tsx"
+    "src/components/homepage/work/Modals/.TemplateModal.tsx"
   ],
   "exclude": [
     "node_modules"

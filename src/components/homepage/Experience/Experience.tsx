@@ -85,7 +85,7 @@ export default function Experience() {
                     ))}
                 </div>
             </div>
-            <NextButton url="#Contact" />
+            <NextButton url="#Testimonials" />
         </>
     )
 }

@@ -20,8 +20,8 @@ const NAVBAR_COMPONENT_DETAILS = [
         href: "#Experience"
     },
     {
-        name: "Contact",
-        href: "#Contact"
+        name: "Testimonials",
+        href: "#Testimonials"
     },
 ];
 

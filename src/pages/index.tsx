@@ -3,10 +3,10 @@ import { type NextPage } from "next";
 import PageLayout from "~/components/common/PageLayout";
 
 import HomePage from "~/components/homepage/HomePage";
-import Expertise from "~/components/homepage/Expertise/Expertise";
-import Work from "~/components/homepage/Work/Work";
-import Contact from "~/components/homepage/Contact";
-import Experience from "~/components/homepage/Experience/Experience";
+import Expertise from "~/components/homepage/expertise/Expertise";
+import Work from "~/components/homepage/work/Work";
+import Testimony from "~/components/homepage/Testimony";
+import Experience from "~/components/homepage/experience/Experience";
 import AboutMe from "~/components/homepage/AboutMe";
 
 const Home: NextPage = () => {
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         <Expertise />
         <Work />
         <Experience />
-        <Contact />
+        <Testimony />
       </main>
     </PageLayout>
   );
