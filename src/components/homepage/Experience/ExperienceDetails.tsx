@@ -1,7 +1,3 @@
-import Image from "next/image";
-
-import LFG from "src/assets/experience/LFG.svg"
-
 export const EXPERIENCE_DETAILS = [
     {
         id: 1,
@@ -23,9 +19,5 @@ export const EXPERIENCE_DETAILS = [
                 </ul>
             </>,
         tags: ["TypeScript", "Node.js", "Front-End Development", "React.js"],
-        logo:
-            <Image
-                src={LFG as string} alt={"LFG"}
-            />,
     },
 ]
