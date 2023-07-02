@@ -13,7 +13,7 @@ type CardProps = {
     location: string;
     detail: ReactNode;
     tags: string[];
-    logo: string | StaticImageData;
+    logo: ReactNode;
 }
 
 export function Card({
@@ -35,7 +35,7 @@ export function Card({
                 </div>
                 <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
                     <div className='w-12'>
-                        <Image src={logo} alt={'Company Logo'} />
+                        {logo}
                     </div>
                     <h3 className="py-2 font-bold text-white text-xl">{title}</h3>
                     <h4 className="font-semibold text-white text-sm">{company_organisation} | {duration}</h4>
@@ -60,7 +60,7 @@ export function Card({
             </div>
             <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
                 <div className='w-12'>
-                    <Image src={logo} alt={'Company Logo'} />
+                    {logo}
                 </div>
                 <h3 className="py-2 font-bold text-white text-xl">{title}</h3>
                 <h4 className="font-semibold text-white text-sm">{company_organisation} | {duration}</h4>
