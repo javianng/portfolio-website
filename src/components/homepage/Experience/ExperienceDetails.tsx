@@ -1,3 +1,5 @@
+import LFG from "src/assets/experience/LFG.svg"
+
 export const EXPERIENCE_DETAILS = [
     {
         id: 1,
@@ -18,6 +20,7 @@ export const EXPERIENCE_DETAILS = [
                     <li>Stay up-to-date with emerging trends and technologies in web development (especially with travel tech)</li>
                 </ul>
             </>,
-        tags: ["TypeScript", "Node.js", "Front-End Development", "React.js"]
+        tags: ["TypeScript", "Node.js", "Front-End Development", "React.js"],
+        logo: LFG,
     },
 ]
