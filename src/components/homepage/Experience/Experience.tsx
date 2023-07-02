@@ -2,7 +2,6 @@ import { MapPinIcon } from '@heroicons/react/24/outline'
 import NextButton from '../../common/Button';
 import { EXPERIENCE_DETAILS } from './ExperienceDetails';
 import { ReactNode } from 'react';
-import Image, { StaticImageData } from "next/image";
 
 type CardProps = {
     id: number;
