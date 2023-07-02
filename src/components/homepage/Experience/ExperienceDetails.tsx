@@ -25,7 +25,7 @@ export const EXPERIENCE_DETAILS = [
         tags: ["TypeScript", "Node.js", "Front-End Development", "React.js"],
         logo:
             <Image
-                src={LFG} alt={"LFG"}
+                src={LFG as string} alt={"LFG"}
             />,
     },
 ]

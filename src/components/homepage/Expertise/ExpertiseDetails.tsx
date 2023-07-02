@@ -29,9 +29,9 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-100",
         skillLogo:
             <>
-                <Image src={NextJS} alt={'NextJS'} className='h-fit' />
-                <Image src={React} alt={'React'} className='h-fit' />
-                <Image src={CSS} alt={'CSS'} className='h-fit' />
+                <Image src={NextJS as string} alt={'NextJS'} className='h-fit' />
+                <Image src={React as string} alt={'React'} className='h-fit' />
+                <Image src={CSS as string} alt={'CSS'} className='h-fit' />
             </>
     },
     {
@@ -43,8 +43,8 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-200 hover:text-white",
         skillLogo:
             <>
-                <Image src={Prisma} alt={'Prisma'} className='h-fit' />
-                <Image src={mySQL} alt={'mySQL'} className='h-fit' />
+                <Image src={Prisma as string} alt={'Prisma'} className='h-fit' />
+                <Image src={mySQL as string} alt={'mySQL'} className='h-fit' />
             </>
     },
     {
@@ -56,8 +56,8 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-300 hover:text-white",
         skillLogo:
             <>
-                <Image src={Python} alt={'Python'} className='h-fit' />
-                <Image src={R} alt={'R'} className='h-fit' />
+                <Image src={Python as string} alt={'Python'} className='h-fit' />
+                <Image src={R as string} alt={'R'} className='h-fit' />
             </>
     },
     {
@@ -69,9 +69,9 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-100",
         skillLogo:
             <>
-                <Image src={Java} alt={'Java'} className='h-fit' />
-                <Image src={Javascript} alt={'JavaScript'} className='h-fit' />
-                <Image src={Typescript} alt={'TypeScript'} className='h-fit' />
+                <Image src={Java as string} alt={'Java'} className='h-fit' />
+                <Image src={Javascript as string} alt={'JavaScript'} className='h-fit' />
+                <Image src={Typescript as string} alt={'TypeScript'} className='h-fit' />
             </>
     },
 ];
