@@ -4,11 +4,11 @@ import PageLayout from "~/components/common/PageLayout";
 
 import HomePage from "~/components/homepage/HomePage";
 import Expertise from "~/components/homepage/Expertise";
-import Work from "~/components/homepage/Work/Work";
+import Work from "~/components/homepage/work/Work";
 import Contact from "~/components/homepage/Contact";
 import Experience from "~/components/homepage/Experience";
 
-import NextButton from "~/components/Button";
+import NextButton from "~/components/common/Button";
 
 const Home: NextPage = () => {
   return (
