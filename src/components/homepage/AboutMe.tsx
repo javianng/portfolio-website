@@ -22,7 +22,7 @@ export default function AboutMe() {
                     />
                     <div>
                         <div>
-                            <p><span className="waving-hand">👋</span> Hi! I am Javian! </p>
+                            <p><span className="waving">👋</span> Hi! I am Javian! </p>
                             <br />
                             <p>I am a Business Analytics Sophemore and a passionate developer and analyst based in Singapore.</p>
                             <br />

@@ -6,7 +6,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.waving-hand {
+.waving {
     animation-name: wave-animation;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;

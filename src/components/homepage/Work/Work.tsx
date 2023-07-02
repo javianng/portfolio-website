@@ -18,7 +18,7 @@ const ShowcasedProject = (
         <hr className="mt-3 mb-1 border-black" />
         <hr className="mb-3 border-black" />
 
-        <div className="bg-brand-50 card">
+        <div className="bg-brand-100 card">
             <div id="Project Description" className="p-4">
                 <p className="overflow-hidden text-ellipsis line-clamp-2">
                     {ShowcasedProjectCaption}

@@ -17,7 +17,7 @@ export default function StartAProject() {
                             href="mailto:javian.ng.z.h@gmail.com"
                             className="bg-slate-100 rounded-full flex p-4 group transition delay-100 ease-in-out 
                             hover:bg-red-100">
-                            <FireIcon className="h-6 group transition delay-100 ease-in-out
+                            <FireIcon className="h-6 group transition delay-100 ease-in-out pr-1
                             group-hover:text-red-400" />
                             <p>
                                 Let&apos;s do this!
