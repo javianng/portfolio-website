@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-social-icons';
 export default function Footer() {
     return (
         <footer className="footer bg-brand-300 flex justify-center items-center text-white text-lg text-center">
-            <div className='w-1/3 pt-36 pb-24'>
+            <div className='w-1/3 pt-48 pb-24'>
                 <div className='flex justify-center w-full'>
                     <CodeBracketIcon className='w-14' />
                 </div>
