@@ -1,7 +1,6 @@
 import { MapPinIcon } from '@heroicons/react/24/outline'
 import NextButton from '../../common/Button';
 import { EXPERIENCE_DETAILS } from './ExperienceDetails';
-import { ReactNode } from 'react';
 
 type CardProps = {
     id: number;
@@ -10,9 +9,8 @@ type CardProps = {
     duration: string;
     bg_color: string;
     location: string;
-    detail: ReactNode;
+    detail: JSX.Element;
     tags: string[];
-    logo: ReactNode;
 }
 
 export function Card({
@@ -23,8 +21,7 @@ export function Card({
     bg_color,
     location,
     detail,
-    tags,
-    logo }: CardProps) {
+    tags }: CardProps) {
     if (id % 2 == 1) {
         return (
             <div className="mb-8 flex justify-between items-center w-full left-timeline">
@@ -33,17 +30,14 @@ export function Card({
                     <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
                 </div>
                 <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
-                    <div className='w-12'>
-                        {logo}
-                    </div>
-                    <h3 className="py-2 font-bold text-white text-xl">{title}</h3>
+                    <h3 className="mb-2 font-bold text-white text-xl">{title}</h3>
                     <h4 className="font-semibold text-white text-sm">{company_organisation} | {duration}</h4>
-                    <div className='flex items-center py-1'>
-                        <MapPinIcon className='h-4 text-white pr-1' />
-                        <h4 className="font-semibold text-white text-sm"> {location} </h4>
+                    <div className='flex items-center mb-1'>
+                        <MapPinIcon className='h-4 text-white mr-1' />
+                        <h4 className=" font-semibold text-white text-sm"> {location} </h4>
                     </div>
-                    <hr className='py-1 my-1' />
-                    <div className="text-sm leading-snug tracking-wide text-white text-opacity-100">{detail}h</div>
+                    <div className="text-sm leading-snug tracking-wide text-white text-opacity-100">{detail}</div>
+
                     <div className="mt-3 flex flex-wrap gap-1">
                         {tags.map((tag, i) => <div className='badge badge-ghost' key={i}> {tag} </div>)}
                     </div>
@@ -58,17 +52,14 @@ export function Card({
                 <h1 className="mx-auto text-white font-semibold text-lg">{id}</h1>
             </div>
             <div className={`order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 ${bg_color}`}>
-                <div className='w-12'>
-                    {logo}
-                </div>
-                <h3 className="py-2 font-bold text-white text-xl">{title}</h3>
+                <h3 className="mb-2 font-bold text-white text-xl">{title}</h3>
                 <h4 className="font-semibold text-white text-sm">{company_organisation} | {duration}</h4>
-                <div className='flex items-center py-1'>
-                    <MapPinIcon className='h-4 text-white pr-1' />
-                    <h4 className="font-semibold text-white text-sm"> {location} </h4>
+                <div className='flex items-center mb-1'>
+                    <MapPinIcon className='h-4 text-white mr-1' />
+                    <h4 className=" font-semibold text-white text-sm"> {location} </h4>
                 </div>
-                <hr className='py-1 my-1' />
                 <div className="text-sm leading-snug tracking-wide text-white text-opacity-100">{detail}</div>
+
                 <div className="mt-3 flex flex-wrap gap-1">
                     {tags.map((tag, i) => <div className='badge badge-ghost' key={i}> {tag} </div>)}
                 </div>
@@ -86,7 +77,7 @@ export default function Experience() {
             >
                 Professional<br />Experience
             </h1>
-            <div className="mx-auto w-full h-full">
+            <div className="bg-brand-50 mx-auto w-full h-full">
                 <div className="relative wrap overflow-hidden p-10 h-full">
                     <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2"></div>
                     {EXPERIENCE_DETAILS.map((cardDetails, i) => (
@@ -94,7 +85,7 @@ export default function Experience() {
                     ))}
                 </div>
             </div>
-            <NextButton url="#Testimonials" />
+            <NextButton url="#Contact" />
         </>
     )
 }
