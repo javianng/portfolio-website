@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 
-import PageLayout from "~/components/homepage/PageLayout";
+import PageLayout from "~/components/common/PageLayout";
 
 import HomePage from "~/components/homepage/HomePage";
 import Expertise from "~/components/homepage/Expertise";
