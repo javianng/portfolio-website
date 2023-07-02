@@ -13,7 +13,6 @@ export default function AboutMe() {
             >
                 About Me
             </h1>
-
             <div className="hero">
                 <div className="hero-content p-0 flex-col lg:flex-row-reverse">
                     <Image
@@ -32,7 +31,7 @@ export default function AboutMe() {
                             </p>
                             <br />
                             <p>
-                                When I was a child, I was always tearing apart computers and putting them together, diving deep into window's shell only to break the computer... It was only after I came across CS50X on edX when my interest in programming peaked and now, I am a Business Analytics Sophemore.
+                                When I was a child, I was always tearing apart computers and putting them together, diving deep into window&apos;s shell only to break the computer... It was only after I came across CS50X on edX when my interest in programming peaked and now, I am a Business Analytics Sophemore.
                             </p>
                             <br />
                             <p>
@@ -40,15 +39,40 @@ export default function AboutMe() {
                             </p>
                             <br />
                             <p>
-                                I am always down for a chat online or over a cup of coffee. Feel free to reach out to me using the links below! Interested in working together? We should queue up a time to chat. I'll buy the coffee.
+                                I am always down for a chat online or over a cup of coffee. Feel free to reach out to me using the links below! Interested in working together? We should queue up a time to chat. I&apos;ll buy the coffee.
                             </p>
                             <div className='flex justify-start mt-9'>
                                 <div className='grid grid-flow-col gap-3'>
-                                    <SocialIcon url="https://twitter.com/j_avianzz" className="hover:animate-bounce ease-in-out duration-300 transition" />
-                                    <SocialIcon url="https://www.linkedin.com/in/javianngzh/" />
-                                    <SocialIcon url="https://github.com/javianng" />
-                                    <SocialIcon url="mailto:javian.ng.z.h@gmail.com" />
-                                    <SocialIcon url="https://t.me/javianng" />
+                                    <SocialIcon
+                                        fgColor="#FFFFFF"
+                                        url="https://twitter.com/j_avianzz"
+                                        className="hover:animate-bounce"
+                                        style={{ height: 35, width: 35 }}
+                                    />
+                                    <SocialIcon
+                                        fgColor="#FFFFFF"
+                                        url="https://www.linkedin.com/in/javianngzh/"
+                                        className="hover:animate-bounce"
+                                        style={{ height: 35, width: 35 }}
+                                    />
+                                    <SocialIcon
+                                        fgColor="#FFFFFF"
+                                        url="https://github.com/javianng"
+                                        className="hover:animate-bounce"
+                                        style={{ height: 35, width: 35 }}
+                                    />
+                                    <SocialIcon
+                                        fgColor="#FFFFFF"
+                                        url="mailto:javian.ng.z.h@gmail.com"
+                                        className="hover:animate-bounce"
+                                        style={{ height: 35, width: 35 }}
+                                    />
+                                    <SocialIcon
+                                        fgColor="#FFFFFF"
+                                        url="https://t.me/javianng"
+                                        className="hover:animate-bounce"
+                                        style={{ height: 35, width: 35 }}
+                                    />
                                 </div>
                             </div>
                         </div>
