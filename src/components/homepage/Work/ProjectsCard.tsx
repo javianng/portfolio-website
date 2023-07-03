@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
+import { ReactNode } from 'react';
 
 type ProjectCardProp = {
     title: string;
@@ -6,7 +7,7 @@ type ProjectCardProp = {
     description: string;
     color: string;
     id: string;
-    modalContent: JSX.Element;
+    modalContent: ReactNode;
 };
 
 export default function ProjectCard({
@@ -22,8 +23,8 @@ export default function ProjectCard({
             <div className='p-3'>
                 <div className='flex'>
                     <div className='grid grid-cols-1'>
-                        <p className='my-[-4px] text-gray-500'>
-                            &lt;h1&gt;
+                        <p className='my-[-4px] text-gray-500 font-mono'>
+                            &lt;h1/&gt;
                         </p>
                         <div className='text-l border-l-[1.5px] ml-5 pl-4 py-3 border-gray-500'>
                             <h1 className={`${color} font-bold text-center underline underline-offset-8 text-lg my-2 py-1 text-ellipsis overflow-hidden line-clamp-1 decoration-4`}>
@@ -56,7 +57,7 @@ export default function ProjectCard({
                             </div>
 
                         </div>
-                        <p className='my-[-4px] text-gray-500'>
+                        <p className='my-[-4px] text-gray-500 font-mono'>
                             &lt;h1/&gt;
                         </p>
                     </div>
