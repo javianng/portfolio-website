@@ -9,6 +9,16 @@ import CSS from "src/assets/logos/CSS.svg"
 import NextJS from "src/assets/logos/NextJS.svg"
 import React from "src/assets/logos/React.svg"
 
+import Prisma from "src/assets/logos/Prisma.svg"
+import mySQL from "src/assets/logos/mySQL.svg"
+
+import Python from "src/assets/logos/Python.svg"
+import R from "src/assets/logos/R.svg"
+
+import Java from "src/assets/logos/Java.svg"
+import Javascript from "src/assets/logos/Javascript.svg"
+import Typescript from "src/assets/logos/Typescript.svg"
+
 export const EXPERTISE_COMPONENT_DETAILS = [
     {
         name: "Frontend Development",
@@ -19,9 +29,9 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-100",
         logo:
             <>
-                <Image src={CSS as string} alt={""} />
-                <Image src={NextJS as string} alt={""} />
-                <Image src={React as string} alt={""} />
+                <Image src={CSS as string} alt={"CSS"} />
+                <Image src={NextJS as string} alt={"NextJS"} />
+                <Image src={React as string} alt={"React"} />
             </>
     },
     {
@@ -33,9 +43,8 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-200 hover:text-white",
         logo:
             <>
-                <Image src={CSS as string} alt={""} />
-                <Image src={NextJS as string} alt={""} />
-                <Image src={React as string} alt={""} />
+                <Image src={Prisma as string} alt={"Prisma"} />
+                <Image src={mySQL as string} alt={"mySQL"} />
             </>
     },
     {
@@ -47,9 +56,8 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-300 hover:text-white",
         logo:
             <>
-                <Image src={CSS as string} alt={""} />
-                <Image src={NextJS as string} alt={""} />
-                <Image src={React as string} alt={""} />
+                <Image src={Python as string} alt={"Python"} />
+                <Image src={R as string} alt={"R"} />
             </>
     },
     {
@@ -61,9 +69,9 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-100",
         logo:
             <>
-                <Image src={CSS as string} alt={""} />
-                <Image src={NextJS as string} alt={""} />
-                <Image src={React as string} alt={""} />
+                <Image src={Java as string} alt={"Java"} />
+                <Image src={Javascript as string} alt={"Javascript"} />
+                <Image src={Typescript as string} alt={"Typescript"} />
             </>
     },
 ];
