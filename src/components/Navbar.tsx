@@ -1,23 +1,27 @@
 const NAVBAR_COMPONENT_DETAILS = [
     {
-        name: "HOME",
+        name: "Home",
         href: "#Home"
     },
     {
-        name: "EXPERTISE",
+        name: "About Me",
+        href: "#AboutMe"
+    },
+    {
+        name: "Expertise",
         href: "#Expertise"
     },
     {
-        name: "WORK",
+        name: "Work",
         href: "#Work"
     },
     {
-        name: "EXPERIENCE",
+        name: "Experience",
         href: "#Experience"
     },
     {
-        name: "CONTACT",
-        href: "#Contact"
+        name: "Testimonials",
+        href: "#Testimonials"
     },
 ];
 
@@ -30,7 +34,7 @@ const NavbarComponent = ({ name, href }: NavbarComponentProps) => {
     return (
         <a
             href={href}
-            className="flex w-36 justify-center"
+            className="flex w-36 justify-center uppercase"
         >
             {name}
         </a>
