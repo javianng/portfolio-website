@@ -2,7 +2,7 @@ import PageContainer from "../common/PageContainer";
 import Image from "next/image";
 import zenacademy from "src/assets/testimony/zenacademy.png"
 
-export default function Contact() {
+export default function Testimonials() {
     return (
         <PageContainer>
             <h1

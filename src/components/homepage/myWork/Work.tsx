@@ -5,7 +5,7 @@ import { ShowcasedProjectTitle, ShowcasedProjectCaption, ShowcasedProjectDescrip
 
 // Resources
 
-import DataAnalysisCropRecommendation from "./Modals/DataAnalytics/DataAnalysisCropRecommendation";
+import DataAnalysisCropRecommendation from "./projectModals/DataAnalytics/DataAnalysisCropRecommendation";
 import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png"
 import NextButton from '~/components/common/Button';
 import PageContainer from '~/components/common/PageContainer';

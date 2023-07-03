@@ -43,12 +43,39 @@ export default function AboutMe() {
                                 I am always down for a chat online or over a cup of coffee. Feel free to reach out to me using the links below! Interested in working together? We should queue up a time to chat. I&apos;ll buy the coffee.
                             </p>
                             <div className='flex justify-start mt-9'>
-                                <div className='grid grid-flow-col gap-3'>
-                                    <SocialIcon url="https://twitter.com/j_avianzz" className="hover:animate-bounce ease-in-out duration-300 transition" />
-                                    <SocialIcon url="https://www.linkedin.com/in/javianngzh/" />
-                                    <SocialIcon url="https://github.com/javianng" />
-                                    <SocialIcon url="mailto:javian.ng.z.h@gmail.com" />
-                                    <SocialIcon url="https://t.me/javianng" />
+                                <div className='flex justify-start py-9 w-full'>
+                                    <div className='grid grid-flow-col gap-5'>
+                                        <SocialIcon
+                                            fgColor="#FFFFFF"
+                                            url="https://twitter.com/j_avianzz"
+                                            className="hover:animate-bounce"
+                                            style={{ height: 35, width: 35 }}
+                                        />
+                                        <SocialIcon
+                                            fgColor="#FFFFFF"
+                                            url="https://www.linkedin.com/in/javianngzh/"
+                                            className="hover:animate-bounce"
+                                            style={{ height: 35, width: 35 }}
+                                        />
+                                        <SocialIcon
+                                            fgColor="#FFFFFF"
+                                            url="https://github.com/javianng"
+                                            className="hover:animate-bounce"
+                                            style={{ height: 35, width: 35 }}
+                                        />
+                                        <SocialIcon
+                                            fgColor="#FFFFFF"
+                                            url="mailto:javian.ng.z.h@gmail.com"
+                                            className="hover:animate-bounce"
+                                            style={{ height: 35, width: 35 }}
+                                        />
+                                        <SocialIcon
+                                            fgColor="#FFFFFF"
+                                            url="https://t.me/javianng"
+                                            className="hover:animate-bounce"
+                                            style={{ height: 35, width: 35 }}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
