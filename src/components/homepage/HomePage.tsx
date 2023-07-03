@@ -1,5 +1,6 @@
 import React from 'react'
 import Wave from 'react-wavify'
+import NextButton from '../common/Button'
 
 export default function HomePage() {
     return (
@@ -55,6 +56,7 @@ export default function HomePage() {
                     />
                 </div >
             </div>
+            <NextButton url="#AboutMe" />
         </>
     )
 }
