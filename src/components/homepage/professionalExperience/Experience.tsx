@@ -1,6 +1,7 @@
 import { MapPinIcon } from '@heroicons/react/24/outline'
 import NextButton from '../../common/Button';
 import { EXPERIENCE_DETAILS } from './ExperienceDetails';
+import { ReactNode } from 'react';
 
 type CardProps = {
     id: number;
@@ -9,7 +10,7 @@ type CardProps = {
     duration: string;
     bg_color: string;
     location: string;
-    detail: JSX.Element;
+    detail: ReactNode;
     tags: string[];
 }
 
