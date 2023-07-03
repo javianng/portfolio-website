@@ -7,12 +7,12 @@ import GoogleClonePreview from "src/assets/projectDocuments/GoogleCloneWebsite/s
 import GmailClonePreview from "src/assets/projectDocuments/GMailCloneWebsite/screenshot.png"
 
 // Modals
-import DataAnalysisCropRecommendation from "./Modals/DataAnalytics/DataAnalysisCropRecommendation";
-import HTML5Website from "./Modals/WebDevelopment/HTML5Website";
-import TwitterCloneWebsite from "./Modals/WebDevelopment/TwitterCloneWebsite";
-import NetflixCloneWebsite from "./Modals/WebDevelopment/NetflixCloneWebsite"
-import GoogleCloneWebsite from "./Modals/WebDevelopment/GoogleCloneWebsite"
-import GmailCloneWebsite from "./Modals/WebDevelopment/GmailCloneWebsite"
+import DataAnalysisCropRecommendation from "./projectModals/DataAnalytics/DataAnalysisCropRecommendation";
+import HTML5Website from "./projectModals/WebDevelopment/HTML5Website";
+import TwitterCloneWebsite from "./projectModals/WebDevelopment/TwitterCloneWebsite";
+import NetflixCloneWebsite from "./projectModals/WebDevelopment/NetflixCloneWebsite"
+import GoogleCloneWebsite from "./projectModals/WebDevelopment/GoogleCloneWebsite"
+import GmailCloneWebsite from "./projectModals/WebDevelopment/GmailCloneWebsite"
 
 export const PROJECT_DETAILS = [
     {
