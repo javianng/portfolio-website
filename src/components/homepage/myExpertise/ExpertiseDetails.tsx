@@ -19,9 +19,9 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-100",
         logo:
             <>
-                <Image src={CSS} alt={"CSS"} />
-                <Image src={NextJS} alt={"NextJS"} />
-                <Image src={React} alt={"React"} />
+                <Image src={CSS as string} alt={""} />
+                <Image src={NextJS as string} alt={""} />
+                <Image src={React as string} alt={""} />
             </>
     },
     {
@@ -33,9 +33,9 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-200 hover:text-white",
         logo:
             <>
-                <Image src={CSS} alt={"CSS"} />
-                <Image src={NextJS} alt={"NextJS"} />
-                <Image src={React} alt={"React"} />
+                <Image src={CSS as string} alt={""} />
+                <Image src={NextJS as string} alt={""} />
+                <Image src={React as string} alt={""} />
             </>
     },
     {
@@ -47,9 +47,9 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-300 hover:text-white",
         logo:
             <>
-                <Image src={CSS} alt={"CSS"} />
-                <Image src={NextJS} alt={"NextJS"} />
-                <Image src={React} alt={"React"} />
+                <Image src={CSS as string} alt={""} />
+                <Image src={NextJS as string} alt={""} />
+                <Image src={React as string} alt={""} />
             </>
     },
     {
@@ -61,9 +61,9 @@ export const EXPERTISE_COMPONENT_DETAILS = [
         color: "hover:bg-brand-100",
         logo:
             <>
-                <Image src={CSS} alt={"CSS"} />
-                <Image src={NextJS} alt={"NextJS"} />
-                <Image src={React} alt={"React"} />
+                <Image src={CSS as string} alt={""} />
+                <Image src={NextJS as string} alt={""} />
+                <Image src={React as string} alt={""} />
             </>
     },
 ];
