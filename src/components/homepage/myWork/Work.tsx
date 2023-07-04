@@ -10,34 +10,36 @@ import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/
 import NextButton from '~/components/common/Button';
 import PageContainer from '~/components/common/PageContainer';
 
-const ShowcasedProject = (
-    <div className="h-fit">
-        <h2 className="font-semibold text-3xl overflow-hidden text-ellipsis line-clamp-2">
-            {ShowcasedProjectTitle}
-        </h2>
-        <hr className="mt-3 mb-1 border-black" />
-        <hr className="mb-3 border-black" />
+function ShowcasedProject() {
+    return (
+        <div className="h-fit">
+            <h2 className="font-semibold text-3xl overflow-hidden text-ellipsis pb-3">
+                {ShowcasedProjectTitle}
+            </h2>
+            <div className="bg-brand-100 card shadow-xl">
+                <figure>
+                    <div className='bg-white'>
+                        <Image
+                            src={HeatMap}
+                            width={500}
+                            height={500}
+                            alt={''}
+                            className="rounded-lg object-contain h-full w-full"
+                        />
+                    </div></figure>
+                <div className="card-body">
+                    <div id="Project Description" className="p-4">
+                        <p className="overflow-hidden text-ellipsis line-clamp-2 h-fit">
+                            {ShowcasedProjectCaption}
+                        </p>
 
-        <div className="bg-brand-100 card">
-            <div id="Project Description" className="p-4">
-                <p className="overflow-hidden text-ellipsis line-clamp-2">
-                    {ShowcasedProjectCaption}
-                </p>
-                <div className='bg-white'>
-                    <Image
-                        src={HeatMap}
-                        width={500}
-                        height={500}
-                        alt={''}
-                        className="rounded-lg object-contain my-2"
-                    />
-                </div>
-                <div id="Project Description">
-                    <p className="overflow-hidden text-ellipsis line-clamp-6">
-                        {ShowcasedProjectDescription}
-                    </p>
-
-                    <div className="flex justify-end w-full pt-2">
+                        <div id="Project Description">
+                            <p className="overflow-hidden text-ellipsis line-clamp-6">
+                                {ShowcasedProjectDescription}
+                            </p>
+                        </div>
+                    </div>
+                    <div className="card-actions justify-end">
                         <label htmlFor="0" className="btn bg-brand-50">Learn More</label>
                         <input type="checkbox" id="0" className="modal-toggle" />
                         <div className="modal">
@@ -50,48 +52,61 @@ const ShowcasedProject = (
                         </div>
                     </div>
                 </div>
+
+
+            </div>
+            <div className="card bg-base-100 shadow-xl">
+
             </div>
         </div>
-    </div>
-)
+    )
+}
 
 // Work
 
-const Description = (
-    <div>
-        <h1
-            className="text-8xl font-bold pb-9"
-            id="Work"
-        >
-            My<br />Work
-        </h1>
-        <p>
-            Driven to learn and eager to explore new tools and technologies. I have worked on some projects that are close to my heart, to explore my interest and passion as well as to hone my abilities as a developer and data analyst.
-        </p>
-        <br />
-        <p>
-            My works are mainly on frontend, backend and data analytics using dataset found on websites such as Kaggle. More details and the codes can be found on Github.
-        </p>
-    </div>
-)
+function Description() {
+    return (
+        <div>
+            <h1
+                className="text-8xl font-bold pb-9"
+                id="Work"
+            >
+                My<br />Work
+            </h1>
+            <p>
+                Driven to learn and eager to explore new tools and technologies. I have worked on some projects that are close to my heart, to explore my interest and passion as well as to hone my abilities as a developer and data analyst.
+            </p>
+            <br />
+            <p>
+                My works are mainly on frontend, backend and data analytics using dataset found on websites such as Kaggle. More details and the codes can be found on Github.
+            </p>
+        </div>
+    )
+}
+
+function OtherProjectsCarousel() {
+    return (
+        <div className="flex overflow-scroll h-fit">
+            <div className="flex gap-6 my-4">
+                {PROJECT_DETAILS.map((componentDetails, i) => (
+                    <ProjectCard key={i} {...componentDetails} />
+                ))}
+            </div>
+        </div>
+    )
+}
 
 export default function Work() {
     return (
         <PageContainer>
-            <div className="grid grid-cols-2 pb-4 gap-8">
-                {Description}
-                {ShowcasedProject}
+            <div className="grid grid-cols-1 sm:grid-cols-2 pb-4 gap-8">
+                {<Description />}
+                {<ShowcasedProject />}
             </div>
             <h2 className="text-3xl font-semibold py-4">
                 Check out my other <span className=" underline underline-offset-4 decoration-brand-100">Projects</span>
             </h2>
-            <div className="flex overflow-scroll h-fit">
-                <div className="flex gap-6 my-4">
-                    {PROJECT_DETAILS.map((componentDetails, i) => (
-                        <ProjectCard key={i} {...componentDetails} />
-                    ))}
-                </div>
-            </div>
+            <OtherProjectsCarousel />
             <NextButton url="#Experience" />
         </PageContainer>
     )

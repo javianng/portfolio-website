@@ -5,7 +5,7 @@ export default function StartAProject() {
     return (
         <PageContainer>
             <div className="h-14">
-                <div className="card bg-brand-100 py-14">
+                <div className="card bg-brand-100 py-14 shadow-lg">
                     <div className="grid grid-cols-3 place-items-center text-center">
                         <p className="text-2xl font-bold">
                             Start a project
@@ -15,7 +15,7 @@ export default function StartAProject() {
                         </p>
                         <a
                             href="mailto:javian.ng.z.h@gmail.com"
-                            className="bg-slate-100 rounded-full flex p-4 group transition ease-in-out 
+                            className="bg-slate-100 rounded-lg shadow-lg flex p-4 group transition ease-in-out 
                             hover:bg-red-100">
                             <FireIcon className="h-6 group transition ease-in-out pr-1
                             group-hover:text-red-400" />
@@ -23,7 +23,6 @@ export default function StartAProject() {
                                 Let&apos;s do this!
                             </p>
                         </a>
-
                     </div>
                 </div>
             </div>
