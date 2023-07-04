@@ -4,6 +4,7 @@ import { EXPERIENCE_DETAILS } from './ExperienceDetails';
 import { ReactNode } from 'react';
 import Image, { StaticImageData } from "next/image";
 import PageContainer from '~/components/common/PageContainer';
+import TitleContainer from '~/components/common/TitleContainer';
 
 
 type CardProps = {
@@ -57,12 +58,13 @@ function Card({
 export default function Experience() {
     return (
         <>
-            <h1
-                className="flex justify-center text-8xl font-bold mb-9 text-center"
-                id='Experience'
-            >
-                Professional<br />Experience
-            </h1>
+            <div className='flex justify-center text-center'>
+                <TitleContainer
+                    id='Experience'
+                >
+                    Professional<br />Experience
+                </TitleContainer>
+            </div>
             <PageContainer>
                 <div className='flex flex-col gap-8'>
                     {EXPERIENCE_DETAILS.map((cardDetails, i) => (

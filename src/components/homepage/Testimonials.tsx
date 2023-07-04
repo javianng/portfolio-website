@@ -1,16 +1,18 @@
 import PageContainer from "../common/PageContainer";
 import Image from "next/image";
 import zenacademy from "src/assets/testimony/zenacademy.png"
+import TitleContainer from "../common/TitleContainer";
 
 export default function Testimonials() {
     return (
         <PageContainer>
-            <h1
-                className="text-8xl font-bold py-4 text-center"
-                id="Testimonials"
-            >
-                Testimonials
-            </h1>
+            <div className='flex justify-center'>
+                <TitleContainer
+                    id='Testimonials'
+                >
+                    Testimonials
+                </TitleContainer>
+            </div>
             <p className="text-center py-4">
                 Some nice things people have said about me...
             </p>

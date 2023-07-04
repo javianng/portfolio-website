@@ -9,11 +9,13 @@ import DataAnalysisCropRecommendation from "./projectModals/DataAnalytics/DataAn
 import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png"
 import NextButton from '~/components/common/Button';
 import PageContainer from '~/components/common/PageContainer';
+import TitleContainer from '~/components/common/TitleContainer';
 
 function ShowcasedProject() {
     return (
         <div className="h-fit">
-            <h2 className="font-semibold text-3xl overflow-hidden text-ellipsis pb-3">
+            <h2 className="font-semibold overflow-hidden text-ellipsis pb-3
+                text-xl sm:text-3xl">
                 {ShowcasedProjectTitle}
             </h2>
             <div className="bg-brand-100 card shadow-xl">
@@ -34,7 +36,7 @@ function ShowcasedProject() {
                         </p>
 
                         <div id="Project Description">
-                            <p className="overflow-hidden text-ellipsis line-clamp-6">
+                            <p className="overflow-hidden text-ellipsis line-clamp-3 sm:line-clamp-4 lg:line-clamp-6">
                                 {ShowcasedProjectDescription}
                             </p>
                         </div>
@@ -52,11 +54,6 @@ function ShowcasedProject() {
                         </div>
                     </div>
                 </div>
-
-
-            </div>
-            <div className="card bg-base-100 shadow-xl">
-
             </div>
         </div>
     )
@@ -67,12 +64,11 @@ function ShowcasedProject() {
 function Description() {
     return (
         <div>
-            <h1
-                className="text-8xl font-bold pb-9"
+            <TitleContainer
                 id="Work"
             >
                 My<br />Work
-            </h1>
+            </TitleContainer>
             <p>
                 Driven to learn and eager to explore new tools and technologies. I have worked on some projects that are close to my heart, to explore my interest and passion as well as to hone my abilities as a developer and data analyst.
             </p>
@@ -86,8 +82,8 @@ function Description() {
 
 function OtherProjectsCarousel() {
     return (
-        <div className="flex overflow-scroll h-fit">
-            <div className="flex gap-6 my-4">
+        <div className='flex'>
+            <div className="carousel carousel-center rounded-box gap-4">
                 {PROJECT_DETAILS.map((componentDetails, i) => (
                     <ProjectCard key={i} {...componentDetails} />
                 ))}
@@ -103,7 +99,7 @@ export default function Work() {
                 {<Description />}
                 {<ShowcasedProject />}
             </div>
-            <h2 className="text-3xl font-semibold py-4">
+            <h2 className="text-2xl sm:text-3xl font-semibold py-4">
                 Check out my other <span className=" underline underline-offset-4 decoration-brand-100">Projects</span>
             </h2>
             <OtherProjectsCarousel />
