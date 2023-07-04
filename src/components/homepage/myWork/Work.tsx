@@ -82,8 +82,8 @@ function Description() {
 
 function OtherProjectsCarousel() {
     return (
-        <div className="flex overflow-scroll h-fit">
-            <div className="flex gap-6 my-4">
+        <div className='flex'>
+            <div className="carousel carousel-center rounded-box gap-4">
                 {PROJECT_DETAILS.map((componentDetails, i) => (
                     <ProjectCard key={i} {...componentDetails} />
                 ))}
