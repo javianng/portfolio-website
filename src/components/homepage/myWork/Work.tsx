@@ -23,10 +23,10 @@ function ShowcasedProject() {
                     <div className='bg-white'>
                         <Image
                             src={HeatMap}
-                            width={500}
-                            height={500}
+                            width={1600}
+                            height={1600}
                             alt={''}
-                            className="rounded-lg object-contain h-full w-full"
+                            className="rounded-lg object-contain w-full h-full"
                         />
                     </div></figure>
                 <div className="card-body">
