@@ -2,6 +2,7 @@ import PageContainer from '~/components/common/PageContainer';
 import { ReactNode } from 'react';
 import NextButton from '../../common/Button';
 import { EXPERTISE_COMPONENT_DETAILS } from './ExpertiseDetails';
+import TitleContainer from '~/components/common/TitleContainer';
 
 type ExpertiseComponentProps = {
     name: string;
@@ -26,15 +27,19 @@ const ExpertiseComponent = ({
             <div className='px-3 py-8 flex justify-between'>
                 <div>
                     <div className='flex align-top pb-4 brand'>
-                        <div className='w-16 mr-4'>
+                        <div className='w-12 sm:w-16 mr-4'>
                             {icon}
                         </div>
                         <div>
                             <div className='m-2'></div>
-                            <h2 className={`${decorationColor} text-4xl font-bold mb-2 underline decoration-solid decoration-8`}>
+                            <h2 className={`${decorationColor} font-bold underline decoration-solid
+                                mb-1 sm:mb-2 
+                                decoration-4 sm:decoration-8
+                                text-2xl sm:text-4xl `}>
                                 {name}
                             </h2>
-                            <h3 className="text-4xl font-bold">
+                            <h3 className="font-bold
+                                text-2xl sm:text-4xl">
                                 {subtitle}
                             </h3>
                         </div>
@@ -44,7 +49,7 @@ const ExpertiseComponent = ({
                             <p className='my-[-4px] text-gray-500 font-mono'>
                                 &lt;h1&gt;
                             </p>
-                            <p className='text-l border-l-[1.5px] ml-5 pl-4 py-3 border-gray-500'>
+                            <p className='border-l-[1.5px] ml-5 pl-4 py-3 border-gray-500'>
                                 {description}
                             </p>
                             <p className='my-[-4px] text-gray-500 font-mono'>
@@ -53,7 +58,7 @@ const ExpertiseComponent = ({
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-rows-3'>
+                <div className='grid grid-rows-3 place-items-center'>
                     {logo}
                 </div>
             </div>
@@ -64,12 +69,13 @@ const ExpertiseComponent = ({
 export default function Expertise() {
     return (
         <PageContainer>
-            <h1
-                className="flex justify-center text-8xl font-bold mb-9"
-                id='Expertise'
-            >
-                My Expertise
-            </h1>
+            <div className='flex justify-center'>
+                <TitleContainer
+                    id='Expertise'
+                >
+                    My Expertise
+                </TitleContainer>
+            </div>
             <div className="grid grid-cols-1 gap-4">
                 {EXPERTISE_COMPONENT_DETAILS.map((componentDetails, i) => (
                     <ExpertiseComponent key={i} {...componentDetails} />
