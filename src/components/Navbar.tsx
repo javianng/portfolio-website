@@ -32,25 +32,40 @@ type NavbarComponentProps = {
 
 const NavbarComponent = ({ name, href }: NavbarComponentProps) => {
     return (
-        <a
-            href={href}
-            className="flex w-36 justify-center uppercase"
-        >
-            {name}
-        </a>
+        <li>
+            <a
+                href={href}
+                className="flex w-36 justify-center uppercase"
+            >
+                {name}
+            </a>
+        </li>
     )
 }
 
 export default function Navbar() {
     return (
-        <>
-            <header className="flex justify-center font-semibold text-sm sticky z-50 top-5 h-10">
-                {NAVBAR_COMPONENT_DETAILS.map((componentDetails, i) => (
-                    <>
+        <div className="navbar bg-base-100">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        {NAVBAR_COMPONENT_DETAILS.map((componentDetails, i) => (
+                            <NavbarComponent key={i} {...componentDetails} />
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    {NAVBAR_COMPONENT_DETAILS.map((componentDetails, i) => (
                         <NavbarComponent key={i} {...componentDetails} />
-                    </>
-                ))}
-            </header>
-        </>
+                    ))}
+                </ul>
+            </div>
+            <div className="navbar-end"></div>
+        </div>
     )
 }

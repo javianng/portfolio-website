@@ -1,13 +1,13 @@
 import Image from "next/image";
 import LFG from "src/assets/experience/LFG.svg"
+import LFGPhoto from "src/assets/experience/LFGPhoto.jpeg"
 
 export const EXPERIENCE_DETAILS = [
     {
-        id: 1,
         title: "Software Developer Intern",
         company_organisation: "LFG",
         duration: "May 2023 - Present", // duration format to be e.g. January 2023 - Present 
-        bg_color: "bg-LFG-50",
+        className: "bg-LFG-50 text-white hover:text-LFG-50 hover:bg-white",
         location: "Vietnam, Ho Chi Minh City",
         detail:
             <>
@@ -25,6 +25,7 @@ export const EXPERIENCE_DETAILS = [
         logo:
             <>
                 <Image src={LFG as string} alt={""} />
-            </>
+            </>,
+        image: LFGPhoto,
     },
 ]

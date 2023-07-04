@@ -10,10 +10,12 @@ export default function HomePage() {
                 className='h-[90vh] relative bg-brand-50'
             >
                 <div className='h-[50vh] justify-end items-center flex flex-col'>
-                    <p className="font-bold text-8xl">
+                    <p className="font-bold 
+                        text-6xl sm:text-8xl">
                         JAVIAN NG
                     </p>
-                    <p className="font-semibold text-l">
+                    <p className="font-semibold 
+                         text-xs sm:text-lg">
                         SOFTWARE DEVELOPER & BUSINESS ANALYST
                     </p>
                 </div>
