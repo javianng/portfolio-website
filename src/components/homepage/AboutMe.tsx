@@ -16,11 +16,13 @@ export default function AboutMe() {
 
             <div className="hero">
                 <div className="hero-content p-0 flex-col lg:flex-row-reverse">
-                    <Image
-                        src={profilePhoto}
-                        alt="Javian Ng"
-                        className='max-w-sm rounded-lg shadow-xl'
-                    />
+                    <div className='max-w-sm'>
+                        <Image
+                            src={profilePhoto}
+                            alt="Javian Ng"
+                            className='rounded shadow-xl'
+                        />
+                    </div>
                     <div>
                         <div>
                             <p><span className="wave">👋</span> Hi! I am Javian! </p>
