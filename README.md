@@ -71,7 +71,7 @@ The project is an ongoing one so stay tuned and follow the project as I embark o
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap the project.
+This section list the major frameworks/libraries used to bootstrap your project.
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -87,11 +87,9 @@ This section should list any major frameworks/libraries used to bootstrap the pr
 ## Roadmap
 
 - [x] Add README.md
-- [ ] Implement Mobile Responsiveness
+- [x] Implement Mobile Responsiveness
 - [ ] Implement Dark Mode
 - [ ] Explore Framer Motion
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,9 +97,9 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@j_avianzz](https://twitter.com/j_avianzz) - email@example.com
+Your Name - [@j_avianzz](https://twitter.com/j_avianzz)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/javianng/portfolio-website)
+Project Link: [https://github.com/javianng/portfolio-website](https://github.com/javianng/portfolio-website)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
