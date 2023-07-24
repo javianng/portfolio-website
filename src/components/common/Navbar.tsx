@@ -30,7 +30,7 @@ type NavbarComponentProps = {
     href: string;
 };
 
-const NavbarComponent = ({ name, href }: NavbarComponentProps) => {
+function NavbarComponent({ name, href }: NavbarComponentProps) {
     return (
         <li>
             <a
