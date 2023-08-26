@@ -6,6 +6,12 @@ import NetflixClonePreview from "src/assets/projectDocuments/NetflixCloneWebsite
 import GoogleClonePreview from "src/assets/projectDocuments/GoogleCloneWebsite/screenshot.png"
 import GmailClonePreview from "src/assets/projectDocuments/GMailCloneWebsite/screenshot.png"
 
+export const SHOWCASED_PROJECT_TITLE = "Crop Recommendation Data Analytics"
+
+export const SHOWCASED_PROJECT_CAPTION = ""
+
+export const SHOWCASED_PROJECT_DESCRIPTION = "Crop Recommendation This dataset contains information on the levels of nitrogen, phosphorus, and potassium in soil, as well as temperature, humidity, pH, and rainfall, and their impact on the growth of crops. The data can be used to make data-driven recommendations for achieving optimal nutrient and environmental conditions to improve crop yield. https://www.kaggle.com/datasets/aksahaha/crop-recommendation"
+
 export const PROJECT_DETAILS = [
     {
         title: "Crop Recommendation Data Analytics",

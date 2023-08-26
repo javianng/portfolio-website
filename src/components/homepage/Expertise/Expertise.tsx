@@ -1,6 +1,6 @@
 import PageContainer from '~/components/common/PageContainer';
 import { ReactNode } from 'react';
-import NextButton from '../../common/Button';
+import NextButton from '../../common/NextButton';
 import { EXPERTISE_COMPONENT_DETAILS } from './ExpertiseDetails';
 import TitleContainer from '~/components/common/TitleContainer';
 

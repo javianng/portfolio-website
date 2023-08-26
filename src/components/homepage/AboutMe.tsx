@@ -1,19 +1,16 @@
 import { SocialIcon } from "react-social-icons";
-import NextButton from "../common/Button";
+import NextButton from "../common/NextButton";
 import PageContainer from "../common/PageContainer";
 import profilePhoto from 'src/assets/profilephoto.jpg'
 import Image from "next/image";
+import TitleContainer from "../common/TitleContainer";
 
 export default function AboutMe() {
     return (
         <PageContainer>
-            <h1
-                className="text-8xl font-bold py-4"
-                id="AboutMe"
-            >
+            <TitleContainer id={"AboutMe"}>
                 About Me
-            </h1>
-
+            </TitleContainer>
             <div className="hero">
                 <div className="hero-content p-0 flex-col lg:flex-row-reverse">
                     <div className='max-w-sm'>

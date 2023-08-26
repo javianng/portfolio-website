@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from 'next/image'
-import { ReactNode } from 'react';
 
 type ProjectCardProp = {
     title: string;

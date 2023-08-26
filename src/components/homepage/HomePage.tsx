@@ -1,6 +1,6 @@
 import React from 'react'
 import Wave from 'react-wavify'
-import NextButton from '../common/Button'
+import NextButton from '../common/NextButton'
 
 export default function HomePage() {
     return (
