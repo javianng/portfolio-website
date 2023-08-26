@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 import PageContainer from "../common/PageContainer";
 import TitleContainer from "../common/TitleContainer";
@@ -72,12 +72,12 @@ export default function Testimonials() {
                 style={{
                     "--swiper-pagination-color": "#395B64",
                     "--swiper-navigation-color": "#395B64",
-                }}
+                } as CSSProperties}
             >
 
                 {TESTIMONIAL_DETAILS.map((cardDetails, i) => (
-                    <SwiperSlide>
-                        <CarouselCard key={i} {...cardDetails} />
+                    <SwiperSlide key={i}>
+                        <CarouselCard {...cardDetails} />
                     </SwiperSlide>
                 ))}
             </Swiper>

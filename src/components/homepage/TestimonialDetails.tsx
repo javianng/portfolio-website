@@ -8,9 +8,9 @@ export const TESTIMONIAL_DETAILS = [
             <div>
                 <span>&quot;From the very beginning, you demonstrated a remarkable enthusiasm for learning and a strong commitment to your role. Your eagerness to delve into new technologies and your willingness to take on challenges head-on greatly impressed us.</span>
                 <br />  <br />
-                <span>Your technical skills have been instrumental in the development of our new platform. Your coding expertise, problem-solving abilities, and attention to detail have consistently exceeded our expectations. The features and functionalities you've helped bring to life have enriched the user experience of LFG, making it easier for travelers to navigate and discover exciting destinations.</span>
+                <span>Your technical skills have been instrumental in the development of our new platform. Your coding expertise, problem-solving abilities, and attention to detail have consistently exceeded our expectations. The features and functionalities you&apos;ve helped bring to life have enriched the user experience of LFG, making it easier for travelers to navigate and discover exciting destinations.</span>
                 <br />  <br />
-                <span>However, it's not just your technical abilities that we admire. Your proactive approach to communication and your willingness to seek clarification or guidance when needed have demonstrated your commitment to producing high-quality work. Your humility and willingness to learn from others, regardless of their role or experience, have made you a valuable team player.&quot;</span>
+                <span>However, it&apos;s not just your technical abilities that we admire. Your proactive approach to communication and your willingness to seek clarification or guidance when needed have demonstrated your commitment to producing high-quality work. Your humility and willingness to learn from others, regardless of their role or experience, have made you a valuable team player.&quot;</span>
             </div>,
         personel: "Darryl Han",
         organisation: "Co-Founder LFG",
