@@ -18,6 +18,7 @@
     "react-dom": "18.2.0",
     "react-social-icons": "^5.15.0",
     "react-wavify": "^1.8.3",
+    "swiper": "^10.2.0",
     "zod": "^3.21.4"
   },
   "devDependencies": {
