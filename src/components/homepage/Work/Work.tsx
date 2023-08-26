@@ -40,7 +40,7 @@ function ShowcasedProject() {
                         </div>
                     </div>
                     <div className="card-actions justify-end">
-                        <Button href='/work/0' displayText='Learn More' />
+                        <Button href='/work/crop-recommendation-data-analytics' displayText='Learn More' />
                     </div>
                 </div>
             </div>

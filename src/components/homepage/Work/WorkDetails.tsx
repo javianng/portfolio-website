@@ -5,6 +5,7 @@ import TwitterClonePreview from "src/assets/projectDocuments/twitter-clone-websi
 import NetflixClonePreview from "src/assets/projectDocuments/netflix-clone-website.png"
 import GoogleClonePreview from "src/assets/projectDocuments/google-clone-website.png"
 import GmailClonePreview from "src/assets/projectDocuments/gmail-clone-website.png"
+import MonarchPreview from "src/assets/projectDocuments/ueh-biztech-hackathon-mvp.jpeg"
 
 export const SHOWCASED_PROJECT_TITLE = "Crop Recommendation Data Analytics"
 
@@ -13,6 +14,12 @@ export const SHOWCASED_PROJECT_CAPTION = ""
 export const SHOWCASED_PROJECT_DESCRIPTION = "Crop Recommendation This dataset contains information on the levels of nitrogen, phosphorus, and potassium in soil, as well as temperature, humidity, pH, and rainfall, and their impact on the growth of crops. The data can be used to make data-driven recommendations for achieving optimal nutrient and environmental conditions to improve crop yield. https://www.kaggle.com/datasets/aksahaha/crop-recommendation"
 
 export const PROJECT_DETAILS = [
+    {
+        title: "Monarch - Drone Rental Platform",
+        image: MonarchPreview,
+        description: "Monarch is a startup project submission for UEH (University of Economics HCMC) Biztech Hackathon 2022. This is a 28 hours hackathon in which we seek out solutions for the betterment of the agricultural scene in Mekong Delta. This project was a fork from the AirBnb Clone Project due to the time constraints and the need to do market research and business plans. The codes are not clean but the application is functional.",
+        href: "/work/monarch-hackathon-mvp",
+    },
     {
         title: "Crop Recommendation Data Analytics",
         image: CropRecommendationDataAnalyticsPreview,
