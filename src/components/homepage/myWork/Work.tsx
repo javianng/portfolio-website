@@ -80,14 +80,12 @@ function Description() {
     )
 }
 
-function OtherProjectsCarousel() {
+function OtherProjectsGrid() {
     return (
-        <div className='flex'>
-            <div className="carousel carousel-center rounded-box gap-4">
-                {PROJECT_DETAILS.map((componentDetails, i) => (
-                    <ProjectCard key={i} {...componentDetails} />
-                ))}
-            </div>
+        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+            {PROJECT_DETAILS.map((componentDetails, i) => (
+                <ProjectCard key={i} {...componentDetails} />
+            )).slice(0, 6)}
         </div>
     )
 }
@@ -102,7 +100,7 @@ export default function Work() {
             <h2 className="text-2xl sm:text-3xl font-semibold py-4">
                 Check out my other <span className=" underline underline-offset-4 decoration-brand-100">Projects</span>
             </h2>
-            <OtherProjectsCarousel />
+            <OtherProjectsGrid />
             <NextButton url="#Experience" />
         </PageContainer>
     )

@@ -13,6 +13,9 @@ export default {
         },
         LFG: {
           50: "#E50171",
+        },
+        ABYA: {
+          50: "#F6F2AE",
         }
       }
     },

@@ -31,24 +31,27 @@ function Card({
     image }: CardProps) {
 
     return (
-        <div className={`card lg:card-side rounded-lg shadow-xl transition ease-in-out ${className}`}>
-            <figure>
-                <Image src={image} alt={company_organisation} className='object-cover h-full w-full' />
-            </figure>
+        <div className={`card rounded-lg shadow-xl transition ease-in-out ${className}`}>
             <div className="card-body">
-                <div className='w-16 pb-6'>
-                    {logo}
-                </div>
-                <h3 className="pb-2 font-bold text-xl">{title}</h3>
-                <h4 className="font-semibold">{company_organisation} | {duration}</h4>
-
-                <div className='flex font-semibold items-center pb-4'>
-                    <MapPinIcon className='h-4 pr-1' />
-                    <h4> {location} </h4>
-                </div>
-                <div className="pb-6">{detail}</div>
-                <div className="card-actions justify-end">
-                    {tags.map((tag, i) => <div className='badge badge-ghost h-6 px-2' key={i}> {tag} </div>)}
+                <div className='flex flex-col sm:flex-row gap-9'>
+                    <div className='w-full sm:w-1/2'>
+                        <Image src={image} alt={company_organisation} className='object-cover h-full rounded-lg' />
+                    </div>
+                    <div className='w-full sm:w-1/2'>
+                        <div className='w-16 pb-6'>
+                            {logo}
+                        </div>
+                        <h3 className="pb-2 font-bold text-xl">{title}</h3>
+                        <h4 className="font-semibold">{company_organisation} | {duration}</h4>
+                        <div className='flex font-semibold items-center pb-4'>
+                            <MapPinIcon className='h-4 pr-1' />
+                            <h4> {location} </h4>
+                        </div>
+                        <div className="pb-6">{detail}</div>
+                        <div className="card-actions justify-end">
+                            {tags.map((tag, i) => <div className='badge badge-ghost h-6 px-2' key={i}> {tag} </div>)}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div >
