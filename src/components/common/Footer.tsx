@@ -11,7 +11,7 @@ export default function Footer() {
             </div>
 
             <div>
-                <div className='grid grid-flow-col gap-5'>
+                <div className='grid grid-flow-col gap-5 pb-5'>
                     <div className="tooltip" data-tip="twitter">
                         <SocialIcon
                             url="https://twitter.com/j_avianzz"
