@@ -5,7 +5,6 @@ type ProjectCardProp = {
     title: string;
     image: string | StaticImageData;
     description: string;
-    id: string;
     href?: string;
 };
 
@@ -13,6 +12,7 @@ export default function ProjectCard({
     title,
     image,
     description,
+    href,
 }: ProjectCardProp) {
     return (
         <div
@@ -41,7 +41,7 @@ export default function ProjectCard({
                     </p>
                 </div>
                 <div className="card-actions justify-end">
-                    <Button displayText='Learn More' />
+                    <Button displayText='Learn More' href={href} />
                 </div>
             </div>
         </div>

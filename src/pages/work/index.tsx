@@ -2,10 +2,10 @@ import PageContainer from "~/components/common/PageContainer";
 import ReturnNavbar from "~/components/common/ReturnNavbar";
 import TitleContainer from "~/components/common/TitleContainer";
 import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetails";
+import SubpageLayout from "~/components/common/SubpageLayout";
 import ProjectCard from "~/components/common/ProjectsCard";
 import Footer from "~/components/common/Footer";
 import StartAProject from "~/components/homepage/StartAProject";
-import Button from "~/components/common/Button";
 
 function OtherProjectsGrid() {
     return (
@@ -19,19 +19,13 @@ function OtherProjectsGrid() {
 
 export default function work() {
     return (
-        <div className="text-brand-300 bg-gray-50">
-            <ReturnNavbar href={"/"} />
-            <PageContainer>
-                <div className="h-[5vh]" />
-                <TitleContainer
-                    id='MyWork'
-                >
-                    My Work
-                </TitleContainer>
-                <OtherProjectsGrid />
-            </PageContainer>
-            <StartAProject />
-            <Footer />
-        </div >
+        <SubpageLayout href="/">
+            <TitleContainer
+                id='MyWork'
+            >
+                My Work
+            </TitleContainer>
+            <OtherProjectsGrid />
+        </SubpageLayout>
     )
 }

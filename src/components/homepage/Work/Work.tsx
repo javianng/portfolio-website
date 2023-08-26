@@ -7,6 +7,7 @@ import PageContainer from '~/components/common/PageContainer';
 import TitleContainer from '~/components/common/TitleContainer';
 import Link from 'next/link';
 import { ChevronDoubleDownIcon } from '@heroicons/react/24/solid'
+import Button from '~/components/common/Button';
 
 function ShowcasedProject() {
     return (
@@ -39,7 +40,7 @@ function ShowcasedProject() {
                         </div>
                     </div>
                     <div className="card-actions justify-end">
-                        <label htmlFor="0" className="btn bg-brand-50">Learn More</label>
+                        <Button href='/work/0' displayText='Learn More' />
                     </div>
                 </div>
             </div>
@@ -49,7 +50,7 @@ function ShowcasedProject() {
 
 function Description() {
     return (
-        <div>
+        <div className='pr-0 sm:pr-14'>
             <TitleContainer
                 id="Work"
             >
