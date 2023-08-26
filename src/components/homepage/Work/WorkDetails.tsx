@@ -1,10 +1,10 @@
 // Images
 import CropRecommendationDataAnalyticsPreview from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png"
-import HTML5WebsitePreview from "src/assets/projectDocuments/HTML5Website/HTML5WebsitePreview.png"
-import TwitterClonePreview from "src/assets/projectDocuments/TwitterCloneWebsite/screenshot.png"
-import NetflixClonePreview from "src/assets/projectDocuments/NetflixCloneWebsite/screenshot.png"
-import GoogleClonePreview from "src/assets/projectDocuments/GoogleCloneWebsite/screenshot.png"
-import GmailClonePreview from "src/assets/projectDocuments/GMailCloneWebsite/screenshot.png"
+import HTML5WebsitePreview from "src/assets/projectDocuments/HTML5-portfolio-website.png"
+import TwitterClonePreview from "src/assets/projectDocuments/twitter-clone-website.png"
+import NetflixClonePreview from "src/assets/projectDocuments/netflix-clone-website.png"
+import GoogleClonePreview from "src/assets/projectDocuments/google-clone-website.png"
+import GmailClonePreview from "src/assets/projectDocuments/gmail-clone-website.png"
 
 export const SHOWCASED_PROJECT_TITLE = "Crop Recommendation Data Analytics"
 
