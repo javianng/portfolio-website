@@ -1,13 +1,13 @@
 import Image, { StaticImageData } from 'next/image'
 import ProjectCard from "../../common/ProjectsCard";
 import { SHOWCASED_PROJECT_TITLE, SHOWCASED_PROJECT_CAPTION, SHOWCASED_PROJECT_DESCRIPTION, PROJECT_DETAILS } from "./WorkDetails";
-
-// Resources
-
 import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png"
 import NextButton from '~/components/common/NextButton';
 import PageContainer from '~/components/common/PageContainer';
 import TitleContainer from '~/components/common/TitleContainer';
+import Link from 'next/link';
+import { ChevronDoubleDownIcon } from '@heroicons/react/24/solid'
+
 
 function ShowcasedProject() {
     return (
@@ -71,11 +71,18 @@ function Description() {
 
 function OtherProjectsGrid() {
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
-            {PROJECT_DETAILS.map((componentDetails, i) => (
-                <ProjectCard key={i} {...componentDetails} />
-            )).slice(0, 6)}
-        </div>
+        <>
+            <div className='sm:grid grid-cols-3 gap-4 hidden'>
+                {PROJECT_DETAILS.map((componentDetails, i) => (
+                    <ProjectCard key={i} {...componentDetails} />
+                )).slice(0, 6)}
+            </div>
+            <div className='grid grid-cols-1 gap-4 sm:hidden'>
+                {PROJECT_DETAILS.map((componentDetails, i) => (
+                    <ProjectCard key={i} {...componentDetails} />
+                )).slice(0, 3)}
+            </div>
+        </>
     )
 }
 
@@ -90,6 +97,19 @@ export default function Work() {
                 Check out my other <span className=" underline underline-offset-4 decoration-brand-100">Projects</span>
             </h2>
             <OtherProjectsGrid />
+            <div className="flex justify-center pt-4 sm:pt-12">
+                <Link href={"/work"}>
+                    <div className='flex flex-row items-center gap-1 
+                        border-2 p-5 rounded-lg
+                        hover:text-brand-200 hover:border-brand-200
+                        transition ease-in-out'>
+                        <ChevronDoubleDownIcon className='h-6 w-6' />
+                        <p className='font-semibold uppercase text-sm'>
+                            Show all projects
+                        </p>
+                    </div>
+                </Link>
+            </div>
             <NextButton url="#Experience" />
         </PageContainer>
     )

@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
+import Button from './Button';
 
 type ProjectCardProp = {
     title: string;
@@ -6,6 +7,7 @@ type ProjectCardProp = {
     description: string;
     color: string;
     id: string;
+    href?: string;
 };
 
 export default function ProjectCard({
@@ -41,7 +43,7 @@ export default function ProjectCard({
                     </p>
                 </div>
                 <div className="card-actions justify-end">
-                    <label className="btn bg-brand-50">Learn More</label>
+                    <Button displayText='Learn More' />
                 </div>
             </div>
         </div>
