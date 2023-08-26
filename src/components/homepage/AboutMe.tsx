@@ -4,6 +4,7 @@ import PageContainer from "../common/PageContainer";
 import profilePhoto from 'src/assets/profilephoto.jpg'
 import Image from "next/image";
 import TitleContainer from "../common/TitleContainer";
+import { DocumentTextIcon } from '@heroicons/react/24/solid'
 
 export default function AboutMe() {
     return (
@@ -44,36 +45,46 @@ export default function AboutMe() {
                             <div className='flex justify-start mt-9'>
                                 <div className='flex justify-start py-9 w-full'>
                                     <div className='grid grid-flow-col gap-5'>
-                                        <SocialIcon
-                                            fgColor="#FFFFFF"
-                                            url="https://twitter.com/j_avianzz"
-                                            className="hover:animate-bounce"
-                                            style={{ height: 35, width: 35 }}
-                                        />
-                                        <SocialIcon
-                                            fgColor="#FFFFFF"
-                                            url="https://www.linkedin.com/in/javianngzh/"
-                                            className="hover:animate-bounce"
-                                            style={{ height: 35, width: 35 }}
-                                        />
-                                        <SocialIcon
-                                            fgColor="#FFFFFF"
-                                            url="https://github.com/javianng"
-                                            className="hover:animate-bounce"
-                                            style={{ height: 35, width: 35 }}
-                                        />
-                                        <SocialIcon
-                                            fgColor="#FFFFFF"
-                                            url="mailto:javian.ng.z.h@gmail.com"
-                                            className="hover:animate-bounce"
-                                            style={{ height: 35, width: 35 }}
-                                        />
-                                        <SocialIcon
-                                            fgColor="#FFFFFF"
-                                            url="https://t.me/javianng"
-                                            className="hover:animate-bounce"
-                                            style={{ height: 35, width: 35 }}
-                                        />
+                                        <div className="tooltip" data-tip="twitter">
+                                            <SocialIcon
+                                                url="https://twitter.com/j_avianzz"
+                                                className="hover:animate-bounce"
+                                                style={{ height: 35, width: 35 }}
+                                            />
+                                        </div>
+                                        <div className="tooltip" data-tip="linkedin">
+                                            <SocialIcon
+                                                url="https://www.linkedin.com/in/javianngzh/"
+                                                className="hover:animate-bounce"
+                                                style={{ height: 35, width: 35 }}
+                                            />
+                                        </div>
+                                        <div className="tooltip" data-tip="github">
+                                            <SocialIcon
+                                                url="https://github.com/javianng"
+                                                className="hover:animate-bounce"
+                                                style={{ height: 35, width: 35 }}
+                                            />
+                                        </div>
+                                        <div className="tooltip" data-tip="email me!">
+                                            <SocialIcon
+                                                url="mailto:javian.ng.z.h@gmail.com"
+                                                className="hover:animate-bounce"
+                                                style={{ height: 35, width: 35 }}
+                                            />
+                                        </div>
+                                        <div className="tooltip" data-tip="telegram">
+                                            <SocialIcon
+                                                url="https://t.me/javianng"
+                                                className="hover:animate-bounce"
+                                                style={{ height: 35, width: 35 }}
+                                            />
+                                        </div>
+                                        <div className="tooltip" data-tip="my resume">
+                                            <a href="/resume.pdf" className="w-[35px] h-[35px] rounded-full bg-slate-600 flex items-center justify-center hover:animate-bounce">
+                                                <DocumentTextIcon className="w-6 h-6 text-white" />
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

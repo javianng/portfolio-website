@@ -5,7 +5,6 @@ type ProjectCardProp = {
     title: string;
     image: string | StaticImageData;
     description: string;
-    color: string;
     id: string;
     href?: string;
 };
@@ -14,7 +13,6 @@ export default function ProjectCard({
     title,
     image,
     description,
-    color,
 }: ProjectCardProp) {
     return (
         <div
@@ -33,7 +31,7 @@ export default function ProjectCard({
             </figure>
             <div className="card-body">
                 <div>
-                    <h1 className={`${color} font-bold text-center underline underline-offset-8 text-lg my-2 py-1 text-ellipsis overflow-hidden line-clamp-1 decoration-4 break-all`}>
+                    <h1 className={`font-bold text-center underline underline-offset-8 text-lg my-2 py-1 text-ellipsis overflow-hidden line-clamp-1 decoration-4 break-all`}>
                         {title}
                     </h1>
                 </div>

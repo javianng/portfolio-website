@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import ProjectCard from "../../common/ProjectsCard";
 import { SHOWCASED_PROJECT_TITLE, SHOWCASED_PROJECT_CAPTION, SHOWCASED_PROJECT_DESCRIPTION, PROJECT_DETAILS } from "./WorkDetails";
 import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png"
@@ -7,7 +7,6 @@ import PageContainer from '~/components/common/PageContainer';
 import TitleContainer from '~/components/common/TitleContainer';
 import Link from 'next/link';
 import { ChevronDoubleDownIcon } from '@heroicons/react/24/solid'
-
 
 function ShowcasedProject() {
     return (
@@ -48,8 +47,6 @@ function ShowcasedProject() {
     )
 }
 
-// Work
-
 function Description() {
     return (
         <div>
@@ -86,6 +83,22 @@ function OtherProjectsGrid() {
     )
 }
 
+function ShowAllProjectsButton() {
+    return (
+        <Link href={"/work"}>
+            <div className='flex flex-row items-center gap-1 
+            border-2 p-5 rounded-lg
+            hover:text-brand-200 hover:border-brand-200
+            transition ease-in-out'>
+                <ChevronDoubleDownIcon className='h-6 w-6' />
+                <p className='font-semibold uppercase text-sm'>
+                    Show all projects
+                </p>
+            </div>
+        </Link>
+    )
+}
+
 export default function Work() {
     return (
         <PageContainer>
@@ -98,17 +111,7 @@ export default function Work() {
             </h2>
             <OtherProjectsGrid />
             <div className="flex justify-center pt-4 sm:pt-12">
-                <Link href={"/work"}>
-                    <div className='flex flex-row items-center gap-1 
-                        border-2 p-5 rounded-lg
-                        hover:text-brand-200 hover:border-brand-200
-                        transition ease-in-out'>
-                        <ChevronDoubleDownIcon className='h-6 w-6' />
-                        <p className='font-semibold uppercase text-sm'>
-                            Show all projects
-                        </p>
-                    </div>
-                </Link>
+                <ShowAllProjectsButton />
             </div>
             <NextButton url="#Experience" />
         </PageContainer>
