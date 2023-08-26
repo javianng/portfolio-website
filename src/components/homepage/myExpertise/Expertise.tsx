@@ -14,14 +14,14 @@ type ExpertiseComponentProps = {
     logo: ReactNode;
 };
 
-const ExpertiseComponent = ({
+function ExpertiseComponent({
     name,
     decorationColor,
     subtitle,
     description,
     icon,
     color,
-    logo }: ExpertiseComponentProps) => {
+    logo }: ExpertiseComponentProps) {
     return (
         <div className={`group tracking-tight p-3 border-black border-2 ${color} transition delay-75 ease-in-out`}>
             <div className='px-3 py-8 flex justify-between'>

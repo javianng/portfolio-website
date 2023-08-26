@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import { CSSProperties, ReactNode } from "react";
 
-import PageContainer from "../common/PageContainer";
-import TitleContainer from "../common/TitleContainer";
+import PageContainer from "../../common/PageContainer";
+import TitleContainer from "../../common/TitleContainer";
 import { TESTIMONIAL_DETAILS } from "./TestimonialDetails";
 
 // Import Swiper React components

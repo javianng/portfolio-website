@@ -10,7 +10,7 @@ type PageLayoutProps = {
     className?: string;
 };
 
-const PageLayout = (props: PageLayoutProps) => {
+export default function PageLayout(props: PageLayoutProps) {
     const {
         children,
         title = "Javian Ng",
@@ -30,6 +30,4 @@ const PageLayout = (props: PageLayoutProps) => {
             <Footer />
         </div>
     );
-};
-
-export default PageLayout;
+}
