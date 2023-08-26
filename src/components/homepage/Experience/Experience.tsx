@@ -30,7 +30,7 @@ function Card({
     image }: CardProps) {
 
     return (
-        <div className={`card rounded-lg shadow-xl transition ease-in-out ${className}`}>
+        <div className={`card rounded-lg shadow-xl ${className}`}>
             <div className="card-body">
                 <div className='flex flex-col sm:flex-row gap-9'>
                     <div className='w-full sm:w-1/2'>
