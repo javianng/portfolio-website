@@ -4,8 +4,8 @@ import { FireIcon } from '@heroicons/react/24/outline';
 export default function StartAProject() {
     return (
         <PageContainer>
-            <div className=" h-28 sm:h-14">
-                <div className="card bg-brand-100 py-14 shadow-lg">
+            <div className="h-28 sm:h-14">
+                <div className="card bg-brand-100 py-8 sm:py-14 shadow-lg">
                     <div className="mx-8 sm:mx-0">
                         <div className="grid place-items-center text-center
                         gap-4 sm:gap-0 

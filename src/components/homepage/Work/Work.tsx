@@ -1,24 +1,21 @@
-import Image, { StaticImageData } from 'next/image'
-import ProjectCard from "./ProjectsCard";
-import { PROJECT_DETAILS } from "./ProjectDetails";
-import { ShowcasedProjectTitle, ShowcasedProjectCaption, ShowcasedProjectDescription } from "./ShowcasedProjectDetails";
-
-// Resources
-
-import DataAnalysisCropRecommendation from "./projectModals/DataAnalytics/DataAnalysisCropRecommendation";
+import Image from 'next/image'
+import ProjectCard from "../../common/ProjectsCard";
+import { SHOWCASED_PROJECT_TITLE, SHOWCASED_PROJECT_CAPTION, SHOWCASED_PROJECT_DESCRIPTION, PROJECT_DETAILS } from "./WorkDetails";
 import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png"
-import NextButton from '~/components/common/Button';
+import NextButton from '~/components/common/NextButton';
 import PageContainer from '~/components/common/PageContainer';
 import TitleContainer from '~/components/common/TitleContainer';
+import Link from 'next/link';
+import { ChevronDoubleDownIcon } from '@heroicons/react/24/solid'
 
 function ShowcasedProject() {
     return (
         <div className="h-fit">
             <h2 className="font-semibold overflow-hidden text-ellipsis pb-3
                 text-xl sm:text-3xl">
-                {ShowcasedProjectTitle}
+                {SHOWCASED_PROJECT_TITLE}
             </h2>
-            <div className="bg-brand-100 card shadow-xl">
+            <div className="bg-brand-100 card shadow-xl max-h-[35rem]">
                 <figure>
                     <div className='bg-white'>
                         <Image
@@ -32,34 +29,23 @@ function ShowcasedProject() {
                 <div className="card-body">
                     <div id="Project Description" className="p-4">
                         <p className="overflow-hidden text-ellipsis line-clamp-2 h-fit">
-                            {ShowcasedProjectCaption}
+                            {SHOWCASED_PROJECT_CAPTION}
                         </p>
 
                         <div id="Project Description">
                             <p className="overflow-hidden text-ellipsis line-clamp-3 sm:line-clamp-4 lg:line-clamp-6">
-                                {ShowcasedProjectDescription}
+                                {SHOWCASED_PROJECT_DESCRIPTION}
                             </p>
                         </div>
                     </div>
                     <div className="card-actions justify-end">
                         <label htmlFor="0" className="btn bg-brand-50">Learn More</label>
-                        <input type="checkbox" id="0" className="modal-toggle" />
-                        <div className="modal">
-                            <div className="modal-box w-11/12 h-fit max-h-[5/6vh] max-w-none overflow-scroll">
-                                <DataAnalysisCropRecommendation />
-                                <div className="modal-action">
-                                    <label htmlFor="0" className="btn">Close</label>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
-
-// Work
 
 function Description() {
     return (
@@ -82,11 +68,34 @@ function Description() {
 
 function OtherProjectsGrid() {
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
-            {PROJECT_DETAILS.map((componentDetails, i) => (
-                <ProjectCard key={i} {...componentDetails} />
-            )).slice(0, 6)}
-        </div>
+        <>
+            <div className='sm:grid grid-cols-3 gap-4 hidden'>
+                {PROJECT_DETAILS.map((componentDetails, i) => (
+                    <ProjectCard key={i} {...componentDetails} />
+                )).slice(0, 6)}
+            </div>
+            <div className='grid grid-cols-1 gap-4 sm:hidden'>
+                {PROJECT_DETAILS.map((componentDetails, i) => (
+                    <ProjectCard key={i} {...componentDetails} />
+                )).slice(0, 3)}
+            </div>
+        </>
+    )
+}
+
+function ShowAllProjectsButton() {
+    return (
+        <Link href={"/work"}>
+            <div className='flex flex-row items-center gap-1 
+            border-2 p-5 rounded-lg
+            hover:text-brand-200 hover:border-brand-200
+            transition ease-in-out'>
+                <ChevronDoubleDownIcon className='h-6 w-6' />
+                <p className='font-semibold uppercase text-sm'>
+                    Show all projects
+                </p>
+            </div>
+        </Link>
     )
 }
 
@@ -94,13 +103,16 @@ export default function Work() {
     return (
         <PageContainer>
             <div className="grid grid-cols-1 sm:grid-cols-2 pb-4 gap-8">
-                {<Description />}
-                {<ShowcasedProject />}
+                <Description />
+                <ShowcasedProject />
             </div>
             <h2 className="text-2xl sm:text-3xl font-semibold py-4">
                 Check out my other <span className=" underline underline-offset-4 decoration-brand-100">Projects</span>
             </h2>
             <OtherProjectsGrid />
+            <div className="flex justify-center pt-4 sm:pt-12">
+                <ShowAllProjectsButton />
+            </div>
             <NextButton url="#Experience" />
         </PageContainer>
     )

@@ -1,20 +1,16 @@
-import { ArrowDownIcon } from '@heroicons/react/24/outline'
+import Link from "next/link";
 
-type NextButtonType = {
-    url: string;
-};
+type ButtonProp = {
+    href?: string;
+    displayText?: string;
+}
 
-export default function NextButton({ url }: NextButtonType) {
+export default function Button({ href, displayText }: ButtonProp) {
     return (
-        <div className='flex justify-center'>
-            <a
-                type="button"
-                className="flex justify-center items-center mt-5 h-[10vh]
-                    animate-bounce w-fit"
-                href={url}
-            >
-                <ArrowDownIcon className="w-7 animate-pulse" />
-            </a >
+        <div>
+            <Link href={href ?? "/"}>
+                <button className="btn bg-brand-50">{displayText ?? "Button"}</button>
+            </Link>
         </div>
     )
 }
