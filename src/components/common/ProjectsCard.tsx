@@ -26,8 +26,7 @@ export default function ProjectCard({
                     height={500}
                     alt={''}
                     className="object-contain
-                    
-                    "
+                    group-hover:scale-125 group-hover:opacity-25 ease-in-out transition duration-700"
                 />
             </figure>
             <div className="card-body">
@@ -36,7 +35,7 @@ export default function ProjectCard({
                         {title}
                     </h1>
                 </div>
-                <div className=' h-36'>
+                <div className='h-36'>
                     <p className='line-clamp-5'>
                         {description}
                     </p>
