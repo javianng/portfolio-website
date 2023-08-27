@@ -16,8 +16,8 @@ export default function ProjectCard({
 }: ProjectCardProp) {
     return (
         <div
-            className="carousel-item card bg-black shadow-xl image-full group 
-                h-fit max-h-80"
+            className="card bg-black shadow-xl image-full group 
+                h-fit"
         >
             <figure>
                 <Image
@@ -26,7 +26,7 @@ export default function ProjectCard({
                     height={500}
                     alt={''}
                     className="object-contain
-                    group-hover:scale-125 group-hover:opacity-25 ease-in-out transition duration-700"
+                    group-hover:scale-125 group-hover:opacity-25 ease-in-out transition duration-700 aspect-square"
                 />
             </figure>
             <div className="card-body">
