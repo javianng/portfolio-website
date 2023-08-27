@@ -26,7 +26,8 @@ export default function ProjectCard({
                     height={500}
                     alt={''}
                     className="object-contain
-                    group-hover:scale-125 group-hover:opacity-25 ease-in-out transition duration-700"
+                    
+                    "
                 />
             </figure>
             <div className="card-body">
