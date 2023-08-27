@@ -17,7 +17,7 @@ export default function ProjectCard({
     return (
         <div
             className="carousel-item card bg-black shadow-xl image-full group 
-                max-h-80"
+                h-fit max-h-80"
         >
             <figure>
                 <Image
@@ -25,18 +25,18 @@ export default function ProjectCard({
                     width={500}
                     height={500}
                     alt={''}
-                    className="rounded-lg object-contain
-                    group-hover:scale-125 group-hover:opacity-25 ease-in-out transition duration-700 delay-75"
+                    className="object-contain
+                    group-hover:scale-125 group-hover:opacity-25 ease-in-out transition duration-700"
                 />
             </figure>
             <div className="card-body">
                 <div>
-                    <h1 className={`font-bold text-center underline underline-offset-8 text-lg my-2 py-1 text-ellipsis overflow-hidden line-clamp-1 decoration-4 break-all`}>
+                    <h1 className="font-bold text-center underline underline-offset-8 text-lg my-2 py-1 text-ellipsis overflow-hidden line-clamp-1 decoration-4 break-all">
                         {title}
                     </h1>
                 </div>
                 <div className=' h-36'>
-                    <p className='line-clamp-5 break-all'>
+                    <p className='line-clamp-5'>
                         {description}
                     </p>
                 </div>
