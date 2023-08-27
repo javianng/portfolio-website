@@ -8,6 +8,7 @@ import TitleContainer from '~/components/common/TitleContainer';
 import Link from 'next/link';
 import { ChevronDoubleDownIcon } from '@heroicons/react/24/solid'
 import Button from '~/components/common/Button';
+import { useEffect, useState } from 'react';
 
 function ShowcasedProject() {
     return (
@@ -68,20 +69,33 @@ function Description() {
 }
 
 function OtherProjectsGrid() {
+    const [cardsPerPage, setCardsPerPage] = useState(3);
+
+    useEffect(() => {
+        const updateCardsPerPage = () => {
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 576) {
+                setCardsPerPage(3);
+            } else {
+                setCardsPerPage(6);
+            }
+        };
+
+        updateCardsPerPage(); // Call the function initially
+        window.addEventListener('resize', updateCardsPerPage); // Listen for window resize events
+
+        return () => {
+            window.removeEventListener('resize', updateCardsPerPage); // Clean up the event listener
+        };
+    }, []);
+
     return (
-        <>
-            <div className='sm:grid grid-cols-3 gap-4 hidden'>
-                {PROJECT_DETAILS.map((componentDetails, i) => (
-                    <ProjectCard key={i} {...componentDetails} />
-                )).slice(0, 6)}
-            </div>
-            <div className='grid grid-cols-1 gap-4 sm:hidden'>
-                {PROJECT_DETAILS.map((componentDetails, i) => (
-                    <ProjectCard key={i} {...componentDetails} />
-                )).slice(0, 3)}
-            </div>
-        </>
-    )
+        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+            {PROJECT_DETAILS.slice(0, cardsPerPage).map((componentDetails, i) => (
+                <ProjectCard key={i} {...componentDetails} />
+            ))}
+        </div>
+    );
 }
 
 function ShowAllProjectsButton() {
