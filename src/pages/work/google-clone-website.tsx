@@ -36,7 +36,11 @@ export default function googleCloneWebsite() {
                     </p>
                 </div>
             </div>
-            <Image src={googleCloneWebsiteImage} alt={"Google Clone Website"} className="shadow, mt-9" />
+            <div className="mockup-window border bg-base-300 mt-9 shadow">
+                <div className="flex justify-center bg-base-100">
+                    <Image src={googleCloneWebsiteImage} alt={"Google Clone Website"} />
+                </div>
+            </div>
         </SubpageLayout>
     )
 }

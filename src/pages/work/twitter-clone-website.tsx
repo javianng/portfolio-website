@@ -36,7 +36,12 @@ export default function twitterCloneWebsite() {
                     </p>
                 </div>
             </div>
-            <Image src={twitterCloneWebsiteImage} alt={"Twitter Clone Website"} className="shadow, mt-9" />
+
+            <div className="mockup-window border bg-base-300 mt-9 shadow">
+                <div className="flex justify-center bg-base-200">
+                    <Image src={twitterCloneWebsiteImage} alt={"Twitter Clone Website"} />
+                </div>
+            </div>
         </SubpageLayout>
     )
 }

@@ -36,7 +36,11 @@ export default function netflixCloneWebsite() {
                     </p>
                 </div>
             </div>
-            <Image src={netflixCloneWebsiteImage} alt={"Netflix Clone Website"} className="shadow, mt-9" />
+            <div className="mockup-window border bg-base-300 mt-9 shadow">
+                <div className="flex justify-center bg-base-100">
+                    <Image src={netflixCloneWebsiteImage} alt={"Netflix Clone Website"} />
+                </div>
+            </div>
         </SubpageLayout>
     )
 }
