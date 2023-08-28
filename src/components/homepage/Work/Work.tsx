@@ -70,27 +70,26 @@ function Description() {
 
 function OtherProjectsGrid() {
     const [cardsPerPage, setCardsPerPage] = useState(3);
-
     useEffect(() => {
         const updateCardsPerPage = () => {
             const screenWidth = window.innerWidth;
-            if (screenWidth < 576) {
+            if (screenWidth < 640) {
                 setCardsPerPage(3);
+            } else if (screenWidth < 1024) {
+                setCardsPerPage(4);
             } else {
                 setCardsPerPage(6);
             }
         };
-
-        updateCardsPerPage(); // Call the function initially
-        window.addEventListener('resize', updateCardsPerPage); // Listen for window resize events
-
+        updateCardsPerPage();
+        window.addEventListener('resize', updateCardsPerPage);
         return () => {
-            window.removeEventListener('resize', updateCardsPerPage); // Clean up the event listener
+            window.removeEventListener('resize', updateCardsPerPage);
         };
     }, []);
 
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4'>
             {PROJECT_DETAILS.slice(0, cardsPerPage).map((componentDetails, i) => (
                 <ProjectCard key={i} {...componentDetails} />
             ))}

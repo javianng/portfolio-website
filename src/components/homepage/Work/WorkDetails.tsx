@@ -11,7 +11,7 @@ export const SHOWCASED_PROJECT_TITLE = "Crop Recommendation Data Analytics"
 
 export const SHOWCASED_PROJECT_CAPTION = ""
 
-export const SHOWCASED_PROJECT_DESCRIPTION = "Crop Recommendation This dataset contains information on the levels of nitrogen, phosphorus, and potassium in soil, as well as temperature, humidity, pH, and rainfall, and their impact on the growth of crops. The data can be used to make data-driven recommendations for achieving optimal nutrient and environmental conditions to improve crop yield. https://www.kaggle.com/datasets/aksahaha/crop-recommendation"
+export const SHOWCASED_PROJECT_DESCRIPTION = "Crop Recommendation This dataset contains information on the levels of nitrogen, phosphorus, and potassium in soil, as well as temperature, humidity, pH, and rainfall, and their impact on the growth of crops. The data can be used to make data-driven recommendations for achieving optimal nutrient and environmental conditions to improve crop yield."
 
 export const PROJECT_DETAILS = [
     {
@@ -23,7 +23,7 @@ export const PROJECT_DETAILS = [
     {
         title: "Crop Recommendation Data Analytics",
         image: CropRecommendationDataAnalyticsPreview,
-        description: "This dataset contains information on the levels of nitrogen, phosphorus, and potassium in soil, as well as temperature, humidity, pH, and rainfall, and their impact on the growth of crops. The data can be used to make data-driven recommendations for achieving optimal nutrient and environmental conditions to improve crop yield. https://www.kaggle.com/datasets/aksahaha/crop-recommendation",
+        description: "This dataset contains information on the levels of nitrogen, phosphorus, and potassium in soil, as well as temperature, humidity, pH, and rainfall, and their impact on the growth of crops. The data can be used to make data-driven recommendations for achieving optimal nutrient and environmental conditions to improve crop yield.",
         href: "/work/crop-recommendation-data-analytics",
     },
     {

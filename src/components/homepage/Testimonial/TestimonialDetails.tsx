@@ -20,7 +20,7 @@ export const TESTIMONIAL_DETAILS = [
         quote:
             <div>
                 <span>
-                    &quot;A well- liked and hardworking fighter, Javian trained hard and persevered through the tough trainings which was physically and mentally exhausting.He gave his 100 % during trainings and never had his head down despite losing to his well - experienced black - belt seniors numerous times, always standing back up to fight back.
+                    &quot;A well-liked and hardworking fighter, Javian trained hard and persevered through the tough trainings which was physically and mentally exhausting. He gave his 100% during trainings and never had his head down despite losing to his well-experienced black-belt seniors numerous times, always standing back up to fight back.
                 </span >
                 <br />  <br />
                 <span>

@@ -28,15 +28,16 @@ function Card({
     tags,
     logo,
     image }: CardProps) {
-
     return (
-        <div className={`card rounded-lg shadow-xl ${className}`}>
+        <div className={`card rounded-lg shadow-xl 
+            hover:shadow-2xl hover:scale-105 duration-150 transition 
+            ${className}`}>
             <div className="card-body">
-                <div className='flex flex-col sm:flex-row gap-9'>
-                    <div className='w-full sm:w-1/2'>
+                <div className='flex flex-col lg:flex-row gap-9'>
+                    <div className='w-full lg:w-1/2'>
                         <Image src={image} alt={company_organisation} className='object-cover h-full rounded-lg' />
                     </div>
-                    <div className='w-full sm:w-1/2'>
+                    <div className='w-full lg:w-1/2'>
                         <div className='w-16 pb-6'>
                             {logo}
                         </div>
