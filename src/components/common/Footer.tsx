@@ -4,10 +4,10 @@ import { SocialIcon } from 'react-social-icons';
 
 export default function Footer() {
     return (
-        <footer className="footer footer-center bg-brand-300 text-white text-lg pt-44 pb-32">
+        <footer className="footer footer-center bg-brand-300 text-white pt-44 pb-12 sm:pb-32">
             <div>
                 <CodeBracketIcon className='w-14 hover:text-brand-100 transition ease-in-out' />
-                <p className='pt-9 font-thin'>Don&apos;t watch the clock; do what it does. Keep coding, living and killing it one tick at a time</p>
+                <p className='pt-9 font-thin text-lg'>Don&apos;t watch the clock; do what it does. Keep coding, living and killing it one tick at a time</p>
             </div>
 
             <div>

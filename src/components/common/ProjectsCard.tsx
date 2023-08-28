@@ -25,8 +25,8 @@ export default function ProjectCard({
                     width={500}
                     height={500}
                     alt={''}
-                    className="object-contain
-                    group-hover:scale-125 group-hover:opacity-25 ease-in-out transition duration-700 aspect-square"
+                    className="object-contain aspect-square
+                    group-hover:scale-125 group-hover:opacity-25 ease-in-out transition duration-700"
                 />
             </figure>
             <div className="card-body">

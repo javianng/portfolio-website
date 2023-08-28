@@ -73,8 +73,10 @@ function OtherProjectsGrid() {
     useEffect(() => {
         const updateCardsPerPage = () => {
             const screenWidth = window.innerWidth;
-            if (screenWidth < 576) {
+            if (screenWidth < 640) {
                 setCardsPerPage(3);
+            } else if (screenWidth < 1024) {
+                setCardsPerPage(4);
             } else {
                 setCardsPerPage(6);
             }
@@ -87,7 +89,7 @@ function OtherProjectsGrid() {
     }, []);
 
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-3 grid-flow-row gap-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4'>
             {PROJECT_DETAILS.slice(0, cardsPerPage).map((componentDetails, i) => (
                 <ProjectCard key={i} {...componentDetails} />
             ))}

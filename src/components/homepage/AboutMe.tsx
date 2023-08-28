@@ -76,7 +76,7 @@ export default function AboutMe() {
                                         <div className="tooltip" data-tip="telegram">
                                             <SocialIcon
                                                 url="https://t.me/javianng"
-                                                className="hover:animate-bounce"
+                                                className="hover:animate-bounce w-6 h-6"
                                                 style={{ height: 35, width: 35 }}
                                             />
                                         </div>
