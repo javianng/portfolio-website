@@ -14,7 +14,7 @@ export default function PageLayout(props: PageLayoutProps) {
     const {
         children,
         title = "Javian Ng",
-        description = "Developer, Business Analyst, Car Enthusiast",
+        description = "Part-Time Developer, Part-Time Business Analyst, Full-Time Curious Adventurer",
         className = "text-brand-300 bg-gray-50"
     } = props;
 
