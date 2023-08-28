@@ -34,8 +34,11 @@ export default function HTML5Website() {
                     </p>
                 </div>
             </div>
-
-            <iframe src="/html5-porfolio-website.html" className="w-full h-[90vh]" />
+            <div className="mockup-window border bg-base-300 mt-9 shadow">
+                <div className="flex justify-center bg-base-100">
+                    <iframe src="/html5-porfolio-website.html" className="w-full h-[90vh]" />
+                </div>
+            </div>
         </SubpageLayout>
     )
 }

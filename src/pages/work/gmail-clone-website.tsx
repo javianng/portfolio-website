@@ -36,7 +36,11 @@ export default function gmailCloneWebsite() {
                     </p>
                 </div>
             </div>
-            <Image src={gmailCloneWebsiteImage} alt={"Gmail Clone Website"} className="shadow, mt-9" />
+            <div className="mockup-window border bg-base-300 mt-9 shadow">
+                <div className="flex justify-center bg-base-100">
+                    <Image src={gmailCloneWebsiteImage} alt={"Gmail Clone Website"} />
+                </div>
+            </div>
         </SubpageLayout>
     )
 }

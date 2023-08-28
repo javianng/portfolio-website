@@ -24,7 +24,7 @@ export default function ProjectCard({
                     src={image}
                     width={500}
                     height={500}
-                    alt={''}
+                    alt={title}
                     className="object-contain aspect-square
                     group-hover:scale-125 group-hover:opacity-25 ease-in-out transition duration-700"
                 />

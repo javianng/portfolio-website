@@ -42,7 +42,13 @@ export default function googleCloneWebsite() {
                     </p>
                 </div>
             </div>
-            <iframe src="https://ueh-biztech-hackathon-e18wa79t0-javianng.vercel.app" className="w-full h-[90vh] mt-9 shadow"></iframe>
+
+            <div className="mockup-window border bg-base-300 mt-9 shadow">
+                <div className="flex justify-center bg-base-100">
+                    <iframe src="https://ueh-biztech-hackathon-e18wa79t0-javianng.vercel.app" className="w-full h-[90vh]"></iframe>
+                </div>
+            </div>
+
         </SubpageLayout>
     )
 }
