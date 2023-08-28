@@ -1,10 +1,12 @@
-import { MapPinIcon } from '@heroicons/react/24/outline'
 import NextButton from '../../common/NextButton';
-import { EXPERIENCE_DETAILS } from './ExperienceDetails';
-import { ReactNode } from 'react';
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import PageContainer from '~/components/common/PageContainer';
 import TitleContainer from '~/components/common/TitleContainer';
+import { EXPERIENCE_DETAILS } from './ExperienceDetails';
+import { MapPinIcon } from '@heroicons/react/24/outline'
+
+import type { ReactNode } from 'react';
+import type { StaticImageData } from "next/image";
 
 type CardProps = {
     title: string;

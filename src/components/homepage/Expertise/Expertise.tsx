@@ -1,8 +1,8 @@
 import PageContainer from '~/components/common/PageContainer';
-import { ReactNode } from 'react';
 import NextButton from '../../common/NextButton';
-import { EXPERTISE_COMPONENT_DETAILS } from './ExpertiseDetails';
 import TitleContainer from '~/components/common/TitleContainer';
+import { EXPERTISE_COMPONENT_DETAILS } from './ExpertiseDetails';
+import type { ReactNode } from 'react';
 
 type ExpertiseComponentProps = {
     name: string;

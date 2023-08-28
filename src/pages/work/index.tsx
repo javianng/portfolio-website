@@ -1,11 +1,7 @@
-import PageContainer from "~/components/common/PageContainer";
-import ReturnNavbar from "~/components/common/ReturnNavbar";
 import TitleContainer from "~/components/common/TitleContainer";
 import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetails";
 import SubpageLayout from "~/components/common/SubpageLayout";
 import ProjectCard from "~/components/common/ProjectsCard";
-import Footer from "~/components/common/Footer";
-import StartAProject from "~/components/homepage/StartAProject";
 
 function OtherProjectsGrid() {
     return (

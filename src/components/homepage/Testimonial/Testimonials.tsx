@@ -1,20 +1,15 @@
-import Image, { StaticImageData } from "next/image";
-import { CSSProperties, ReactNode } from "react";
-
+import Image from "next/image";
 import PageContainer from "../../common/PageContainer";
 import TitleContainer from "../../common/TitleContainer";
-import { TESTIMONIAL_DETAILS } from "./TestimonialDetails";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import { TESTIMONIAL_DETAILS } from "./TestimonialDetails";
+import type { CSSProperties, ReactNode } from "react";
+import type { StaticImageData } from "next/image";
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-// import required modules
-import { Navigation, Pagination } from 'swiper/modules';
 
 type CarouselCardProps = {
     image: string | StaticImageData;

@@ -1,5 +1,6 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Button from './Button';
+import type { StaticImageData } from 'next/image'
 
 type ProjectCardProp = {
     title: string;
