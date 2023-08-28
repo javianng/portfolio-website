@@ -53,7 +53,7 @@ export default function Navbar() {
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {NAVBAR_COMPONENT_DETAILS.map(({ name, href }: NavbarComponentProps, i) => (
-                            <li>
+                            <li key={i}>
                                 <a
                                     href={href}
                                     className="flex w-36 justify-start uppercase"
@@ -68,7 +68,7 @@ export default function Navbar() {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {NAVBAR_COMPONENT_DETAILS.map(({ name, href }: NavbarComponentProps, i) => (
-                        <li>
+                        <li key={i}>
                             <a
                                 href={href}
                                 className="flex w-36 justify-center uppercase"
