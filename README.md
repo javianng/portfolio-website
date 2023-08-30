@@ -80,7 +80,7 @@ This section list the major frameworks/libraries used to bootstrap this project.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@j_avianzz](https://twitter.com/j_avianzz)
+Javian Ng - [@j_avianzz](https://twitter.com/j_avianzz)
 
 Project Link: [https://github.com/javianng/portfolio-website](https://github.com/javianng/portfolio-website)
 

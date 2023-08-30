@@ -1,10 +1,8 @@
 import { type NextPage } from "next";
 
 import PageLayout from "~/components/common/PageLayout";
-
 import HomePage from "~/components/homepage/HomePage";
 import Expertise from "~/components/homepage/Expertise/Expertise";
-
 import Work from "~/components/homepage/Work/Work";
 import Testimonials from "~/components/homepage/Testimonial/Testimonials";
 import Experience from "~/components/homepage/Experience/Experience";
