@@ -6,6 +6,7 @@ import NetflixClonePreview from "src/assets/projectDocuments/netflix-clone-websi
 import GoogleClonePreview from "src/assets/projectDocuments/google-clone-website.png"
 import GmailClonePreview from "src/assets/projectDocuments/gmail-clone-website.png"
 import MonarchPreview from "src/assets/projectDocuments/ueh-biztech-hackathon-mvp.jpeg"
+import PhotographyPortfolioWebsitePreview from "src/assets/projectDocuments/photography-portfolio-website.jpeg"
 
 export const SHOWCASED_PROJECT_TITLE = "Crop Recommendation Data Analytics"
 
@@ -19,6 +20,12 @@ export const PROJECT_DETAILS = [
         image: MonarchPreview,
         description: "Monarch is a startup project submission for UEH (University of Economics HCMC) Biztech Hackathon 2022. This is a 28 hours hackathon in which we seek out solutions for the betterment of the agricultural scene in Mekong Delta. This project was a fork from the AirBnb Clone Project due to the time constraints and the need to do market research and business plans. The codes are not clean but the application is functional.",
         href: "/work/monarch-hackathon-mvp",
+    },
+    {
+        title: "Photography Portfolio Website",
+        image: PhotographyPortfolioWebsitePreview,
+        description: "This project serves as a showcase of my passion for photography, providing a platform for me to exhibit my work, share my experiences, and connect with fellow photography enthusiasts. Whether you're an avid photographer, a potential client, or simply someone interested in visual storytelling, this website offers a glimpse into my creative journey through the lens.",
+        href: "/work/photography-portfolio-website",
     },
     {
         title: "Crop Recommendation Data Analytics",

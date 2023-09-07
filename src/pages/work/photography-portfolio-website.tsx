@@ -3,14 +3,14 @@ import SubpageLayout from "~/components/common/SubpageLayout"
 import TitleContainer from "~/components/common/TitleContainer"
 
 const TAGS = [
-    'ReactJS', 'Full-Stack', 'Tailwindcss', 'Hackathon'
+    'ReactJS', 'Full-Stack', 'Tailwindcss', 'Portfolio', 'Photography'
 ]
 
-export default function monarchHackathonMvp() {
+export default function photographyPortfolioWebsite() {
     return (
         <SubpageLayout href="/work">
             <TitleContainer>
-                Monarch - Drone Rental Platform
+                Photography Portfolio Website
             </TitleContainer>
             <div className="pb-9">
                 <div className="pb-9">
@@ -22,22 +22,14 @@ export default function monarchHackathonMvp() {
                         ))}
                     </div>
                 </div>
-                <GithubButton href="https://github.com/javianng/ueh-biztech-hackathon/" />
-            </div>
-            <div>
-                <h2 className="font-bold text-3xl">
-                    UEH Biztech Hackathon - Monarchs
-                </h2>
-                <h3 className="text-xl pt-2 pb-9">
-                    Website Application platform for a B2B drone rental service.
-                </h3>
+                <GithubButton href="https://github.com/javianng/photography-website-v2" />
             </div>
             <div>
                 <div className="alert">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-info shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <p>
                         <span>
-                            Monarch is a startup project submission for UEH (University of Economics HCMC) Biztech Hackathon 2022. This is a 28 hours hackathon in which we seek out solutions for the betterment of the agricultural scene in Mekong Delta. This project was a fork from the AirBnb Clone Project due to the time constraints and the need to do market research and business plans. The codes are not clean but the application is functional.
+                            This project serves as a showcase of my passion for photography, providing a platform for me to exhibit my work, share my experiences, and connect with fellow photography enthusiasts. Whether you&apos;re an avid photographer, a potential client, or simply someone interested in visual storytelling, this website offers a glimpse into my creative journey through the lens.
                         </span>
                     </p>
                 </div>
@@ -45,7 +37,7 @@ export default function monarchHackathonMvp() {
 
             <div className="mockup-window border bg-base-300 mt-9 shadow">
                 <div className="flex justify-center bg-base-100">
-                    <iframe src="https://ueh-biztech-hackathon-e18wa79t0-javianng.vercel.app" className="w-full h-[90vh]"></iframe>
+                    <iframe src="https://photography-website-v2.vercel.app/" className="w-full h-[90vh]"></iframe>
                 </div>
             </div>
 
