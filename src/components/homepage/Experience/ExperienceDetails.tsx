@@ -3,8 +3,39 @@ import LFG from "src/assets/experience/LFG.svg"
 import LFGPhoto from "src/assets/experience/LFGPhoto.jpeg"
 import ABYA from "src/assets/experience/ABYA.png"
 import ABYAPhoto from "src/assets/experience/ABYAPhoto.jpg"
+import CompClub from "src/assets/experience/CompClub.png"
+import CompClubPhoto from "src/assets/experience/CompClubPhoto.jpg"
 
 export const EXPERIENCE_DETAILS = [
+    {
+        title: "President",
+        company_organisation: "NUS SoC Computing Club",
+        duration: "September 2023 - Present", // duration format to be e.g. January 2023 - Present 
+        className: "bg-ComputingClub-100 text-white",
+        location: "Singapore",
+        detail:
+            <>
+                <ul className='ml-3 list-disc'>
+                    <li>In my role as President, I have the privilege of leading a dedicated team of Vice Presidents, including Jay Lynn (ER), Reina (IR), Le Xuan (SD), and Nathan (SL), along with our exceptional Directors, Secretaries, and Tech Leads. Together, we are committed to charting a course towards new heights of excellence for the Computing Club.
+                    </li>
+                    <li>My tenure as President is driven by a three-fold mission:</li>
+                </ul>
+                <ol className='ml-8 list-decimal'>
+                    <li>Strengthening Internal Bonds: Our committee functions as a closely-knit and cohesive team, fostering collaboration and camaraderie among our members.</li>
+                    <li>Establishing Partnerships: We actively seek partnerships and collaborations with other organizations to enrich our club&apos;s offerings and outreach.</li>
+                    <li>Building Relationships with Advisors: We recognize the pivotal role played by our esteemed advisors in enabling and empowering us to serve the student population effectively.</li>
+                </ol>
+                <ul className='ml-3 list-disc'>
+                    <li>My committee and I are excited to embark on this journey, infusing the Computing Club with fresh ideas, enthusiasm, and a renewed sense of purpose. Together, we aspire to make a positive impact and create memorable experiences for our fellow students.</li>
+                </ul>
+            </>,
+        tags: ["Management", "Leadership", "Project Management"],
+        logo:
+            <>
+                <Image src={CompClub} alt={"SoC Computing Club"} />
+            </>,
+        image: CompClubPhoto,
+    },
     {
         title: "Software Developer Intern",
         company_organisation: "LFG",

@@ -16,6 +16,11 @@ export default {
                 },
                 ABYA: {
                     50: "#F6F2AE",
+                },
+                ComputingClub: {
+                    0: "#FFFFFF",
+                    50: "#ADABD5",
+                    100: "#2A378A",
                 }
             }
         },
