@@ -1,64 +1,65 @@
-import React from 'react'
-import Wave from 'react-wavify'
-import NextButton from '../common/NextButton'
+import React from "react";
+import Wave from "react-wavify";
+import NextButton from "../common/NextButton";
 
 export default function HomePage() {
-    return (
-        <>
-            <div
-                id='Home'
-                className='h-[90vh] relative bg-brand-50'
-            >
-                <div className='h-[50vh] justify-end items-center flex flex-col'>
-                    <p className="font-bold 
-                        text-6xl sm:text-8xl">
-                        JAVIAN NG
-                    </p>
-                    <p className="font-semibold 
-                         text-xs sm:text-lg">
-                        SOFTWARE DEVELOPER & BUSINESS ANALYST
-                    </p>
-                </div>
+  return (
+    <>
+      <div id="Home" className="relative h-[90vh] bg-brand-50">
+        <div className="flex h-[50vh] flex-col items-center justify-end">
+          <p
+            className="text-6xl 
+                        font-bold sm:text-8xl"
+          >
+            JAVIAN NG
+          </p>
+          <p
+            className="text-xs 
+                         font-semibold sm:text-lg"
+          >
+            SOFTWARE DEVELOPER & BUSINESS ANALYST
+          </p>
+        </div>
 
-                {/* Waves Animation */}
+        {/* Waves Animation */}
 
-                <div className='h-[40vh] w-full absolute'>
-                    <Wave
-                        className='w-full absolute h-[40vh]'
-                        fill='#2C3333'
-                        paused={false}
-                        options={{
-                            height: 1,
-                            amplitude: 150,
-                            speed: 0.05,
-                            points: 3
-                        }}
-                    />
-                    <Wave
-                        className='w-full absolute h-[40vh] opacity-50'
-                        fill='#A5C9CA'
-                        paused={false}
-                        options={{
-                            height: 50,
-                            amplitude: 130,
-                            speed: 0.15,
-                            points: 3
-                        }}
-                    />
-                    <Wave
-                        className='w-full absolute h-[40vh] opacity-50'
-                        fill='#E7F6F2'
-                        paused={false}
-                        options={{
-                            height: 70,
-                            amplitude: 120,
-                            speed: 0.10,
-                            points: 3
-                        }}
-                    />
-                </div >
+        <div className="absolute h-[40vh] w-full">
+          <Wave
+            className="absolute h-[40vh] w-full"
+            fill="#2C3333"
+            paused={false}
+            options={{
+              height: 1,
+              amplitude: 150,
+              speed: 0.05,
+              points: 3,
+            }}
+          />
+          <Wave
+            className="absolute h-[40vh] w-full opacity-50"
+            fill="#A5C9CA"
+            paused={false}
+            options={{
+              height: 50,
+              amplitude: 130,
+              speed: 0.15,
+              points: 3,
+            }}
+          />
+          <Wave
+            className="absolute h-[40vh] w-full opacity-50"
+            fill="#E7F6F2"
+            paused={false}
+            options={{
+              height: 70,
+              amplitude: 120,
+              speed: 0.1,
+              points: 3,
+            }}
+          />
+        </div>
 
-                {/* <div className='h-[40vh] w-full dark:absolute hidden'>
+        {/* <div className='h-[40vh] w-full dark:absolute hidden'>
                     <Wave
                         className='w-full absolute h-[40vh]'
                         fill='#2C3333'
@@ -93,8 +94,8 @@ export default function HomePage() {
                         }}
                     />
                 </div > */}
-            </div>
-            <NextButton url="#AboutMe" />
-        </>
-    )
+      </div>
+      <NextButton url="#AboutMe" />
+    </>
+  );
 }

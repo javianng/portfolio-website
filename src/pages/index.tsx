@@ -10,19 +10,19 @@ import AboutMe from "~/components/homepage/AboutMe";
 import StartAProject from "~/components/homepage/StartAProject";
 
 const Home: NextPage = () => {
-    return (
-        <PageLayout>
-            <main>
-                <HomePage />
-                <AboutMe />
-                <Expertise />
-                <Work />
-                <Experience />
-                <Testimonials />
-                <StartAProject />
-            </main>
-        </PageLayout>
-    );
+  return (
+    <PageLayout>
+      <main>
+        <HomePage />
+        <AboutMe />
+        <Expertise />
+        <Work />
+        <Experience />
+        <Testimonials />
+        <StartAProject />
+      </main>
+    </PageLayout>
+  );
 };
 
 export default Home;
