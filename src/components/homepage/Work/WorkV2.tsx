@@ -26,7 +26,7 @@ function ShowAllProjectsButton() {
 
 export default function WorkV2() {
   return (
-    <div>
+    <div id="Work">
       <HeroParallax products={PROJECT_DETAILS} />
       <div className="flex justify-center pt-4 sm:pt-12">
         <ShowAllProjectsButton />

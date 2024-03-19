@@ -1,45 +1,48 @@
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
+
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "../ui/card";
 
 type ProjectCardProp = {
   title: string;
-  image: string | StaticImageData;
-  description: string;
-  href?: string;
+  thumbnail: string | StaticImageData;
+  link?: string;
+  description?: string;
 };
 
 export default function ProjectCard({
   title,
-  image,
+  thumbnail,
+  link,
   description,
-  href,
 }: ProjectCardProp) {
   return (
-    <div className="card image-full group h-fit bg-black shadow-md">
-      <figure>
-        <Image
-          src={image}
-          width={500}
-          height={500}
-          alt={title}
-          className="aspect-square object-contain
-                    transition duration-700 ease-in-out group-hover:scale-125 group-hover:opacity-25"
-        />
-      </figure>
-      <div className="card-body">
-        <div>
-          <h1 className="my-2 line-clamp-1 overflow-hidden text-ellipsis break-all py-1 text-center text-lg font-bold underline decoration-4 underline-offset-8">
-            {title}
-          </h1>
+    <Card className="w-[350px]">
+      <CardHeader>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription className="line-clamp-4">
+          {description}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="h-40 overflow-hidden">
+          <Image src={thumbnail ?? ""} alt={""} width={400} height={400} />
         </div>
-        <div className="h-36">
-          <p className="line-clamp-5">{description}</p>
-        </div>
-        <div className="card-actions justify-end">
-          <Button>Learn More</Button>
-        </div>
-      </div>
-    </div>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Link href={link ?? ""}>
+          <Button>View</Button>
+        </Link>
+      </CardFooter>
+    </Card>
   );
 }

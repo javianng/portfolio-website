@@ -34,7 +34,7 @@ export default function gmailCloneWebsite() {
           and Javascript components into future web projects.
         </AlertDescription>
       </Alert>
-      <div className="mockup-window bg-base-300 mt-9 border shadow">
+      <div className=" bg-base-300 mt-9 border shadow">
         <div className="bg-base-100 flex justify-center">
           <Image src={gmailCloneWebsiteImage} alt={"Gmail Clone Website"} />
         </div>

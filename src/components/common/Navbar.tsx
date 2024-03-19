@@ -12,76 +12,7 @@ import {
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
 import { cn } from "~/lib/utils";
-
-const NAVBAR_COMPONENT_DETAILS = [
-  {
-    name: "Home",
-    href: "#Home",
-  },
-  {
-    name: "About Me",
-    href: "#AboutMe",
-  },
-  {
-    name: "Expertise",
-    href: "#Expertise",
-  },
-  {
-    name: "Work",
-    href: "#Work",
-  },
-  {
-    name: "Experience",
-    href: "#Experience",
-  },
-  {
-    name: "Testimonials",
-    href: "#Testimonials",
-  },
-];
-
-type NavbarProps = {
-  name: string;
-  href: string;
-};
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
+import { PROJECT_DETAILS } from "../homepage/Work/WorkDetailsV2";
 
 export default function Navbar() {
   return (
@@ -90,60 +21,108 @@ export default function Navbar() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+              <Link href="#AboutMe" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  About Me
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>My Expertise</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-4">
+                    <NavigationMenuLink asChild>
+                      <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md">
+                        <span className="mb-2 mt-4 text-lg font-medium">
+                          My Expertise
+                        </span>
+                        <span className="text-muted-foreground text-sm leading-tight">
+                          What I am good at!
+                        </span>
+                      </p>
+                    </NavigationMenuLink>
+                  </li>
+                  <ListItem href="#Expertise" title="Frontend Development">
+                    UI/UX Design and responsiveness
+                  </ListItem>
+                  <ListItem href="#Expertise" title="Backend Development">
+                    Design and implement backend and authentications services
+                  </ListItem>
+                  <ListItem href="#Expertise" title="Data Analytics">
+                    Analytical and Detailed Oriented
+                  </ListItem>
+                  <ListItem href="#Expertise" title="Software Development">
+                    Functional and OO programming
+                  </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>My Work</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
+                  {PROJECT_DETAILS.slice(0, 5).map((componentDetails, i) => (
+                    <ListItem
+                      key={i}
+                      href="#Work"
+                      title={componentDetails.title}
+                    >
+                      <p className="line-clamp-2">
+                        {componentDetails.description}
+                      </p>
+                    </ListItem>
+                  ))}
+                  <ListItem key={6} href="/work" title="More Projects">
+                    Check out all my projects!
+                  </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                Professional Experiences
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
-                      <a
-                        className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
-                      >
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          shadcn/ui
-                        </div>
-                        <p className="text-muted-foreground text-sm leading-tight">
-                          Beautifully designed components built with Radix UI
-                          and Tailwind CSS.
-                        </p>
-                      </a>
+                      <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md">
+                        <span className="mb-2 mt-4 text-lg font-medium">
+                          Where have I worked / interned
+                        </span>
+                        <span className="text-muted-foreground text-sm leading-tight">
+                          My journey of growth and learnings beyond the
+                          university
+                        </span>
+                      </p>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/docs" title="Introduction">
-                    Re-usable components built using Radix UI and Tailwind CSS.
+                  <ListItem href="#Experience" title="Computing Club">
+                    Preside over the club's initiatives and oversee policy
+                    revamps for the students' wellbeing.
                   </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
-                    How to install dependencies and structure your app.
+                  <ListItem href="#Experience" title="LFG">
+                    Interned as a software engineer. Participated in product
+                    reviews and business development opportunities.
                   </ListItem>
                   <ListItem
-                    href="/docs/primitives/typography"
-                    title="Typography"
+                    href="#Experience"
+                    title="ASEAN Business Youth Association"
                   >
-                    Styles for headings, paragraphs, lists...etc
+                    Worked as a website developer lead.
                   </ListItem>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
+              <Link href="#Testimonials" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Documentation
+                  Testimonials
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
