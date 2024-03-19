@@ -1,12 +1,12 @@
 // Images
-import CropRecommendationDataAnalyticsPreview from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png";
-import HTML5WebsitePreview from "src/assets/projectDocuments/HTML5-portfolio-website.png";
-import TwitterClonePreview from "src/assets/projectDocuments/twitter-clone-website.png";
-import NetflixClonePreview from "src/assets/projectDocuments/netflix-clone-website.png";
-import GoogleClonePreview from "src/assets/projectDocuments/google-clone-website.png";
-import GmailClonePreview from "src/assets/projectDocuments/gmail-clone-website.png";
-import MonarchPreview from "src/assets/projectDocuments/ueh-biztech-hackathon-mvp.jpeg";
-import PhotographyPortfolioWebsitePreview from "src/assets/projectDocuments/photography-portfolio-website.jpeg";
+import CropRecommendationDataAnalyticsPreview from "/public/projectDocuments/DataAnalysisCropRecommendation/heatmap.png";
+import HTML5WebsitePreview from "/public/projectDocuments/HTML5-portfolio-website.png";
+import TwitterClonePreview from "/public/projectDocuments/twitter-clone-website.png";
+import NetflixClonePreview from "/public/projectDocuments/netflix-clone-website.png";
+import GoogleClonePreview from "/public/projectDocuments/google-clone-website.png";
+import GmailClonePreview from "/public/projectDocuments/gmail-clone-website.png";
+import MonarchPreview from "/public/projectDocuments/ueh-biztech-hackathon-mvp.jpeg";
+import PhotographyPortfolioWebsitePreview from "/public/projectDocuments/photography-portfolio-website.jpeg";
 
 export const SHOWCASED_PROJECT_TITLE = "Crop Recommendation Data Analytics";
 

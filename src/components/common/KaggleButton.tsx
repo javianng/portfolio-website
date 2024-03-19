@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Kaggle from "src/assets/logos/Kaggle.svg";
+import Kaggle from "/public/logos/Kaggle.svg";
 
 type ButtonProp = {
   href?: string;

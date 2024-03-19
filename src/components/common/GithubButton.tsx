@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Github from "src/assets/logos/Github.svg";
+import Github from "/public/logos/Github.svg";
 
 type ButtonProp = {
   href?: string;

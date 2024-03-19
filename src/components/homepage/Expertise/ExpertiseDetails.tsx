@@ -5,19 +5,19 @@ import { CpuChipIcon } from "@heroicons/react/24/outline";
 import { PresentationChartLineIcon } from "@heroicons/react/24/outline";
 import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
 
-import CSS from "src/assets/logos/CSS.svg";
-import NextJS from "src/assets/logos/NextJS.svg";
-import React from "src/assets/logos/React.svg";
+import CSS from "/public/logos/CSS.svg";
+import NextJS from "/public/logos/NextJS.svg";
+import React from "/public/logos/React.svg";
 
-import Prisma from "src/assets/logos/Prisma.svg";
-import mySQL from "src/assets/logos/mySQL.svg";
+import Prisma from "/public/logos/Prisma.svg";
+import mySQL from "/public/logos/mySQL.svg";
 
-import Python from "src/assets/logos/Python.svg";
-import R from "src/assets/logos/R.svg";
+import Python from "/public/logos/Python.svg";
+import R from "/public/logos/R.svg";
 
-import Java from "src/assets/logos/Java.svg";
-import Javascript from "src/assets/logos/Javascript.svg";
-import Typescript from "src/assets/logos/Typescript.svg";
+import Java from "/public/logos/Java.svg";
+import Javascript from "/public/logos/Javascript.svg";
+import Typescript from "/public/logos/Typescript.svg";
 
 export const EXPERTISE_COMPONENT_DETAILS = [
   {
