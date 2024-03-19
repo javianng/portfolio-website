@@ -23,6 +23,10 @@ const NAVBAR_COMPONENT_DETAILS = [
     name: "Testimonials",
     href: "#Testimonials",
   },
+  {
+    name: "Blogs",
+    href: "/blogs",
+  },
 ];
 
 type NavbarProps = {

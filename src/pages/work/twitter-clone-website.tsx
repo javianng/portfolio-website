@@ -2,7 +2,7 @@ import GithubButton from "~/components/common/GithubButton";
 import SubpageLayout from "~/components/common/SubpageLayout";
 import TitleContainer from "~/components/common/TitleContainer";
 import Image from "next/image";
-import twitterCloneWebsiteImage from "src/assets/projectDocuments/twitter-clone-website.png";
+import twitterCloneWebsiteImage from "/public/projectDocuments/twitter-clone-website.png";
 
 const TAGS = ["HTML5", "Frontend"];
 

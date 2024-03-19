@@ -1,7 +1,7 @@
 import { SocialIcon } from "react-social-icons";
 import NextButton from "../common/NextButton";
 import PageContainer from "../common/PageContainer";
-import profilePhoto from "src/assets/profilephoto.jpg";
+import profilePhoto from "/public/profilephoto.jpg";
 import Image from "next/image";
 import TitleContainer from "../common/TitleContainer";
 import { DocumentTextIcon } from "@heroicons/react/24/solid";

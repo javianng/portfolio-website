@@ -1,10 +1,10 @@
 import Image from "next/image";
-import LFG from "src/assets/experience/LFG.svg";
-import LFGPhoto from "src/assets/experience/LFGPhoto.jpeg";
-import ABYA from "src/assets/experience/ABYA.png";
-import ABYAPhoto from "src/assets/experience/ABYAPhoto.jpg";
-import CompClub from "src/assets/experience/CompClub.png";
-import CompClubPhoto from "src/assets/experience/CompClubPhoto.jpg";
+import LFG from "/public/experience/LFG.svg";
+import LFGPhoto from "/public/experience/LFGPhoto.jpeg";
+import ABYA from "/public/experience/ABYA.png";
+import ABYAPhoto from "/public/experience/ABYAPhoto.jpg";
+import CompClub from "/public/experience/CompClub.png";
+import CompClubPhoto from "/public/experience/CompClubPhoto.jpg";
 
 export const EXPERIENCE_DETAILS = [
   {

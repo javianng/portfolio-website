@@ -6,7 +6,7 @@ import {
   SHOWCASED_PROJECT_DESCRIPTION,
   PROJECT_DETAILS,
 } from "./WorkDetails";
-import HeatMap from "src/assets/projectDocuments/DataAnalysisCropRecommendation/heatmap.png";
+import HeatMap from "/public/projectDocuments/DataAnalysisCropRecommendation/heatmap.png";
 import NextButton from "~/components/common/NextButton";
 import PageContainer from "~/components/common/PageContainer";
 import TitleContainer from "~/components/common/TitleContainer";

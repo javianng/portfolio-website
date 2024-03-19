@@ -2,7 +2,7 @@ import GithubButton from "~/components/common/GithubButton";
 import SubpageLayout from "~/components/common/SubpageLayout";
 import TitleContainer from "~/components/common/TitleContainer";
 import Image from "next/image";
-import netflixCloneWebsiteImage from "src/assets/projectDocuments/netflix-clone-website.png";
+import netflixCloneWebsiteImage from "/public/projectDocuments/netflix-clone-website.png";
 
 const TAGS = ["HTML5", "Frontend"];
 
