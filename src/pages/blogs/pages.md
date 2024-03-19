@@ -4,6 +4,7 @@ date: 2021/3/18
 description: Learn more about Next.js pages.
 tag: web development
 author: You
+type: post
 ---
 
 # Next.js Pages
@@ -14,10 +15,10 @@ In Next.js, a **page** is a [React Component](https://reactjs.org/docs/component
 
 ```js
 function About() {
-  return <div>About</div>
+  return <div>About</div>;
 }
 
-export default About
+export default About;
 ```
 
 ### Pages with Dynamic Routes
@@ -57,10 +58,10 @@ By default, Next.js pre-renders pages using Static Generation without fetching d
 
 ```js
 function About() {
-  return <div>About</div>
+  return <div>About</div>;
 }
 
-export default About
+export default About;
 ```
 
 Note that this page does not need to fetch any external data to be pre-rendered. In cases like this, Next.js generates a single HTML file per page during build time.
@@ -86,10 +87,10 @@ function Blog({ posts }) {
         <li>{post.title}</li>
       ))}
     </ul>
-  )
+  );
 }
 
-export default Blog
+export default Blog;
 ```
 
 To fetch this data on pre-render, Next.js allows you to `export` an `async` function called `getStaticProps` from the same file. This function gets called at build time and lets you pass fetched data to the page's `props` on pre-render.
@@ -102,19 +103,19 @@ function Blog({ posts }) {
 // This function gets called at build time
 export async function getStaticProps() {
   // Call an external API endpoint to get posts
-  const res = await fetch('https://.../posts')
-  const posts = await res.json()
+  const res = await fetch("https://.../posts");
+  const posts = await res.json();
 
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
   return {
     props: {
-      posts
-    }
-  }
+      posts,
+    },
+  };
 }
 
-export default Blog
+export default Blog;
 ```
 
 To learn more about how `getStaticProps` works, check out the [Data Fetching documentation](/docs/basic-features/data-fetching.md#getstaticprops-static-generation).
@@ -137,17 +138,17 @@ So your page **paths** that are pre-rendered depend on external data**.** To han
 // This function gets called at build time
 export async function getStaticPaths() {
   // Call an external API endpoint to get posts
-  const res = await fetch('https://.../posts')
-  const posts = await res.json()
+  const res = await fetch("https://.../posts");
+  const posts = await res.json();
 
   // Get the paths we want to pre-render based on posts
   const paths = posts.map((post) => ({
-    params: { id: post.id }
-  }))
+    params: { id: post.id },
+  }));
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
-  return { paths, fallback: false }
+  return { paths, fallback: false };
 }
 ```
 
@@ -166,14 +167,14 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const res = await fetch(`https://.../posts/${params.id}`)
-  const post = await res.json()
+  const res = await fetch(`https://.../posts/${params.id}`);
+  const post = await res.json();
 
   // Pass post data to the page via props
-  return { props: { post } }
+  return { props: { post } };
 }
 
-export default Post
+export default Post;
 ```
 
 To learn more about how `getStaticPaths` works, check out the [Data Fetching documentation](/docs/basic-features/data-fetching.md#getstaticpaths-static-generation).
@@ -216,14 +217,14 @@ function Page({ data }) {
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`https://.../data`)
-  const data = await res.json()
+  const res = await fetch(`https://.../data`);
+  const data = await res.json();
 
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { data } };
 }
 
-export default Page
+export default Page;
 ```
 
 As you can see, `getServerSideProps` is similar to `getStaticProps`, but the difference is that `getServerSideProps` is run on every request instead of on build time.
