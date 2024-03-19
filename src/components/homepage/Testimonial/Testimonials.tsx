@@ -29,8 +29,12 @@ function CarouselCard({
       <div>
         <div className="mx-16 flex flex-col items-center">
           <div className="avatar pb-8">
-            <div className=" mask mask-squircle w-36 outline-2 ">
-              <Image src={image} alt={personel + " " + organisation} />
+            <div className="w-36 rounded-md outline-2 ">
+              <Image
+                src={image}
+                alt={personel + " " + organisation}
+                className="rounded-md shadow-md"
+              />
             </div>
           </div>
           {quote}

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Button from "./Button";
 import type { StaticImageData } from "next/image";
+import { Button } from "../ui/button";
 
 type ProjectCardProp = {
   title: string;
@@ -16,10 +16,7 @@ export default function ProjectCard({
   href,
 }: ProjectCardProp) {
   return (
-    <div
-      className="group card image-full h-fit bg-black 
-                shadow-xl"
-    >
+    <div className="card image-full group h-fit bg-black shadow-md">
       <figure>
         <Image
           src={image}
@@ -40,7 +37,7 @@ export default function ProjectCard({
           <p className="line-clamp-5">{description}</p>
         </div>
         <div className="card-actions justify-end">
-          <Button displayText="Learn More" href={href} />
+          <Button>Learn More</Button>
         </div>
       </div>
     </div>

@@ -4,10 +4,7 @@ export default function Page() {
   return (
     <div className="flex h-screen items-center justify-center bg-brand-300">
       <Link href="/">
-        <div
-          className="alert alert-error w-fit bg-brand-100 text-brand-300 shadow-xl
-                transition duration-150 hover:bg-brand-50"
-        >
+        <div className="flex w-fit items-center gap-3 rounded-md bg-brand-100 p-4 text-brand-300 shadow-md transition duration-150 hover:bg-brand-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 shrink-0 stroke-current"

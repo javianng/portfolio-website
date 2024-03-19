@@ -5,18 +5,10 @@ import NextButton from "../common/NextButton";
 export default function HomePage() {
   return (
     <>
-      <div id="Home" className="relative h-[90vh] bg-brand-50">
+      <div id="Home" className="bg-brand-50 relative h-[90vh]">
         <div className="flex h-[50vh] flex-col items-center justify-end">
-          <p
-            className="text-6xl 
-                        font-bold sm:text-8xl"
-          >
-            JAVIAN NG
-          </p>
-          <p
-            className="text-xs 
-                         font-semibold sm:text-lg"
-          >
+          <p className="text-6xl font-bold sm:text-8xl">JAVIAN NG</p>
+          <p className="text-xs font-semibold sm:text-lg">
             SOFTWARE DEVELOPER & BUSINESS ANALYST
           </p>
         </div>

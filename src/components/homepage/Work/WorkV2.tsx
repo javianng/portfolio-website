@@ -13,7 +13,7 @@ function ShowAllProjectsButton() {
     <Link href={"/work"}>
       <div
         className="flex flex-row items-center gap-1 
-            rounded-lg border-2 p-5
+            rounded-md border-2 p-5
             transition ease-in-out
             hover:border-brand-200 hover:text-brand-200"
       >
