@@ -44,7 +44,7 @@ export default function Navbar() {
             <DrawerTitle>About Javian Ng</DrawerTitle>
             <DrawerDescription className="flex flex-col gap-2 pt-6">
               <a href={"/work"}>My Works</a>
-              <a href={"/work"}>Blog (Coming Soon)</a>
+              <a href={"/blog"}>Blog</a>
             </DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>
@@ -162,6 +162,14 @@ export default function Navbar() {
                 <Link href="#Testimonials" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Testimonials
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/blog" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Blog
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
