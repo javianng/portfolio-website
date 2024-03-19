@@ -1,5 +1,5 @@
 import TitleContainer from "~/components/common/TitleContainer";
-import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetails";
+import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetailsV2";
 import SubpageLayout from "~/components/common/SubpageLayout";
 import ProjectCard from "~/components/common/ProjectsCard";
 

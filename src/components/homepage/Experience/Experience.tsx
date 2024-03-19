@@ -7,6 +7,7 @@ import { MapPinIcon } from "@heroicons/react/24/outline";
 
 import type { ReactNode } from "react";
 import type { StaticImageData } from "next/image";
+import { Badge } from "~/components/ui/badge";
 
 type CardProps = {
   title: string;
@@ -33,17 +34,15 @@ function Card({
 }: CardProps) {
   return (
     <div
-      className={`card rounded-lg shadow-xl 
-            transition duration-150 hover:scale-105 hover:shadow-2xl 
-            ${className}`}
+      className={`rounded-md shadow-md transition duration-150 hover:scale-105 hover:shadow-lg ${className}`}
     >
-      <div className="card-body">
+      <div className="p-4 lg:p-9">
         <div className="flex flex-col gap-9 lg:flex-row">
           <div className="w-full lg:w-1/2">
             <Image
               src={image}
               alt={company_organisation}
-              className="h-full rounded-lg object-cover"
+              className="h-full rounded-md object-cover"
             />
           </div>
           <div className="w-full lg:w-1/2">
@@ -57,12 +56,11 @@ function Card({
               <h4> {location} </h4>
             </div>
             <div className="pb-6">{detail}</div>
-            <div className="card-actions justify-end">
+            <div className="flex flex-wrap gap-1">
               {tags.map((tag, i) => (
-                <div className="badge badge-ghost h-6 px-2" key={i}>
-                  {" "}
-                  {tag}{" "}
-                </div>
+                <Badge key={i} className="bg-neutral-800 px-2 py-1">
+                  {tag}
+                </Badge>
               ))}
             </div>
           </div>

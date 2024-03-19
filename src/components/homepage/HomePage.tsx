@@ -7,16 +7,8 @@ export default function HomePage() {
     <>
       <div id="Home" className="relative h-[90vh] bg-brand-50">
         <div className="flex h-[50vh] flex-col items-center justify-end">
-          <p
-            className="text-6xl 
-                        font-bold sm:text-8xl"
-          >
-            JAVIAN NG
-          </p>
-          <p
-            className="text-xs 
-                         font-semibold sm:text-lg"
-          >
+          <p className="text-6xl font-bold sm:text-8xl">JAVIAN NG</p>
+          <p className="text-xs font-semibold sm:text-lg">
             SOFTWARE DEVELOPER & BUSINESS ANALYST
           </p>
         </div>

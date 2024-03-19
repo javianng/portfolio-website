@@ -1,6 +1,9 @@
+import { RocketIcon } from "lucide-react";
 import GithubButton from "~/components/common/GithubButton";
 import SubpageLayout from "~/components/common/SubpageLayout";
 import TitleContainer from "~/components/common/TitleContainer";
+import { Alert, AlertDescription } from "~/components/ui/alert";
+import { Badge } from "~/components/ui/badge";
 
 const TAGS = ["ReactJS", "Full-Stack", "Tailwindcss", "Hackathon"];
 
@@ -12,12 +15,9 @@ export default function monarchHackathonMvp() {
         <div className="pb-9">
           <div className="flex flex-wrap gap-2">
             {TAGS.map((TagDetails, i) => (
-              <div
-                key={i}
-                className="badge badge-ghost p-4 text-lg font-medium capitalize sm:text-2xl"
-              >
+              <Badge key={i} className="px-2 py-1 capitalize" variant="outline">
                 {TagDetails}
-              </div>
+              </Badge>
             ))}
           </div>
         </div>
@@ -29,37 +29,20 @@ export default function monarchHackathonMvp() {
           Website Application platform for a B2B drone rental service.
         </h3>
       </div>
-      <div>
-        <div className="alert">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            className="h-6 w-6 shrink-0 stroke-info"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            ></path>
-          </svg>
-          <p>
-            <span>
-              Monarch is a startup project submission for UEH (University of
-              Economics HCMC) Biztech Hackathon 2022. This is a 28 hours
-              hackathon in which we seek out solutions for the betterment of the
-              agricultural scene in Mekong Delta. This project was a fork from
-              the AirBnb Clone Project due to the time constraints and the need
-              to do market research and business plans. The codes are not clean
-              but the application is functional.
-            </span>
-          </p>
-        </div>
-      </div>
-
-      <div className="mockup-window mt-9 border bg-base-300 shadow">
-        <div className="flex justify-center bg-base-100">
+      <Alert>
+        <RocketIcon className="h-5 w-5" />
+        <AlertDescription>
+          Monarch is a startup project submission for UEH (University of
+          Economics HCMC) Biztech Hackathon 2022. This is a 28 hours hackathon
+          in which we seek out solutions for the betterment of the agricultural
+          scene in Mekong Delta. This project was a fork from the AirBnb Clone
+          Project due to the time constraints and the need to do market research
+          and business plans. The codes are not clean but the application is
+          functional.
+        </AlertDescription>
+      </Alert>
+      <div className=" bg-base-300 mt-9 border shadow">
+        <div className="bg-base-100 flex justify-center">
           <iframe
             src="https://ueh-biztech-hackathon-e18wa79t0-javianng.vercel.app"
             className="h-[90vh] w-full"

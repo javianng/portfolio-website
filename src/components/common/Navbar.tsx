@@ -1,82 +1,201 @@
-const NAVBAR_COMPONENT_DETAILS = [
-  {
-    name: "Home",
-    href: "#Home",
-  },
-  {
-    name: "About Me",
-    href: "#AboutMe",
-  },
-  {
-    name: "Expertise",
-    href: "#Expertise",
-  },
-  {
-    name: "Work",
-    href: "#Work",
-  },
-  {
-    name: "Experience",
-    href: "#Experience",
-  },
-  {
-    name: "Testimonials",
-    href: "#Testimonials",
-  },
-];
+"use client";
 
-type NavbarProps = {
-  name: string;
-  href: string;
-};
+import * as React from "react";
+import Link from "next/link";
+import { cn } from "~/lib/utils";
+import { Button } from "../ui/button";
+import { Bars3Icon } from "@heroicons/react/24/solid";
+import { PROJECT_DETAILS } from "../homepage/Work/WorkDetailsV2";
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "../ui/navigation-menu";
+
+import {
+  DrawerTrigger,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerClose,
+  Drawer,
+} from "../ui/drawer";
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu dropdown-content rounded-box menu-sm z-[1] mt-3 w-52 bg-base-100 p-2 shadow"
-          >
-            {NAVBAR_COMPONENT_DETAILS.map(({ name, href }: NavbarProps, i) => (
-              <li key={i}>
-                <a href={href} className="flex w-36 justify-start uppercase">
-                  {name}
-                </a>
-              </li>
-            ))}
-          </ul>
+    <>
+      <Drawer>
+        <div className="sticky top-[85vh] z-50 h-0 sm:hidden">
+          <DrawerTrigger>
+            <div className="ml-8 rounded-full bg-neutral-800 p-3 shadow-md">
+              <Bars3Icon className="w-5 text-white" />
+            </div>
+          </DrawerTrigger>
+        </div>
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerTitle>About Javian Ng</DrawerTitle>
+            <DrawerDescription className="flex flex-col gap-2 pt-6">
+              <a href={"/work"}>My Works</a>
+              <a href={"/work"}>Blog (Coming Soon)</a>
+            </DrawerDescription>
+          </DrawerHeader>
+          <DrawerFooter>
+            <DrawerClose>
+              <div className="rounded-md bg-neutral-200 py-2 ">Close</div>
+            </DrawerClose>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+
+      <div className="sticky top-4 z-50 hidden h-0 w-full sm:block">
+        <div className="flex justify-center">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link href="#AboutMe" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    About Me
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>My Expertise</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-4">
+                      <NavigationMenuLink asChild>
+                        <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md">
+                          <span className="mb-2 mt-4 text-lg font-medium">
+                            My Expertise
+                          </span>
+                          <span className="text-muted-foreground text-sm leading-tight">
+                            What I am good at!
+                          </span>
+                        </p>
+                      </NavigationMenuLink>
+                    </li>
+                    <ListItem href="#Expertise" title="Frontend Development">
+                      UI/UX Design and responsiveness
+                    </ListItem>
+                    <ListItem href="#Expertise" title="Backend Development">
+                      Design and implement backend and authentications services
+                    </ListItem>
+                    <ListItem href="#Expertise" title="Data Analytics">
+                      Analytical and Detailed Oriented
+                    </ListItem>
+                    <ListItem href="#Expertise" title="Software Development">
+                      Functional and OO programming
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>My Work</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
+                    {PROJECT_DETAILS.slice(0, 5).map((componentDetails, i) => (
+                      <ListItem
+                        key={i}
+                        href="#Work"
+                        title={componentDetails.title}
+                      >
+                        <p className="line-clamp-2">
+                          {componentDetails.description}
+                        </p>
+                      </ListItem>
+                    ))}
+                    <ListItem key={6} href="/work" title="More Projects">
+                      Check out all my projects!
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>
+                  Professional Experiences
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md">
+                          <span className="mb-2 mt-4 text-lg font-medium">
+                            Where have I worked / interned
+                          </span>
+                          <span className="text-muted-foreground text-sm leading-tight">
+                            My journey of growth and learnings beyond the
+                            university
+                          </span>
+                        </p>
+                      </NavigationMenuLink>
+                    </li>
+                    <ListItem href="#Experience" title="Computing Club">
+                      Preside over the club's initiatives and oversee policy
+                      revamps for the students' wellbeing.
+                    </ListItem>
+                    <ListItem href="#Experience" title="LFG">
+                      Interned as a software engineer. Participated in product
+                      reviews and business development opportunities.
+                    </ListItem>
+                    <ListItem
+                      href="#Experience"
+                      title="ASEAN Business Youth Association"
+                    >
+                      Worked as a website developer lead.
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="#Testimonials" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Testimonials
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {NAVBAR_COMPONENT_DETAILS.map(({ name, href }: NavbarProps, i) => (
-            <li key={i}>
-              <a href={href} className="flex w-36 justify-center uppercase">
-                {name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="navbar-end"></div>
-    </div>
+    </>
   );
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+
+ListItem.displayName = "ListItem";

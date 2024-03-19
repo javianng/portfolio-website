@@ -10,7 +10,6 @@ type ExpertiseComponentProps = {
   subtitle: string;
   description: string;
   icon: ReactNode;
-  color: string;
   logo: ReactNode;
 };
 
@@ -20,12 +19,11 @@ function ExpertiseComponent({
   subtitle,
   description,
   icon,
-  color,
   logo,
 }: ExpertiseComponentProps) {
   return (
     <div
-      className={`group border-2 border-black p-3 tracking-tight ${color} transition delay-75 ease-in-out`}
+      className={`group border-2 border-black p-3 tracking-tight transition delay-75 ease-in-out`}
     >
       <div className="flex justify-between px-3 py-8">
         <div>
