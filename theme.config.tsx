@@ -14,6 +14,9 @@ export default {
             padding-bottom: 4rem;
           }
         }
+        * {
+          color: black;
+        }
       `}</style>
     </small>
   ),
