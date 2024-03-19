@@ -19,7 +19,7 @@ export default {
   ),
   readMore: "Read More →",
   postFooter: null,
-  darkMode: true,
+  darkMode: false,
   navs: [
     {
       url: "/",
