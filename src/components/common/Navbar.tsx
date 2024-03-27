@@ -1,10 +1,9 @@
 "use client";
 
-import * as React from "react";
 import Link from "next/link";
+import * as React from "react";
 import { cn } from "~/lib/utils";
-import { Button } from "../ui/button";
-import { Bars3Icon } from "@heroicons/react/24/solid";
+import { Menu } from "lucide-react";
 import { PROJECT_DETAILS } from "../homepage/Work/WorkDetailsV2";
 
 import {
@@ -35,7 +34,7 @@ export default function Navbar() {
         <div className="sticky top-[85vh] z-50 h-0 sm:hidden">
           <DrawerTrigger>
             <div className="ml-8 rounded-full bg-neutral-800 p-3 shadow-md">
-              <Bars3Icon className="w-5 text-white" />
+              <Menu className="w-5 text-white" />
             </div>
           </DrawerTrigger>
         </div>

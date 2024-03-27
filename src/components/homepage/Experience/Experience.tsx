@@ -1,13 +1,12 @@
-import NextButton from "../../common/NextButton";
 import Image from "next/image";
+import { MapPin } from "lucide-react";
+import type { ReactNode } from "react";
+import { Badge } from "~/components/ui/badge";
+import NextButton from "../../common/NextButton";
+import type { StaticImageData } from "next/image";
+import { EXPERIENCE_DETAILS } from "./ExperienceDetails";
 import PageContainer from "~/components/common/PageContainer";
 import TitleContainer from "~/components/common/TitleContainer";
-import { EXPERIENCE_DETAILS } from "./ExperienceDetails";
-import { MapPinIcon } from "@heroicons/react/24/outline";
-
-import type { ReactNode } from "react";
-import type { StaticImageData } from "next/image";
-import { Badge } from "~/components/ui/badge";
 
 type CardProps = {
   title: string;
@@ -52,7 +51,7 @@ function Card({
               {company_organisation} | {duration}
             </h4>
             <div className="flex items-center pb-4 font-semibold">
-              <MapPinIcon className="h-4 pr-1" />
+              <MapPin className="h-4 w-4 pr-1" />
               <h4> {location} </h4>
             </div>
             <div className="pb-6">{detail}</div>

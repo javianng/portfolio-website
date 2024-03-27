@@ -1,4 +1,4 @@
-import { ArrowDownIcon } from "@heroicons/react/24/outline";
+import { ArrowDown } from "lucide-react";
 
 type NextButtonType = {
   url: string;
@@ -13,7 +13,7 @@ export default function NextButton({ url }: NextButtonType) {
                     items-center justify-center"
         href={url}
       >
-        <ArrowDownIcon className="w-7 animate-pulse" />
+        <ArrowDown className="w-7 animate-pulse" />
       </a>
     </div>
   );

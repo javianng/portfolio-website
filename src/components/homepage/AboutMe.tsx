@@ -1,10 +1,10 @@
-import { SocialIcon } from "react-social-icons";
+import Image from "next/image";
+import { FileText } from "lucide-react";
 import NextButton from "../common/NextButton";
+import { SocialIcon } from "react-social-icons";
 import PageContainer from "../common/PageContainer";
 import profilePhoto from "/public/profilephoto.jpg";
-import Image from "next/image";
 import TitleContainer from "../common/TitleContainer";
-import { DocumentTextIcon } from "@heroicons/react/24/solid";
 
 export default function AboutMe() {
   return (
@@ -101,7 +101,7 @@ export default function AboutMe() {
                       href="/resume.pdf"
                       className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-slate-600 hover:animate-bounce"
                     >
-                      <DocumentTextIcon className="h-6 w-6 text-white" />
+                      <FileText className="h-6 w-6 text-white" />
                     </a>
                   </div>
                 </div>

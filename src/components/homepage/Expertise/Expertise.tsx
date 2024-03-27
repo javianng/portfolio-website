@@ -28,9 +28,8 @@ function ExpertiseComponent({
       <div className="flex justify-between px-3 py-8">
         <div>
           <div className="brand flex pb-4 align-top">
-            <div className="mr-4 w-12 sm:w-16">{icon}</div>
+            <div className="mr-4">{icon}</div>
             <div>
-              <div className="m-2"></div>
               <h2
                 className={`${decorationColor} mb-1 text-2xl font-bold
                                 underline decoration-solid 

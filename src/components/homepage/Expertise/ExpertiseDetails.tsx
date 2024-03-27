@@ -1,10 +1,5 @@
 import Image from "next/image";
 
-import { ComputerDesktopIcon } from "@heroicons/react/24/outline";
-import { CpuChipIcon } from "@heroicons/react/24/outline";
-import { PresentationChartLineIcon } from "@heroicons/react/24/outline";
-import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
-
 import CSS from "/public/logos/CSS.svg";
 import NextJS from "/public/logos/NextJS.svg";
 import React from "/public/logos/React.svg";
@@ -18,6 +13,12 @@ import R from "/public/logos/R.svg";
 import Java from "/public/logos/Java.svg";
 import Javascript from "/public/logos/Javascript.svg";
 import Typescript from "/public/logos/Typescript.svg";
+import {
+  AppWindowMac,
+  BetweenHorizontalStart,
+  LineChart,
+  MonitorSmartphone,
+} from "lucide-react";
 
 export const EXPERTISE_COMPONENT_DETAILS = [
   {
@@ -26,7 +27,7 @@ export const EXPERTISE_COMPONENT_DETAILS = [
     subtitle: "ReactJS, NextJS, HTML, CSS",
     description:
       "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
-    icon: <ComputerDesktopIcon />,
+    icon: <MonitorSmartphone className="h-12 w-12 sm:h-16 sm:w-16" />,
     logo: (
       <>
         <Image src={CSS as string} alt={"CSS"} />
@@ -40,7 +41,7 @@ export const EXPERTISE_COMPONENT_DETAILS = [
     decorationColor: "decoration-brand-200",
     subtitle: "Prisma, SQL",
     description: "Experienced with working on backend development.",
-    icon: <CpuChipIcon />,
+    icon: <BetweenHorizontalStart className="h-12 w-12 sm:h-16 sm:w-16" />,
     logo: (
       <>
         <Image src={Prisma as string} alt={"Prisma"} />
@@ -54,7 +55,7 @@ export const EXPERTISE_COMPONENT_DETAILS = [
     subtitle: "Python, R",
     description:
       "Analytical and detailed oriented, with knowledge and practical experience in data analytics.",
-    icon: <PresentationChartLineIcon />,
+    icon: <LineChart className="h-12 w-12 sm:h-16 sm:w-16" />,
     logo: (
       <>
         <Image src={Python as string} alt={"Python"} />
@@ -68,7 +69,7 @@ export const EXPERTISE_COMPONENT_DETAILS = [
     subtitle: "Java, JavaScript, TypeScript",
     description:
       "Knowledge in both functional and object-oriented programming languages.",
-    icon: <DevicePhoneMobileIcon />,
+    icon: <AppWindowMac className="h-12 w-12 sm:h-16 sm:w-16" />,
     logo: (
       <>
         <Image src={Java as string} alt={"Java"} />

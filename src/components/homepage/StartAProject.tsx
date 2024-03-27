@@ -1,5 +1,5 @@
+import { Flame } from "lucide-react";
 import PageContainer from "../common/PageContainer";
-import { FireIcon } from "@heroicons/react/24/outline";
 
 export default function StartAProject() {
   return (
@@ -17,7 +17,7 @@ export default function StartAProject() {
                 href="mailto:javian.ng.z.h@gmail.com"
                 className="group flex rounded-md bg-slate-100 p-4 shadow-md transition hover:bg-red-100"
               >
-                <FireIcon className="group h-6 pr-1 transition ease-in-out group-hover:text-red-400" />
+                <Flame className="group h-6 pr-1 transition ease-in-out group-hover:text-red-400" />
                 <p>Let&apos;s do this!</p>
               </a>
             </div>
