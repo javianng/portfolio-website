@@ -1,10 +1,11 @@
 "use client";
 
-import * as React from "react";
 import Link from "next/link";
+import * as React from "react";
 import { cn } from "~/lib/utils";
-import { Button } from "../ui/button";
-import { Bars3Icon } from "@heroicons/react/24/solid";
+import { Menu } from "lucide-react";
+import { Switch } from "../ui/switch";
+import { ClassNameContext } from "~/pages/_app";
 import { PROJECT_DETAILS } from "../homepage/Work/WorkDetailsV2";
 
 import {
@@ -16,7 +17,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
-
 import {
   DrawerTrigger,
   DrawerContent,
@@ -29,13 +29,17 @@ import {
 } from "../ui/drawer";
 
 export default function Navbar() {
+  const { toggleClassName } = React.useContext(ClassNameContext);
+  const handleClick = () => {
+    toggleClassName();
+  };
   return (
     <>
       <Drawer>
         <div className="sticky top-[85vh] z-50 h-0 sm:hidden">
           <DrawerTrigger>
             <div className="ml-8 rounded-full bg-neutral-800 p-3 shadow-md">
-              <Bars3Icon className="w-5 text-white" />
+              <Menu className="w-5 text-white" />
             </div>
           </DrawerTrigger>
         </div>
@@ -172,6 +176,9 @@ export default function Navbar() {
                     Blog
                   </NavigationMenuLink>
                 </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Switch onClick={handleClick} />
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

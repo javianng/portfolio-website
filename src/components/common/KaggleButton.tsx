@@ -10,8 +10,8 @@ type ButtonProp = {
 export default function KaggleButton({ href }: ButtonProp) {
   return (
     <Link href={href ?? "/"} className="flex items-center gap-2">
-      <Button variant="outline">
-        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-white">
+      <Button>
+        <div className="mr-2 flex h-7 w-7 items-center justify-center rounded-md bg-white">
           <Image src={Kaggle as string} alt={"Kaggle"} className="h-6 w-6" />
         </div>
         Explore in Kaggle

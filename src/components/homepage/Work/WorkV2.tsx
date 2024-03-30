@@ -6,7 +6,7 @@ import { PROJECT_DETAILS } from "./WorkDetailsV2";
 
 import NextButton from "~/components/common/NextButton";
 import Link from "next/link";
-import { ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
+import { ChevronsDown } from "lucide-react";
 
 function ShowAllProjectsButton() {
   return (
@@ -17,7 +17,7 @@ function ShowAllProjectsButton() {
             transition ease-in-out
             hover:border-brand-200 hover:text-brand-200"
       >
-        <ChevronDoubleDownIcon className="h-6 w-6" />
+        <ChevronsDown className="h-6 w-6" />
         <p className="text-sm font-semibold uppercase">Show all projects</p>
       </div>
     </Link>

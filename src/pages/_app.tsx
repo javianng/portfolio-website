@@ -1,13 +1,38 @@
+import React, { createContext, useState, useEffect } from "react";
 import { type AppType } from "next/dist/shared/lib/utils";
 import "~/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
+export const ClassNameContext = createContext({
+  className: "",
+  toggleClassName: () => {},
+});
+
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const [className, setClassName] = useState("");
+
+  useEffect(() => {
+    const savedClassName = localStorage.getItem("className");
+    if (savedClassName) {
+      setClassName(savedClassName);
+    }
+  }, []);
+
+  const toggleClassName = () => {
+    setClassName((prevClassName) => {
+      const newClassName = prevClassName === "dark" ? "" : "dark";
+      localStorage.setItem("className", newClassName);
+      return newClassName;
+    });
+  };
+
   return (
-    <>
-      <Component {...pageProps} />
-      <Analytics />
-    </>
+    <ClassNameContext.Provider value={{ className, toggleClassName }}>
+      <div className={className}>
+        <Component {...pageProps} />
+        <Analytics />
+      </div>
+    </ClassNameContext.Provider>
   );
 };
 

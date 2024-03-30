@@ -23,14 +23,13 @@ function ExpertiseComponent({
 }: ExpertiseComponentProps) {
   return (
     <div
-      className={`group border-2 border-black p-3 tracking-tight transition delay-75 ease-in-out`}
+      className={`group border-2 border-brand-300 p-3 tracking-tight transition delay-75 ease-in-out dark:border-brand-200`}
     >
       <div className="flex justify-between px-3 py-8">
         <div>
           <div className="brand flex pb-4 align-top">
-            <div className="mr-4 w-12 sm:w-16">{icon}</div>
+            <div className="mr-4">{icon}</div>
             <div>
-              <div className="m-2"></div>
               <h2
                 className={`${decorationColor} mb-1 text-2xl font-bold
                                 underline decoration-solid 
@@ -49,11 +48,15 @@ function ExpertiseComponent({
           </div>
           <div className="flex">
             <div className="grid grid-cols-1">
-              <p className="my-[-4px] font-mono text-gray-500">&lt;h1&gt;</p>
-              <p className="ml-5 border-l-[1.5px] border-gray-500 py-3 pl-4">
+              <p className="my-[-4px] font-mono text-neutral-300 dark:text-brand-100">
+                &lt;h1&gt;
+              </p>
+              <p className="ml-5 border-l-[1.5px] border-neutral-300 py-3 pl-4 dark:border-brand-100">
                 {description}
               </p>
-              <p className="my-[-4px] font-mono text-gray-500">&lt;h1/&gt;</p>
+              <p className="my-[-4px] font-mono text-neutral-300 dark:text-brand-100">
+                &lt;h1/&gt;
+              </p>
             </div>
           </div>
         </div>

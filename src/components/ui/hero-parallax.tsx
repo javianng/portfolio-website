@@ -154,7 +154,7 @@ export const ProductCard = ({
           alt={product.title}
         />
       </Link>
-      <div className="pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-80"></div>
+      <div className="pointer-events-none absolute inset-0 h-full w-full bg-brand-200 opacity-0 group-hover/product:opacity-80"></div>
       <h2 className="absolute bottom-4 left-4 text-white opacity-0 group-hover/product:opacity-100">
         {product.title}
       </h2>

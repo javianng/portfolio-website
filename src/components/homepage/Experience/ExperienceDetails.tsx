@@ -114,7 +114,7 @@ export const EXPERIENCE_DETAILS = [
     title: "Web Developer Lead",
     company_organisation: "ASEAN Business Youth Association",
     duration: "June 2023 - Present", // duration format to be e.g. January 2023 - Present
-    className: "bg-ABYA-50 text-blakc",
+    className: "bg-ABYA-50 text-brand-300",
     location: "Singapore",
     detail: (
       <>
