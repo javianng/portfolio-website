@@ -36,7 +36,7 @@ export default function HTML5Website() {
         <div className="bg-base-100 flex justify-center">
           <iframe
             src="/html5-porfolio-website.html"
-            className="h-[90vh] w-full"
+            className="h-[90vh] w-full bg-white"
           />
         </div>
       </div>

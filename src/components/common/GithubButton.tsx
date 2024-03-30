@@ -14,7 +14,7 @@ export default function GithubButton({ href }: ButtonProp) {
         <Image
           src={Github as string}
           alt={"Github"}
-          className="h-7 w-7 rounded-md bg-white"
+          className="mr-2 h-7 w-7 rounded-md bg-white"
         />
         Explore in Github
       </Button>

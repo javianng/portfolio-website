@@ -45,7 +45,7 @@ export default function monarchHackathonMvp() {
         <div className="bg-base-100 flex justify-center">
           <iframe
             src="https://ueh-biztech-hackathon-e18wa79t0-javianng.vercel.app"
-            className="h-[90vh] w-full"
+            className="h-[90vh] w-full bg-white"
           ></iframe>
         </div>
       </div>
