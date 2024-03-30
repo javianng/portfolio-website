@@ -49,7 +49,7 @@ export default function Footer() {
           <div data-tip="my resume">
             <a
               href="/resume.pdf"
-              className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-slate-600 hover:animate-bounce"
+              className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-neutral-600 hover:animate-bounce"
             >
               <FileText className="h-6 w-6 text-white" />
             </a>

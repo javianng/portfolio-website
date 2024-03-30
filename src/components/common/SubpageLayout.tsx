@@ -10,7 +10,11 @@ type PageLayoutProps = {
 };
 
 export default function SubpageLayout(props: PageLayoutProps) {
-  const { children, className = "text-brand-300 bg-gray-50", href } = props;
+  const {
+    children,
+    className = "text-brand-300 bg-neutral-50 dark:bg-brand-300 dark:text-brand-50",
+    href,
+  } = props;
 
   return (
     <div className={className}>

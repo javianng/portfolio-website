@@ -13,7 +13,7 @@ export default function NextButton({ url }: NextButtonType) {
                     items-center justify-center"
         href={url}
       >
-        <ArrowDown className="w-7 animate-pulse" />
+        <ArrowDown className="w-7 animate-pulse dark:text-brand-50" />
       </a>
     </div>
   );

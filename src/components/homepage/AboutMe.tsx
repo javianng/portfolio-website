@@ -64,42 +64,42 @@ export default function AboutMe() {
                   <div data-tip="twitter">
                     <SocialIcon
                       url="https://twitter.com/j_avianzz"
-                      className="hover:animate-bounce"
+                      className="h-6 w-6 rounded-full bg-white hover:animate-bounce"
                       style={{ height: 35, width: 35 }}
                     />
                   </div>
                   <div data-tip="linkedin">
                     <SocialIcon
                       url="https://www.linkedin.com/in/javianngzh/"
-                      className="hover:animate-bounce"
+                      className="h-6 w-6 rounded-full bg-white hover:animate-bounce"
                       style={{ height: 35, width: 35 }}
                     />
                   </div>
                   <div data-tip="github">
                     <SocialIcon
                       url="https://github.com/javianng"
-                      className="hover:animate-bounce"
+                      className="h-6 w-6 rounded-full bg-white hover:animate-bounce"
                       style={{ height: 35, width: 35 }}
                     />
                   </div>
                   <div data-tip="email me!">
                     <SocialIcon
                       url="mailto:javian.ng.z.h@gmail.com"
-                      className="hover:animate-bounce"
+                      className="h-6 w-6 rounded-full bg-white hover:animate-bounce"
                       style={{ height: 35, width: 35 }}
                     />
                   </div>
                   <div data-tip="telegram">
                     <SocialIcon
                       url="https://t.me/javianng"
-                      className="h-6 w-6 hover:animate-bounce"
+                      className="h-6 w-6 rounded-full bg-white hover:animate-bounce"
                       style={{ height: 35, width: 35 }}
                     />
                   </div>
                   <div data-tip="my resume">
                     <a
                       href="/resume.pdf"
-                      className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-slate-600 hover:animate-bounce"
+                      className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-neutral-600 hover:animate-bounce"
                     >
                       <FileText className="h-6 w-6 text-white" />
                     </a>

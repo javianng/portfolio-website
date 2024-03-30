@@ -4,6 +4,8 @@ import Link from "next/link";
 import * as React from "react";
 import { cn } from "~/lib/utils";
 import { Menu } from "lucide-react";
+import { Switch } from "../ui/switch";
+import { ClassNameContext } from "~/pages/_app";
 import { PROJECT_DETAILS } from "../homepage/Work/WorkDetailsV2";
 
 import {
@@ -15,7 +17,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
-
 import {
   DrawerTrigger,
   DrawerContent,
@@ -28,6 +29,10 @@ import {
 } from "../ui/drawer";
 
 export default function Navbar() {
+  const { toggleClassName } = React.useContext(ClassNameContext);
+  const handleClick = () => {
+    toggleClassName();
+  };
   return (
     <>
       <Drawer>
@@ -171,6 +176,9 @@ export default function Navbar() {
                     Blog
                   </NavigationMenuLink>
                 </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Switch onClick={handleClick} />
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
