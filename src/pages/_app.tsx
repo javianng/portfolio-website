@@ -1,7 +1,8 @@
-import React, { createContext, useState, useEffect } from "react";
-import { type AppType } from "next/dist/shared/lib/utils";
 import "~/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { type AppType } from "next/dist/shared/lib/utils";
+import PointerFollower from "~/components/common/Pointer";
+import React, { createContext, useState, useEffect } from "react";
 
 export const ClassNameContext = createContext({
   className: "",
@@ -31,6 +32,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <div className={className}>
         <Component {...pageProps} />
         <Analytics />
+        <PointerFollower />
       </div>
     </ClassNameContext.Provider>
   );
