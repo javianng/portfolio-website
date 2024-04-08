@@ -11,6 +11,7 @@ const Dot = React.memo(({ position }: { position: Position }) => (
       position: "absolute",
       transition: "top 0.025s, left 0.025s",
       zIndex: 9999,
+      pointerEvents: "none",
       top: `calc(${position.y}px - 5px)`,
       left: `calc(${position.x}px - 5px)`,
       width: "10px",
@@ -26,6 +27,7 @@ const OuterCircle = React.memo(({ position }: { position: Position }) => (
     style={{
       position: "absolute",
       zIndex: 9999,
+      pointerEvents: "none",
       top: `calc(${position.y}px - 25px)`,
       left: `calc(${position.x}px - 25px)`,
       width: "50px",
