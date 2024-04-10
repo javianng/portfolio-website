@@ -18,7 +18,7 @@ export default function HomePage() {
 
         {/* Waves Animation */}
 
-        {/* <div className="absolute hidden h-[40vh] w-full dark:block">
+        <div className="absolute hidden h-[40vh] w-full dark:block">
           <Wave
             className="absolute h-[40vh] w-full"
             fill="#395B64"
@@ -88,7 +88,7 @@ export default function HomePage() {
               points: 3,
             }}
           />
-        </div> */}
+        </div>
       </div>
       <NextButton url="#AboutMe" />
     </>
