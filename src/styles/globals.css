@@ -6,3 +6,20 @@
   scroll-behavior: smooth;
   cursor: none;
 }
+
+.loading {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.transition-out {
+  opacity: 0;
+}
+
+.content {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.transition-in {
+  opacity: 1;
+}

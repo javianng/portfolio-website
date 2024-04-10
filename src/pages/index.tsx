@@ -12,15 +12,13 @@ import WorkV2 from "~/components/homepage/Work/WorkV2";
 const Home: NextPage = () => {
   return (
     <PageLayout>
-      <main>
-        <HomePage />
-        <AboutMe />
-        <Expertise />
-        <WorkV2 />
-        <Experience />
-        <Testimonials />
-        <StartAProject />
-      </main>
+      <HomePage />
+      <AboutMe />
+      <Expertise />
+      <WorkV2 />
+      <Experience />
+      <Testimonials />
+      <StartAProject />
     </PageLayout>
   );
 };

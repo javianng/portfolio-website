@@ -2,6 +2,52 @@ import React from "react";
 import Wave from "react-wavify";
 import NextButton from "../common/NextButton";
 
+const waveOptions = [
+  {
+    height: 1,
+    amplitude: 150,
+    speed: 0.05,
+    points: 3,
+  },
+  {
+    height: 50,
+    amplitude: 130,
+    speed: 0.15,
+    points: 3,
+  },
+  {
+    height: 70,
+    amplitude: 120,
+    speed: 0.1,
+    points: 3,
+  },
+];
+
+type WaveComponentProps = {
+  fill: string;
+  opacity: number;
+  options: {
+    height: number;
+    amplitude: number;
+    speed: number;
+    points: number;
+  };
+};
+
+const WaveComponent: React.FC<WaveComponentProps> = ({
+  fill,
+  opacity,
+  options,
+}) => (
+  <Wave
+    className="absolute h-[40vh] w-full"
+    fill={fill}
+    paused={false}
+    options={options}
+    style={{ opacity: opacity }}
+  />
+);
+
 export default function HomePage() {
   return (
     <>
@@ -17,77 +63,30 @@ export default function HomePage() {
         </div>
 
         {/* Waves Animation */}
-
         <div className="absolute hidden h-[40vh] w-full dark:block">
-          <Wave
-            className="absolute h-[40vh] w-full"
-            fill="#395B64"
-            paused={false}
-            options={{
-              height: 1,
-              amplitude: 150,
-              speed: 0.05,
-              points: 3,
-            }}
-          />
-          <Wave
-            className="absolute h-[40vh] w-full opacity-50"
-            fill="#A5C9CA"
-            paused={false}
-            options={{
-              height: 50,
-              amplitude: 130,
-              speed: 0.15,
-              points: 3,
-            }}
-          />
-          <Wave
-            className="absolute h-[40vh] w-full opacity-50"
-            fill="#E7F6F2"
-            paused={false}
-            options={{
-              height: 70,
-              amplitude: 120,
-              speed: 0.1,
-              points: 3,
-            }}
-          />
+          {waveOptions.map((option, index) => (
+            <WaveComponent
+              key={index}
+              fill={
+                index === 0 ? "#395B64" : index === 1 ? "#A5C9CA" : "#E7F6F2"
+              }
+              opacity={index === 0 ? 1 : 0.5}
+              options={option}
+            />
+          ))}
         </div>
 
         <div className="absolute h-[40vh] w-full dark:hidden">
-          <Wave
-            className="absolute h-[40vh] w-full"
-            fill="#2C3333"
-            paused={false}
-            options={{
-              height: 1,
-              amplitude: 150,
-              speed: 0.05,
-              points: 3,
-            }}
-          />
-          <Wave
-            className="absolute h-[40vh] w-full opacity-50"
-            fill="#A5C9CA"
-            paused={false}
-            options={{
-              height: 50,
-              amplitude: 130,
-              speed: 0.15,
-              points: 3,
-            }}
-          />
-          <Wave
-            className="absolute h-[40vh] w-full opacity-50"
-            fill="#E7F6F2"
-            paused={false}
-            options={{
-              height: 70,
-              amplitude: 120,
-              speed: 0.1,
-              points: 3,
-            }}
-          />
+          {waveOptions.map((option, index) => (
+            <WaveComponent
+              key={index}
+              fill={
+                index === 0 ? "#2C3333" : index === 1 ? "#A5C9CA" : "#E7F6F2"
+              }
+              opacity={index === 0 ? 1 : 0.5}
+              options={option}
+            />
+          ))}
         </div>
       </div>
       <NextButton url="#AboutMe" />

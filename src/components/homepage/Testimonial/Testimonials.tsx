@@ -4,8 +4,8 @@ import TitleContainer from "../../common/TitleContainer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { TESTIMONIAL_DETAILS } from "./TestimonialDetails";
-import type { CSSProperties, ReactNode } from "react";
 import type { StaticImageData } from "next/image";
+import type { CSSProperties, ReactNode } from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";

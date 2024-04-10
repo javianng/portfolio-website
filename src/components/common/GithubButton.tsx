@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
 import Github from "/public/logos/Github.svg";
@@ -7,9 +8,9 @@ type ButtonProp = {
   href?: string;
 };
 
-export default function GithubButton({ href }: ButtonProp) {
+const GithubButton: React.FC<ButtonProp> = ({ href = "/" }) => {
   return (
-    <Link href={href ?? "/"} className="flex items-center gap-2">
+    <Link href={href} className="flex items-center gap-2">
       <Button>
         <Image
           src={Github as string}
@@ -20,4 +21,10 @@ export default function GithubButton({ href }: ButtonProp) {
       </Button>
     </Link>
   );
-}
+};
+
+GithubButton.propTypes = {
+  href: PropTypes.string,
+};
+
+export default GithubButton;
