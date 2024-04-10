@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 type Position = {
   x: number;
@@ -9,7 +9,6 @@ const Dot = React.memo(({ position }: { position: Position }) => (
   <div
     style={{
       position: "absolute",
-      transition: "top 0.025s, left 0.025s",
       zIndex: 9999,
       pointerEvents: "none",
       top: `calc(${position.y}px - 5px)`,
@@ -33,33 +32,49 @@ const OuterCircle = React.memo(({ position }: { position: Position }) => (
       width: "50px",
       height: "50px",
       borderRadius: "50%",
-      transition: "top 0.05s, left 0.05s",
     }}
     className="border-2 border-brand-200 dark:border-brand-100"
   />
 ));
 
 const PointerFollower = () => {
-  const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
+  const [dotPosition, setDotPosition] = useState<Position>({ x: 0, y: 0 });
+  const [circlePosition, setCirclePosition] = useState<Position>({
+    x: 0,
+    y: 0,
+  });
+  const targetPosition = useRef<Position>({ x: 0, y: 0 });
 
-  const handleMouseMove = useCallback(
-    (event: { pageX: number; pageY: number }) => {
-      setPosition({ x: event.pageX, y: event.pageY });
-    },
-    []
-  );
+  const handleMouseMove = (event: { pageX: number; pageY: number }) => {
+    targetPosition.current = { x: event.pageX, y: event.pageY };
+  };
+
+  useEffect(() => {
+    const handleFrame = () => {
+      setDotPosition((prev) => ({
+        x: prev.x + (targetPosition.current.x - prev.x) * 0.9,
+        y: prev.y + (targetPosition.current.y - prev.y) * 0.9,
+      }));
+      setCirclePosition((prev) => ({
+        x: prev.x + (targetPosition.current.x - prev.x) * 0.15,
+        y: prev.y + (targetPosition.current.y - prev.y) * 0.15,
+      }));
+      requestAnimationFrame(handleFrame);
+    };
+    handleFrame();
+  }, []);
 
   useEffect(() => {
     document.addEventListener("mousemove", handleMouseMove);
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [handleMouseMove]);
+  }, []);
 
   return (
     <div>
-      <OuterCircle position={position} />
-      <Dot position={position} />
+      <OuterCircle position={circlePosition} />
+      <Dot position={dotPosition} />
     </div>
   );
 };

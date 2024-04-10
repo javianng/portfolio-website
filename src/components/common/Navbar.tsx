@@ -77,7 +77,7 @@ export default function Navbar() {
                   <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-4">
                       <NavigationMenuLink asChild>
-                        <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md">
+                        <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none duration-200 hover:bg-brand-50 focus:shadow-md dark:hover:bg-brand-300">
                           <span className="mb-2 mt-4 text-lg font-medium">
                             My Expertise
                           </span>
@@ -130,10 +130,10 @@ export default function Navbar() {
                   Professional Experiences
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
-                        <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md">
+                        <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none duration-200 hover:bg-brand-50 focus:shadow-md dark:hover:bg-brand-300">
                           <span className="mb-2 mt-4 text-lg font-medium">
                             Where have I worked / interned
                           </span>
@@ -198,7 +198,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
+            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors duration-200 hover:bg-brand-50 focus:shadow-md dark:hover:bg-brand-300",
             className
           )}
           {...props}
