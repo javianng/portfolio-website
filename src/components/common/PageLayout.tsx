@@ -69,7 +69,6 @@ export default function PageLayout(props: PageLayoutProps) {
                 name="viewport"
               />
               <meta content={description} name="description" />
-              <link rel="icon" href="/icon.webp" />
             </Head>
             <Navbar />
             <main>{children}</main>
