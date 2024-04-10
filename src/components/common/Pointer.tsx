@@ -52,12 +52,12 @@ const PointerFollower = () => {
   useEffect(() => {
     const handleFrame = () => {
       setDotPosition((prev) => ({
-        x: prev.x + (targetPosition.current.x - prev.x) * 0.1, // 10% interpolation speed for dot
-        y: prev.y + (targetPosition.current.y - prev.y) * 0.1,
+        x: prev.x + (targetPosition.current.x - prev.x) * 0.9,
+        y: prev.y + (targetPosition.current.y - prev.y) * 0.9,
       }));
       setCirclePosition((prev) => ({
-        x: prev.x + (targetPosition.current.x - prev.x) * 0.05, // 5% interpolation speed for circle
-        y: prev.y + (targetPosition.current.y - prev.y) * 0.05,
+        x: prev.x + (targetPosition.current.x - prev.x) * 0.15,
+        y: prev.y + (targetPosition.current.y - prev.y) * 0.15,
       }));
       requestAnimationFrame(handleFrame);
     };
