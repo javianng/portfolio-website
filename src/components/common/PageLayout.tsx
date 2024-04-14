@@ -16,7 +16,7 @@ export default function PageLayout(props: PageLayoutProps) {
     children,
     title = "Javian Ng",
     description = "Part-Time Developer, Part-Time Business Analyst, Full-Time Curious Adventurer",
-    className = "text-brand-300 bg-neutral-50 dark:text-neutral-50 dark:bg-brand-300",
+    className = "text-brand-300 bg-neutral-50 dark:text-neutral-50 dark:bg-brand-300 sm:cursor-none cursor-default",
   } = props;
 
   const [isLoading, setIsLoading] = useState(true);
