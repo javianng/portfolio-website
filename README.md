@@ -66,8 +66,8 @@ This section list the major frameworks/libraries used to bootstrap this project.
 
 - [x] Add README.md
 - [x] Implement Mobile Responsiveness
-- [ ] Implement Dark Mode
-- [ ] Explore Framer Motion
+- [x] Implement Dark Mode
+- [x] Explore Framer Motion
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
