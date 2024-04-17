@@ -9,7 +9,7 @@ import { FileText } from "lucide-react";
 
 export default function SocialMedia() {
   return (
-    <div className="flex gap-2">
+    <div className="flex flex-wrap items-center justify-center gap-2">
       {socialMediaProfiles.map((profile, index) => (
         <TooltipProvider key={index}>
           <Tooltip delayDuration={150}>
