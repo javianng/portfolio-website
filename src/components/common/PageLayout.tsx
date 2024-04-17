@@ -24,7 +24,7 @@ export default function PageLayout(props: PageLayoutProps) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const totalDuration = 0;
+    const totalDuration = 1;
     const intervalTime = 50;
     const totalSteps = (totalDuration * 1000) / intervalTime;
     let steps = 0;
