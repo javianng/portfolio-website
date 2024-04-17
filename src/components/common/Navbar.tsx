@@ -40,20 +40,33 @@ function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button
+          variant="outline"
+          size="icon"
+          className="dark:hover:brand-300 border-0 hover:bg-brand-100 dark:bg-brand-200"
+        >
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+      <DropdownMenuContent align="end" className="dark:bg-brand-200">
+        <DropdownMenuItem
+          onClick={() => setTheme("light")}
+          className="focus:bg-brand-50 dark:focus:bg-brand-300"
+        >
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem
+          onClick={() => setTheme("dark")}
+          className="focus:bg-brand-50 dark:focus:bg-brand-300"
+        >
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem
+          onClick={() => setTheme("system")}
+          className="focus:bg-brand-50 dark:focus:bg-brand-300"
+        >
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
@@ -75,9 +88,10 @@ export default function Navbar() {
         <DrawerContent>
           <DrawerHeader>
             <DrawerTitle>About Javian Ng</DrawerTitle>
-            <DrawerDescription className="flex flex-col gap-2 pt-6">
+            <DrawerDescription className="flex flex-col items-center gap-2 pt-6">
               <a href={"/work"}>My Works</a>
               <a href={"/blog"}>Blog</a>
+              <ModeToggle />
             </DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>
@@ -106,14 +120,14 @@ export default function Navbar() {
                   <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-4">
                       <NavigationMenuLink asChild>
-                        <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none duration-200 hover:bg-brand-50 focus:shadow-md dark:hover:bg-brand-300">
+                        <span className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none duration-200 hover:bg-brand-50 focus:shadow-md dark:hover:bg-brand-300">
                           <span className="mb-2 mt-4 text-lg font-medium">
                             My Expertise
                           </span>
                           <span className="text-muted-foreground text-sm leading-tight">
                             What I am good at!
                           </span>
-                        </p>
+                        </span>
                       </NavigationMenuLink>
                     </li>
                     <ListItem href="#Expertise" title="Frontend Development">
@@ -142,9 +156,9 @@ export default function Navbar() {
                         href="#Work"
                         title={componentDetails.title}
                       >
-                        <p className="line-clamp-2">
+                        <span className="line-clamp-2">
                           {componentDetails.description}
-                        </p>
+                        </span>
                       </ListItem>
                     ))}
                     <ListItem key={6} href="/work" title="More Projects">
@@ -162,7 +176,7 @@ export default function Navbar() {
                   <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
-                        <p className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none duration-200 hover:bg-brand-50 focus:shadow-md dark:hover:bg-brand-300">
+                        <span className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none duration-200 hover:bg-brand-50 focus:shadow-md dark:hover:bg-brand-300">
                           <span className="mb-2 mt-4 text-lg font-medium">
                             Where have I worked / interned
                           </span>
@@ -170,7 +184,7 @@ export default function Navbar() {
                             My journey of growth and learnings beyond the
                             university
                           </span>
-                        </p>
+                        </span>
                       </NavigationMenuLink>
                     </li>
                     <ListItem href="#Experience" title="Computing Club">

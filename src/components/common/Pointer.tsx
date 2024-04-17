@@ -72,7 +72,7 @@ const PointerFollower = () => {
   }, []);
 
   return (
-    <div>
+    <div className="hidden sm:block">
       <OuterCircle position={circlePosition} />
       <Dot position={dotPosition} />
     </div>
