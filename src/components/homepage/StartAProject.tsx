@@ -1,5 +1,7 @@
 import { Flame } from "lucide-react";
 import PageContainer from "../common/PageContainer";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const EMAIL = "javian.ng.z.h@gmail.com";
 
@@ -25,19 +27,33 @@ const ProjectAction = () => (
 );
 
 export default function StartAProject() {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+  });
   return (
     <PageContainer>
-      <div className="h-28 sm:h-14">
-        <div className="rounded-md bg-brand-100 py-8 shadow-md sm:py-14 dark:bg-brand-200">
-          <div className="mx-8 sm:mx-0">
-            <div className="grid grid-cols-1 place-items-center gap-4 text-center sm:grid-cols-3 sm:gap-0">
-              <ProjectTitle />
-              <ProjectDescription />
-              <ProjectAction />
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={{
+          hidden: { y: 50 },
+          visible: { y: 0 },
+        }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="h-28 sm:h-14">
+          <div className="rounded-md bg-brand-100 py-8 shadow-md sm:py-14 dark:bg-brand-200">
+            <div className="mx-8 sm:mx-0">
+              <div className="grid grid-cols-1 place-items-center gap-4 text-center sm:grid-cols-3 sm:gap-0">
+                <ProjectTitle />
+                <ProjectDescription />
+                <ProjectAction />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </PageContainer>
   );
 }

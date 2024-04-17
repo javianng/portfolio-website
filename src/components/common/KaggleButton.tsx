@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
-import Kaggle from "/public/logos/Kaggle.svg";
+import Kaggle from "/public/logos/kaggle.svg";
 import { Button } from "../ui/button";
 
 type ButtonProp = {
