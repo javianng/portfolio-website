@@ -23,7 +23,6 @@ import {
 export const EXPERTISE_COMPONENT_DETAILS = [
   {
     name: "Frontend Development",
-    decorationColor: "decoration-brand-100",
     subtitle: "ReactJS, NextJS, HTML, CSS",
     description:
       "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
@@ -38,7 +37,6 @@ export const EXPERTISE_COMPONENT_DETAILS = [
   },
   {
     name: "Backend Development",
-    decorationColor: "decoration-brand-200",
     subtitle: "Prisma, SQL",
     description: "Experienced with working on backend development.",
     icon: <BetweenHorizontalStart className="h-12 w-12 sm:h-16 sm:w-16" />,
@@ -51,7 +49,6 @@ export const EXPERTISE_COMPONENT_DETAILS = [
   },
   {
     name: "Data Analytics",
-    decorationColor: "decoration-brand-300",
     subtitle: "Python, R",
     description:
       "Analytical and detailed oriented, with knowledge and practical experience in data analytics.",
@@ -65,7 +62,6 @@ export const EXPERTISE_COMPONENT_DETAILS = [
   },
   {
     name: "Software Development",
-    decorationColor: "decoration-brand-100",
     subtitle: "Java, JavaScript, TypeScript",
     description:
       "Knowledge in both functional and object-oriented programming languages.",
