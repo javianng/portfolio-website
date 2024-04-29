@@ -5,7 +5,7 @@ import SubpageLayout from "~/components/common/SubpageLayout";
 import ProjectCard from "~/components/common/ProjectsCard";
 import { Button } from "~/components/ui/button";
 
-function OtherProjectsGrid({ filterTag }) {
+function OtherProjectsGrid({ filterTag }: { filterTag: string }) {
   return (
     <div className="flex flex-wrap gap-3">
       {PROJECT_DETAILS.filter((project) =>
