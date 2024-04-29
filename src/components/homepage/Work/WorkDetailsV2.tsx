@@ -1,11 +1,35 @@
 export const PROJECT_DETAILS = [
   {
+    title: "Twenify",
+    link: "/work/twenify",
+    thumbnail: "/projectDocuments/twenify.png",
+    description:
+      "In this project, I work with HTML and CSS to clone Gmail. These projects are part of jouney to learning web development.",
+    tags: ["FullStack"],
+  },
+  {
+    title: "VolunteerToken",
+    link: "/work/volunteertoken",
+    thumbnail: "/projectDocuments/volunteertoken.png",
+    description:
+      "In this project, I work with HTML and CSS to clone Gmail. These projects are part of jouney to learning web development.",
+    tags: ["Blockchain", "Backend"],
+  },
+  {
+    title: "Housing Pricing Prediction",
+    link: "/work/housing-pricing-prediction",
+    thumbnail: "/projectDocuments/housing-pricing-prediction.png",
+    description:
+      "In this project, I work with HTML and CSS to clone Gmail. These projects are part of jouney to learning web development.",
+    tags: ["DataAnalysis"],
+  },
+  {
     title: "Monarch - Drone Rental Platform",
     link: "/work/monarch-hackathon-mvp",
     thumbnail: "/projectDocuments/ueh-biztech-hackathon-mvp.jpeg",
     description:
       "Monarch is a startup project submission for UEH (University of Economics HCMC) Biztech Hackathon 2022. This is a 28 hours hackathon in which we seek out solutions for the betterment of the agricultural scene in Mekong Delta. This project was a fork from the AirBnb Clone Project due to the time constraints and the need to do market research and business plans. The codes are not clean but the application is functional.",
-    tags: ["Full-Stack"],
+    tags: ["FullStack"],
   },
   {
     title: "Photography Portfolio Website",
@@ -13,7 +37,7 @@ export const PROJECT_DETAILS = [
     thumbnail: "/projectDocuments/photography-portfolio-website.jpeg",
     description:
       "This project serves as a showcase of my passion for photography, providing a platform for me to exhibit my work, share my experiences, and connect with fellow photography enthusiasts. Whether you're an avid photographer, a potential client, or simply someone interested in visual storytelling, this website offers a glimpse into my creative journey through the lens.",
-    tags: ["Front-end"],
+    tags: ["Frontend"],
   },
   {
     title: "Crop Recommendation Data Analytics",
@@ -21,7 +45,7 @@ export const PROJECT_DETAILS = [
     thumbnail: "/projectDocuments/DataAnalysisCropRecommendation/heatmap.png",
     description:
       "This dataset contains information on the levels of nitrogen, phosphorus, and potassium in soil, as well as temperature, humidity, pH, and rainfall, and their impact on the growth of crops. The data can be used to make data-driven recommendations for achieving optimal nutrient and environmental conditions to improve crop yield.",
-    tags: ["Data Analysis"],
+    tags: ["DataAnalysis"],
   },
   {
     title: "HTML 5 Website",
@@ -29,7 +53,7 @@ export const PROJECT_DETAILS = [
     thumbnail: "/projectDocuments/HTML5-portfolio-website.png",
     description:
       "In this project, I experiment with HTML5 to build a portfolio page that is solely powered by HTML. I then host it on Github Pages. This is my very first step into web development and I hope to impart CSS and Javascript components into future web projects.",
-    tags: ["Front-end"],
+    tags: ["Frontend"],
   },
   {
     title: "Twitter Clone Website",
@@ -37,7 +61,7 @@ export const PROJECT_DETAILS = [
     thumbnail: "/projectDocuments/twitter-clone-website.png",
     description:
       "In this project, I work with HTML and CSS to clone Twitter. These projects are part of jouney to learning web development.",
-    tags: ["Front-end"],
+    tags: ["Frontend"],
   },
   {
     title: "Netflix Clone Website",
@@ -45,7 +69,7 @@ export const PROJECT_DETAILS = [
     thumbnail: "/projectDocuments/netflix-clone-website.png",
     description:
       "In this project, I work with HTML and CSS to clone Netflix. These projects are part of jouney to learning web development.",
-    tags: ["Front-end"],
+    tags: ["Frontend"],
   },
   {
     title: "Google Clone Website",
@@ -53,7 +77,7 @@ export const PROJECT_DETAILS = [
     thumbnail: "/projectDocuments/google-clone-website.png",
     description:
       "In this project, I work with HTML and CSS to clone Google. These projects are part of jouney to learning web development.",
-    tags: ["Front-end"],
+    tags: ["Frontend"],
   },
   {
     title: "Gmail Clone Website",
@@ -61,6 +85,6 @@ export const PROJECT_DETAILS = [
     thumbnail: "/projectDocuments/gmail-clone-website.png",
     description:
       "In this project, I work with HTML and CSS to clone Gmail. These projects are part of jouney to learning web development.",
-    tags: ["Front-end"],
+    tags: ["Frontend"],
   },
 ];

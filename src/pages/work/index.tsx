@@ -1,9 +1,9 @@
+import { Button } from "~/components/ui/button";
 import { SetStateAction, useState } from "react";
+import ProjectCard from "~/components/common/ProjectsCard";
+import SubpageLayout from "~/components/common/SubpageLayout";
 import TitleContainer from "~/components/common/TitleContainer";
 import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetailsV2";
-import SubpageLayout from "~/components/common/SubpageLayout";
-import ProjectCard from "~/components/common/ProjectsCard";
-import { Button } from "~/components/ui/button";
 
 function OtherProjectsGrid({ filterTag }: { filterTag: string }) {
   return (
@@ -31,21 +31,21 @@ export default function work() {
       <TitleContainer id="MyWork">My Work</TitleContainer>
       <div className="flex gap-2 pb-3">
         <Button
-          variant={"ghost"}
+          variant={"brand"}
           className={
             activeButton === "all"
-              ? "bg-brand-200 text-white hover:bg-brand-100"
-              : "bg-brand-50 hover:bg-brand-100"
+              ? "border-brand-200 bg-brand-100 hover:bg-brand-50 dark:border-2 dark:bg-brand-300"
+              : ""
           }
           onClick={() => handleButtonClick("all")}
         >
           All
         </Button>
         <Button
-          variant={"ghost"}
+          variant={"brand"}
           className={
             activeButton === "Front-end"
-              ? "bg-brand-200 text-white hover:bg-brand-100"
+              ? "border-brand-200 bg-brand-100 hover:bg-brand-50 dark:border-2 dark:bg-brand-300"
               : "bg-brand-50 hover:bg-brand-100"
           }
           onClick={() => handleButtonClick("Front-end")}
@@ -53,10 +53,10 @@ export default function work() {
           Front-end
         </Button>
         <Button
-          variant={"ghost"}
+          variant={"brand"}
           className={
             activeButton === "Data Analysis"
-              ? "bg-brand-200 text-white hover:bg-brand-100"
+              ? "border-brand-200 bg-brand-100 hover:bg-brand-50 dark:border-2 dark:bg-brand-300"
               : "bg-brand-50 hover:bg-brand-100"
           }
           onClick={() => handleButtonClick("Data Analysis")}
@@ -64,10 +64,10 @@ export default function work() {
           Data Analysis
         </Button>
         <Button
-          variant={"ghost"}
+          variant={"brand"}
           className={
             activeButton === "Full-Stack"
-              ? "bg-brand-200 text-white hover:bg-brand-100"
+              ? "border-brand-200 bg-brand-100 hover:bg-brand-50 dark:border-2 dark:bg-brand-300"
               : "bg-brand-50 hover:bg-brand-100"
           }
           onClick={() => handleButtonClick("Full-Stack")}
