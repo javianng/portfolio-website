@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import TitleContainer from "~/components/common/TitleContainer";
 import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetailsV2";
 import SubpageLayout from "~/components/common/SubpageLayout";
@@ -21,7 +21,7 @@ export default function work() {
   const [filterTag, setFilterTag] = useState("all");
   const [activeButton, setActiveButton] = useState("all");
 
-  const handleButtonClick = (tag) => {
+  const handleButtonClick = (tag: SetStateAction<string>) => {
     setFilterTag(tag);
     setActiveButton(tag);
   };
