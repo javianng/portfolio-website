@@ -18,6 +18,7 @@ type ProjectCardProp = {
   thumbnail: string | StaticImageData;
   link?: string;
   description?: string;
+  tags: string[];
 };
 
 export default function ProjectCard({
@@ -25,6 +26,7 @@ export default function ProjectCard({
   thumbnail,
   link,
   description,
+  tags,
 }: ProjectCardProp) {
   return (
     <Link href={link ?? ""} className="group">
