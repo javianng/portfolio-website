@@ -11,7 +11,7 @@ type ButtonProp = {
 const GithubButton: React.FC<ButtonProp> = ({ href = "/" }) => {
   return (
     <Link href={href} className="flex items-center gap-2">
-      <Button>
+      <Button variant={"ghost"} className="hover:bg-neutral-300">
         <Image
           src={Github as string}
           alt={"Github"}

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import type { StaticImageData } from "next/image";
 
 import {
@@ -18,6 +17,7 @@ type ProjectCardProp = {
   thumbnail: string | StaticImageData;
   link?: string;
   description?: string;
+  tags: string[];
 };
 
 export default function ProjectCard({
@@ -25,12 +25,13 @@ export default function ProjectCard({
   thumbnail,
   link,
   description,
+  tags,
 }: ProjectCardProp) {
   return (
     <Link href={link ?? ""} className="group">
-      <Card className="w-[350px] duration-200 group-hover:bg-brand-50 dark:border-2 dark:border-brand-50 dark:bg-transparent dark:group-hover:bg-brand-200">
+      <Card className="w-80 duration-200 group-hover:bg-brand-50 dark:border-2 dark:border-brand-50 dark:bg-transparent dark:group-hover:bg-brand-200">
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className="line-clamp-1">{title}</CardTitle>
           <CardDescription className="line-clamp-3">
             {description}
           </CardDescription>

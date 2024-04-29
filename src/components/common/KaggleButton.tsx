@@ -11,7 +11,7 @@ type ButtonProp = {
 const KaggleButton: React.FC<ButtonProp> = ({ href = "/" }) => {
   return (
     <Link href={href} className="flex items-center gap-2">
-      <Button>
+      <Button variant={"ghost"} className="bg-neutral-200">
         <div className="mr-2 flex h-7 w-7 items-center justify-center rounded-md bg-white">
           <Image src={Kaggle as string} alt={"Kaggle"} className="h-6 w-6" />
         </div>

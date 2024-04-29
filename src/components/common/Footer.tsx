@@ -10,7 +10,7 @@ export default function Footer() {
         killing it one tick at a time
       </p>
       <SocialMedia />
-      <p className="font-thin">Handcrafted by me &#169; twentytwentythree</p>
+      <p className="font-thin">Handcrafted by me &#169; twentytwentyfour</p>
     </footer>
   );
 }

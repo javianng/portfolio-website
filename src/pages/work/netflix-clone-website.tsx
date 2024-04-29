@@ -36,7 +36,10 @@ export default function netflixCloneWebsite() {
       </Alert>
       <div className=" bg-base-300 mt-9 border shadow">
         <div className="bg-base-100 flex justify-center">
-          <Image src={netflixCloneWebsiteImage} alt={"Netflix Clone Website"} />
+          <iframe
+            src="https://netflix-clone-silk-eight.vercel.app/"
+            className="h-[90vh] w-full bg-white"
+          />
         </div>
       </div>
     </SubpageLayout>
