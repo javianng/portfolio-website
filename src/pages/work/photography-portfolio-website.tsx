@@ -41,7 +41,7 @@ export default function photographyPortfolioWebsite() {
         </AlertDescription>
       </Alert>
 
-      <div className=" bg-base-300 mt-9 border shadow">
+      <div className="bg-base-300 mt-9 border shadow">
         <div className="bg-base-100 flex justify-center">
           <iframe
             src="https://photography-website-v2.vercel.app/"
