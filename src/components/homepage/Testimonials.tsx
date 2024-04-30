@@ -2,10 +2,10 @@ import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { CSSProperties, ReactNode } from "react";
-import PageContainer from "../../common/PageContainer";
+import PageContainer from "../common/PageContainer";
 import { Navigation, Pagination } from "swiper/modules";
-import TitleContainer from "../../common/TitleContainer";
-import { TESTIMONIAL_DETAILS } from "./TestimonialDetails";
+import TitleContainer from "../common/TitleContainer";
+import { TESTIMONIAL_DETAILS } from "../../data/TestimonialDetails";
 
 import "swiper/css";
 import "swiper/css/navigation";

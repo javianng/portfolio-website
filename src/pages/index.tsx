@@ -1,12 +1,12 @@
 import { type NextPage } from "next";
 import AboutMe from "~/components/homepage/AboutMe";
 import HomePage from "~/components/homepage/HomePage";
-import WorkV2 from "~/components/homepage/Work/WorkV2";
+import Work from "~/components/homepage/Work";
 import PageLayout from "~/components/common/PageLayout";
 import StartAProject from "~/components/homepage/StartAProject";
-import Expertise from "~/components/homepage/Expertise/Expertise";
-import Experience from "~/components/homepage/Experience/Experience";
-import Testimonials from "~/components/homepage/Testimonial/Testimonials";
+import Expertise from "~/components/homepage/Expertise";
+import Experience from "~/components/homepage/Experience";
+import Testimonials from "~/components/homepage/Testimonials";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <HomePage />
       <AboutMe />
       <Expertise />
-      <WorkV2 />
+      <Work />
       <Experience />
       <Testimonials />
       <StartAProject />

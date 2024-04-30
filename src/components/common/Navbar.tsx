@@ -4,7 +4,7 @@ import Link from "next/link";
 import * as React from "react";
 import { cn } from "~/lib/utils";
 import { Menu } from "lucide-react";
-import { PROJECT_DETAILS } from "../homepage/Work/WorkDetailsV2";
+import { PROJECT_DETAILS } from "../../data/WorkDetails";
 
 import {
   NavigationMenu,

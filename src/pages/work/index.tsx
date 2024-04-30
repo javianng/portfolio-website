@@ -3,7 +3,7 @@ import { SetStateAction, useState, useEffect } from "react";
 import ProjectCard from "~/components/common/ProjectsCard";
 import SubpageLayout from "~/components/common/SubpageLayout";
 import TitleContainer from "~/components/common/TitleContainer";
-import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetailsV2";
+import { PROJECT_DETAILS } from "~/data/WorkDetails";
 
 function OtherProjectsGrid({ filterTag }: { filterTag: string }) {
   return (

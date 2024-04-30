@@ -5,7 +5,7 @@ import { Badge } from "~/components/ui/badge";
 import SubpageLayout from "~/components/common/SubpageLayout";
 import TitleContainer from "~/components/common/TitleContainer";
 import { Alert, AlertDescription } from "~/components/ui/alert";
-import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetailsV2";
+import { PROJECT_DETAILS } from "~/data/WorkDetails";
 import ProjectSocialButton from "~/components/common/ProjectSocialButton";
 
 export default function ProjectPage() {

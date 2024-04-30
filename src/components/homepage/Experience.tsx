@@ -2,14 +2,14 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "~/components/ui/badge";
-import NextButton from "../../common/NextButton";
+import NextButton from "../common/NextButton";
 import { useInView } from "react-intersection-observer";
 import PageContainer from "~/components/common/PageContainer";
 import TitleContainer from "~/components/common/TitleContainer";
 import {
   EXPERIENCE_DETAILS,
   EXPERIENCE_DETAILS_TYPE,
-} from "./ExperienceDetails";
+} from "../../data/ExperienceDetails";
 
 function Card({
   title,

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import NextButton from "../../common/NextButton";
+import NextButton from "../common/NextButton";
 import { useInView } from "react-intersection-observer";
 import PageContainer from "~/components/common/PageContainer";
 import TitleContainer from "~/components/common/TitleContainer";
@@ -10,7 +10,7 @@ import {
   EXPERTISE_COMPONENT_DETAILS_TYPE,
   TECH_STACK_DETAILS,
   TECH_STACK_DETAILS_TYPE,
-} from "./ExpertiseDetails";
+} from "../../data/ExpertiseDetails";
 import {
   Tooltip,
   TooltipContent,
