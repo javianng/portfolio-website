@@ -8,7 +8,7 @@ import { Alert, AlertDescription } from "~/components/ui/alert";
 import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetailsV2";
 import ProjectSocialButton from "~/components/common/ProjectSocialButton";
 
-const ProjectPage = () => {
+export default function ProjectPage() {
   const router = useRouter();
   const { id } = router.query;
 
@@ -69,6 +69,4 @@ const ProjectPage = () => {
       {project.children}
     </SubpageLayout>
   );
-};
-
-export default ProjectPage;
+}

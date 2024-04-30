@@ -153,6 +153,7 @@ export type PROJECT_DETAILS_TYPE = {
   children: ReactNode;
   projectSocialLink: String;
 };
+
 export function getUniqueTags() {
   const allTags = PROJECT_DETAILS.flatMap((project) => project.tags);
   const uniqueTags = [...new Set(allTags)];

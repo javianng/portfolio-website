@@ -18,6 +18,22 @@ import {
   TooltipTrigger,
 } from "~/components/ui/tooltip";
 
+export default function Expertise() {
+  return (
+    <PageContainer>
+      <div className="flex justify-center">
+        <TitleContainer id="Expertise">My Expertise</TitleContainer>
+      </div>
+      <div className="grid grid-cols-1 gap-4">
+        {EXPERTISE_COMPONENT_DETAILS.map((componentDetails, i) => (
+          <ExpertiseComponent key={i} {...componentDetails} />
+        ))}
+      </div>
+      <NextButton url="#Work" />
+    </PageContainer>
+  );
+}
+
 function TechStackIcon({
   name,
   logo,
@@ -119,21 +135,5 @@ function ExpertiseComponent({
         </div>
       </div>
     </motion.div>
-  );
-}
-
-export default function Expertise() {
-  return (
-    <PageContainer>
-      <div className="flex justify-center">
-        <TitleContainer id="Expertise">My Expertise</TitleContainer>
-      </div>
-      <div className="grid grid-cols-1 gap-4">
-        {EXPERTISE_COMPONENT_DETAILS.map((componentDetails, i) => (
-          <ExpertiseComponent key={i} {...componentDetails} />
-        ))}
-      </div>
-      <NextButton url="#Work" />
-    </PageContainer>
   );
 }

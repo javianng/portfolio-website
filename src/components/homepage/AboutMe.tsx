@@ -1,9 +1,9 @@
 import Image from "next/image";
 import NextButton from "../common/NextButton";
+import SocialMedia from "../common/SocialMedia";
 import PageContainer from "../common/PageContainer";
 import profilePhoto from "/public/profilephoto.jpg";
 import TitleContainer from "../common/TitleContainer";
-import SocialMedia from "../common/SocialMedia";
 
 export default function AboutMe() {
   return (

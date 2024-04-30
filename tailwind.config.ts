@@ -36,6 +36,12 @@ const config = {
           50: "#ADABD5",
           100: "#2A378A",
         },
+        AStar: {
+          50: "#102F82",
+        },
+        Parametriks: {
+          50: "#201E28",
+        },
       },
       keyframes: {
         "accordion-down": {

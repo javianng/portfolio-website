@@ -1,5 +1,5 @@
-import zenacademy from "/public/testimony/zenacademy.png";
 import darrylhan from "/public/testimony/darrylhan.jpeg";
+import zenacademy from "/public/testimony/zenacademy.png";
 
 export const TESTIMONIAL_DETAILS = [
   {

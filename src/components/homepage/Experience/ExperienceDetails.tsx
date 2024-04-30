@@ -1,15 +1,60 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import { ReactNode } from "react";
+
+import Placeholder from "/public/experience/Placeholder.webp";
 import LFG from "/public/experience/LFG.svg";
 import LFGPhoto from "/public/experience/LFGPhoto.jpeg";
 import ABYA from "/public/experience/ABYA.png";
 import ABYAPhoto from "/public/experience/ABYAPhoto.jpg";
 import CompClub from "/public/experience/CompClub.png";
 import CompClubPhoto from "/public/experience/CompClubPhoto.jpg";
+import Parametriks from "/public/experience/Parametriks.png";
+import AstarSIgN from "/public/experience/AstarSIgN.png";
+
+export type EXPERIENCE_DETAILS_TYPE = {
+  title: string;
+  companyOrganization: string;
+  duration: string;
+  className: string;
+  location: string;
+  detail: ReactNode;
+  tags: string[];
+  logo: ReactNode;
+  image: string | StaticImageData;
+};
 
 export const EXPERIENCE_DETAILS = [
   {
+    title: "Machine Learning / Data Scientist / Software Engineer Intern",
+    companyOrganization: "Parametriks",
+    duration: "August 2024 - January 2025", // duration format to be e.g. January 2023 - Present
+    className: "bg-Parametriks-50 text-white",
+    location: "Singapore",
+    detail: <></>,
+    tags: ["Data Science", "Data Analytics", "Machine Learning"],
+    logo: <Image src={Parametriks} alt={"Parametriks"} className="w-1/6" />,
+    image: Placeholder,
+  },
+  {
+    title: "BioInformatics Data Scientist Intern",
+    companyOrganization: "A*Star",
+    duration: "May 2024 - August 2024", // duration format to be e.g. January 2023 - Present
+    className: "bg-white text-black border-AStar-50 border-4",
+    location: "Singapore",
+    detail: <></>,
+    tags: [
+      "Data Science",
+      "Bioinformatics",
+      "Data Analytics",
+      "Machine Learning",
+      "Research",
+    ],
+    logo: <Image src={AstarSIgN} alt={"Astar SIgN"} className="w-1/2" />,
+    image: Placeholder,
+  },
+  {
     title: "President",
-    company_organisation: "NUS SoC Computing Club",
+    companyOrganization: "NUS SoC Computing Club",
     duration: "September 2023 - Present", // duration format to be e.g. January 2023 - Present
     className: "bg-ComputingClub-100 text-white",
     location: "Singapore",
@@ -53,16 +98,12 @@ export const EXPERIENCE_DETAILS = [
       </>
     ),
     tags: ["Management", "Leadership", "Project Management"],
-    logo: (
-      <>
-        <Image src={CompClub} alt={"SoC Computing Club"} />
-      </>
-    ),
+    logo: <Image src={CompClub} alt={"SoC Computing Club"} className="w-1/5" />,
     image: CompClubPhoto,
   },
   {
     title: "Software Developer Intern",
-    company_organisation: "LFG",
+    companyOrganization: "LFG",
     duration: "May 2023 - August 2023", // duration format to be e.g. January 2023 - Present
     className: "bg-LFG-50 text-white",
     location: "Vietnam, Ho Chi Minh City",
@@ -103,16 +144,12 @@ export const EXPERIENCE_DETAILS = [
       "Software Development",
       "Product Development",
     ],
-    logo: (
-      <>
-        <Image src={LFG as string} alt={"LFG"} />
-      </>
-    ),
+    logo: <Image src={LFG as string} alt={"LFG"} className="w-1/5" />,
     image: LFGPhoto,
   },
   {
     title: "Web Developer Lead",
-    company_organisation: "ASEAN Business Youth Association",
+    companyOrganization: "ASEAN Business Youth Association",
     duration: "June 2023 - Present", // duration format to be e.g. January 2023 - Present
     className: "bg-ABYA-50 text-brand-300",
     location: "Singapore",
@@ -143,9 +180,11 @@ export const EXPERIENCE_DETAILS = [
     ),
     tags: ["TypeScript", "Front-End Development", "React.js"],
     logo: (
-      <>
-        <Image src={ABYA} alt={"ASEAN Business Youth Association"} />
-      </>
+      <Image
+        src={ABYA}
+        alt="ASEAN Business Youth Association"
+        className="w-1/5"
+      />
     ),
     image: ABYAPhoto,
   },

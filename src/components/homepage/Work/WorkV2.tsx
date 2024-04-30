@@ -1,12 +1,11 @@
 "use client";
 
 import React from "react";
-import { HeroParallax } from "~/components/ui/hero-parallax";
-import { PROJECT_DETAILS } from "./WorkDetailsV2";
-
-import NextButton from "~/components/common/NextButton";
 import Link from "next/link";
 import { ChevronsDown } from "lucide-react";
+import { PROJECT_DETAILS } from "./WorkDetailsV2";
+import NextButton from "~/components/common/NextButton";
+import { HeroParallax } from "~/components/ui/hero-parallax";
 
 function ShowAllProjectsButton() {
   return (

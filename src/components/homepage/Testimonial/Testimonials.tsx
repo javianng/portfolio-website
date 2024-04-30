@@ -1,15 +1,48 @@
 import Image from "next/image";
-import PageContainer from "../../common/PageContainer";
-import TitleContainer from "../../common/TitleContainer";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import { TESTIMONIAL_DETAILS } from "./TestimonialDetails";
 import type { StaticImageData } from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
 import type { CSSProperties, ReactNode } from "react";
+import PageContainer from "../../common/PageContainer";
+import { Navigation, Pagination } from "swiper/modules";
+import TitleContainer from "../../common/TitleContainer";
+import { TESTIMONIAL_DETAILS } from "./TestimonialDetails";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+export default function Testimonials() {
+  return (
+    <PageContainer>
+      <div className="flex justify-center">
+        <TitleContainer id="Testimonials">Testimonials</TitleContainer>
+      </div>
+      <p className="py-4 text-center">
+        Some nice things people have said about me...
+      </p>
+      <Swiper
+        navigation={true}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        modules={[Navigation, Pagination]}
+        style={
+          {
+            "--swiper-pagination-color": "#395B64",
+            "--swiper-navigation-color": "#395B64",
+          } as CSSProperties
+        }
+      >
+        {TESTIMONIAL_DETAILS.map((cardDetails, i) => (
+          <SwiperSlide key={i}>
+            <CarouselCard {...cardDetails} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className="h-[4vh]" />
+    </PageContainer>
+  );
+}
 
 type CarouselCardProps = {
   image: string | StaticImageData;
@@ -43,38 +76,5 @@ function CarouselCard({
         </div>
       </div>
     </div>
-  );
-}
-
-export default function Testimonials() {
-  return (
-    <PageContainer>
-      <div className="flex justify-center">
-        <TitleContainer id="Testimonials">Testimonials</TitleContainer>
-      </div>
-      <p className="py-4 text-center">
-        Some nice things people have said about me...
-      </p>
-      <Swiper
-        navigation={true}
-        pagination={{
-          dynamicBullets: true,
-        }}
-        modules={[Navigation, Pagination]}
-        style={
-          {
-            "--swiper-pagination-color": "#395B64",
-            "--swiper-navigation-color": "#395B64",
-          } as CSSProperties
-        }
-      >
-        {TESTIMONIAL_DETAILS.map((cardDetails, i) => (
-          <SwiperSlide key={i}>
-            <CarouselCard {...cardDetails} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="h-[4vh]" />
-    </PageContainer>
   );
 }
