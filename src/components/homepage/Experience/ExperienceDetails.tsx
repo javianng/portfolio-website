@@ -25,12 +25,31 @@ export type EXPERIENCE_DETAILS_TYPE = {
 
 export const EXPERIENCE_DETAILS = [
   {
-    title: "Machine Learning / Data Scientist / Software Engineer Intern",
+    title: "Data Scientist Intern",
     companyOrganization: "Parametriks",
-    duration: "August 2024 - January 2025", // duration format to be e.g. January 2023 - Present
+    duration: "August 2024 - January 2025",
     className: "bg-Parametriks-50 text-white",
-    location: "Singapore",
-    detail: <></>,
+    location: "Paris, France",
+    detail: (
+      <>
+        <ul className="ml-3 list-disc">
+          <li>
+            Developing machine learning algorithms for risk analysis and
+            prediction.
+          </li>
+          <li>Enhancing AI-powered analytics for real-time risk management.</li>
+          <li>
+            Integrating diverse data sources to improve predictive capabilities.
+          </li>
+          <li>Automating processes to increase operational efficiency.</li>
+          <li>Refining predictive models for better accuracy.</li>
+          <li>
+            Contributing to innovative solutions in dynamic risk assessment and
+            insurance strategies.
+          </li>
+        </ul>
+      </>
+    ),
     tags: ["Data Science", "Data Analytics", "Machine Learning"],
     logo: <Image src={Parametriks} alt={"Parametriks"} className="w-1/6" />,
     image: Placeholder,
@@ -38,10 +57,44 @@ export const EXPERIENCE_DETAILS = [
   {
     title: "BioInformatics Data Scientist Intern",
     companyOrganization: "A*Star",
-    duration: "May 2024 - August 2024", // duration format to be e.g. January 2023 - Present
+    duration: "May 2024 - August 2024",
     className: "bg-white text-black border-AStar-50 border-4",
     location: "Singapore",
-    detail: <></>,
+    detail: (
+      <>
+        <h3>
+          Real-Time Analysis Pipeline for Nanopore Sequencing and Comparative
+          Data Analysis
+        </h3>
+
+        <ul className="ml-3 list-disc">
+          <li>
+            Project Overview: The primary goal of this upcoming project is to
+            advance analytics capabilities for cancer vaccine research using
+            Nanopore sequencing technology. This project will include developing
+            a real-time analysis pipeline and comparing Singleron versus
+            Nanopore data in TCR repertoire analysis.
+          </li>
+          <li>
+            Objectives:
+            <ul className="ml-3 list-disc">
+              <li>
+                Real-Time Sequencing Analysis: To develop on-the-fly data
+                analytics that will enable real-time monitoring of sequencing
+                quality, establish data-informed sequencing endpoints, and offer
+                a code-free analytics capability.
+              </li>
+              <li>
+                Comparative Data Analysis: To compare the efficacy of Singleron
+                and Nanopore technologies in analyzing TCR repertoires, aiming
+                to identify the most accurate and reliable method for use in
+                immunotherapy applications.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </>
+    ),
     tags: [
       "Data Science",
       "Bioinformatics",
@@ -55,7 +108,7 @@ export const EXPERIENCE_DETAILS = [
   {
     title: "President",
     companyOrganization: "NUS SoC Computing Club",
-    duration: "September 2023 - Present", // duration format to be e.g. January 2023 - Present
+    duration: "September 2023 - Present",
     className: "bg-ComputingClub-100 text-white",
     location: "Singapore",
     detail: (
@@ -69,25 +122,23 @@ export const EXPERIENCE_DETAILS = [
             a course towards new heights of excellence for the Computing Club.
           </li>
           <li>My tenure as President is driven by a three-fold mission:</li>
-        </ul>
-        <ol className="ml-8 list-decimal">
-          <li>
-            Strengthening Internal Bonds: Our committee functions as a
-            closely-knit and cohesive team, fostering collaboration and
-            camaraderie among our members.
-          </li>
-          <li>
-            Establishing Partnerships: We actively seek partnerships and
-            collaborations with other organizations to enrich our club&apos;s
-            offerings and outreach.
-          </li>
-          <li>
-            Building Relationships with Advisors: We recognize the pivotal role
-            played by our esteemed advisors in enabling and empowering us to
-            serve the student population effectively.
-          </li>
-        </ol>
-        <ul className="ml-3 list-disc">
+          <ol className="ml-8 list-decimal">
+            <li>
+              Strengthening Internal Bonds: Our committee functions as a
+              closely-knit and cohesive team, fostering collaboration and
+              camaraderie among our members.
+            </li>
+            <li>
+              Establishing Partnerships: We actively seek partnerships and
+              collaborations with other organizations to enrich our club&apos;s
+              offerings and outreach.
+            </li>
+            <li>
+              Building Relationships with Advisors: We recognize the pivotal
+              role played by our esteemed advisors in enabling and empowering us
+              to serve the student population effectively.
+            </li>
+          </ol>
           <li>
             My committee and I are excited to embark on this journey, infusing
             the Computing Club with fresh ideas, enthusiasm, and a renewed sense
@@ -104,7 +155,7 @@ export const EXPERIENCE_DETAILS = [
   {
     title: "Software Developer Intern",
     companyOrganization: "LFG",
-    duration: "May 2023 - August 2023", // duration format to be e.g. January 2023 - Present
+    duration: "May 2023 - August 2023",
     className: "bg-LFG-50 text-white",
     location: "Vietnam, Ho Chi Minh City",
     detail: (
