@@ -3,11 +3,12 @@ import type { StaticImageData } from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { CSSProperties, ReactNode } from "react";
 import PageContainer from "../common/PageContainer";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import TitleContainer from "../common/TitleContainer";
 import { TESTIMONIAL_DETAILS } from "../../data/TestimonialDetails";
 
 import "swiper/css";
+import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
@@ -25,7 +26,10 @@ export default function Testimonials() {
         pagination={{
           dynamicBullets: true,
         }}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
+        autoplay={{
+          delay: 2000,
+        }}
         style={
           {
             "--swiper-pagination-color": "#395B64",
