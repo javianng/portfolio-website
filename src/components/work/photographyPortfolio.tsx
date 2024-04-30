@@ -5,7 +5,7 @@ export default function PhotographyPortfolio() {
         <iframe
           src="https://photography-website-v2.vercel.app/"
           className="h-[90vh] w-full"
-        ></iframe>
+        />
       </div>
     </div>
   );
