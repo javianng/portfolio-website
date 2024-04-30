@@ -1,9 +1,9 @@
-import { SetStateAction, useState } from "react";
-import TitleContainer from "~/components/common/TitleContainer";
-import { PROJECT_DETAILS } from "~/components/homepage/Work/WorkDetailsV2";
-import SubpageLayout from "~/components/common/SubpageLayout";
-import ProjectCard from "~/components/common/ProjectsCard";
 import { Button } from "~/components/ui/button";
+import { SetStateAction, useState, useEffect } from "react";
+import ProjectCard from "~/components/common/ProjectsCard";
+import SubpageLayout from "~/components/common/SubpageLayout";
+import TitleContainer from "~/components/common/TitleContainer";
+import { PROJECT_DETAILS } from "~/data/WorkDetails";
 
 function OtherProjectsGrid({ filterTag }: { filterTag: string }) {
   return (
@@ -17,9 +17,20 @@ function OtherProjectsGrid({ filterTag }: { filterTag: string }) {
   );
 }
 
+function getUniqueTags() {
+  const allTags = PROJECT_DETAILS.flatMap((project) => project.tags);
+  const uniqueTags = [...new Set(allTags)];
+  return uniqueTags;
+}
+
 export default function work() {
   const [filterTag, setFilterTag] = useState("all");
   const [activeButton, setActiveButton] = useState("all");
+  const [uniqueTags, setUniqueTags] = useState<string[]>([]);
+
+  useEffect(() => {
+    setUniqueTags(getUniqueTags());
+  }, []);
 
   const handleButtonClick = (tag: SetStateAction<string>) => {
     setFilterTag(tag);
@@ -28,52 +39,32 @@ export default function work() {
 
   return (
     <SubpageLayout href="/">
-      <TitleContainer id="MyWork">My Work</TitleContainer>
-      <div className="flex gap-2 pb-3">
+      <TitleContainer id="MyWork">My Works</TitleContainer>
+      <div className="flex flex-wrap gap-2 pb-3">
         <Button
-          variant={"ghost"}
+          variant={"brand"}
           className={
             activeButton === "all"
-              ? "bg-brand-200 text-white hover:bg-brand-100"
-              : "bg-brand-50 hover:bg-brand-100"
+              ? "border-2 border-brand-200 bg-brand-100 hover:bg-brand-50 dark:border-2 dark:bg-brand-300"
+              : ""
           }
           onClick={() => handleButtonClick("all")}
         >
           All
         </Button>
-        <Button
-          variant={"ghost"}
-          className={
-            activeButton === "Front-end"
-              ? "bg-brand-200 text-white hover:bg-brand-100"
-              : "bg-brand-50 hover:bg-brand-100"
-          }
-          onClick={() => handleButtonClick("Front-end")}
-        >
-          Front-end
-        </Button>
-        <Button
-          variant={"ghost"}
-          className={
-            activeButton === "Data Analysis"
-              ? "bg-brand-200 text-white hover:bg-brand-100"
-              : "bg-brand-50 hover:bg-brand-100"
-          }
-          onClick={() => handleButtonClick("Data Analysis")}
-        >
-          Data Analysis
-        </Button>
-        <Button
-          variant={"ghost"}
-          className={
-            activeButton === "Full-Stack"
-              ? "bg-brand-200 text-white hover:bg-brand-100"
-              : "bg-brand-50 hover:bg-brand-100"
-          }
-          onClick={() => handleButtonClick("Full-Stack")}
-        >
-          Full-Stack
-        </Button>
+        {uniqueTags.map((tag) => (
+          <Button
+            variant={"brand"}
+            className={
+              activeButton === tag
+                ? "border-2 border-brand-200 bg-brand-100 hover:bg-brand-50 dark:border-2 dark:bg-brand-300"
+                : "bg-brand-50 hover:bg-brand-100"
+            }
+            onClick={() => handleButtonClick(tag)}
+          >
+            {tag}
+          </Button>
+        ))}
       </div>
       <OtherProjectsGrid filterTag={filterTag} />
     </SubpageLayout>

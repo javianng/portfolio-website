@@ -1,7 +1,46 @@
-import zenacademy from "/public/testimony/zenacademy.png";
+import fooshihong from "/public/testimony/fooshihong.jpeg";
 import darrylhan from "/public/testimony/darrylhan.jpeg";
+import zenacademy from "/public/testimony/zenacademy.png";
 
 export const TESTIMONIAL_DETAILS = [
+  {
+    image: fooshihong,
+    quote: (
+      <div>
+        <span>
+          &quot; Javian actively and passionately engaged in the design and
+          implementation of website and product features. His enthusiasm for web
+          development was evident in the high-quality work he consistently
+          delivered. Javian&apos;s ability to write clean, efficient, and
+          maintainable code using modern programming languages, such as
+          TypeScript and React.js, was truly impressive. His contributions
+          significantly enhanced the functionality and performance of our
+          projects.
+        </span>
+        <br /> <br />
+        <span>
+          Beyond his technical proficiency, Javian made a valuable impact during
+          our product discussions. He actively participated in these
+          discussions, offering constructive feedback, and collaborating
+          seamlessly with our design team. This collaborative spirit was
+          instrumental in ensuring the quality and cohesiveness of our website,
+          resulting in a seamless and visually appealing user experience.
+        </span>
+        <br /> <br />
+        <span>
+          Throughout his internship, Javian consistently exceeded our
+          expectations and played a pivotal role in our development team&apos;s
+          achievements. I have full confidence that his strong work ethic,
+          technical prowess, and unwavering passion for web development will
+          continue to serve him exceptionally well in his future endeavors. I
+          wholeheartedly endorse Javian as an exceptional candidate for any
+          professional opportunity.&quot;
+        </span>
+      </div>
+    ),
+    personel: "Foo Shi Hong",
+    organisation: "Co-Founder, CTO LFG",
+  },
   {
     image: darrylhan,
     quote: (
@@ -33,7 +72,7 @@ export const TESTIMONIAL_DETAILS = [
       </div>
     ),
     personel: "Darryl Han",
-    organisation: "Co-Founder LFG",
+    organisation: "Co-Founder, CEO LFG",
   },
   {
     image: zenacademy,

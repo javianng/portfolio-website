@@ -1,30 +1,19 @@
 import Image from "next/image";
 import { MapPin } from "lucide-react";
-import type { ReactNode } from "react";
+import { motion } from "framer-motion";
 import { Badge } from "~/components/ui/badge";
-import NextButton from "../../common/NextButton";
-import type { StaticImageData } from "next/image";
-import { EXPERIENCE_DETAILS } from "./ExperienceDetails";
+import NextButton from "../common/NextButton";
+import { useInView } from "react-intersection-observer";
 import PageContainer from "~/components/common/PageContainer";
 import TitleContainer from "~/components/common/TitleContainer";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
-type CardProps = {
-  title: string;
-  company_organisation: string;
-  duration: string;
-  className: string;
-  location: string;
-  detail: ReactNode;
-  tags: string[];
-  logo: ReactNode;
-  image: string | StaticImageData;
-};
+import {
+  EXPERIENCE_DETAILS,
+  EXPERIENCE_DETAILS_TYPE,
+} from "../../data/ExperienceDetails";
 
 function Card({
   title,
-  company_organisation,
+  companyOrganization,
   duration,
   className,
   location,
@@ -32,7 +21,7 @@ function Card({
   tags,
   logo,
   image,
-}: CardProps) {
+}: EXPERIENCE_DETAILS_TYPE) {
   const [ref, inView] = useInView({
     triggerOnce: false,
   });
@@ -55,15 +44,15 @@ function Card({
             <div className="w-full lg:w-1/2">
               <Image
                 src={image}
-                alt={company_organisation}
+                alt={companyOrganization}
                 className="h-full rounded-md object-cover"
               />
             </div>
             <div className="w-full lg:w-1/2">
-              <div className="w-16 pb-6">{logo}</div>
+              <div className="pb-5">{logo}</div>
               <h3 className="pb-2 text-xl font-bold">{title}</h3>
               <h4 className="font-semibold">
-                {company_organisation} | {duration}
+                {companyOrganization} | {duration}
               </h4>
               <div className="flex items-center pb-4 font-semibold">
                 <MapPin className="h-4 w-4 pr-1" />

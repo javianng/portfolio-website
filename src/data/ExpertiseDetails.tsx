@@ -1,11 +1,11 @@
-import {
-  AppWindowMac,
-  BetweenHorizontalStart,
-  LineChart,
-  MonitorSmartphone,
-  CpuIcon,
-} from "lucide-react";
 import { ReactNode } from "react";
+import {
+  CpuIcon,
+  LineChart,
+  AppWindowMac,
+  MonitorSmartphone,
+  BetweenHorizontalStart,
+} from "lucide-react";
 
 export type EXPERTISE_COMPONENT_DETAILS_TYPE = {
   name: string;

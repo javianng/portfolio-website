@@ -13,12 +13,11 @@ export default function SubpageLayout(props: PageLayoutProps) {
   const {
     children,
     className = "text-brand-300 bg-neutral-50 dark:bg-brand-300 dark:text-brand-50",
-    href,
   } = props;
 
   return (
     <div className={className}>
-      <ReturnNavbar href={href ?? "/"} />
+      <ReturnNavbar />
       <PageContainer>
         <div className="h-[5vh]" />
         {children}

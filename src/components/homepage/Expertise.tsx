@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import NextButton from "../../common/NextButton";
+import NextButton from "../common/NextButton";
 import { useInView } from "react-intersection-observer";
 import PageContainer from "~/components/common/PageContainer";
 import TitleContainer from "~/components/common/TitleContainer";
@@ -10,13 +10,29 @@ import {
   EXPERTISE_COMPONENT_DETAILS_TYPE,
   TECH_STACK_DETAILS,
   TECH_STACK_DETAILS_TYPE,
-} from "./ExpertiseDetails";
+} from "../../data/ExpertiseDetails";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "~/components/ui/tooltip";
+
+export default function Expertise() {
+  return (
+    <PageContainer>
+      <div className="flex justify-center">
+        <TitleContainer id="Expertise">My Expertise</TitleContainer>
+      </div>
+      <div className="grid grid-cols-1 gap-4">
+        {EXPERTISE_COMPONENT_DETAILS.map((componentDetails, i) => (
+          <ExpertiseComponent key={i} {...componentDetails} />
+        ))}
+      </div>
+      <NextButton url="#Work" />
+    </PageContainer>
+  );
+}
 
 function TechStackIcon({
   name,
@@ -40,6 +56,7 @@ function TechStackIcon({
                 alt={String(name)}
                 width={40}
                 height={40}
+                className="h-full w-full"
               />
             </div>
           </Link>
@@ -118,21 +135,5 @@ function ExpertiseComponent({
         </div>
       </div>
     </motion.div>
-  );
-}
-
-export default function Expertise() {
-  return (
-    <PageContainer>
-      <div className="flex justify-center">
-        <TitleContainer id="Expertise">My Expertise</TitleContainer>
-      </div>
-      <div className="grid grid-cols-1 gap-4">
-        {EXPERTISE_COMPONENT_DETAILS.map((componentDetails, i) => (
-          <ExpertiseComponent key={i} {...componentDetails} />
-        ))}
-      </div>
-      <NextButton url="#Work" />
-    </PageContainer>
   );
 }
