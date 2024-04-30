@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 import type { StaticImageData } from "next/image";
-
 import {
   Card,
   CardHeader,
@@ -10,7 +10,6 @@ import {
   CardContent,
   CardFooter,
 } from "../ui/card";
-import { ChevronRight } from "lucide-react";
 
 type ProjectCardProp = {
   title: string;

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import type { ReactNode } from "react";
 
 type TitleProps = {
@@ -20,8 +19,3 @@ export default function TitleContainer({ children, id = "" }: TitleProps) {
     </h1>
   );
 }
-
-TitleContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  id: PropTypes.string,
-};

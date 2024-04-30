@@ -1,11 +1,11 @@
 import Link from "next/link";
+import { FileText } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
-import { FileText } from "lucide-react";
 
 export default function SocialMedia() {
   return (

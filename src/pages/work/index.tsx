@@ -39,7 +39,7 @@ export default function work() {
 
   return (
     <SubpageLayout href="/">
-      <TitleContainer id="MyWork">My Work</TitleContainer>
+      <TitleContainer id="MyWork">My Works</TitleContainer>
       <div className="flex flex-wrap gap-2 pb-3">
         <Button
           variant={"brand"}
