@@ -128,9 +128,8 @@ function ExpertiseComponent({
       }}
       transition={{ duration: 0.5 }}
       onClick={handleOnClick}
-      className="duration-200 hover:bg-brand-50 dark:hover:bg-neutral-800"
     >
-      <div className="group border-2 border-brand-300 p-3 tracking-tight transition delay-75 ease-in-out dark:border-brand-200">
+      <div className="group border-2 border-brand-300 p-3 tracking-tight transition delay-75 duration-200 ease-in-out hover:bg-brand-50 dark:border-brand-200 dark:hover:bg-neutral-800">
         <div
           className={`flex flex-col gap-6 px-3 py-8 ${
             isDetailedView
