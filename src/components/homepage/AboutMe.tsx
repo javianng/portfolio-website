@@ -9,8 +9,7 @@ export default function AboutMe() {
   return (
     <PageContainer>
       <TitleContainer id={"AboutMe"}>About Me</TitleContainer>
-
-      <div className="flex flex-col items-center justify-center gap-10 lg:flex-row-reverse">
+      <section className="flex flex-col items-center justify-center gap-10 lg:flex-row-reverse">
         <div className="max-w-sm">
           <Image
             src={profilePhoto}
@@ -64,7 +63,7 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <NextButton url="#Expertise" />
     </PageContainer>
   );

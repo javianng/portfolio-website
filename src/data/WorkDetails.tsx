@@ -63,7 +63,7 @@ export const PROJECT_DETAILS = [
   {
     title: "Monarch - Drone Rental Platform",
     link: "/work/monarch-drone-rental-platform",
-    thumbnail: "/projectDocuments/ueh-biztech-hackathon-mvp.jpeg",
+    thumbnail: "/projectDocuments/ueh-biztech-hackathon-mvp.png",
     description:
       "Monarch is a startup project submission for UEH (University of Economics HCMC) Biztech Hackathon 2022. This is a 28 hours hackathon in which we seek out solutions for the betterment of the agricultural scene in Mekong Delta. This project was a fork from the AirBnb Clone Project due to the time constraints and the need to do market research and business plans. The codes are not clean but the application is functional.",
     tags: ["FullStack", "Authentication"],
@@ -71,9 +71,19 @@ export const PROJECT_DETAILS = [
     projectSocialLink: "https://github.com/javianng/ueh-biztech-hackathon/",
   },
   {
+    title: "Memories Hub",
+    link: "/work/memories-hub",
+    thumbnail: "/projectDocuments/memories-hub.png",
+    description:
+      "Personalized digital memory repository for couples to curate date itineraries, store images, and cherish moments together.",
+    tags: ["FullStack", "Edge Authentication"],
+    children: <Monarch />,
+    projectSocialLink: "https://github.com/javianng/memories-hub",
+  },
+  {
     title: "Photography Portfolio",
     link: "/work/photography-portfolio",
-    thumbnail: "/projectDocuments/photography-portfolio-website.jpeg",
+    thumbnail: "/projectDocuments/photography-portfolio-website.png",
     description:
       "This project serves as a showcase of my passion for photography, providing a platform for me to exhibit my work, share my experiences, and connect with fellow photography enthusiasts. Whether you're an avid photographer, a potential client, or simply someone interested in visual storytelling, this website offers a glimpse into my creative journey through the lens.",
     tags: ["Frontend", "React", "TailwindCSS"],

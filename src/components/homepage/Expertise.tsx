@@ -22,14 +22,14 @@ import {
 export default function Expertise() {
   return (
     <PageContainer>
-      <div className="flex justify-center">
-        <TitleContainer id="Expertise">My Expertise</TitleContainer>
-      </div>
-      <div className="grid grid-cols-1 gap-4">
+      <TitleContainer id="Expertise" className="text-center">
+        My Expertise
+      </TitleContainer>
+      <section className="grid grid-cols-1 gap-4">
         {EXPERTISE_COMPONENT_DETAILS.map((componentDetails, i) => (
           <ExpertiseComponent key={i} {...componentDetails} />
         ))}
-      </div>
+      </section>
       <NextButton url="#Work" />
     </PageContainer>
   );
@@ -49,7 +49,7 @@ function TechStackIcon({
       rel="noopener noreferrer"
       className={`flex w-full items-center px-4 ${
         isDetailedView
-          ? "duration-200 hover:bg-brand-50 dark:hover:bg-brand-300"
+          ? "duration-200 hover:bg-brand-100 dark:hover:bg-brand-300"
           : ""
       }`}
     >

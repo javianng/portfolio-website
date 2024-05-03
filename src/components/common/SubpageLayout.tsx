@@ -19,8 +19,7 @@ export default function SubpageLayout(props: PageLayoutProps) {
     <div className={className}>
       <ReturnNavbar />
       <PageContainer>
-        <div className="h-[5vh]" />
-        {children}
+        <div className="flex flex-col gap-4 pt-[5vh]">{children}</div>
       </PageContainer>
       <StartAProject />
       <Footer />

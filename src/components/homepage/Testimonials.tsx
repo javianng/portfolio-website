@@ -15,35 +15,36 @@ import "swiper/css/pagination";
 export default function Testimonials() {
   return (
     <PageContainer>
-      <div className="flex justify-center">
-        <TitleContainer id="Testimonials">Testimonials</TitleContainer>
-      </div>
-      <p className="py-4 text-center">
-        Some nice things people have said about me...
-      </p>
-      <Swiper
-        navigation={true}
-        pagination={{
-          dynamicBullets: true,
-        }}
-        modules={[Navigation, Pagination, Autoplay]}
-        autoplay={{
-          delay: 2000,
-        }}
-        style={
-          {
-            "--swiper-pagination-color": "#395B64",
-            "--swiper-navigation-color": "#395B64",
-          } as CSSProperties
-        }
-      >
-        {TESTIMONIAL_DETAILS.map((cardDetails, i) => (
-          <SwiperSlide key={i}>
-            <CarouselCard {...cardDetails} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="h-[4vh]" />
+      <TitleContainer id="Testimonials" className="text-center">
+        Testimonials
+      </TitleContainer>
+      <section className="pb-[4vh]">
+        <p className="py-4 text-center">
+          Some nice things people have said about me...
+        </p>
+        <Swiper
+          navigation={true}
+          pagination={{
+            dynamicBullets: true,
+          }}
+          modules={[Navigation, Pagination, Autoplay]}
+          autoplay={{
+            delay: 2000,
+          }}
+          style={
+            {
+              "--swiper-pagination-color": "#395B64",
+              "--swiper-navigation-color": "#395B64",
+            } as CSSProperties
+          }
+        >
+          {TESTIMONIAL_DETAILS.map((cardDetails, i) => (
+            <SwiperSlide key={i}>
+              <CarouselCard {...cardDetails} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
     </PageContainer>
   );
 }

@@ -9,13 +9,13 @@ import { HeroParallax } from "~/components/ui/hero-parallax";
 
 export default function Work() {
   return (
-    <div id="Work">
+    <section id="Work">
       <HeroParallax products={PROJECT_DETAILS} />
       <div className="flex justify-center pt-4 sm:pt-12">
         <ShowAllProjectsButton />
       </div>
       <NextButton url="#Experience" />
-    </div>
+    </section>
   );
 }
 
