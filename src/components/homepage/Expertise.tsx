@@ -47,13 +47,13 @@ function TechStackIcon({
       href={String(website)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`flex w-full items-center px-4 ${
+      className={`grid w-full grid-cols-4 items-center gap-3 px-4 sm:grid-cols-5 ${
         isDetailedView
           ? "duration-200 hover:bg-brand-100 dark:hover:bg-brand-300"
           : ""
       }`}
     >
-      <p className="w-24 font-bold">{name}</p>
+      <p className="font-bold">{name}</p>
       <div
         className={`mx-3 flex h-14 w-14 items-center justify-center  p-2 duration-200   ${
           isDetailedView ? "" : " bg-brand-50 shadow-md hover:bg-brand-100"
@@ -67,7 +67,7 @@ function TechStackIcon({
           className="h-full w-full"
         />
       </div>
-      <p>{description}</p>
+      <p className="col-span-2 sm:col-span-3">{description}</p>
     </Link>
   ) : (
     <TooltipProvider>

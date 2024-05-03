@@ -1,7 +1,7 @@
-import StartAProject from "../homepage/StartAProject";
 import Footer from "./Footer";
-import PageContainer from "./PageContainer";
 import ReturnNavbar from "./ReturnNavbar";
+import PageContainer from "./PageContainer";
+import StartAProject from "../homepage/StartAProject";
 
 type PageLayoutProps = {
   children: React.ReactNode;

@@ -1,9 +1,9 @@
 import { Button } from "~/components/ui/button";
-import { SetStateAction, useState, useEffect } from "react";
+import { PROJECT_DETAILS } from "~/data/WorkDetails";
 import ProjectCard from "~/components/common/ProjectsCard";
+import { SetStateAction, useState, useEffect } from "react";
 import SubpageLayout from "~/components/common/SubpageLayout";
 import TitleContainer from "~/components/common/TitleContainer";
-import { PROJECT_DETAILS } from "~/data/WorkDetails";
 
 function OtherProjectsGrid({ filterTag }: { filterTag: string }) {
   return (
@@ -52,8 +52,9 @@ export default function work() {
         >
           All
         </Button>
-        {uniqueTags.map((tag) => (
+        {uniqueTags.map((tag, i) => (
           <Button
+            key={i}
             variant={"brand"}
             className={
               activeButton === tag

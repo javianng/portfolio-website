@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { RocketIcon } from "lucide-react";
 import { Badge } from "~/components/ui/badge";
@@ -58,6 +59,13 @@ export default function ProjectPage() {
         <RocketIcon className="h-5 w-5" />
         <AlertDescription>{project.description}</AlertDescription>
       </Alert>
+      <Image
+        src={project.thumbnail}
+        alt={""}
+        width={800}
+        height={800}
+        className="w-full shadow-md"
+      />
       {project.children}
     </SubpageLayout>
   );

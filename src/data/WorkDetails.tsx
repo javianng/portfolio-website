@@ -11,6 +11,7 @@ import TwitterClone from "~/components/work/twitterClone";
 import NetflixClone from "~/components/work/netflixClone";
 import GoogleClone from "~/components/work/googleClone";
 import GmailClone from "~/components/work/gmailClone";
+import MemoriesHub from "~/components/work/memoriesHub";
 
 export const PROJECT_DETAILS = [
   {
@@ -34,7 +35,7 @@ export const PROJECT_DETAILS = [
   {
     title: "VolunteerClock",
     link: "/work/volunteerclock",
-    thumbnail: "/projectDocuments/volunteertoken.png",
+    thumbnail: "/projectDocuments/volunteertoken/volunteertoken.png",
     description:
       "This project provides a blockchain-based solution for managing and rewarding participation in Community Involvement Projects (CIP).",
     tags: ["Backend", "Blockchain", "Ganache", "Solidity", "Figma"],
@@ -77,7 +78,7 @@ export const PROJECT_DETAILS = [
     description:
       "Personalized digital memory repository for couples to curate date itineraries, store images, and cherish moments together.",
     tags: ["FullStack", "Edge Authentication"],
-    children: <Monarch />,
+    children: <MemoriesHub />,
     projectSocialLink: "https://github.com/javianng/memories-hub",
   },
   {
