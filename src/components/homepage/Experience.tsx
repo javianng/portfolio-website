@@ -35,34 +35,39 @@ function Card({
         visible: { opacity: 1, x: 0 },
       }}
       transition={{ duration: 0.5 }}
-      className={`rounded-md shadow-md transition duration-150 hover:scale-105 hover:shadow-lg ${className}`}
     >
-      <div className="p-4 lg:p-9">
-        <div className={`grid grid-cols-1 gap-9 ${image && "lg:grid-cols-2"}`}>
-          {image && (
-            <Image
-              src={image}
-              alt={companyOrganization}
-              className="h-full rounded-md object-cover"
-            />
-          )}
-          <div>
-            <div className={`pb-5 ${image ? "w-1/2" : "w-1/3"}`}>{logo}</div>
-            <h3 className="pb-2 text-xl font-bold">{title}</h3>
-            <h4 className="font-semibold">
-              {companyOrganization} | {duration}
-            </h4>
-            <div className="flex items-center pb-4 font-semibold">
-              <MapPin className="h-4 w-4 pr-1" />
-              <h4> {location} </h4>
-            </div>
-            <div className="pb-6">{detail}</div>
-            <div className="flex flex-wrap gap-1">
-              {tags.map((tag, i) => (
-                <Badge key={i} className="bg-neutral-800 px-2 py-1">
-                  {tag}
-                </Badge>
-              ))}
+      <div
+        className={`rounded-md shadow-md transition duration-150 hover:scale-105 hover:shadow-lg ${className}`}
+      >
+        <div className="p-4 lg:p-9">
+          <div
+            className={`grid grid-cols-1 gap-9 ${image && "lg:grid-cols-2"}`}
+          >
+            {image && (
+              <Image
+                src={image}
+                alt={companyOrganization}
+                className="h-full rounded-md object-cover"
+              />
+            )}
+            <div>
+              <div className={`pb-5 ${image ? "w-1/2" : "w-1/3"}`}>{logo}</div>
+              <h3 className="pb-2 text-xl font-bold">{title}</h3>
+              <h4 className="font-semibold">
+                {companyOrganization} | {duration}
+              </h4>
+              <div className="flex items-center pb-4 font-semibold">
+                <MapPin className="h-4 w-4 pr-1" />
+                <h4> {location} </h4>
+              </div>
+              <div className="pb-6">{detail}</div>
+              <div className="flex flex-wrap gap-1">
+                {tags.map((tag, i) => (
+                  <Badge key={i} className="bg-neutral-800 px-2 py-1">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
             </div>
           </div>
         </div>

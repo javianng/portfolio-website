@@ -13,7 +13,6 @@ export default function VolunteerClock() {
         verification—VolunteerClock provides a robust solution using blockchain
         technology.
       </p>
-
       <h2 className="pb-1 text-xl font-bold sm:text-3xl">The Problem</h2>
       <p>
         Existing community volunteering systems often suffer from inaccurate and
@@ -22,7 +21,6 @@ export default function VolunteerClock() {
         typically self-report their hours without a standardized process, which
         can lead to potential inaccuracies and misrepresentation.
       </p>
-
       <h2 className="pb-1 text-xl font-bold sm:text-3xl">
         Our Solution: VolunteerClock DApp
       </h2>
@@ -33,7 +31,6 @@ export default function VolunteerClock() {
         immutably on the blockchain, providing a transparent and verifiable
         mechanism to track and reward volunteer activities.
       </p>
-
       <h2 className="pb-1 text-xl font-bold sm:text-3xl">
         Key Features of VolunteerClock
       </h2>
@@ -68,12 +65,11 @@ export default function VolunteerClock() {
           transparency and trust.
         </li>
       </ol>
-
       <h2 className="pb-1 text-xl font-bold sm:text-3xl">
         System Design and Architecture
       </h2>
       <p>
-        VolunteerClock’s architecture is crafted with precision to ensure
+        VolunteerClock&apos;s architecture is crafted with precision to ensure
         scalability, security, and user-friendly interactions. The application
         uses a combination of client-side technology for a smooth user interface
         and smart contracts for backend logic that runs on the blockchain.
@@ -89,7 +85,7 @@ export default function VolunteerClock() {
           distinct interfaces for volunteers, organizers, and third-party
           observers, each tailored to provide the necessary tools and
           information relevant to each group.
-          <div className="my-3 grid grid-cols-2 gap-3 overflow-hidden">
+          <div className="my-3 flex flex-col gap-3 sm:grid sm:grid-cols-2">
             <Image
               src={"/projectDocuments/volunteertoken/organisation.png"}
               alt={""}
@@ -117,7 +113,6 @@ export default function VolunteerClock() {
           maintained to protect volunteer identities as needed.
         </li>
       </ol>
-
       <h2 className="pb-1 text-xl font-bold sm:text-3xl ">
         Challenges and Future Directions
       </h2>
@@ -128,7 +123,6 @@ export default function VolunteerClock() {
         tracking accuracy, and expanding the flexibility of the token minting
         process.
       </p>
-
       <h2 className="pb-1 text-xl font-bold sm:text-3xl ">Conclusion</h2>
       <p>
         VolunteerClock is not just a tool for managing volunteer activities but
