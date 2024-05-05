@@ -8,7 +8,7 @@ export const TESTIMONIAL_DETAILS = [
     quote: (
       <div>
         <span>
-          &quot; Javian actively and passionately engaged in the design and
+          &quot;Javian actively and passionately engaged in the design and
           implementation of website and product features. His enthusiasm for web
           development was evident in the high-quality work he consistently
           delivered. Javian&apos;s ability to write clean, efficient, and

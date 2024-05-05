@@ -11,6 +11,7 @@ import TwitterClone from "~/components/work/twitterClone";
 import NetflixClone from "~/components/work/netflixClone";
 import GoogleClone from "~/components/work/googleClone";
 import GmailClone from "~/components/work/gmailClone";
+import MemoriesHub from "~/components/work/memoriesHub";
 
 export const PROJECT_DETAILS = [
   {
@@ -18,7 +19,7 @@ export const PROJECT_DETAILS = [
     link: "/work/twenify",
     thumbnail: "/projectDocuments/twenify.png",
     description:
-      "Your ultimate student productivity tool. Pomodoro Timer, Calendar, To-Do List, Website Blocking, Music Integration, and more. Built with Vue.js and Firebase for a seamless experience. Boost your academic performance with Twenify.",
+      "Twenify is an innovative all-in-one productivity platform designed to enhance time management and focus for students, though its tools are beneficial for any user looking to improve their productivity. This platform integrates a customizable Pomodoro Timer, an Integrated Calendar, To-Do List, a Website Blocking Tool, and Music Integration to create a focused and efficient study environment. Additionally, Twenify includes gamification elements like a Productivity Leaderboard and a Tamagotchi-esque feature to motivate users and encourage engagement. Developed using agile methodologies and built on Vue.js and Firebase, Twenify aims to address common student challenges around distraction and motivation, providing a comprehensive toolset for managing and optimizing academic life.",
     tags: [
       "FullStack",
       "Vue",
@@ -34,9 +35,9 @@ export const PROJECT_DETAILS = [
   {
     title: "VolunteerClock",
     link: "/work/volunteerclock",
-    thumbnail: "/projectDocuments/volunteertoken.png",
+    thumbnail: "/projectDocuments/volunteertoken/volunteertoken.png",
     description:
-      "This project provides a blockchain-based solution for managing and rewarding participation in Community Involvement Projects (CIP).",
+      "VolunteerClock is a decentralized application (DApp) developed on blockchain technology to manage and reward participation in community volunteering projects. This innovative platform addresses critical issues of transparency, accountability, and efficiency in tracking volunteer hours through the use of smart contracts. By automating the creation and management of volunteering events on the blockchain and incorporating Non-Fungible Tokens (NFTs) for verifiable participation records, VolunteerClock enhances the trust and reliability of volunteer contributions. The application is designed to benefit charities, non-profits, and volunteers by providing a secure, transparent mechanism for recording and verifying volunteer activities, making it an essential tool for community engagement and management.",
     tags: ["Backend", "Blockchain", "Ganache", "Solidity", "Figma"],
     children: <VolunteerClock />,
     projectSocialLink: "https://github.com/javianng/volunteerclock",
@@ -46,7 +47,7 @@ export const PROJECT_DETAILS = [
     link: "/work/housing-pricing-prediction",
     thumbnail: "/projectDocuments/housing-pricing-prediction.png",
     description:
-      "We aim to develop a time series forecasting model for predicting housing prices in Singapore's HDB market using transaction data and geographical information.",
+      "Our project develops a sophisticated forecasting model to predict resale prices of Housing Development Board (HDB) flats in Singapore, leveraging transactional data and geographical features. By integrating diverse datasets such as SORA rates, BTO launch dates, and points of interest proximity, and employing machine learning techniques including Random Forest and XGBoost, the model achieved high accuracy in predictions for 2024. This work aids buyers and investors in making informed decisions, showcasing our expertise in predictive analytics for real estate.",
     tags: [
       "DataAnalysis",
       "MachineLearning",
@@ -63,7 +64,7 @@ export const PROJECT_DETAILS = [
   {
     title: "Monarch - Drone Rental Platform",
     link: "/work/monarch-drone-rental-platform",
-    thumbnail: "/projectDocuments/ueh-biztech-hackathon-mvp.jpeg",
+    thumbnail: "/projectDocuments/ueh-biztech-hackathon-mvp.png",
     description:
       "Monarch is a startup project submission for UEH (University of Economics HCMC) Biztech Hackathon 2022. This is a 28 hours hackathon in which we seek out solutions for the betterment of the agricultural scene in Mekong Delta. This project was a fork from the AirBnb Clone Project due to the time constraints and the need to do market research and business plans. The codes are not clean but the application is functional.",
     tags: ["FullStack", "Authentication"],
@@ -71,9 +72,19 @@ export const PROJECT_DETAILS = [
     projectSocialLink: "https://github.com/javianng/ueh-biztech-hackathon/",
   },
   {
+    title: "Memories Hub",
+    link: "/work/memories-hub",
+    thumbnail: "/projectDocuments/memories-hub.png",
+    description:
+      "Personalized digital memory repository for couples to curate date itineraries, store images, and cherish moments together.",
+    tags: ["FullStack", "Edge Authentication"],
+    children: <MemoriesHub />,
+    projectSocialLink: "https://github.com/javianng/memories-hub",
+  },
+  {
     title: "Photography Portfolio",
     link: "/work/photography-portfolio",
-    thumbnail: "/projectDocuments/photography-portfolio-website.jpeg",
+    thumbnail: "/projectDocuments/photography-portfolio-website.png",
     description:
       "This project serves as a showcase of my passion for photography, providing a platform for me to exhibit my work, share my experiences, and connect with fellow photography enthusiasts. Whether you're an avid photographer, a potential client, or simply someone interested in visual storytelling, this website offers a glimpse into my creative journey through the lens.",
     tags: ["Frontend", "React", "TailwindCSS"],

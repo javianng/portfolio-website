@@ -1,7 +1,7 @@
-import StartAProject from "../homepage/StartAProject";
 import Footer from "./Footer";
-import PageContainer from "./PageContainer";
 import ReturnNavbar from "./ReturnNavbar";
+import PageContainer from "./PageContainer";
+import StartAProject from "../homepage/StartAProject";
 
 type PageLayoutProps = {
   children: React.ReactNode;
@@ -19,8 +19,7 @@ export default function SubpageLayout(props: PageLayoutProps) {
     <div className={className}>
       <ReturnNavbar />
       <PageContainer>
-        <div className="h-[5vh]" />
-        {children}
+        <div className="flex flex-col gap-4 pt-[5vh]">{children}</div>
       </PageContainer>
       <StartAProject />
       <Footer />

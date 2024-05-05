@@ -51,7 +51,7 @@ const WaveComponent: React.FC<WaveComponentProps> = ({
 export default function HomePage() {
   return (
     <>
-      <div
+      <section
         id="Home"
         className="relative h-[90vh] bg-brand-50 dark:bg-brand-300"
       >
@@ -88,7 +88,7 @@ export default function HomePage() {
             />
           ))}
         </div>
-      </div>
+      </section>
       <NextButton url="#AboutMe" />
     </>
   );

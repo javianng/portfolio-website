@@ -20,7 +20,7 @@ export type EXPERIENCE_DETAILS_TYPE = {
   detail: ReactNode;
   tags: string[];
   logo: ReactNode;
-  image: string | StaticImageData;
+  image?: string | StaticImageData;
 };
 
 export const EXPERIENCE_DETAILS = [
@@ -52,11 +52,10 @@ export const EXPERIENCE_DETAILS = [
     ),
     tags: ["Data Science", "Data Analytics", "Machine Learning"],
     logo: <Image src={Parametriks} alt={"Parametriks"} className="w-1/6" />,
-    image: Placeholder,
   },
   {
-    title: "BioInformatics Data Scientist Intern",
-    companyOrganization: "A*Star",
+    title: "Research Intern",
+    companyOrganization: "Singapore Immunology Network (SIgN)",
     duration: "May 2024 - August 2024",
     className: "bg-white text-black border-AStar-50 border-4",
     location: "Singapore",
@@ -75,35 +74,26 @@ export const EXPERIENCE_DETAILS = [
             a real-time analysis pipeline and comparing Singleron versus
             Nanopore data in TCR repertoire analysis.
           </li>
-          <li>
-            Objectives:
-            <ul className="ml-3 list-disc">
-              <li>
-                Real-Time Sequencing Analysis: To develop on-the-fly data
-                analytics that will enable real-time monitoring of sequencing
-                quality, establish data-informed sequencing endpoints, and offer
-                a code-free analytics capability.
-              </li>
-              <li>
-                Comparative Data Analysis: To compare the efficacy of Singleron
-                and Nanopore technologies in analyzing TCR repertoires, aiming
-                to identify the most accurate and reliable method for use in
-                immunotherapy applications.
-              </li>
-            </ul>
-          </li>
+          <li>Objectives:</li>
+          <ol className="ml-8 list-outside list-decimal">
+            <li>
+              Real-Time Sequencing Analysis: To develop on-the-fly data
+              analytics that will enable real-time monitoring of sequencing
+              quality, establish data-informed sequencing endpoints, and offer a
+              code-free analytics capability.
+            </li>
+            <li>
+              Comparative Data Analysis: To compare the efficacy of Singleron
+              and Nanopore technologies in analyzing TCR repertoires, aiming to
+              identify the most accurate and reliable method for use in
+              immunotherapy applications.
+            </li>
+          </ol>
         </ul>
       </>
     ),
-    tags: [
-      "Data Science",
-      "Bioinformatics",
-      "Data Analytics",
-      "Machine Learning",
-      "Research",
-    ],
+    tags: ["Bioinformatics", "Data Science", "Machine Learning", "Research"],
     logo: <Image src={AstarSIgN} alt={"Astar SIgN"} className="w-1/2" />,
-    image: Placeholder,
   },
   {
     title: "President",

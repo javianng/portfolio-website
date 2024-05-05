@@ -26,7 +26,7 @@ function Card({
     triggerOnce: false,
   });
   return (
-    <motion.div
+    <motion.li
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
@@ -40,16 +40,18 @@ function Card({
         className={`rounded-md shadow-md transition duration-150 hover:scale-105 hover:shadow-lg ${className}`}
       >
         <div className="p-4 lg:p-9">
-          <div className="flex flex-col gap-9 lg:flex-row">
-            <div className="w-full lg:w-1/2">
+          <div
+            className={`grid grid-cols-1 gap-9 ${image && "lg:grid-cols-2"}`}
+          >
+            {image && (
               <Image
                 src={image}
                 alt={companyOrganization}
                 className="h-full rounded-md object-cover"
               />
-            </div>
-            <div className="w-full lg:w-1/2">
-              <div className="pb-5">{logo}</div>
+            )}
+            <div>
+              <div className={`pb-5 ${image ? "w-1/2" : "w-1/3"}`}>{logo}</div>
               <h3 className="pb-2 text-xl font-bold">{title}</h3>
               <h4 className="font-semibold">
                 {companyOrganization} | {duration}
@@ -70,26 +72,26 @@ function Card({
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.li>
   );
 }
 
 export default function Experience() {
   return (
     <>
-      <div className="flex justify-center text-center">
-        <TitleContainer id="Experience">
-          Professional
-          <br />
-          Experience
-        </TitleContainer>
-      </div>
+      <TitleContainer className="text-center" id="Experience">
+        Professional
+        <br />
+        Experience
+      </TitleContainer>
       <PageContainer>
-        <div className="flex flex-col gap-8">
-          {EXPERIENCE_DETAILS.map((cardDetails, i) => (
-            <Card {...cardDetails} key={i} />
-          ))}
-        </div>
+        <section>
+          <ol className="flex flex-col gap-8">
+            {EXPERIENCE_DETAILS.map((cardDetails, i) => (
+              <Card {...cardDetails} key={i} />
+            ))}
+          </ol>
+        </section>
         <NextButton url="#Testimonials" />
       </PageContainer>
     </>

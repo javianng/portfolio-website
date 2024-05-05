@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import NextButton from "../common/NextButton";
 import { useInView } from "react-intersection-observer";
@@ -21,14 +22,14 @@ import {
 export default function Expertise() {
   return (
     <PageContainer>
-      <div className="flex justify-center">
-        <TitleContainer id="Expertise">My Expertise</TitleContainer>
-      </div>
-      <div className="grid grid-cols-1 gap-4">
+      <TitleContainer id="Expertise" className="text-center">
+        My Expertise
+      </TitleContainer>
+      <section className="grid grid-cols-1 gap-4">
         {EXPERTISE_COMPONENT_DETAILS.map((componentDetails, i) => (
           <ExpertiseComponent key={i} {...componentDetails} />
         ))}
-      </div>
+      </section>
       <NextButton url="#Work" />
     </PageContainer>
   );
@@ -37,11 +38,38 @@ export default function Expertise() {
 function TechStackIcon({
   name,
   logo,
-  category,
   description,
   website,
-}: TECH_STACK_DETAILS_TYPE) {
-  return (
+  isDetailedView,
+}: TECH_STACK_DETAILS_TYPE & { isDetailedView: boolean }) {
+  return isDetailedView ? (
+    <Link
+      href={String(website)}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`grid w-full grid-cols-4 items-center gap-3 px-4 sm:grid-cols-5 ${
+        isDetailedView
+          ? "duration-200 hover:bg-brand-100 dark:hover:bg-brand-300"
+          : ""
+      }`}
+    >
+      <p className="font-bold">{name}</p>
+      <div
+        className={`mx-3 flex h-14 w-14 items-center justify-center  p-2 duration-200   ${
+          isDetailedView ? "" : " bg-brand-50 shadow-md hover:bg-brand-100"
+        }`}
+      >
+        <Image
+          src={String(logo)}
+          alt={String(name)}
+          width={40}
+          height={40}
+          className="h-full w-full"
+        />
+      </div>
+      <p className="col-span-2 sm:col-span-3">{description}</p>
+    </Link>
+  ) : (
     <TooltipProvider>
       <Tooltip delayDuration={150}>
         <TooltipTrigger asChild>
@@ -79,9 +107,15 @@ function ExpertiseComponent({
     triggerOnce: false,
   });
 
+  const [isDetailedView, setIsDetailedView] = useState(false);
+
   const relevantTechStacks = TECH_STACK_DETAILS.filter((tech) =>
     tech.category.includes(name)
   );
+
+  const handleOnClick = () => {
+    setIsDetailedView(!isDetailedView);
+  };
 
   return (
     <motion.div
@@ -93,12 +127,19 @@ function ExpertiseComponent({
         visible: { opacity: 1, x: 0 },
       }}
       transition={{ duration: 0.5 }}
+      onClick={handleOnClick}
     >
-      <div
-        className={`group border-2 border-brand-300 p-3 tracking-tight transition delay-75 ease-in-out dark:border-brand-200`}
-      >
-        <div className="flex flex-col justify-between gap-6 px-3 py-8 sm:flex-row sm:gap-2">
-          <div className="w-full sm:w-[66%]">
+      <div className="group border-2 border-brand-300 p-3 tracking-tight transition delay-75 duration-200 ease-in-out hover:bg-brand-50 dark:border-brand-200 dark:hover:bg-neutral-800">
+        <div
+          className={`flex flex-col gap-6 px-3 py-8 ${
+            isDetailedView
+              ? "items-start sm:flex-col"
+              : "justify-between sm:flex-row"
+          }  sm:gap-2`}
+        >
+          <div
+            className={`w-full ${isDetailedView ? "sm:w-full" : "sm:w-[66%]"}`}
+          >
             <div className="flex pb-4 align-top">
               <div className="mr-4">{icon}</div>
               <div>
@@ -125,11 +166,19 @@ function ExpertiseComponent({
             </div>
           </div>
           <div
-            className="grid grid-cols-4 place-items-center gap-3 sm:grid-flow-col sm:grid-rows-3"
-            style={{ direction: "rtl" }}
+            className={`grid gap-3 ${
+              isDetailedView
+                ? "grid-cols-1 pt-4 "
+                : "grid-cols-4 place-items-center sm:grid-flow-col sm:grid-rows-3"
+            }`}
+            style={isDetailedView ? {} : { direction: "rtl" }}
           >
             {relevantTechStacks.map((componentDetails, i) => (
-              <TechStackIcon key={i} {...componentDetails} />
+              <TechStackIcon
+                key={i}
+                {...componentDetails}
+                isDetailedView={isDetailedView}
+              />
             ))}
           </div>
         </div>

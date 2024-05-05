@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { RocketIcon } from "lucide-react";
 import { Badge } from "~/components/ui/badge";
+import { PROJECT_DETAILS } from "~/data/WorkDetails";
 import SubpageLayout from "~/components/common/SubpageLayout";
 import TitleContainer from "~/components/common/TitleContainer";
 import { Alert, AlertDescription } from "~/components/ui/alert";
-import { PROJECT_DETAILS } from "~/data/WorkDetails";
 import ProjectSocialButton from "~/components/common/ProjectSocialButton";
 
 export default function ProjectPage() {
@@ -46,26 +47,25 @@ export default function ProjectPage() {
   return (
     <SubpageLayout href="/work">
       <TitleContainer>{project.title}</TitleContainer>
-      <div className="pb-9">
-        <div className="pb-9">
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag, index) => (
-              <Badge
-                key={index}
-                className="px-2 py-1 capitalize"
-                variant="outline"
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        </div>
-        <ProjectSocialButton href={project.projectSocialLink} />
+      <div className="flex flex-wrap gap-2">
+        {project.tags.map((tag, index) => (
+          <Badge key={index} className="px-2 py-1 capitalize" variant="outline">
+            {tag}
+          </Badge>
+        ))}
       </div>
+      <ProjectSocialButton href={project.projectSocialLink} />
       <Alert>
         <RocketIcon className="h-5 w-5" />
         <AlertDescription>{project.description}</AlertDescription>
       </Alert>
+      <Image
+        src={project.thumbnail}
+        alt={""}
+        width={800}
+        height={800}
+        className="w-full shadow-md"
+      />
       {project.children}
     </SubpageLayout>
   );

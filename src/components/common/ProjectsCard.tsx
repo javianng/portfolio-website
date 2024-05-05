@@ -36,13 +36,13 @@ export default function ProjectCard({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="h-40 overflow-hidden">
+          <div className="flex h-40 overflow-hidden">
             <Image
               src={thumbnail ?? ""}
               alt={""}
               width={400}
               height={400}
-              className="duration-300 group-hover:scale-110"
+              className="object-cover duration-300  group-hover:scale-110"
             />
           </div>
         </CardContent>

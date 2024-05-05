@@ -27,7 +27,7 @@ function Window({ children }: { children: ReactNode }) {
       <div className="bg-white p-4">{children}</div>
     </div>
   ) : (
-    <div className="aspect-[0.4796748] max-h-[90vh] max-w-[90vw] overflow-scroll rounded-[2rem] border-8 border-black bg-white shadow-2xl">
+    <div className="relative aspect-[0.4796748] max-h-[90vh] min-h-[52rem] max-w-[90vw] overflow-hidden rounded-[2rem] border-8 border-black bg-white shadow-2xl">
       <div className="flex">{children}</div>
       <div className="flex w-full items-center justify-center">
         <div className="absolute top-4 h-[3.5%] w-[33%] items-center rounded-3xl bg-black">
