@@ -18,7 +18,7 @@ export const PROJECT_DETAILS = [
   {
     title: "StudyGPT",
     link: "/work/chatgpt",
-    thumbnail: "/projectDocuments/ChatGPT.svg",
+    thumbnail: "/projectDocuments/StudyGPT.png",
     description:
       "Helps students study by generating questions and providing feedback.",
     tags: ["Prompt Engineering", "ChatGPT"],
