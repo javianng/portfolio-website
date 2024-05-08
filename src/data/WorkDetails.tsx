@@ -12,8 +12,19 @@ import NetflixClone from "~/components/work/netflixClone";
 import GoogleClone from "~/components/work/googleClone";
 import GmailClone from "~/components/work/gmailClone";
 import MemoriesHub from "~/components/work/memoriesHub";
+import StudyGPT from "~/components/work/studyGPT";
 
 export const PROJECT_DETAILS = [
+  {
+    title: "StudyGPT",
+    link: "/work/chatgpt",
+    thumbnail: "/projectDocuments/ChatGPT.svg",
+    description:
+      "Helps students study by generating questions and providing feedback.",
+    tags: ["Prompt Engineering", "ChatGPT"],
+    children: <StudyGPT />,
+    projectSocialLink: "https://chatgpt.com/g/g-ZbvJk1IQd-studygpt",
+  },
   {
     title: "Twenify",
     link: "/work/twenify",
