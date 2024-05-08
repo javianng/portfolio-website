@@ -302,4 +302,12 @@ export const TECH_STACK_DETAILS = [
       "Open-source library providing an optimized gradient boosting framework for classification, regression, and ranking problems.",
     website: "https://xgboost.ai/",
   },
+  {
+    name: "ChatGPT Prompt Engineering",
+    logo: "/logos/ChatGPT.svg",
+    category: ["Miscellaneous"],
+    description:
+      "Prompt engineering involves crafting precise and effective prompts or queries to guide artificial intelligence systems towards desired outcomes or responses.",
+    website: "https://chatgpt.com/",
+  },
 ];

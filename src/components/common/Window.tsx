@@ -1,19 +1,29 @@
 import React, { useState, useEffect, ReactNode } from "react";
 
-function Window({ children }: { children: ReactNode }) {
+interface WindowProps {
+  children: ReactNode;
+}
+
+const useWindowWidth = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
   useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  return windowWidth;
+};
+
+const Window: React.FC<WindowProps> = ({ children }) => {
+  const windowWidth = useWindowWidth();
 
   return windowWidth > 640 ? (
     <div className="h-full w-full overflow-hidden rounded-lg shadow-2xl">
@@ -38,6 +48,6 @@ function Window({ children }: { children: ReactNode }) {
       </div>
     </div>
   );
-}
+};
 
 export default Window;

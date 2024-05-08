@@ -9,10 +9,11 @@ type NextButtonType = {
 
 export default function NextButton({ url }: NextButtonType) {
   return (
-    <div className="flex justify-center">
+    <div className="mt-5 flex justify-center">
       <a
-        className="mt-5 flex h-[10vh] w-fit animate-bounce items-center justify-center"
+        className="flex h-[10vh] w-fit animate-bounce items-center justify-center"
         href={url}
+        aria-label="Next"
       >
         <Suspense fallback={<div>Loading...</div>}>
           <ArrowDown className="w-7 animate-pulse dark:text-brand-50" />

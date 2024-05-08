@@ -15,37 +15,35 @@ export default function ReturnNavbar({
     router.back();
   };
 
+  const renderBackButton = (
+    href: string,
+    onClick?: (event: React.MouseEvent) => void
+  ) => (
+    <Link href={href} onClick={onClick} className="flex items-center gap-2">
+      <Button variant="ghost" className="bg-neutral-300 dark:bg-brand-300">
+        <ArrowLeftFromLine className="mr-2 h-5 w-5" />
+        {displayText}
+      </Button>
+    </Link>
+  );
+
+  const renderMoreProjectsButton = () => (
+    <Link href="/work" className="flex items-center gap-2">
+      <Button variant="ghost" className="bg-neutral-300 dark:bg-brand-300">
+        <Grip className="mr-2 h-5 w-5" />
+        More Projects
+      </Button>
+    </Link>
+  );
+
   return (
     <div className="bg-neutral-200 p-3 dark:bg-brand-200">
-      {router.pathname === "/work" && (
-        <Link href="/" className="flex items-center gap-2">
-          <Button variant="ghost" className="bg-neutral-300 dark:bg-brand-300">
-            <ArrowLeftFromLine className="mr-2 h-5 w-5" />
-            {displayText}
-          </Button>
-        </Link>
-      )}
-
-      {router.pathname !== "/work" && (
+      {router.pathname === "/work" ? (
+        renderBackButton("/")
+      ) : (
         <div className="flex gap-2">
-          <Link href="#" onClick={goBack} className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              className="bg-neutral-300 dark:bg-brand-300"
-            >
-              <ArrowLeftFromLine className="mr-2 h-5 w-5" />
-              {displayText}
-            </Button>
-          </Link>
-          <Link href="/work" className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              className="bg-neutral-300 dark:bg-brand-300"
-            >
-              <Grip className="mr-2 h-5 w-5" />
-              More Projects
-            </Button>
-          </Link>
+          {renderBackButton("#", goBack)}
+          {renderMoreProjectsButton()}
         </div>
       )}
     </div>

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import type { CSSProperties, ReactNode } from "react";
 import PageContainer from "../common/PageContainer";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import type { CSSProperties, ReactNode } from "react";
 import TitleContainer from "../common/TitleContainer";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { TESTIMONIAL_DETAILS } from "../../data/TestimonialDetails";
 
 import "swiper/css";
