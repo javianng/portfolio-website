@@ -18,7 +18,7 @@ export const PROJECT_DETAILS = [
   {
     title: "StudyGPT",
     link: "/work/chatgpt",
-    thumbnail: "/projectDocuments/StudyGPT.png",
+    thumbnail: "/projectDocuments/StudyGPT/mockup.png",
     description:
       "Helps students study by generating questions and providing feedback.",
     tags: ["Prompt Engineering", "ChatGPT"],
@@ -56,7 +56,8 @@ export const PROJECT_DETAILS = [
   {
     title: "Housing Pricing Prediction",
     link: "/work/housing-pricing-prediction",
-    thumbnail: "/projectDocuments/housing-pricing-prediction.png",
+    thumbnail:
+      "/projectDocuments/housingPricingPrediction/housing-pricing-prediction.png",
     description:
       "Our project develops a sophisticated forecasting model to predict resale prices of Housing Development Board (HDB) flats in Singapore, leveraging transactional data and geographical features. By integrating diverse datasets such as SORA rates, BTO launch dates, and points of interest proximity, and employing machine learning techniques including Random Forest and XGBoost, the model achieved high accuracy in predictions for 2024. This work aids buyers and investors in making informed decisions, showcasing our expertise in predictive analytics for real estate.",
     tags: [
