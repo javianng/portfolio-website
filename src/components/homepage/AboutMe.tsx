@@ -23,12 +23,12 @@ export default function AboutMe() {
             </p>
             <br />
             <p>
-              I am a Full-Stack Web Developer with a robust background in{" "}
-              <strong>Machine Learning and Data Science</strong>. My passion for
-              technology drives me to constantly explore new realms, making me a
-              quick learner and highly adaptable professional. I thrive on
-              challenges and love turning complex problems into clean,
-              user-friendly solutions.
+              I am a <strong>Full-Stack Web Developer</strong> with a robust
+              background in <strong>Machine Learning and Data Science</strong>.
+              My passion for technology drives me to constantly explore new
+              realms, making me a quick learner and highly adaptable
+              professional. I thrive on challenges and love turning complex
+              problems into clean, user-friendly solutions.
             </p>
             <br />
             <p>
