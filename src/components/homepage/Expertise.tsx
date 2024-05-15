@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import NextButton from "../common/NextButton";
 import { useInView } from "react-intersection-observer";
 import PageContainer from "~/components/common/PageContainer";
 import TitleContainer from "~/components/common/TitleContainer";
@@ -30,7 +29,6 @@ export default function Expertise() {
           <ExpertiseComponent key={i} {...componentDetails} />
         ))}
       </section>
-      <NextButton url="#Work" />
     </PageContainer>
   );
 }

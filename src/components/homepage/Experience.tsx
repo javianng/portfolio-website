@@ -92,7 +92,6 @@ export default function Experience() {
             ))}
           </ol>
         </section>
-        <NextButton url="#Testimonials" />
       </PageContainer>
     </>
   );

@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { ChevronsDown } from "lucide-react";
 import { PROJECT_DETAILS } from "../../data/WorkDetails";
-import NextButton from "~/components/common/NextButton";
 import { HeroParallax } from "~/components/ui/hero-parallax";
 
 export default function Work() {
@@ -14,7 +13,6 @@ export default function Work() {
       <div className="flex justify-center pt-4 sm:pt-12">
         <ShowAllProjectsButton />
       </div>
-      <NextButton url="#Experience" />
     </section>
   );
 }

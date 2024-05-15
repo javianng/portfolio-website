@@ -15,7 +15,7 @@ export default function PageLayout(props: PageLayoutProps) {
   const {
     children,
     title = "Javian Ng",
-    description = "Part-Time Developer, Part-Time Business Analyst, Full-Time Curious Adventurer",
+    description = "Full-Stack Web Developer, ML Data Scientist, Full-Time Adventurer",
   } = props;
 
   const { isLoading, progress, isTransitioning } = useLoading();
@@ -43,6 +43,22 @@ export default function PageLayout(props: PageLayoutProps) {
                 name="viewport"
               />
               <meta content={description} name="description" />
+              <meta
+                property="og:image"
+                content="https://github.com/javianng/portfolio-website/blob/main/public/profilephoto.jpg?raw=true"
+              />
+              <meta
+                property="og:title"
+                content="Javian Ng - Full-Stack Web Developer, ML Data Scientist, Full-Time Adventurer"
+              />
+              <meta
+                property="og:description"
+                content="I run on espressos and kopi-peng. Am either building a project, or taking on a new challenge."
+              />
+              <meta
+                property="og:url"
+                content="https://portfolio-website-pearl-tau.vercel.app/"
+              />
             </Head>
             <Navbar />
             <main>{children}</main>

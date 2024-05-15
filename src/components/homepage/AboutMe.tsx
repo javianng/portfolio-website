@@ -1,5 +1,4 @@
 import Image from "next/image";
-import NextButton from "../common/NextButton";
 import SocialMedia from "../common/SocialMedia";
 import PageContainer from "../common/PageContainer";
 import profilePhoto from "/public/profilephoto.jpg";
@@ -24,37 +23,37 @@ export default function AboutMe() {
             </p>
             <br />
             <p>
-              I am a Business Analytics Sophemore and a passionate developer and
-              analyst based in Singapore.
+              I am a Full-Stack Web Developer with a robust background in{" "}
+              <strong>Machine Learning and Data Science</strong>. My passion for
+              technology drives me to constantly explore new realms, making me a
+              quick learner and highly adaptable professional. I thrive on
+              challenges and love turning complex problems into clean,
+              user-friendly solutions.
             </p>
             <br />
             <p>
-              <span className="font-mono text-red-400">Hello World!</span> was
-              when I found my passion for coding.
+              Currently, I am expanding my expertise through a research data
+              science internship focused on cancer research. This opportunity
+              allows me to apply my{" "}
+              <strong>analytical skills and machine learning knowledge</strong>{" "}
+              to make meaningful contributions to critical health issues. It's
+              an exhilarating experience that has deepened my understanding of
+              bioinformatics and its impact on medical advancements.
             </p>
             <br />
             <p>
-              When I was a child, I was always tearing apart computers and
-              putting them together, diving deep into window&apos;s shell only
-              to break the computer... It was only after I came across CS50X on
-              edX when my interest in programming peaked and now, I am a
-              Business Analytics Sophemore.
+              With an entrepreneurial mindset, I have initiated and led various
+              projects that bridge the gap between data-driven insights and
+              functional web applications. My goal is always to innovate and
+              optimize, ensuring that every project not only meets but exceeds
+              expectations.
             </p>
             <br />
             <p>
-              I love new experiences that pushes my boundaries outside of my
-              comfort zone. I love reading productivity and self-help books, and
-              gathering new skillsets from MOOCs. I love travelling, taking
-              photos and playing the guitar. Most of all, I love meeting people
-              from all walks of life, to understand our different experiences
-              and life lessons.
-            </p>
-            <br />
-            <p>
-              I am always down for a chat online or over a cup of coffee. Feel
-              free to reach out to me using the links below! Interested in
-              working together? We should queue up a time to chat. I&apos;ll buy
-              the coffee.
+              Whether I'm coding, crunching data, or collaborating on
+              breakthrough research, I bring a blend of expertise, dedication,
+              and a forward-thinking approach to everything I do. Let's connect
+              and explore how we can create something great together!
             </p>
             <div className="mt-9 flex">
               <div className="flex w-full justify-center py-9 lg:justify-start">
@@ -64,7 +63,6 @@ export default function AboutMe() {
           </div>
         </div>
       </section>
-      <NextButton url="#Expertise" />
     </PageContainer>
   );
 }
