@@ -1,96 +1,29 @@
-<a name="readme-top"></a>
+# Create T3 App
 
-<!-- PROJECT SHIELDS -->
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-[![LinkedIn][linkedin-shield]][linkedin-url]
+## What's next? How do I make an app with this?
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
+We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
 
-  <h3 align="center">Portfolio Website</h3>
+If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
 
-  <p align="center">
-    This is a website to showcase my skills, projects and past works.
-    <br />
-    <a href="https://portfolio-website-pearl-tau.vercel.app/"><strong>Visit the page »</strong></a>
-  </p>
-</div>
+- [Next.js](https://nextjs.org)
+- [NextAuth.js](https://next-auth.js.org)
+- [Prisma](https://prisma.io)
+- [Drizzle](https://orm.drizzle.team)
+- [Tailwind CSS](https://tailwindcss.com)
+- [tRPC](https://trpc.io)
 
-<!-- TABLE OF CONTENTS -->
+## Learn More
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
+To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
 
-</br>
+- [Documentation](https://create.t3.gg/)
+- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
 
-<!-- ABOUT THE PROJECT -->
+You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-## About The Project
+## How do I deploy this?
 
-This project was started in June 2023, during my internship as a Software Developer. During my internship, I picked up many technical skills and knowledge. With my new found knowledge and passion for web development and coding in general, I decided to create a portfolio webpage for myself.
-
-The project is an ongoing one so stay tuned and follow the project as I embark on my journey as a software developer and business analyst. The goal of this porfolio website is to:
-
-- showcase my technical abilities and skillset
-- showcase myself through my design choices which I would define as simple and minimalistic
-- but most importantly, to have fun.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Built With
-
-This section list the major frameworks/libraries used to bootstrap this project.
-
-- [![Next][Next.js]][Next-url]
-- [![React][React.js]][React-url]
-- [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
-- [![TypeScript][TypeScript]][TypeScript-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-
-## Roadmap
-
-- [x] Add README.md
-- [x] Implement Mobile Responsiveness
-- [x] Implement Dark Mode
-- [x] Explore Framer Motion
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTACT -->
-
-## Contact
-
-Javian Ng - [@j_avianzz](https://twitter.com/j_avianzz)
-
-Project Link: [https://github.com/javianng/portfolio-website](https://github.com/javianng/portfolio-website)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/javianngzh/
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[TailwindCSS]: https://img.shields.io/static/v1?style=for-the-badge&message=Tailwind+CSS&color=222222&logo=Tailwind+CSS&logoColor=06B6D4&label=
-[TailwindCSS-url]: https://tailwindcss.com/
-[TypeScript]: https://img.shields.io/static/v1?style=for-the-badge&message=TypeScript&color=3178C6&logo=TypeScript&logoColor=FFFFFF&label=
-[TypeScript-url]: https://www.typescriptlang.org/
+Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
