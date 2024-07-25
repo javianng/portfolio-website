@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 import { ScrollArea } from "~/components/ui/scroll-area";
+import { containerVariants, itemVariants } from "~/components/animation";
 
 export default function HomePage() {
   // dynamic text sizing
@@ -29,20 +31,46 @@ export default function HomePage() {
   return (
     <ScrollArea className="w-full rounded-lg shadow-md">
       <main className="flex h-full min-h-[90vh] flex-col justify-between bg-white p-4 text-end">
-        <section id="roles" className="flex flex-col">
-          <h2 className="font-extralight">photographer</h2>
-          <h2 className="font-extralight">problem-solver</h2>
-          <h2 className="font-extralight">business analyst</h2>
-          <h2 className="font-extralight">software engineer</h2>
-        </section>
+        <motion.section
+          id="roles"
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col"
+          variants={containerVariants}
+        >
+          <motion.h2 className="font-extralight" variants={itemVariants}>
+            photographer
+          </motion.h2>
+          <motion.h2 className="font-extralight" variants={itemVariants}>
+            problem-solver
+          </motion.h2>
+          <motion.h2 className="font-extralight" variants={itemVariants}>
+            business analyst
+          </motion.h2>
+          <motion.h2 className="font-extralight" variants={itemVariants}>
+            software engineer
+          </motion.h2>
+        </motion.section>
         <section id="introduction">
-          <div id="responsive-container" className="w-full">
-            <p id="responsive-subtitle-text" className="font-extralight">
+          <div className="w-full" id="responsive-container">
+            <motion.p
+              id="responsive-subtitle-text"
+              className="font-extralight"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.05 }}
+            >
               hi, i am
-            </p>
-            <h1 id="responsive-title-text" className="font-thin">
+            </motion.p>
+            <motion.h1
+              id="responsive-title-text"
+              className="font-thin"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+            >
               Javian Ng
-            </h1>
+            </motion.h1>
           </div>
         </section>
       </main>
