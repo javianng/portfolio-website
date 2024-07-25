@@ -1,3 +1,7 @@
 export default function Page() {
-  return <div></div>;
+  return (
+    <main className="flex h-full min-h-[90vh] flex-col justify-between bg-white p-4 text-end">
+      work exp
+    </main>
+  );
 }

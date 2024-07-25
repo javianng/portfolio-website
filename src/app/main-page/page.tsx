@@ -26,7 +26,7 @@ export default function HomePage() {
     };
   }, []);
   return (
-    <div className="flex h-full min-h-[90vh] flex-col justify-between bg-white p-4 text-end">
+    <main className="flex h-full min-h-[90vh] flex-col justify-between bg-white p-4 text-end">
       <div id="roles" className="flex flex-col">
         <p className="font-extralight">photographer</p>
         <p className="font-extralight">problem-solver</p>
@@ -43,6 +43,6 @@ export default function HomePage() {
           </h1>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
