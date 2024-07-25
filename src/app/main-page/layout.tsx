@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ScrollArea } from "~/components/ui/scroll-area";
 import {
   Accordion,
   AccordionContent,
@@ -55,9 +54,7 @@ export default function Layout({
         </Accordion>
         <div>social links</div>
       </aside>
-      <ScrollArea className="w-full rounded-lg shadow-md">
-        {children}
-      </ScrollArea>
+      {children}
     </>
   );
 }
