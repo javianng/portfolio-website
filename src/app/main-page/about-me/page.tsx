@@ -1,3 +1,9 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "~/components/ui/accordion";
 import { ScrollArea } from "~/components/ui/scroll-area";
 
 export default function Page() {
@@ -33,6 +39,15 @@ export default function Page() {
             non veniam deserunt Lorem anim nisi.
           </p>
         </article>
+        <h2 className="h2">skillsets</h2>
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger className="justify-end gap-5">
+              Is it accessible?
+            </AccordionTrigger>
+            <AccordionContent>asdsa</AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </main>
     </ScrollArea>
   );

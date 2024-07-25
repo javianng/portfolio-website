@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialList } from "~/components/social-links";
 import {
   Accordion,
   AccordionContent,
@@ -12,7 +13,7 @@ export default function Layout({
   return (
     <>
       <aside className="flex w-80 flex-col justify-between rounded-md bg-white p-10 shadow-md">
-        <Accordion type="single" collapsible>
+        <Accordion type="single" collapsible defaultValue="home">
           <AccordionItem value="home">
             <AccordionTrigger>home</AccordionTrigger>
             <AccordionContent>
@@ -52,7 +53,7 @@ export default function Layout({
             </AccordionItem>
           </Link>
         </Accordion>
-        <div>social links</div>
+        <SocialList />
       </aside>
       {children}
     </>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
   
+* {
+  scroll-behavior: smooth;
+}
+
 .h1 {
   scroll-margin-top: 20px; /* Equivalent to scroll-m-20 in Tailwind */
   font-size: 2.25rem; /* Equivalent to text-4xl */
