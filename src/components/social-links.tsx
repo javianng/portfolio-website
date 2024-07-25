@@ -7,11 +7,16 @@ export function SocialList() {
       {SOCIAL_DETAILS.map(({ website, websiteName }) => (
         <Button
           key={websiteName}
-          variant="link"
+          variant="free"
           size="free"
-          className="py-1 font-thin"
+          className="underline-animation-light rounded-none py-1 font-thin"
         >
-          <Link href={website} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
             <p className="lowercase">{websiteName}</p>
           </Link>
         </Button>

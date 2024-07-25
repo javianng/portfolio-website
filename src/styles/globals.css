@@ -7,6 +7,46 @@
   text-transform: lowercase;
 }
 
+.underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 2px;
+  left: 0;
+  background-color: #000; /* Change to your desired color */
+  transition: width 0.2s ease-in-out;
+}
+
+.underline-animation:hover::after {
+  width: 100%;
+}
+
+.underline-animation-light {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-animation-light::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 5px;
+  left: 0;
+  background-color: #000; /* Change to your desired color */
+  transition: width 0.2s ease-in-out;
+}
+
+.underline-animation-light:hover::after {
+  width: 100%;
+}
+
 .h1 {
   scroll-margin-top: 20px; /* Equivalent to scroll-m-20 in Tailwind */
   font-size: 2.25rem; /* Equivalent to text-4xl */

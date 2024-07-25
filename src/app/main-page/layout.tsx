@@ -19,18 +19,21 @@ export default function Layout({
             <AccordionItem value="home">
               <AccordionTrigger>home</AccordionTrigger>
               <AccordionContent>
-                <Link href="/main-page" className="hover:underline">
+                <Link href="/main-page" className="underline-animation">
                   back to main
                 </Link>
               </AccordionContent>
               <AccordionContent>
-                <Link className="hover:underline" href={"/main-page/about-me"}>
+                <Link
+                  className="underline-animation"
+                  href={"/main-page/about-me"}
+                >
                   about me
                 </Link>
               </AccordionContent>
               <AccordionContent>
                 <Link
-                  className="hover:underline"
+                  className="underline-animation"
                   href={"/main-page/work-experience"}
                 >
                   work experience
@@ -38,7 +41,7 @@ export default function Layout({
               </AccordionContent>
               <AccordionContent>
                 <Link
-                  className="hover:underline"
+                  className="underline-animation"
                   href={"/main-page/contact-me"}
                 >
                   contact me

@@ -1,29 +1,29 @@
-import { Button } from "~/components/ui/button";
+import { MessageCircleQuestion } from "lucide-react";
+import { ContactForm } from "~/components/contact-form";
+import { ScrollArea } from "~/components/ui/scroll-area";
+import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert";
 
 export default function Page() {
   return (
-    <>
-      <main className="flex h-full min-h-[90vh] w-full gap-3">
-        <article className="w-full rounded-lg bg-white p-4 text-end shadow-md">
-          <h1 className="h1">contact me</h1>
-          <p className="p">
-            Interested in working together? We should queue up a time to chat.
-            I&apos;ll buy the coffee.
-          </p>
-        </article>
-
-        <aside className="flex w-fit flex-col items-end justify-end gap-2 rounded-lg bg-white px-4 py-10 shadow-md">
-          <Button size="free" variant="link" className="font-thin">
-            email
-          </Button>
-          <Button size="free" variant="link" className="font-thin">
-            telegram
-          </Button>
-          <Button size="free" variant="link" className="font-thin">
-            whatsapp
-          </Button>
-        </aside>
+    <ScrollArea className="w-full rounded-lg shadow-md">
+      <main className="flex h-full min-h-[90vh] flex-col items-start justify-start bg-white p-4 text-justify">
+        <div className="flex w-full flex-col sm:w-3/5">
+          <h1 className="h1" id="contact me">
+            contact me
+          </h1>
+          <Alert>
+            <MessageCircleQuestion size={20} />
+            <AlertTitle> Interested in working together? </AlertTitle>
+            <AlertDescription>
+              We should queue up a time to chat.
+            </AlertDescription>
+          </Alert>
+          <p className="p"></p>
+        </div>
+        <section className="w-full border-l-2 pl-5 sm:w-3/5">
+          <ContactForm />
+        </section>
       </main>
-    </>
+    </ScrollArea>
   );
 }
