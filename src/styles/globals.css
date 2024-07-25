@@ -4,6 +4,7 @@
   
 * {
   scroll-behavior: smooth;
+  text-transform: lowercase;
 }
 
 .h1 {
@@ -44,10 +45,6 @@
   font-size: 1.25rem; /* Equivalent to text-xl */
   font-weight: 600; /* Equivalent to font-semibold */
   letter-spacing: -0.025em; /* Equivalent to tracking-tight */
-}
-
-.p {
-  line-height: 1.75rem; /* Equivalent to leading-7 in Tailwind */
 }
 
 .p:not(:first-child) {

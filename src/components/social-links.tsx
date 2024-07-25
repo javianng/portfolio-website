@@ -8,8 +8,8 @@ export function SocialList() {
         <Button
           key={websiteName}
           variant="link"
-          size="sm"
-          className="font-thin"
+          size="free"
+          className="py-1 font-thin"
         >
           <Link href={website} target="_blank" rel="noopener noreferrer">
             <p className="lowercase">{websiteName}</p>
