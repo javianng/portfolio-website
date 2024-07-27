@@ -1,12 +1,14 @@
 import Image from "next/image";
+import { CalendarRange, MapPin } from "lucide-react";
 
+import { ScrollArea } from "~/components/ui/scroll-area";
+import { AspectRatio } from "~/components/ui/aspect-ratio";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "~/components/ui/accordion";
-import { ScrollArea } from "~/components/ui/scroll-area";
 
 export default function Page() {
   return (
@@ -17,22 +19,28 @@ export default function Page() {
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="justify-end gap-5">
-              job 1
+              <div>Data Scientist Intern @ Parametriks aug 2024 - jan 2025</div>
             </AccordionTrigger>
             <AccordionContent>
-              <Image
-                src={"/profilephoto.jpg"}
-                alt={""}
-                width={1600}
-                height={1600}
-                className="max-w-sm pt-8"
-              />
+              <AspectRatio ratio={16 / 9} className="flex bg-slate-500">
+                <Image
+                  src={"/profilephoto.jpg"}
+                  alt={""}
+                  width={1600}
+                  height={1600}
+                  className="object-contain object-right"
+                />
+              </AspectRatio>
             </AccordionContent>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+            <AccordionContent className="flex items-center gap-1 text-neutral-600">
+              <MapPin size={16} />
+              singapore
+              <CalendarRange size={16} />
+              date date - date date
             </AccordionContent>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+            <AccordionContent className="flex items-center gap-1 text-neutral-600"></AccordionContent>
+            <AccordionContent className="flex items-center gap-1 text-neutral-600">
+              asdsda
             </AccordionContent>
           </AccordionItem>
         </Accordion>

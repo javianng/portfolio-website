@@ -13,9 +13,9 @@ export default function Page() {
           </h1>
           <Alert>
             <MessageCircleQuestion size={20} />
-            <AlertTitle> Interested in working together? </AlertTitle>
+            <AlertTitle> interested in working together? </AlertTitle>
             <AlertDescription>
-              We should queue up a time to chat.
+              we should queue up a time to chat.
             </AlertDescription>
           </Alert>
           <p className="p"></p>

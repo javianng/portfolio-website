@@ -55,11 +55,11 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>name</FormLabel>
               <FormControl>
                 <Input placeholder="Your name" {...field} />
               </FormControl>
-              <FormDescription>Please enter your full name.</FormDescription>
+              <FormDescription>please enter your full name.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -69,13 +69,11 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>email</FormLabel>
               <FormControl>
-                <Input placeholder="Your email" {...field} />
+                <Input placeholder="your email" {...field} />
               </FormControl>
-              <FormDescription>
-                We&apos;ll use this to contact you.
-              </FormDescription>
+              <FormDescription>i&apos;ll use this to reach you</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -85,18 +83,18 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>message</FormLabel>
               <FormControl>
                 <Textarea placeholder="Your message" {...field} />
               </FormControl>
               <FormDescription>
-                Share your thoughts or inquiries.
+                share your thoughts or inquiries
               </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">submit</Button>
       </form>
     </Form>
   );
