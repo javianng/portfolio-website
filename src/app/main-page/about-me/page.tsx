@@ -21,7 +21,7 @@ export default function Page() {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="w-full pb-10 sm:w-3/5"
+          className="w-full pb-10 sm:w-4/5 md:w-3/5"
         >
           <motion.h1
             variants={itemVariants}
