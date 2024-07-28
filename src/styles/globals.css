@@ -19,7 +19,7 @@
   height: 2px;
   bottom: 2px;
   left: 0;
-  background-color: #000; /* Change to your desired color */
+  background-color: #000; 
   transition: width 0.2s ease-in-out;
 }
 
@@ -39,7 +39,7 @@
   height: 1px;
   bottom: 5px;
   left: 0;
-  background-color: #000; /* Change to your desired color */
+  background-color: #000;
   transition: width 0.2s ease-in-out;
 }
 
@@ -48,87 +48,87 @@
 }
 
 .h1 {
-  scroll-margin-top: 20px; /* Equivalent to scroll-m-20 in Tailwind */
-  font-size: 2.25rem; /* Equivalent to text-4xl */
-  font-weight: 800; /* Equivalent to font-extrabold */
-  letter-spacing: -0.025em; /* Equivalent to tracking-tight */
+  scroll-margin-top: 20px; 
+  font-size: 2.25rem; 
+  font-weight: 800; 
+  letter-spacing: -0.025em; 
 }
 
-@media (min-width: 1024px) { /* lg breakpoint in Tailwind */
+@media (min-width: 1024px) { 
   .h1 {
-    font-size: 3rem; /* Equivalent to lg:text-5xl */
+    font-size: 3rem;
   }
 }
 
 .h2 {
-  scroll-margin-top: 20px; /* Equivalent to scroll-m-20 in Tailwind */
-  border-bottom: 1px solid; /* Equivalent to border-b */
-  padding-bottom: 0.5rem; /* Equivalent to pb-2 */
-  font-size: 1.875rem; /* Equivalent to text-3xl */
-  font-weight: 600; /* Equivalent to font-semibold */
-  letter-spacing: -0.025em; /* Equivalent to tracking-tight */
+  scroll-margin-top: 20px; 
+  border-bottom: 1px solid;
+  padding-bottom: 0.5rem; 
+  font-size: 1.875rem; 
+  font-weight: 600;
+  letter-spacing: -0.025em; 
 }
 
 .h2:first-of-type {
-  margin-top: 0; /* Equivalent to first:mt-0 */
+  margin-top: 0; 
 }
 
 .h3 {
-  scroll-margin-top: 20px; /* Equivalent to scroll-m-20 in Tailwind */
-  font-size: 1.5rem; /* Equivalent to text-2xl */
-  font-weight: 600; /* Equivalent to font-semibold */
-  letter-spacing: -0.025em; /* Equivalent to tracking-tight */
+  scroll-margin-top: 20px; 
+  font-size: 1.5rem;
+  font-weight: 600; 
+  letter-spacing: -0.025em; 
 }
 
 .h4 {
-  scroll-margin-top: 20px; /* Equivalent to scroll-m-20 in Tailwind */
-  font-size: 1.25rem; /* Equivalent to text-xl */
-  font-weight: 600; /* Equivalent to font-semibold */
-  letter-spacing: -0.025em; /* Equivalent to tracking-tight */
+  scroll-margin-top: 20px;
+  font-size: 1.25rem; 
+  font-weight: 600; 
+  letter-spacing: -0.025em; 
 }
 
 .p:not(:first-child) {
-  margin-top: 1.5rem; /* Equivalent to mt-6 in Tailwind */
+  margin-top: 1.5rem; 
 }
 
 .blockquote {
-  margin-top: 1.5rem; /* Equivalent to mt-6 in Tailwind */
-  border-left: 2px solid; /* Equivalent to border-l-2 */
-  padding-left: 1.5rem; /* Equivalent to pl-6 */
-  font-style: italic; /* Equivalent to italic */
+  margin-top: 1.5rem; 
+  border-left: 2px solid; 
+  padding-left: 1.5rem; 
+  font-style: italic;
 }
 
 .ul {
-  margin-top: 1.5rem; /* Equivalent to my-6 in Tailwind */
-  margin-bottom: 1.5rem; /* Equivalent to my-6 in Tailwind */
-  margin-left: 1.5rem; /* Equivalent to ml-6 in Tailwind */
-  list-style-type: disc; /* Equivalent to list-disc in Tailwind */
+  margin-top: 1.5rem; 
+  margin-bottom: 1.5rem; 
+  margin-left: 1.5rem; 
+  list-style-type: disc; 
 }
 
 .ul > li {
-  margin-top: 0.5rem; /* Equivalent to mt-2 in Tailwind */
+  margin-top: 0.5rem; 
 }
 
 .code {
-  position: relative; /* Equivalent to relative in Tailwind */
-  border-radius: 0.25rem; /* Equivalent to rounded in Tailwind */
-  background-color: var(--muted-bg-color); /* Equivalent to bg-muted in Tailwind */
-  padding-left: 0.3rem; /* Equivalent to px-[0.3rem] in Tailwind */
-  padding-right: 0.3rem; /* Equivalent to px-[0.3rem] in Tailwind */
-  padding-top: 0.2rem; /* Equivalent to py-[0.2rem] in Tailwind */
-  padding-bottom: 0.2rem; /* Equivalent to py-[0.2rem] in Tailwind */
-  font-family: monospace; /* Equivalent to font-mono in Tailwind */
-  font-size: 0.875rem; /* Equivalent to text-sm in Tailwind */
-  font-weight: 600; /* Equivalent to font-semibold in Tailwind */
+  position: relative;
+  border-radius: 0.25rem;
+  background-color: var(--muted-bg-color); 
+  padding-left: 0.3rem; 
+  padding-right: 0.3rem; 
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem; 
+  font-family: monospace;
+  font-size: 0.875rem;
+  font-weight: 600; 
 }
 
 .large {
-  font-size: 1.125rem; /* Equivalent to text-lg in Tailwind */
-  font-weight: 600; /* Equivalent to font-semibold in Tailwind */
+  font-size: 1.125rem; 
+  font-weight: 600; 
 }
 
 .small {
-  font-size: 0.875rem; /* Equivalent to text-sm in Tailwind */
-  font-weight: 500; /* Equivalent to font-medium in Tailwind */
-  line-height: 1; /* Equivalent to leading-none in Tailwind */
+  font-size: 0.875rem;
+  font-weight: 500; 
+  line-height: 1;
 }

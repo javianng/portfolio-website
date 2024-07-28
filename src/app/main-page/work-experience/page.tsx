@@ -1,50 +1,127 @@
-import Image from "next/image";
-import { CalendarRange, MapPin } from "lucide-react";
+"use client";
 
+import Image from "next/image";
+import { WORK_DETAILS } from "./work-data";
+import { useEffect, useRef, useState } from "react";
+import { Badge } from "~/components/ui/badge";
+import { CalendarRange, Dot, MapPin } from "lucide-react";
 import { ScrollArea } from "~/components/ui/scroll-area";
-import { AspectRatio } from "~/components/ui/aspect-ratio";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "~/components/ui/accordion";
+import Link from "next/link";
+import { Button } from "~/components/ui/button";
 
 export default function Page() {
-  return (
-    <ScrollArea className="w-full rounded-lg shadow-md">
-      <main className="flex h-full min-h-[90vh] flex-col items-end justify-start text-balance bg-white p-4 text-end">
-        <h1 className="h1 text-end">work experience</h1>
+  const [activeSection, setActiveSection] = useState<string>(
+    WORK_DETAILS[0]?.title ?? "",
+  );
 
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="justify-end gap-5">
-              <div>Data Scientist Intern @ Parametriks aug 2024 - jan 2025</div>
-            </AccordionTrigger>
-            <AccordionContent>
-              <AspectRatio ratio={16 / 9} className="flex bg-slate-500">
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    const currentRefs = sectionRefs.current;
+
+    currentRefs.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      currentRefs.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
+    };
+  }, []);
+
+  return (
+    <main className="flex flex-row gap-3">
+      {/* Navbar */}
+      <nav className="hidden min-w-52 flex-col items-start rounded-md bg-white p-4 shadow-md xl:flex">
+        <h2 className="pt-10 underline underline-offset-2">work experience</h2>
+        {WORK_DETAILS.map((section) => (
+          <Button
+            key={section.title}
+            variant="free"
+            size="free"
+            className="underline-animation-light rounded-none py-1 font-thin"
+          >
+            <a
+              href={`#${section.title}`}
+              className={`flex items-center text-wrap text-start ${
+                activeSection === section.title && "font-normal"
+              }`}
+            >
+              {section.companyOrganization}
+            </a>
+          </Button>
+        ))}
+      </nav>
+      {/* Content */}
+      <ScrollArea>
+        <h1 className="h1">work experience</h1>
+        {WORK_DETAILS.map((section, index) => (
+          <section
+            key={section.title}
+            id={section.title}
+            ref={(el) => {
+              sectionRefs.current[index] = el;
+            }}
+            className={`${section.className} ${index != WORK_DETAILS.length - 1 && "mb-3"} min-h-[85vh] rounded-r-md border-l-4 bg-white p-4 shadow-md`}
+          >
+            <div className="grid grid-cols-2">
+              <h2 className="h3">{section.title}</h2>
+              <div className="row-span-2 flex h-14 w-auto justify-end">
                 <Image
-                  src={"/profilephoto.jpg"}
+                  src={section.logo}
                   alt={""}
                   width={1600}
                   height={1600}
                   className="object-contain object-right"
                 />
-              </AspectRatio>
-            </AccordionContent>
-            <AccordionContent className="flex items-center gap-1 text-neutral-600">
-              <MapPin size={16} />
-              singapore
+              </div>
+              <h3 className="h4">@ {section.companyOrganization}</h3>
+            </div>
+            <div className="p flex items-center gap-1">
               <CalendarRange size={16} />
-              date date - date date
-            </AccordionContent>
-            <AccordionContent className="flex items-center gap-1 text-neutral-600"></AccordionContent>
-            <AccordionContent className="flex items-center gap-1 text-neutral-600">
-              asdsda
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </main>
-    </ScrollArea>
+              <p>{section.duration}</p>
+              <Dot size={16} />
+              <MapPin size={16} />
+              <p>{section.location}</p>
+            </div>
+            <div className="flex gap-3">
+              {section.detail}
+              {section.image && (
+                <Image
+                  src={section.image}
+                  alt={section.title}
+                  className="h-auto w-1/2 rounded-md object-cover shadow-md"
+                  width={800}
+                  height={800}
+                />
+              )}
+            </div>
+            <div className="flex flex-wrap gap-1 pt-3">
+              {section.tags.map((tag) => (
+                <Badge key={tag} variant="secondary">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          </section>
+        ))}
+      </ScrollArea>
+    </main>
   );
 }

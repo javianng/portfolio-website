@@ -5,7 +5,7 @@ import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert";
 
 export default function Page() {
   return (
-    <ScrollArea className="w-full rounded-lg shadow-md">
+    <ScrollArea className="w-full rounded-md shadow-md">
       <main className="flex h-full min-h-[90vh] flex-col items-start justify-start bg-white p-4 text-justify">
         <div className="flex w-full flex-col sm:w-3/5">
           <h1 className="h1" id="contact me">

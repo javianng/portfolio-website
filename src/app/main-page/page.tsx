@@ -29,7 +29,7 @@ export default function HomePage() {
     };
   }, []);
   return (
-    <ScrollArea className="w-full rounded-lg shadow-md">
+    <ScrollArea className="w-full rounded-md shadow-md">
       <main className="flex h-full min-h-[90vh] flex-col justify-between bg-white p-4 text-end">
         <motion.section
           id="roles"

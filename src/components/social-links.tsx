@@ -21,6 +21,20 @@ export function SocialList() {
           </Link>
         </Button>
       ))}
+      <Button
+        variant="free"
+        size="free"
+        className="underline-animation-light rounded-none py-1 font-thin"
+      >
+        <Link
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center"
+        >
+          <p className="lowercase">resume</p>
+        </Link>
+      </Button>
     </div>
   );
 }
@@ -50,11 +64,6 @@ const SOCIAL_DETAILS = [
     website: "https://medium.com/@javianngzh",
     websiteName: "Medium",
     image: "/logos/medium.svg",
-  },
-  {
-    website: "https://www.linkedin.com/in/javianngzh/",
-    websiteName: "LinkedIn",
-    image: "/logos/linkedin.svg",
   },
   {
     website: "https://t.me/javianng",
