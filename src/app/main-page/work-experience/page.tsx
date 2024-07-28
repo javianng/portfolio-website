@@ -6,8 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import { Badge } from "~/components/ui/badge";
 import { CalendarRange, Dot, MapPin } from "lucide-react";
 import { ScrollArea } from "~/components/ui/scroll-area";
-import Link from "next/link";
 import { Button } from "~/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState<string>(
@@ -72,13 +72,19 @@ export default function Page() {
       <ScrollArea>
         <h1 className="h1">work experience</h1>
         {WORK_DETAILS.map((section, index) => (
-          <section
+          <motion.section
             key={section.title}
             id={section.title}
             ref={(el) => {
               sectionRefs.current[index] = el;
             }}
-            className={`${section.className} ${index != WORK_DETAILS.length - 1 && "mb-3"} min-h-[85vh] rounded-r-md border-l-4 bg-white p-4 shadow-md`}
+            className={`${section.className} ${
+              index != WORK_DETAILS.length - 1 && "mb-3"
+            } min-h-[85vh] rounded-r-md border-l-4 bg-white p-4 shadow-md`}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3 }}
+            viewport={{ once: false, amount: 0.1 }}
           >
             <div className="grid grid-cols-2">
               <h2 className="h3">{section.title}</h2>
@@ -119,7 +125,7 @@ export default function Page() {
                 </Badge>
               ))}
             </div>
-          </section>
+          </motion.section>
         ))}
       </ScrollArea>
     </main>
