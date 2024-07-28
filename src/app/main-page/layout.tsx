@@ -39,7 +39,11 @@ export default function Layout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <aside className="absolute bottom-16 right-10 z-50 opacity-80 sm:hidden">
+      {/* small screen */}
+      <aside
+        className="absolute bottom-16 right-10 z-50 opacity-80 sm:hidden"
+        id="sheet"
+      >
         <Sheet>
           <SheetTrigger asChild>
             <Button size="icon">
@@ -80,7 +84,11 @@ export default function Layout({
           </SheetContent>
         </Sheet>
       </aside>
-      <aside className="hidden w-80 flex-col justify-between rounded-md bg-white p-10 shadow-md sm:flex">
+      {/* normal layout */}
+      <aside
+        className="hidden w-80 flex-col justify-between rounded-md bg-white p-10 shadow-md sm:flex"
+        id="sidebar"
+      >
         <ScrollArea>
           <Accordion type="single" collapsible defaultValue="home">
             {/* home */}
