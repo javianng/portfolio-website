@@ -3,7 +3,11 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ScrollArea } from "~/components/ui/scroll-area";
-import { containerVariants, itemVariants } from "~/components/animation";
+import {
+  containerVariants,
+  itemVariantsLeft,
+  itemVariantsRight,
+} from "~/components/animation";
 
 export default function HomePage() {
   // dynamic text sizing
@@ -38,16 +42,16 @@ export default function HomePage() {
           className="flex flex-col"
           variants={containerVariants}
         >
-          <motion.h2 className="font-extralight" variants={itemVariants}>
+          <motion.h2 className="font-extralight" variants={itemVariantsRight}>
             photographer
           </motion.h2>
-          <motion.h2 className="font-extralight" variants={itemVariants}>
+          <motion.h2 className="font-extralight" variants={itemVariantsRight}>
             problem-solver
           </motion.h2>
-          <motion.h2 className="font-extralight" variants={itemVariants}>
+          <motion.h2 className="font-extralight" variants={itemVariantsRight}>
             business analyst
           </motion.h2>
-          <motion.h2 className="font-extralight" variants={itemVariants}>
+          <motion.h2 className="font-extralight" variants={itemVariantsRight}>
             software engineer
           </motion.h2>
         </motion.section>

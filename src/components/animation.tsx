@@ -8,7 +8,12 @@ export const containerVariants = {
   },
 };
 
-export const itemVariants = {
+export const itemVariantsLeft = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0 },
+};
+
+export const itemVariantsRight = {
   hidden: { opacity: 0, x: 20 },
   visible: { opacity: 1, x: 0 },
 };

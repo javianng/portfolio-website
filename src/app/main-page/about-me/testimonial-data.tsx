@@ -1,13 +1,18 @@
-import fooshihong from "/public/testimony/fooshihong.jpeg";
-import darrylhan from "/public/testimony/darrylhan.jpeg";
-import zenacademy from "/public/testimony/zenacademy.png";
+import { type ReactNode } from "react";
 
-export const TESTIMONIAL_DATA = [
+interface Testimonial {
+  image: string;
+  quote: ReactNode;
+  personel: string;
+  organisation: string;
+}
+
+export const TESTIMONIAL_DATA: Testimonial[] = [
   {
-    image: fooshihong,
+    image: "/testimony/fooshihong.jpeg",
     quote: (
       <article>
-        <span>
+        <p className="p">
           &quot;Javian actively and passionately engaged in the design and
           implementation of website and product features. His enthusiasm for web
           development was evident in the high-quality work he consistently
@@ -16,18 +21,16 @@ export const TESTIMONIAL_DATA = [
           TypeScript and React.js, was truly impressive. His contributions
           significantly enhanced the functionality and performance of our
           projects.
-        </span>
-        <br /> <br />
-        <span>
+        </p>
+        <p className="p">
           Beyond his technical proficiency, Javian made a valuable impact during
           our product discussions. He actively participated in these
           discussions, offering constructive feedback, and collaborating
           seamlessly with our design team. This collaborative spirit was
           instrumental in ensuring the quality and cohesiveness of our website,
           resulting in a seamless and visually appealing user experience.
-        </span>
-        <br /> <br />
-        <span>
+        </p>
+        <p className="p">
           Throughout his internship, Javian consistently exceeded our
           expectations and played a pivotal role in our development team&apos;s
           achievements. I have full confidence that his strong work ethic,
@@ -35,47 +38,45 @@ export const TESTIMONIAL_DATA = [
           continue to serve him exceptionally well in his future endeavors. I
           wholeheartedly endorse Javian as an exceptional candidate for any
           professional opportunity.&quot;
-        </span>
+        </p>
       </article>
     ),
     personel: "Foo Shi Hong",
     organisation: "Co-Founder, CTO LFG",
   },
   {
-    image: darrylhan,
+    image: "/testimony/darrylhan.jpeg",
     quote: (
       <article>
-        <span>
+        <p className="p">
           &quot;From the very beginning, you demonstrated a remarkable
           enthusiasm for learning and a strong commitment to your role. Your
           eagerness to delve into new technologies and your willingness to take
           on challenges head-on greatly impressed us.
-        </span>
-        <br /> <br />
-        <span>
+        </p>
+        <p className="p">
           Your technical skills have been instrumental in the development of our
           new platform. Your coding expertise, problem-solving abilities, and
           attention to detail have consistently exceeded our expectations. The
           features and functionalities you&apos;ve helped bring to life have
           enriched the user experience of LFG, making it easier for travelers to
           navigate and discover exciting destinations.
-        </span>
-        <br /> <br />
-        <span>
+        </p>
+        <p className="p">
           However, it&apos;s not just your technical abilities that we admire.
           Your proactive approach to communication and your willingness to seek
           clarification or guidance when needed have demonstrated your
           commitment to producing high-quality work. Your humility and
           willingness to learn from others, regardless of their role or
           experience, have made you a valuable team player.&quot;
-        </span>
+        </p>
       </article>
     ),
     personel: "Darryl Han",
     organisation: "Co-Founder, CEO LFG",
   },
   {
-    image: zenacademy,
+    image: "/testimony/zenacademy.png",
     quote: (
       <article>
         <p className="p">
@@ -84,7 +85,8 @@ export const TESTIMONIAL_DATA = [
           mentally exhausting. He gave his 100% during trainings and never had
           his head down despite losing to his well-experienced black-belt
           seniors numerous times, always standing back up to fight back.
-          <br />
+        </p>
+        <p className="p">
           His efforts none the less paid off when he represented the club in 4
           separate tournaments in 2018, clinching 3 gold medals in the National
           Taekwondo Kyorugi Championships 2018 Ambassador Cup, Singapore

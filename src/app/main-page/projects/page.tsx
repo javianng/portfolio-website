@@ -23,7 +23,7 @@ export default function Page() {
             className="h-fit"
           >
             <Card className="aspect-square w-full rounded-none">
-              <div
+              <figure
                 className="aspect-square w-full rounded-none bg-cover bg-center transition-all duration-300 ease-in-out"
                 style={{
                   backgroundImage: `url(${project.main_image})`,

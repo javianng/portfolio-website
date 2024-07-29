@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { WORK_DETAILS } from "./work-data";
-import { useEffect, useRef, useState } from "react";
-import { Badge } from "~/components/ui/badge";
-import { CalendarRange, Dot, MapPin } from "lucide-react";
-import { ScrollArea } from "~/components/ui/scroll-area";
-import { Button } from "~/components/ui/button";
 import { motion } from "framer-motion";
+import { WORK_DETAILS } from "./work-data";
+import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
+import { useEffect, useRef, useState } from "react";
+import { ScrollArea } from "~/components/ui/scroll-area";
+import { CalendarRange, Dot, MapPin } from "lucide-react";
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState<string>(
