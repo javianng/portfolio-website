@@ -1,4 +1,4 @@
-import Image, { type StaticImageData } from "next/image";
+import { type StaticImageData } from "next/image";
 
 type Section = {
   title: string;

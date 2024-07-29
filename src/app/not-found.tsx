@@ -1,14 +1,20 @@
 import Link from "next/link";
+import { House } from "lucide-react";
+import { Button } from "~/components/ui/button";
 
 const NotFoundPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-gray-800">404 - Page Not Found</h1>
-      <p className="mt-4 text-lg text-gray-600">
-        Oops! The page you are looking for does not exist.
-      </p>
-      <Link href="/main-page">Go to Main Page</Link>
-    </div>
+    <main>
+      <h1 className="h1">error 404</h1>
+      <h2 className="h2">page not found</h2>
+      <p className="p">oops! the page you are looking for does not exist.</p>
+      <Button variant="link" size="free">
+        <Link href="/main-page" className="flex items-center gap-1 pt-5">
+          <House size={16} />
+          <p>head back to main page?</p>
+        </Link>
+      </Button>
+    </main>
   );
 };
 

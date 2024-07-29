@@ -11,7 +11,6 @@ import {
 } from "~/components/ui/accordion";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
@@ -19,19 +18,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "~/components/ui/sheet";
+import { PROJECT_DATA_NAV } from "./projects/project-data";
 
 const HOME_LINKS = [
   { href: "/main-page", title: "Back to Main" },
   { href: "/main-page/about-me", title: "About Me" },
   { href: "/main-page/work-experience", title: "Work Experience" },
   { href: "/main-page/contact-me", title: "Contact Me" },
-];
-
-const PROJECTS = [
-  { id: 1, title: "Project #1" },
-  { id: 2, title: "Project #2" },
-  { id: 3, title: "Project #3" },
-  { id: 4, title: "Project #4" },
 ];
 
 export default function Layout({
@@ -73,10 +66,14 @@ export default function Layout({
               </Link>
             ))}
             <p className="p">projects</p>
-            {PROJECTS.map((project) => (
-              <p className="font-light" key={project.id}>
+            {PROJECT_DATA_NAV.map((project) => (
+              <Link
+                href={`/main-page/projects/${project.slug}`}
+                key={project.slug}
+                className="underline-animation font-light"
+              >
                 {project.title}
-              </p>
+              </Link>
             ))}
             <SheetFooter className="pt-8">
               <SocialList />
@@ -105,9 +102,22 @@ export default function Layout({
             {/* projects */}
             <AccordionItem value="projects">
               <AccordionTrigger>projects</AccordionTrigger>
-              {PROJECTS.map((project) => (
-                <AccordionContent key={project.id}>
-                  {project.title}
+              <AccordionContent>
+                <Link
+                  href="/main-page/projects"
+                  className="underline-animation"
+                >
+                  all projects
+                </Link>
+              </AccordionContent>
+              {PROJECT_DATA_NAV.map((project) => (
+                <AccordionContent key={project.slug}>
+                  <Link
+                    href={`/main-page/projects/${project.slug}`}
+                    className="underline-animation"
+                  >
+                    {project.title}
+                  </Link>
                 </AccordionContent>
               ))}
             </AccordionItem>
