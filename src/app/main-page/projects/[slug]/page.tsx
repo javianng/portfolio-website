@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Link2 } from "lucide-react";
 import { notFound } from "next/navigation";
 import { Badge } from "~/components/ui/badge";
 import { ScrollArea } from "~/components/ui/scroll-area";
@@ -5,14 +7,11 @@ import { type Project, PROJECT_DATA } from "../project-data";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "~/components/ui/breadcrumb";
 import { Button } from "~/components/ui/button";
-import Link from "next/link";
-import { Link2 } from "lucide-react";
 
 export async function generateStaticParams() {
   return PROJECT_DATA.map((project) => ({
@@ -42,13 +41,11 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/main-page">home</BreadcrumbLink>
+              <Link href="/main-page">home</Link>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/main-page/projects">
-                projects
-              </BreadcrumbLink>
+              <Link href="/main-page/projects">projects</Link>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
