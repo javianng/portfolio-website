@@ -62,7 +62,7 @@ export const PROJECT_DATA: Project[] = [
     title: "Housing Pricing Prediction",
     description: "A model to predict resale prices of HDB flats in Singapore.",
     main_image:
-      "/projects/housingPricingPrediction/housing-pricing-prediction.png",
+      "/projects/housing-pricing-prediction/housing-pricing-prediction.png",
     tags: [
       "DataAnalysis",
       "MachineLearning",
@@ -97,7 +97,8 @@ export const PROJECT_DATA: Project[] = [
     slug: "photography-portfolio-website",
     title: "Photography Portfolio Website",
     description: "A showcase of my passion for photography.",
-    main_image: "/projects/photography-portfolio-website.png",
+    main_image:
+      "/projects/photography-portfolio-website/cover-photography-portfolio-website.jpg",
     tags: ["Frontend", "React", "TailwindCSS"],
     content: <PhotographyPortfolio />,
     projectlink: "https://github.com/javianng/photography-website-v2",
