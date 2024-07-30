@@ -9,15 +9,21 @@ export default function ThemeSwitcher() {
   return (
     <div className="flex items-center gap-1">
       <Button variant="link" size="free" onClick={() => setTheme("dark")}>
-        <p className="text-xs font-thin">dark</p>
+        <p className="font-thin">
+          <small>dark</small>
+        </p>
       </Button>
       <Dot size={10} />
       <Button variant="link" size="free" onClick={() => setTheme("light")}>
-        <p className="text-xs font-thin">light</p>
+        <p className="font-thin">
+          <small>light</small>
+        </p>
       </Button>
       <Dot size={10} />
       <Button variant="link" size="free" onClick={() => setTheme("system")}>
-        <p className="text-xs font-thin">system</p>
+        <p className="font-thin">
+          <small>system</small>
+        </p>
       </Button>
     </div>
   );
