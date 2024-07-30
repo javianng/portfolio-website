@@ -29,7 +29,7 @@ export default function Page() {
                 href={`/main-page/projects/${project.slug}`}
                 className="group h-fit"
               >
-                <Card className="aspect-square w-full rounded-none">
+                <Card className="aspect-square w-full rounded-none dark:bg-neutral-700">
                   <figure className="aspect-square w-full overflow-hidden rounded-none bg-black">
                     <Image
                       src={project.main_image}

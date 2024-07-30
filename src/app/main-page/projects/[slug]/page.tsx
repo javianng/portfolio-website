@@ -35,7 +35,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
   }
 
   return (
-    <ScrollArea className="w-full rounded-md bg-white shadow-md dark:bg-neutral-900">
+    <ScrollArea className="w-full rounded-md bg-white shadow-md dark:bg-neutral-700">
       <main className="flex h-full min-h-[90vh] flex-col gap-2 p-4">
         {/* breadcrumb */}
         <Breadcrumb>

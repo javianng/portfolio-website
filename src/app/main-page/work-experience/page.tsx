@@ -80,7 +80,7 @@ export default function Page() {
             }}
             className={`${section.className} ${
               index != WORK_DETAILS.length - 1 && "mb-3"
-            } min-h-[85vh] rounded-r-md border-l-4 bg-white p-4 shadow-md dark:bg-neutral-900`}
+            } min-h-[85vh] rounded-r-md border-l-4 bg-white p-4 shadow-md dark:bg-neutral-700`}
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
