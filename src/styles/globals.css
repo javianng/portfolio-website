@@ -1,59 +1,223 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+  
 * {
   scroll-behavior: smooth;
+  text-transform: lowercase;
 }
 
-.loading {
-  transition: opacity 0.5s ease-in-out;
-}
+/* Underline Animation */
 
-.transition-out {
-  opacity: 0;
-}
-
-.content {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0;
-}
-
-.transition-in {
-  opacity: 1;
-}
-
-.wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+.underline-animation {
   display: inline-block;
+  position: relative;
 }
 
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 2px;
+  left: 0;
+  background-color: #000; 
+  transition: width 0.2s ease-in-out;
+}
+
+.underline-animation:hover::after {
+  width: 100%;
+}
+
+.underline-animation-light {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-animation-light::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 5px;
+  left: 0;
+  background-color: #000;
+  transition: width 0.2s ease-in-out;
+}
+
+.underline-animation-light:hover::after {
+  width: 100%;
+}
+
+/* Shadcn ui's Text Style */
+
+.h1 {
+  scroll-margin-top: 20px; 
+  font-size: 2.25rem; 
+  font-weight: 800; 
+  letter-spacing: -0.025em; 
+}
+
+@media (min-width: 1024px) { 
+  .h1 {
+    font-size: 3rem;
   }
-  10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
+}
+
+.h2 {
+  scroll-margin-top: 20px; 
+  border-bottom: 1px solid;
+  padding-bottom: 0.5rem; 
+  font-size: 1.875rem; 
+  font-weight: 600;
+  letter-spacing: -0.025em; 
+  margin-top: 10px; 
+}
+
+.h3 {
+  scroll-margin-top: 20px; 
+  font-size: 1.5rem;
+  font-weight: 600; 
+  letter-spacing: -0.025em; 
+}
+
+.h4 {
+  scroll-margin-top: 20px;
+  font-size: 1.25rem; 
+  font-weight: 600; 
+  letter-spacing: -0.025em; 
+}
+
+.p:not(:first-child) {
+  margin-top: 1.5rem; 
+}
+
+.blockquote {
+  margin-top: 1.5rem; 
+  border-left: 2px solid; 
+  padding-left: 1.5rem; 
+  font-style: italic;
+}
+
+.ul {
+  margin-top: 1.5rem; 
+  margin-bottom: 1.5rem; 
+  margin-left: 1.5rem; 
+  list-style-type: disc; 
+}
+
+.ul > li {
+  margin-top: 0.5rem; 
+}
+
+.ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+.ol > li {
+  margin-top: 0.5rem;
+}
+
+.code {
+  position: relative;
+  border-radius: 0.25rem;
+  background-color: var(--muted-bg-color); 
+  padding-left: 0.3rem; 
+  padding-right: 0.3rem; 
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem; 
+  font-family: monospace;
+  font-size: 0.875rem;
+  font-weight: 600; 
+}
+
+.large {
+  font-size: 1.125rem; 
+  font-weight: 600; 
+}
+
+.small {
+  font-size: 0.875rem;
+  font-weight: 500; 
+  line-height: 1;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+}
+
+/* Row Styles */
+tr {
+  margin: 0;
+  border-top: 1px solid; 
+  padding: 0;
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-muted); 
+}
+
+/* Header Cell Styles */
+th {
+  border: 1px solid; 
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+th[align="center"] {
+  text-align: center;
+}
+
+th[align="right"] {
+  text-align: right;
+}
+
+/* Data Cell Styles */
+td {
+  border: 1px solid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+td[align="center"] {
+  text-align: center;
+}
+
+td[align="right"] {
+  text-align: right;
+}
+
+/* Pulsing Word */
+
+.pulsing-word {
+  display: inline-flex;
+}
+
+.pulsing-char {
+  display: inline-block;
+  animation: pulse 3s infinite; /* Increased duration to 3s to include the pause */
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes pulse {
+  0%, 30% {
+    transform: scale(1);
   }
   50% {
-    transform: rotate(10deg);
+    transform: scale(1.25);
   }
-  60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
+  70%, 100% {
+    transform: scale(1);
   }
 }

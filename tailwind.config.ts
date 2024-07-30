@@ -1,12 +1,12 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config = {
-  darkMode: ["selector"],
+  darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
   prefix: "",
   theme: {
@@ -18,31 +18,6 @@ const config = {
       },
     },
     extend: {
-      colors: {
-        brand: {
-          50: "#E7F6F2",
-          100: "#A5C9CA",
-          200: "#395B64",
-          300: "#2C3333",
-        },
-        LFG: {
-          50: "#E50171",
-        },
-        ABYA: {
-          50: "#F6F2AE",
-        },
-        ComputingClub: {
-          0: "#FFFFFF",
-          50: "#ADABD5",
-          100: "#2A378A",
-        },
-        AStar: {
-          50: "#102F82",
-        },
-        Parametriks: {
-          50: "#201E28",
-        },
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -60,6 +35,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config
 
-export default config;
+export default config
