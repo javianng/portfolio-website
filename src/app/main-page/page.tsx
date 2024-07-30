@@ -30,7 +30,7 @@ export default function HomePage() {
   }, []);
   return (
     <ScrollArea className="w-full rounded-md shadow-md">
-      <main className="flex h-full min-h-[90vh] flex-col justify-between bg-white p-4 text-end">
+      <main className="flex h-full min-h-[90vh] flex-col justify-between bg-white p-4 text-end dark:bg-neutral-900">
         <motion.section
           id="roles"
           initial="hidden"

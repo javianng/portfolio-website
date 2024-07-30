@@ -83,7 +83,7 @@ export default function Layout({
       </aside>
       {/* normal layout */}
       <aside
-        className="hidden w-80 flex-col justify-between rounded-md bg-white p-10 shadow-md sm:flex"
+        className="hidden w-80 flex-col justify-between rounded-md bg-white p-10 shadow-md dark:bg-neutral-900 sm:flex"
         id="sidebar"
       >
         <ScrollArea>

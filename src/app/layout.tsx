@@ -1,6 +1,8 @@
 import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import { ThemeProvider } from "~/components/theme-provider";
+import ThemeSwitcher from "~/components/theme-switcher";
 
 export const metadata: Metadata = {
   title: "Work Experience - Javian Ng",
@@ -29,13 +31,23 @@ export default function Layout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="flex h-screen w-screen flex-col items-center justify-center bg-neutral-100">
-        <div className="container flex h-[90vh] gap-3">{children}</div>
-        <footer className="container">
-          <p className="font-thin">
-            <small>handcrafted by me &#169; twentytwentyfour</small>
-          </p>
-        </footer>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex h-screen w-screen flex-col items-center justify-center bg-neutral-100 dark:bg-neutral-800">
+            <div className="container flex h-[90vh] gap-3">{children}</div>
+            <footer className="container flex justify-between">
+              <p className="font-thin">
+                <small>handcrafted by me &#169; twentytwentyfour</small>
+              </p>
+              <ThemeSwitcher />
+            </footer>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

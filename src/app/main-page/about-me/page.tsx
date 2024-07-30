@@ -18,7 +18,7 @@ import {
 export default function Page() {
   return (
     <ScrollArea className="w-full rounded-md shadow-md">
-      <main className="flex h-full min-h-[90vh] flex-col items-start justify-start bg-white p-4 text-justify">
+      <main className="flex h-full min-h-[90vh] flex-col items-start justify-start bg-white p-4 text-justify dark:bg-neutral-900">
         {/* about me */}
         <motion.article
           initial="hidden"

@@ -48,7 +48,7 @@ export default function Page() {
   return (
     <main className="flex flex-row gap-3">
       {/* Navbar */}
-      <nav className="hidden min-w-52 flex-col items-start rounded-md bg-white p-4 shadow-md xl:flex">
+      <nav className="hidden min-w-52 flex-col items-start rounded-md bg-white p-4 shadow-md dark:bg-neutral-900 xl:flex">
         <h2 className="pt-10 underline underline-offset-2">work experience</h2>
         {WORK_DETAILS.map((section) => (
           <Button
@@ -80,7 +80,7 @@ export default function Page() {
             }}
             className={`${section.className} ${
               index != WORK_DETAILS.length - 1 && "mb-3"
-            } min-h-[85vh] rounded-r-md border-l-4 bg-white p-4 shadow-md`}
+            } min-h-[85vh] rounded-r-md border-l-4 bg-white p-4 shadow-md dark:bg-neutral-900`}
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}

@@ -16,7 +16,7 @@ import {
 export default function Page() {
   return (
     <ScrollArea className="w-full rounded-md shadow-md">
-      <main className="h-full min-h-[90vh] bg-white">
+      <main className="h-full min-h-[90vh] bg-white dark:bg-neutral-900">
         <motion.div
           initial="hidden"
           animate="visible"
