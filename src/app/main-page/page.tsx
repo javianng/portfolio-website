@@ -3,11 +3,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ScrollArea } from "~/components/ui/scroll-area";
-import {
-  containerVariants,
-  itemVariantsLeft,
-  itemVariantsRight,
-} from "~/components/animation";
+import { containerVariants, itemVariantsRight } from "~/components/animation";
 
 export default function HomePage() {
   // dynamic text sizing

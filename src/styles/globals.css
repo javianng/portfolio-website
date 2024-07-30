@@ -109,6 +109,17 @@
   margin-top: 0.5rem; 
 }
 
+.ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+.ol > li {
+  margin-top: 0.5rem;
+}
+
 .code {
   position: relative;
   border-radius: 0.25rem;
@@ -131,4 +142,57 @@
   font-size: 0.875rem;
   font-weight: 500; 
   line-height: 1;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+}
+
+/* Row Styles */
+tr {
+  margin: 0;
+  border-top: 1px solid; 
+  padding: 0;
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-muted); 
+}
+
+/* Header Cell Styles */
+th {
+  border: 1px solid; 
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+th[align="center"] {
+  text-align: center;
+}
+
+th[align="right"] {
+  text-align: right;
+}
+
+/* Data Cell Styles */
+td {
+  border: 1px solid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+td[align="center"] {
+  text-align: center;
+}
+
+td[align="right"] {
+  text-align: right;
 }

@@ -1,6 +1,14 @@
 import { type ReactNode } from "react";
 
-export interface ProjectFull {
+import Twenify from "~/components/projects/twenify";
+import Monarch from "~/components/projects/monarch";
+import StudyGPT from "~/components/projects/studygpt";
+import MemoriesHub from "~/components/projects/memorieshub";
+import VolunteerClock from "~/components/projects/volunteer-clock";
+import PhotographyPortfolio from "~/components/projects/photography-portfolio";
+import HousingPricingPrediction from "~/components/projects/housing-pricing-prediction";
+
+export interface Project {
   slug: string;
   title: string;
   description: string;
@@ -9,64 +17,81 @@ export interface ProjectFull {
   content: ReactNode;
 }
 
-export interface ProjectGrid {
-  slug: string;
-  title: string;
-  description: string;
-  main_image: string;
-  hover_image: string;
-}
-
-export interface ProjectNav {
-  slug: string;
-  title: string;
-}
-
-export const PROJECT_DATA_FULL: ProjectFull[] = [
+export const PROJECT_DATA: Project[] = [
   {
-    slug: "project-one",
-    title: "Project One",
+    slug: "studygpt",
+    title: "StudyGPT",
     description:
-      "This is a description for Project One. Veniam sint excepteur sit et sunt Lorem consectetur ullamco cupidatat ad. Officia aliqua reprehenderit nostrud mollit occaecat veniam et aliqua ipsum voluptate quis et ex cillum. Nisi elit officia cupidatat ut sunt cillum incididunt nostrud. Irure adipisicing adipisicing nostrud commodo in et est duis laborum magna. Magna fugiat minim sint Lorem laborum ex pariatur irure Lorem laborum irure fugiat. Laboris veniam ut mollit consectetur irure consectetur. Ullamco pariatur duis velit labore dolor esse elit cillum veniam mollit. Ipsum nostrud dolor aliquip. Eu cupidatat amet duis cupidatat esse ad eu exercitation qui enim. Laboris voluptate et duis cupidatat amet tempor exercitation reprehenderit. Quis aute laborum amet enim fugiat mollit aliqua ipsum veniam qui nisi consectetur irure aliqua exercitation. Quis occaecat anim velit aute irure nisi deserunt et. Lorem commodo incididunt veniam sint. Esse culpa ad dolore est est cupidatat amet irure est eiusmod occaecat nulla reprehenderit fugiat.",
-    main_image: "/test1.jpg",
-    tags: ["Next.js", "React", "TailwindCSS"],
-    content: "This is some content for Project One.",
+      "Helps students study by generating questions and providing feedback.",
+    main_image: "/projects/studygpt/cover-studygpt.jpg",
+    tags: ["Prompt Engineering", "ChatGPT"],
+    content: <StudyGPT />,
   },
   {
-    slug: "project-two",
-    title: "Project Two",
-    description: "This is a description for Project Two.",
-    main_image: "/images/project-two-main.jpg",
-    tags: ["TypeScript", "Framer Motion"],
-    content: "This is some content for Project Two.",
-  },
-];
-
-export const PROJECT_DATA_GRID: ProjectGrid[] = [
-  {
-    slug: "project-one",
-    title: "Project One",
+    slug: "twenify",
+    title: "Twenify",
     description:
-      "This is a description for Project One. Veniam sint excepteur sit et sunt Lorem consectetur ullamco cupidatat ad. Officia aliqua reprehenderit nostrud mollit occaecat veniam et aliqua ipsum voluptate quis et ex cillum. Nisi elit officia cupidatat ut sunt cillum incididunt nostrud. Irure adipisicing adipisicing nostrud commodo in et est duis laborum magna. Magna fugiat minim sint Lorem laborum ex pariatur irure Lorem laborum irure fugiat. Laboris veniam ut mollit consectetur irure consectetur. Ullamco pariatur duis velit labore dolor esse elit cillum veniam mollit. Ipsum nostrud dolor aliquip. Eu cupidatat amet duis cupidatat esse ad eu exercitation qui enim. Laboris voluptate et duis cupidatat amet tempor exercitation reprehenderit. Quis aute laborum amet enim fugiat mollit aliqua ipsum veniam qui nisi consectetur irure aliqua exercitation. Quis occaecat anim velit aute irure nisi deserunt et. Lorem commodo incididunt veniam sint. Esse culpa ad dolore est est cupidatat amet irure est eiusmod occaecat nulla reprehenderit fugiat.",
-    main_image: "/test1.jpg",
-    hover_image: "/test2.jpg",
+      "An all-in-one productivity platform for time management and focus.",
+    main_image: "/projects/twenify/cover-twenify.jpg",
+    tags: [
+      "FullStack",
+      "Vue",
+      "Firebase",
+      "Figma",
+      "DatabaseManagement",
+      "NoSQL",
+      "Authentication",
+    ],
+    content: <Twenify />,
   },
   {
-    slug: "project-two",
-    title: "Project Two",
-    description: "This is a description for Project Two.",
-    main_image: "/images/project-two-main.jpg",
-    hover_image: "/images/project-two-hover.jpg",
-  },
-];
-
-export const PROJECT_DATA_NAV: ProjectNav[] = [
-  {
-    slug: "project-one",
-    title: "Project One",
+    slug: "volunteer-clock",
+    title: "Volunteer Clock",
+    description:
+      "A DApp for managing and rewarding participation in community volunteering projects.",
+    main_image: "/projects/volunteer-clock/cover-volunteer-clock.jpg",
+    tags: ["Backend", "Blockchain", "Ganache", "Solidity", "Figma"],
+    content: <VolunteerClock />,
   },
   {
-    slug: "project-two",
-    title: "Project Two",
+    slug: "housing-pricing-prediction",
+    title: "Housing Pricing Prediction",
+    description: "A model to predict resale prices of HDB flats in Singapore.",
+    main_image:
+      "/projects/housingPricingPrediction/housing-pricing-prediction.png",
+    tags: [
+      "DataAnalysis",
+      "MachineLearning",
+      "SciKitLearn",
+      "PyTorch",
+      "TensorFlow",
+      "Pandas",
+      "Numpy",
+    ],
+    content: <HousingPricingPrediction />,
+  },
+  {
+    slug: "monarch",
+    title: "Monarch - Drone Rental Platform",
+    description: "A startup project submission for UEH Biztech Hackathon 2022.",
+    main_image: "/projects/monarch/cover-monarch.jpg",
+    tags: ["FullStack", "Authentication"],
+    content: <Monarch />,
+  },
+  {
+    slug: "memorieshub",
+    title: "Memories Hub",
+    description: "Personalized digital memory repository for couples.",
+    main_image: "/projects/memorieshub/cover-memorieshub.jpg",
+    tags: ["FullStack", "Edge Authentication"],
+    content: <MemoriesHub />,
+  },
+  {
+    slug: "photography-portfolio-website",
+    title: "Photography Portfolio Website",
+    description: "A showcase of my passion for photography.",
+    main_image: "/projects/photography-portfolio-website.png",
+    tags: ["Frontend", "React", "TailwindCSS"],
+    content: <PhotographyPortfolio />,
   },
 ];

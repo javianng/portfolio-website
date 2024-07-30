@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Button } from "~/components/ui/button";
+import { PROJECT_DATA } from "./projects/project-data";
 import { SocialList } from "~/components/social-links";
 import { ScrollArea } from "~/components/ui/scroll-area";
 import {
@@ -18,7 +19,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "~/components/ui/sheet";
-import { PROJECT_DATA_NAV } from "./projects/project-data";
 
 const HOME_LINKS = [
   { href: "/main-page", title: "Back to Main" },
@@ -66,7 +66,7 @@ export default function Layout({
               </Link>
             ))}
             <p className="p">projects</p>
-            {PROJECT_DATA_NAV.map((project) => (
+            {PROJECT_DATA.slice(0, 3).map((project) => (
               <Link
                 href={`/main-page/projects/${project.slug}`}
                 key={project.slug}
@@ -110,7 +110,7 @@ export default function Layout({
                   all projects
                 </Link>
               </AccordionContent>
-              {PROJECT_DATA_NAV.map((project) => (
+              {PROJECT_DATA.slice(0, 3).map((project) => (
                 <AccordionContent key={project.slug}>
                   <Link
                     href={`/main-page/projects/${project.slug}`}
