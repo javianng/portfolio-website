@@ -15,6 +15,7 @@ export interface Project {
   main_image: string;
   tags: string[];
   content: ReactNode;
+  projectlink: string;
 }
 
 export const PROJECT_DATA: Project[] = [
@@ -26,6 +27,7 @@ export const PROJECT_DATA: Project[] = [
     main_image: "/projects/studygpt/cover-studygpt.jpg",
     tags: ["Prompt Engineering", "ChatGPT"],
     content: <StudyGPT />,
+    projectlink: "https://chatgpt.com/g/g-ZbvJk1IQd-studygpt",
   },
   {
     slug: "twenify",
@@ -43,6 +45,7 @@ export const PROJECT_DATA: Project[] = [
       "Authentication",
     ],
     content: <Twenify />,
+    projectlink: "https://github.com/javianng/twenify",
   },
   {
     slug: "volunteer-clock",
@@ -52,6 +55,7 @@ export const PROJECT_DATA: Project[] = [
     main_image: "/projects/volunteer-clock/cover-volunteer-clock.jpg",
     tags: ["Backend", "Blockchain", "Ganache", "Solidity", "Figma"],
     content: <VolunteerClock />,
+    projectlink: "https://github.com/javianng/volunteerclock",
   },
   {
     slug: "housing-pricing-prediction",
@@ -69,6 +73,7 @@ export const PROJECT_DATA: Project[] = [
       "Numpy",
     ],
     content: <HousingPricingPrediction />,
+    projectlink: "https://github.com/javianng/housing-pricing-forecasting",
   },
   {
     slug: "monarch",
@@ -77,6 +82,7 @@ export const PROJECT_DATA: Project[] = [
     main_image: "/projects/monarch/cover-monarch.jpg",
     tags: ["FullStack", "Authentication"],
     content: <Monarch />,
+    projectlink: "https://github.com/javianng/ueh-biztech-hackathon/",
   },
   {
     slug: "memorieshub",
@@ -85,6 +91,7 @@ export const PROJECT_DATA: Project[] = [
     main_image: "/projects/memorieshub/cover-memorieshub.jpg",
     tags: ["FullStack", "Edge Authentication"],
     content: <MemoriesHub />,
+    projectlink: "https://github.com/javianng/memories-hub",
   },
   {
     slug: "photography-portfolio-website",
@@ -93,5 +100,6 @@ export const PROJECT_DATA: Project[] = [
     main_image: "/projects/photography-portfolio-website.png",
     tags: ["Frontend", "React", "TailwindCSS"],
     content: <PhotographyPortfolio />,
+    projectlink: "https://github.com/javianng/photography-website-v2",
   },
 ];

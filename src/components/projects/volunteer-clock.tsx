@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function VolunteerClock() {
   return (
     <article>
@@ -11,6 +13,13 @@ export default function VolunteerClock() {
         verification—VolunteerClock provides a robust solution using blockchain
         technology.
       </p>
+      <Image
+        src={"/projects/volunteer-clock/volunteer.png"}
+        alt={"Volunteer's Perspective"}
+        width={500}
+        height={500}
+        className="mt-3 h-auto w-full rounded-md shadow-md"
+      />
       <h2 className="h2">The Problem</h2>
       <p className="p">
         Existing community volunteering systems often suffer from inaccurate and
@@ -27,6 +36,13 @@ export default function VolunteerClock() {
         immutably on the blockchain, providing a transparent and verifiable
         mechanism to track and reward volunteer activities.
       </p>
+      <Image
+        src={"/projects/volunteer-clock/organisation.png"}
+        alt={"Organisation's Perspective"}
+        width={500}
+        height={500}
+        className="mt-3 h-auto w-full rounded-md shadow-md"
+      />
       <h2 className="h2">Key Features of VolunteerClock</h2>
       <ol className="ol">
         <li>
@@ -35,6 +51,13 @@ export default function VolunteerClock() {
           check-ins/check-outs, and token minting. The use of ERC1155 tokens for
           representing volunteer activities ensures that contributions are
           recorded and rewarded accurately.
+          <Image
+            src={"/projects/volunteer-clock/volunteertoken.png"}
+            alt={"VolunteerToken"}
+            width={500}
+            height={500}
+            className="mt-3 h-auto w-full rounded-md shadow-md"
+          />
         </li>
         <li>
           IPFS for Data Integrity: Project details, such as descriptions and
@@ -84,6 +107,13 @@ export default function VolunteerClock() {
           maintained to protect volunteer identities as needed.
         </li>
       </ol>
+      <Image
+        src={"/projects/volunteer-clock/recruiter.png"}
+        alt={"Recruiter's Perspective"}
+        width={500}
+        height={500}
+        className="mt-3 h-auto w-full rounded-md shadow-md"
+      />
       <h2 className="h2">Challenges and Future Directions</h2>
       <p className="p">
         While VolunteerClock addresses many challenges of traditional volunteer

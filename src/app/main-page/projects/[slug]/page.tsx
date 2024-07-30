@@ -10,6 +10,9 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "~/components/ui/breadcrumb";
+import { Button } from "~/components/ui/button";
+import Link from "next/link";
+import { Link2 } from "lucide-react";
 
 export async function generateStaticParams() {
   return PROJECT_DATA.map((project) => ({
@@ -34,7 +37,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
 
   return (
     <ScrollArea className="w-full rounded-md bg-white shadow-md">
-      <main className="h-full min-h-[90vh] flex-col gap-3 p-4">
+      <main className="flex h-full min-h-[90vh] flex-col gap-2 p-4">
         {/* breadcrumb */}
         <Breadcrumb>
           <BreadcrumbList>
@@ -56,7 +59,9 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
         {/* title */}
         <h1 className="h1">{project.title}</h1>
         {/* details */}
+
         <blockquote className="blockquote">{project.description}</blockquote>
+
         <div className="flex flex-wrap gap-1 py-3">
           {project.tags.map((tag, index) => (
             <Badge variant="outline" key={index}>
@@ -64,6 +69,18 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
             </Badge>
           ))}
         </div>
+
+        <Link href={project.projectlink}>
+          <Button
+            size="free"
+            variant="link"
+            className="flex items-center gap-1"
+          >
+            <Link2 size={20} className="pt-0.5" />
+            <p>project link</p>
+          </Button>
+        </Link>
+
         {/* content */}
         {project.content}
       </main>
