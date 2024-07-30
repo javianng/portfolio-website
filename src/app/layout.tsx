@@ -5,7 +5,7 @@ import { ThemeProvider } from "~/components/theme-provider";
 import ThemeSwitcher from "~/components/theme-switcher";
 
 export const metadata: Metadata = {
-  title: "Work Experience - Javian Ng",
+  title: "Javian Ng",
   description: "Explore Javian Ng's professional work experience.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
   openGraph: {
