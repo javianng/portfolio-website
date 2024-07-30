@@ -122,11 +122,11 @@ export default function Layout({
               ))}
             </AccordionItem>
             {/* blog */}
-            <Link href={"/blog"}>
+            {/* <Link href={"/blog"}>
               <AccordionItem value="blog">
                 <AccordionTrigger>blog</AccordionTrigger>
               </AccordionItem>
-            </Link>
+            </Link> */}
           </Accordion>
         </ScrollArea>
         <SocialList />
