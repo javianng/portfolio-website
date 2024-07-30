@@ -17,3 +17,8 @@ export const itemVariantsRight = {
   hidden: { opacity: 0, x: 20 },
   visible: { opacity: 1, x: 0 },
 };
+
+export const itemVariantsBotton = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0 },
+};

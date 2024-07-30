@@ -64,12 +64,20 @@ export default function HomePage() {
             </motion.p>
             <motion.h1
               id="responsive-title-text"
-              className="font-thin"
+              className="pulsing-word font-thin"
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1 }}
             >
-              Javian Ng
+              {`Javian Ng`.split("").map((char, index) => (
+                <span
+                  key={index}
+                  className="pulsing-char"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {char}
+                </span>
+              ))}
             </motion.h1>
           </div>
         </section>

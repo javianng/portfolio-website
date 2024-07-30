@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Link2 } from "lucide-react";
 import { notFound } from "next/navigation";
 import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
 import { ScrollArea } from "~/components/ui/scroll-area";
 import { type Project, PROJECT_DATA } from "../project-data";
 import {
@@ -11,7 +12,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "~/components/ui/breadcrumb";
-import { Button } from "~/components/ui/button";
 
 export async function generateStaticParams() {
   return PROJECT_DATA.map((project) => ({
