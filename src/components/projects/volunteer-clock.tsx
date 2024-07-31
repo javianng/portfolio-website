@@ -14,7 +14,7 @@ export default function VolunteerClock() {
         technology.
       </p>
       <Image
-        src={"/projects/volunteer-clock/volunteer.png"}
+        src={"/projects/volunteer-clock/volunteer.jpg"}
         alt={"Volunteer's Perspective"}
         width={500}
         height={500}
@@ -37,7 +37,7 @@ export default function VolunteerClock() {
         mechanism to track and reward volunteer activities.
       </p>
       <Image
-        src={"/projects/volunteer-clock/organisation.png"}
+        src={"/projects/volunteer-clock/organisation.jpg"}
         alt={"Organisation's Perspective"}
         width={500}
         height={500}
@@ -52,7 +52,7 @@ export default function VolunteerClock() {
           representing volunteer activities ensures that contributions are
           recorded and rewarded accurately.
           <Image
-            src={"/projects/volunteer-clock/volunteertoken.png"}
+            src={"/projects/volunteer-clock/volunteertoken.jpg"}
             alt={"VolunteerToken"}
             width={500}
             height={500}
@@ -108,7 +108,7 @@ export default function VolunteerClock() {
         </li>
       </ol>
       <Image
-        src={"/projects/volunteer-clock/recruiter.png"}
+        src={"/projects/volunteer-clock/recruiter.jpg"}
         alt={"Recruiter's Perspective"}
         width={500}
         height={500}
