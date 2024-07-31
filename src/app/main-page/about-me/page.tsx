@@ -14,6 +14,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "~/components/ui/accordion";
+import { Button } from "~/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "~/components/ui/dialog";
+import { Camera } from "lucide-react";
+import { LIFE_DATA } from "./life-data";
 
 export default function Page() {
   return (
@@ -54,6 +65,50 @@ export default function Page() {
             life with my partner in crime. Whether it&apos;s coding or any other
             interest, feel free to reach out to me!
           </motion.p>
+          {/* dialog */}
+          <motion.div variants={itemVariantsLeft} className="pt-6">
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="secondary">learn more</Button>
+              </DialogTrigger>
+              <DialogContent className="h-[90vh] w-full max-w-[70vw]">
+                <DialogHeader>
+                  <DialogTitle className="flex items-center gap-2">
+                    <Camera size={18} />
+                    snippets of my life
+                  </DialogTitle>
+                  <DialogDescription>
+                    &quot;The most important thing is to enjoy your life—to be
+                    happy - it&apos;s all that matters.&quot; - Steve Jobs
+                  </DialogDescription>
+                </DialogHeader>
+                <ScrollArea>
+                  <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-3">
+                    {LIFE_DATA.map((item, index) => (
+                      <figure
+                        key={index}
+                        className="flex flex-col bg-neutral-800"
+                      >
+                        <div className="overflow-clip">
+                          <Image
+                            src={item.image}
+                            alt={item.title}
+                            width="600"
+                            height="600"
+                            className="aspect-square w-fit object-cover duration-200 hover:scale-105"
+                          />
+                        </div>
+                        <figcaption className="p-3">
+                          <p className="large pb-1">{item.title}</p>
+                          <p className="small">{item.description}</p>
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </ScrollArea>
+              </DialogContent>
+            </Dialog>
+          </motion.div>
         </motion.article>
         {/* testimonial */}
         <motion.section
