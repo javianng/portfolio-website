@@ -99,20 +99,23 @@ export default function Page() {
               </div>
               <h3 className="h4">@ {section.companyOrganization}</h3>
             </div>
-            <div className="p flex items-center gap-1">
-              <CalendarRange size={16} />
-              <p>{section.duration}</p>
-              <Dot size={16} />
-              <MapPin size={16} />
-              <p>{section.location}</p>
+            <div className="p flex flex-col gap-1 pb-3">
+              <div className="flex items-center gap-1">
+                <CalendarRange size={16} />
+                <p>{section.duration}</p>
+              </div>
+              <div className="flex items-center gap-1">
+                <MapPin size={16} />
+                <p>{section.location}</p>
+              </div>
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-col-reverse sm:gap-3 lg:flex-row">
               {section.detail}
               {section.image && (
                 <Image
                   src={section.image}
                   alt={section.title}
-                  className="h-auto w-1/2 rounded-md object-cover shadow-md"
+                  className="h-auto w-full rounded-md object-cover shadow-md lg:w-1/2"
                   width={800}
                   height={800}
                 />

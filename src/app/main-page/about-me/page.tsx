@@ -24,40 +24,35 @@ export default function Page() {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="w-full pb-10 sm:w-4/5 md:w-3/5"
+          className="w-full pb-10 sm:w-4/5 lg:w-3/5"
         >
           <motion.h1 variants={itemVariantsLeft} className="h1" id="about me">
             about me
           </motion.h1>
           <motion.p variants={itemVariantsLeft} className="p">
-            I am a <strong>Full-Stack Web Developer</strong> with a robust
-            background in <strong>Machine Learning and Data Science</strong>. My
-            passion for technology drives me to constantly explore new realms,
-            making me a quick learner and highly adaptable professional. I
-            thrive on challenges and love turning complex problems into clean,
-            user-friendly solutions.
+            For as long as I could remember, I love building things. It started
+            with building LEGO creations and evolved into coding with Scratch,
+            where I spent weeks perfecting my own FPS game while other kids were
+            playing Call of Duty. Fast forward to today, I&apos;ve had the
+            privilege to build software for early-stage startups like LFG, as
+            well as for school projects and personal endeavors.
           </motion.p>
           <motion.p variants={itemVariantsLeft} className="p">
-            Currently, I am expanding my expertise through a research data
-            science internship focused on cancer research. This opportunity
-            allows me to apply my{" "}
-            <strong>analytical skills and machine learning knowledge</strong> to
-            make meaningful contributions to critical health issues. It&apos;s
-            an exhilarating experience that has deepened my understanding of
-            bioinformatics and its impact on medical advancements.
+            I&apos;ve always been drawn to people and the pursuit of knowledge,
+            particularly in understanding industry trends and developing soft
+            skills. This curiosity sparked my journey of self-discovery, pushing
+            me to take on challenging roles - leading clubs, collaborating with
+            international developers... Just a year into university, I was
+            already immersed in full-stack development. Today, my main focus is
+            leveraging the powerful tools at my disposal to bridge gaps and
+            solve problems, ultimately prioritizing what matters most — the
+            people.
           </motion.p>
           <motion.p variants={itemVariantsLeft} className="p">
-            With an entrepreneurial mindset, I have initiated and led various
-            projects that bridge the gap between data-driven insights and
-            functional web applications. My goal is always to innovate and
-            optimize, ensuring that every project not only meets but exceeds
-            expectations.
-          </motion.p>
-          <motion.p variants={itemVariantsLeft} className="p">
-            Whether I&apos;m coding, crunching data, or collaborating on
-            breakthrough research, I bring a blend of expertise, dedication, and
-            a forward-thinking approach to everything I do. Let&apos;s connect
-            and explore how we can create something great together!
+            When I&apos;m not building new tools or taking on new commitments,
+            you can find me on the golf course, photographing life or exploring
+            life with my partner in crime. Whether it&apos;s coding or any other
+            interest, feel free to reach out to me!
           </motion.p>
         </motion.article>
         {/* testimonial */}
@@ -65,7 +60,7 @@ export default function Page() {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="w-full pb-10 sm:w-4/5 md:w-3/5"
+          className="w-full pb-10 sm:w-4/5 lg:w-3/5"
         >
           <motion.h2 variants={itemVariantsLeft} className="h2">
             what others say about me
@@ -97,7 +92,7 @@ export default function Page() {
         <motion.section
           initial="hidden"
           animate="visible"
-          className="w-full pb-10 sm:w-4/5 md:w-3/5"
+          className="w-full pb-10 sm:w-4/5 lg:w-3/5"
           variants={containerVariants}
         >
           <motion.h2 className="h2" variants={itemVariantsLeft}>

@@ -40,7 +40,7 @@ export default function Page() {
                     />
                   </figure>
                   <CardHeader>
-                    <CardTitle className="line-clamp-1 h-7">
+                    <CardTitle className="line-clamp-1 h-[1.6rem]">
                       {project.title}
                     </CardTitle>
                     <CardDescription className="line-clamp-3 h-16">

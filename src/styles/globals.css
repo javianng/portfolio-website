@@ -197,27 +197,3 @@ td[align="center"] {
 td[align="right"] {
   text-align: right;
 }
-
-/* Pulsing Word */
-
-.pulsing-word {
-  display: inline-flex;
-}
-
-.pulsing-char {
-  display: inline-block;
-  animation: pulse 3s infinite; /* Increased duration to 3s to include the pause */
-  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-@keyframes pulse {
-  0%, 30% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  70%, 100% {
-    transform: scale(1);
-  }
-}

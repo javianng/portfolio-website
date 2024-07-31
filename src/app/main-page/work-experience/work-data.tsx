@@ -21,7 +21,7 @@ export const WORK_DETAILS: Section[] = [
     location: "Paris, France",
     detail: (
       <article>
-        <ul className="ul list-disc">
+        <ul className="ul">
           <li>
             Developing machine learning algorithms for risk analysis and
             prediction.
@@ -54,7 +54,7 @@ export const WORK_DETAILS: Section[] = [
           Real-Time Analysis Pipeline for Nanopore Sequencing and Comparative
           Data Analysis
         </h4>
-        <ul className="ul list-disc">
+        <ul className="ul">
           <li>
             Project Overview: The primary goal of this upcoming project is to
             advance analytics capabilities for cancer vaccine research using
@@ -63,7 +63,7 @@ export const WORK_DETAILS: Section[] = [
             Nanopore data in TCR repertoire analysis.
           </li>
           <li>Objectives:</li>
-          <ol className="ml-8 list-outside list-decimal">
+          <ol className="ol">
             <li>
               Real-Time Sequencing Analysis: To develop on-the-fly data
               analytics that will enable real-time monitoring of sequencing
@@ -82,6 +82,7 @@ export const WORK_DETAILS: Section[] = [
     ),
     tags: ["Bioinformatics", "Data Science", "Machine Learning", "Research"],
     logo: "/experience/AstarSIgN.png",
+    image: "/experience/AstarSIgNPhoto.jpeg",
   },
   {
     title: "President",
@@ -99,7 +100,7 @@ export const WORK_DETAILS: Section[] = [
             of excellence for the Computing Club.
           </li>
           <li>My tenure as President is driven by a three-fold mission:</li>
-          <ol className="ml-8 list-decimal">
+          <ol className="ol">
             <li>Strengthening Internal Bonds</li>
             <li>Establishing Partnerships</li>
             <li>Building Relationships with Advisors</li>
