@@ -41,29 +41,32 @@ export default function Page() {
             about me
           </motion.h1>
           <motion.p variants={itemVariantsLeft} className="p">
-            For as long as I could remember, I love building things. It started
-            with building LEGO creations and evolved into coding with Scratch,
-            where I spent weeks perfecting my own FPS game while other kids were
-            playing Call of Duty. Fast forward to today, I&apos;ve had the
-            privilege to build software for early-stage startups like LFG, as
-            well as for school projects and personal endeavors.
+            for as long as i can remember, i&apos;ve loved building things. it
+            started with building lego creations and evolved into coding with
+            scratch, where i spent weeks perfecting my own fps game while other
+            kids my age were busy playing online games such as call of duty.
+            fast forward to today, i&apos;ve had the privilege of building
+            software for early-stage startups like lfg, as well as for school
+            projects and personal endeavours.
           </motion.p>
           <motion.p variants={itemVariantsLeft} className="p">
-            I&apos;ve always been drawn to people and the pursuit of knowledge,
+            i&apos;ve always been drawn to people and the pursuit of knowledge,
             particularly in understanding industry trends and developing soft
-            skills. This curiosity sparked my journey of self-discovery, pushing
-            me to take on challenging roles - leading clubs, collaborating with
-            international developers... Just a year into university, I was
-            already immersed in full-stack development. Today, my main focus is
-            leveraging the powerful tools at my disposal to bridge gaps and
-            solve problems, ultimately prioritizing what matters most — the
-            people.
+            skills. this curiosity sparked my journey of self-discovery, pushing
+            me to take on challenging roles — leading clubs, collaborating with
+            international developers and spearheading novel initiatives… just a
+            year into university, i was already immersed in full-stack
+            development. today, my main focus is leveraging the powerful tools
+            at my disposal to bridge gaps and solve problems, ultimately
+            prioritising what matters most to me — people.
           </motion.p>
           <motion.p variants={itemVariantsLeft} className="p">
-            When I&apos;m not building new tools or taking on new commitments,
-            you can find me on the golf course, photographing life or exploring
-            life with my partner in crime. Whether it&apos;s coding or any other
-            interest, feel free to reach out to me!
+            when i&apos;m not building new tools or taking on new commitments,
+            you can find me on the golf course, photographing life, or exploring
+            life with my partner in crime. whether it&apos;s project
+            development, coding or any other interests, i&apos;d love to have a
+            chat to see how our passions and dreams can best align to create
+            something amazing!
           </motion.p>
           {/* dialog */}
           <motion.div variants={itemVariantsLeft} className="pt-6">
