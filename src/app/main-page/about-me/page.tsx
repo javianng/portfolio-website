@@ -87,7 +87,7 @@ export default function Page() {
                     {LIFE_DATA.map((item, index) => (
                       <figure
                         key={index}
-                        className="flex flex-col bg-neutral-800"
+                        className="flex flex-col bg-neutral-100 dark:bg-neutral-800"
                       >
                         <div className="overflow-clip">
                           <Image
