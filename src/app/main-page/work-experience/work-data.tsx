@@ -51,30 +51,74 @@ export const WORK_DETAILS: Section[] = [
     detail: (
       <article>
         <h4 className="blockquote">
-          Real-Time Analysis Pipeline for Nanopore Sequencing and Comparative
-          Data Analysis
+          Project: To advance analytics capabilities for cancer vaccine research
+          using Nanopore sequencing technology by developing a real-time
+          analysis pipeline using Oxford Nanopore Technologies in TCR repertoire
+          analysis.
         </h4>
         <ul className="ul">
           <li>
-            Project Overview: The primary goal of this upcoming project is to
-            advance analytics capabilities for cancer vaccine research using
-            Nanopore sequencing technology. This project will include developing
-            a real-time analysis pipeline and comparing Singleron versus
-            Nanopore data in TCR repertoire analysis.
+            Background Information: Genetic sequences are error prone and hence
+            require extensive cleaning methods to recover the original seqeunce.
+            This recovery has been a challenge in the field of bioinformatics
+            using long-read sequencing technologies such as Nanopore.
           </li>
-          <li>Objectives:</li>
+          <li>Final Pipeline</li>
           <ol className="ol">
             <li>
-              Real-Time Sequencing Analysis: To develop on-the-fly data
-              analytics that will enable real-time monitoring of sequencing
-              quality, establish data-informed sequencing endpoints, and offer a
-              code-free analytics capability.
+              Utilized Samtools to convert input files into accessible and
+              workable formats, ensuring high data integrity and compatibility.
             </li>
             <li>
-              Comparative Data Analysis: To compare the efficacy of Singleron
-              and Nanopore technologies in analyzing TCR repertoires, aiming to
-              identify the most accurate and reliable method for use in
-              immunotherapy applications.
+              Innovatively identified cell barcodes of various sequences with
+              precision using markers such as TSO and Read1 sequences. This was
+              accomplished by leveraging custom Python scripts and CutAdapt,
+              resulting in a{" "}
+              <u>remarkable 200% increase in sequence recovery</u>.
+            </li>
+            <li>
+              Employed and <u>proposed the Levenshtein distance algorithm</u> to
+              rectify cell barcodes not present in the whitelist, thereby
+              enhancing sequence recovery. This novel approach outperforms
+              traditional Hamming distance by accurately measuring sequence
+              variations due to insertions and deletions.
+            </li>
+            <li>
+              Developed a Python-based method to categorize sequences of a cell
+              barcode into alpha and beta TCR chains without relying on mapping
+              or references. Utilizing Ward&apos;s Linkage clustering approach,
+              this method <u>achieved an average accuracy of 90%</u>, as
+              validated against MixCR references, marking a significant
+              advancement in the field.
+            </li>
+            <li>
+              Implemented a k-mer based strategy to correct UMI of sequences
+              sharing the same cell barcode and similar UMI, thereby enhancing
+              data accuracy.
+            </li>
+            <li>
+              Customized Shasta for the assembly of alpha and beta TCR
+              sequences, overcoming the lack of pre-existing configurations for
+              TCR assembly and pioneering new methodologies in the process.
+            </li>
+          </ol>
+          <li>Additional Achievements</li>
+          <ol className="ol">
+            <li>
+              Experimented with over 20 distinct bioinformatics tools and
+              methodologies, iterating the pipeline more than 20 times using
+              Python, R, and Linux Shell scripts to develop a robust trial
+              pipeline that validates multiple hypotheses.
+            </li>
+            <li>
+              Wrote over 84,863 lines of code in slightly over 1 month of
+              internship, with significant findings shifting research directions
+              multiple times through data analysis and findings
+            </li>
+            <li>
+              3rd co-author of Refining TCR Clonotype Identification With
+              Long-Read Sequencing Technique submitted to Society for
+              Immunotherapy of Cancer for review
             </li>
           </ol>
         </ul>
@@ -95,15 +139,30 @@ export const WORK_DETAILS: Section[] = [
         <ul className="ul">
           <li>
             In my role as President, I have the privilege of leading a dedicated
-            team of Vice Presidents, Directors, Secretaries, and Tech Leads.
-            Together, we are committed to charting a course towards new heights
-            of excellence for the Computing Club.
+            team of Vice Presidents and secretaries. Together, we are committed
+            to charting a course towards new heights of excellence for the
+            Computing Club.
           </li>
           <li>My tenure as President is driven by a three-fold mission:</li>
           <ol className="ol">
             <li>Strengthening Internal Bonds</li>
             <li>Establishing Partnerships</li>
             <li>Building Relationships with Advisors</li>
+          </ol>
+          <li>Our Achievements:</li>
+          <ol className="ol">
+            <li>
+              Led a team of 30 in organising over 20 club events relating to
+              student life and development, impacting 5,000 undergraduates
+            </li>
+            <li>
+              Allocated and managed club&apos;s finance of up to $300,000 to 4
+              departments organising over 20 events
+            </li>
+            <li>
+              Leading exchange program policy change, potentially impacting
+              3,000 undergraduates
+            </li>
           </ol>
         </ul>
       </article>
@@ -122,39 +181,25 @@ export const WORK_DETAILS: Section[] = [
       <article>
         <ul className="ul">
           <li>
-            Collaborate with the development team to design and implement
+            Collaborated with 4 development team members to design and implement
             website and product features
           </li>
           <li>
-            Write clean, efficient, and maintainable code using modern
-            programming languages
+            Wrote over 5,000 lines of clean, efficient, and maintainable code to
+            develop MVP
           </li>
           <li>
-            Participate in code reviews and testing to ensure the quality of the
-            product
+            Collaborated with 3 designers to ensure user interface is responsive
+            and user-friendly, aligning design and development team
           </li>
           <li>
-            Work closely with designers to ensure the user interface is
-            responsive and user-friendly
-          </li>
-          <li>
-            Help troubleshoot and debug any issues that arise during development
-          </li>
-          <li>
-            Stay up-to-date with emerging trends and technologies in web
-            development (especially with travel tech)
+            Conducted business development and product pitching at networking
+            events to VCs.
           </li>
         </ul>
       </article>
     ),
-    tags: [
-      "TypeScript",
-      "Node.js",
-      "Full-Stack Development",
-      "React.js",
-      "Software Development",
-      "Product Development",
-    ],
+    tags: ["TypeScript", "Prisma Studio", "TRPC", "React.js"],
     logo: "/experience/LFG.svg",
     image: "/experience/LFGPhoto.jpeg",
   },
@@ -168,28 +213,19 @@ export const WORK_DETAILS: Section[] = [
       <article>
         <ul className="ul">
           <li>
-            Leading a web development team of 3 in building and maintaining the
-            organisation&apos;s website
+            Directed a team of 3 website developers, 2 UI/UX designers and 2
+            copywriters from 3 different ASEAN countries in building a new
+            full-stack website application
           </li>
+          <li>Conduct code revisions and optimisation on a bi-weekly basis</li>
           <li>
-            Collaborate with the development team to design and implement
-            website and product features
-          </li>
-          <li>
-            Lead and conduct code reviews and testing to ensure the quality of
-            the product
-          </li>
-          <li>
-            Work closely with designers to ensure the user interface is
-            responsive and user-friendly
-          </li>
-          <li>
-            Help troubleshoot and debug any issues that arise during development
+            Wrote over 39,998 lines of code to implement user authentication and
+            key features
           </li>
         </ul>
       </article>
     ),
-    tags: ["TypeScript", "Front-End Development", "React.js"],
+    tags: ["TypeScript", "React.js", "Firebase", "Project Management", "Scrum"],
     logo: "/experience/ABYA.png",
     image: "/experience/ABYAPhoto.jpg",
   },
