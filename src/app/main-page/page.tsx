@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ScrollArea } from "~/components/ui/scroll-area";
+import { useEffect } from "react";
 import { containerVariants, itemVariantsRight } from "~/components/animation";
+import { ScrollArea } from "~/components/ui/scroll-area";
 
 export default function HomePage() {
   // dynamic text sizing

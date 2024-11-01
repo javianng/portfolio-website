@@ -1,8 +1,9 @@
-import "~/styles/globals.css";
-import { type Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import { type Metadata } from "next";
 import { ThemeProvider } from "~/components/theme-provider";
 import ThemeSwitcher from "~/components/theme-switcher";
+import { Toaster } from "~/components/ui/toaster";
+import "~/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Javian Ng",
@@ -48,6 +49,7 @@ export default function Layout({
             </footer>
           </div>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

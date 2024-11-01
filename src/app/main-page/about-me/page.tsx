@@ -1,12 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { Badge } from "~/components/ui/badge";
-import { SKILLSETS_DATA } from "./skillsets-data";
-import { TESTIMONIAL_DATA } from "./testimonial-data";
-import { ScrollArea } from "~/components/ui/scroll-area";
+import { Camera } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { containerVariants, itemVariantsLeft } from "~/components/animation";
 import {
   Accordion,
@@ -14,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "~/components/ui/accordion";
+import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import {
   Dialog,
@@ -23,8 +21,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "~/components/ui/dialog";
-import { Camera } from "lucide-react";
+import { ScrollArea } from "~/components/ui/scroll-area";
 import { LIFE_DATA } from "./life-data";
+import { SKILLSETS_DATA } from "./skillsets-data";
+import { TESTIMONIAL_DATA } from "./testimonial-data";
 
 export default function Page() {
   return (

@@ -1,12 +1,12 @@
 import { type ReactNode } from "react";
 
-import Twenify from "~/components/projects/twenify";
-import Monarch from "~/components/projects/monarch";
-import StudyGPT from "~/components/projects/studygpt";
-import MemoriesHub from "~/components/projects/memorieshub";
-import VolunteerClock from "~/components/projects/volunteer-clock";
-import PhotographyPortfolio from "~/components/projects/photography-portfolio";
 import HousingPricingPrediction from "~/components/projects/housing-pricing-prediction";
+import MemoriesHub from "~/components/projects/memorieshub";
+import Monarch from "~/components/projects/monarch";
+import PhotographyPortfolio from "~/components/projects/photography-portfolio";
+import StudyGPT from "~/components/projects/studygpt";
+import Twenify from "~/components/projects/twenify";
+import VolunteerClock from "~/components/projects/volunteer-clock";
 
 export interface Project {
   slug: string;

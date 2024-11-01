@@ -1,8 +1,8 @@
 "use client";
 
 import { Dot } from "lucide-react";
-import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
+import { Button } from "./ui/button";
 
 export default function ThemeSwitcher() {
   const { setTheme } = useTheme();

@@ -9,7 +9,7 @@ export function SocialList() {
           key={websiteName}
           variant="free"
           size="free"
-          className="underline-animation-light rounded-none py-1 font-thin"
+          className="underline-animation rounded-none py-1 font-thin"
         >
           <Link
             href={website}
@@ -24,7 +24,7 @@ export function SocialList() {
       <Button
         variant="free"
         size="free"
-        className="underline-animation-light rounded-none py-1 font-thin"
+        className="underline-animation rounded-none py-1 font-thin"
       >
         <Link
           href="/resume.pdf"
