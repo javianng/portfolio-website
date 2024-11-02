@@ -16,7 +16,7 @@ export const WORK_DETAILS: Section[] = [
   {
     title: "Data Scientist Intern",
     companyOrganization: "Parametriks",
-    duration: "August 2024 - January 2025",
+    duration: "August 2024 - Present",
     className: "border-l-[#201E28]",
     location: "Paris, France",
     detail: (
@@ -41,6 +41,7 @@ export const WORK_DETAILS: Section[] = [
     ),
     tags: ["Data Science", "Data Analytics", "Machine Learning"],
     logo: "/experience/Parametriks.png",
+    image: "/experience/ParametriksPhoto.jpeg",
   },
   {
     title: "Research Intern",
@@ -131,7 +132,7 @@ export const WORK_DETAILS: Section[] = [
   {
     title: "President",
     companyOrganization: "NUS SoC Computing Club",
-    duration: "September 2023 - Present",
+    duration: "September 2023 - September 2024",
     className: "border-l-[#2A378A]",
     location: "Singapore",
     detail: (
@@ -206,7 +207,7 @@ export const WORK_DETAILS: Section[] = [
   {
     title: "Web Developer Lead",
     companyOrganization: "ASEAN Business Youth Association",
-    duration: "June 2023 - Present", // duration format to be e.g. January 2023 - Present
+    duration: "June 2023 - September 2024",
     className: "border-l-[#F6F2AE]",
     location: "Singapore",
     detail: (

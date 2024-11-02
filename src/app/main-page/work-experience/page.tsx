@@ -1,13 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { WORK_DETAILS } from "./work-data";
+import { CalendarRange, MapPin } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
-import { useEffect, useRef, useState } from "react";
 import { ScrollArea } from "~/components/ui/scroll-area";
-import { CalendarRange, MapPin } from "lucide-react";
+import { WORK_DETAILS } from "./work-data";
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState<string>(
@@ -109,17 +109,17 @@ export default function Page() {
                 <p>{section.location}</p>
               </div>
             </div>
-            <div className="flex flex-col-reverse sm:gap-3 lg:flex-row">
-              {section.detail}
+            <div className="flex flex-col sm:gap-3">
               {section.image && (
                 <Image
                   src={section.image}
                   alt={section.title}
-                  className="h-auto w-full rounded-md object-cover shadow-md lg:w-1/2"
+                  className="h-auto w-full rounded-md object-cover shadow-md"
                   width={800}
                   height={800}
                 />
               )}
+              {section.detail}
             </div>
             <div className="flex flex-wrap gap-1 pt-3">
               {section.tags.map((tag) => (

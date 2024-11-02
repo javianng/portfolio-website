@@ -127,13 +127,13 @@ export default function Page() {
             {TESTIMONIAL_DATA.map(
               ({ image, quote, personel, organisation }) => (
                 <motion.div variants={itemVariantsLeft} key={personel}>
-                  <div className="flex gap-2">
+                  <div className="flex items-center gap-2">
                     <Image
                       src={image}
                       width={100}
                       height={100}
                       alt={`${personel} from ${organisation}`}
-                      className="aspect-square w-16 rounded-md shadow-md"
+                      className="aspect-square h-16 w-16 rounded-md shadow-md"
                     />
                     <div className="flex flex-col justify-center">
                       <p className="large">{personel}</p>
