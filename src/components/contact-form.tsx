@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "emailjs-com";
+import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -43,7 +44,7 @@ export function ContactForm() {
   });
 
   const { toast } = useToast();
-  const [, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { isValid } = form.formState;
 
   async function onSubmit(values: {
@@ -144,8 +145,17 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" disabled={!isValid}>
-          submit
+
+        <Button
+          className="w-fit"
+          type="submit"
+          disabled={!isValid || isSubmitting}
+        >
+          {isSubmitting ? (
+            <Loader2 className="w-12 animate-spin" size={16} />
+          ) : (
+            "submit"
+          )}
         </Button>
       </form>
     </Form>
