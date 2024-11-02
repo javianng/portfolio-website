@@ -1,17 +1,17 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { ScrollArea } from "~/components/ui/scroll-area";
-import { type Project, PROJECT_DATA } from "./project-data";
+import Image from "next/image";
+import Link from "next/link";
 import { containerVariants, itemVariantsBotton } from "~/components/animation";
 import {
   Card,
-  CardTitle,
-  CardHeader,
   CardDescription,
+  CardHeader,
+  CardTitle,
 } from "~/components/ui/card";
+import { ScrollArea } from "~/components/ui/scroll-area";
+import { type Project, PROJECT_DATA } from "./project-data";
 
 export default function Page() {
   return (

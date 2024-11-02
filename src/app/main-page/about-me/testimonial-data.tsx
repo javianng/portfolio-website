@@ -9,6 +9,37 @@ interface Testimonial {
 
 export const TESTIMONIAL_DATA: Testimonial[] = [
   {
+    image: "/testimony/laumaichan.jpeg",
+    quote: (
+      <article>
+        <p className="p">
+          &quot;Javian possesses the qualities of an excellent data scientist
+          and problem-solver. Not only is he adept at identifying issues, but he
+          also has a natural ability to develop efficient solutions. Notably, he
+          proposed and implemented innovative approaches in setting up a new
+          pipeline for long-read sequencing—an essential component of a cancer
+          vaccine development project. His ability to learn and apply new skills
+          swiftly is commendable, and his professional and pleasant personality
+          makes him an invaluable asset to the team. Javian also demonstrated
+          effective communication skills, regularly engaging in internal
+          discussions and presenting updates to the project team, which greatly
+          enhanced our research progress.
+        </p>
+        <p className="p">
+          In a field where adaptability and accountability are essential, Javian
+          stands out as the ideal candidate. His ability to think on his feet,
+          solve complex problems, and apply data science technology to address
+          real-world challenges makes him an excellent fit for any data-driven
+          company. I am confident that your organization will benefit immensely
+          from his promising talent.&quot;
+        </p>
+      </article>
+    ),
+    personel: "Mai Chan Lau",
+    organisation:
+      "Assistant PI, Advanced Spatial Omics with Quantum and Generative AI, BioMedical DataHub, Bioinformatics Institute (BII),  Head of Computational Immunology Platform, Singapore Immunology Network (SIgN), Adjunct Assistant Professor, Lee Kong Chian School of Medicine",
+  },
+  {
     image: "/testimony/fooshihong.jpeg",
     quote: (
       <article>

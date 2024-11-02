@@ -1,12 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-
 "use client";
 
-import { z } from "zod";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import emailjs from "emailjs-com";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { useToast } from "~/hooks/use-toast";
+import { Button } from "./ui/button";
 import {
   Form,
   FormControl,
@@ -18,7 +18,6 @@ import {
 } from "./ui/form";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Button } from "./ui/button";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -33,9 +32,9 @@ const formSchema = z.object({
 });
 
 export function ContactForm() {
-  // Define the form with default values
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    mode: "onTouched",
     defaultValues: {
       name: "",
       email: "",
@@ -43,8 +42,47 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  const { toast } = useToast();
+  const [, setIsSubmitting] = useState(false);
+  const { isValid } = form.formState;
+
+  async function onSubmit(values: {
+    name: string;
+    email: string;
+    message: string;
+  }) {
+    setIsSubmitting(true);
+    try {
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      );
+      toast({
+        title: "Success",
+        variant: "default",
+        description: "Thank you! Your message has been sent.",
+      });
+      console.log("Email sent successfully:", result.text);
+
+      // Reset form fields after successful submission
+      form.reset();
+    } catch (error: unknown) {
+      toast({
+        title: "Error",
+        variant: "destructive",
+        description:
+          "There was an issue sending your message. Please try again later.",
+      });
+      console.log("Failed to send email");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -57,7 +95,11 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>name</FormLabel>
               <FormControl>
-                <Input placeholder="Your name" {...field} />
+                <Input
+                  placeholder="your name"
+                  className="normal-case"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>please enter your full name.</FormDescription>
               <FormMessage />
@@ -71,7 +113,11 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>email</FormLabel>
               <FormControl>
-                <Input placeholder="your email" {...field} />
+                <Input
+                  placeholder="your email"
+                  className="normal-case"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>i&apos;ll use this to reach you</FormDescription>
               <FormMessage />
@@ -85,7 +131,11 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Your message" {...field} />
+                <Textarea
+                  placeholder="your message"
+                  className="normal-case"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>
                 share your thoughts or inquiries
@@ -94,7 +144,9 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">submit</Button>
+        <Button type="submit" disabled={!isValid}>
+          submit
+        </Button>
       </form>
     </Form>
   );

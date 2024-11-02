@@ -1,15 +1,14 @@
-import Link from "next/link";
 import { Menu } from "lucide-react";
-import { Button } from "~/components/ui/button";
-import { PROJECT_DATA } from "./projects/project-data";
+import Link from "next/link";
 import { SocialList } from "~/components/social-links";
-import { ScrollArea } from "~/components/ui/scroll-area";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "~/components/ui/accordion";
+import { Button } from "~/components/ui/button";
+import { ScrollArea } from "~/components/ui/scroll-area";
 import {
   Sheet,
   SheetContent,
@@ -19,6 +18,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "~/components/ui/sheet";
+import { PROJECT_DATA } from "./projects/project-data";
 
 const HOME_LINKS = [
   { href: "/main-page", title: "Back to Main" },
