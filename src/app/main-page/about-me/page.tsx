@@ -41,32 +41,27 @@ export default function Page() {
             about me
           </motion.h1>
           <motion.p variants={itemVariantsLeft} className="p">
-            for as long as i can remember, i&apos;ve loved building things. it
-            started with building lego creations and evolved into coding with
-            scratch, where i spent weeks perfecting my own fps game while other
-            kids my age were busy playing online games such as call of duty.
-            fast forward to today, i&apos;ve had the privilege of building
-            software for early-stage startups like lfg, as well as for school
-            projects and personal endeavours.
+            With over 7 million data points analyzed and automated pipelines
+            boosting data accuracy by 250&#37;, I have a track record of
+            impactful solutions. As a Machine Learning and Software Engineering
+            Intern at Parametriks, I built scalable backends and integrated AWS
+            tools like Bedrock and SageMaker, reducing client risks by 30&#37;.
+            My work at the Singapore Immunology Network involved developing
+            bioinformatics pipelines critical to advancing cancer vaccine
+            research.
           </motion.p>
           <motion.p variants={itemVariantsLeft} className="p">
-            i&apos;ve always been drawn to people and the pursuit of knowledge,
-            particularly in understanding industry trends and developing soft
-            skills. this curiosity sparked my journey of self-discovery, pushing
-            me to take on challenging roles — leading clubs, collaborating with
-            international developers and spearheading novel initiatives… just a
-            year into university, i was already immersed in full-stack
-            development. today, my main focus is leveraging the powerful tools
-            at my disposal to bridge gaps and solve problems, ultimately
-            prioritising what matters most to me — people.
+            Currently pursuing a B.Sc. in Business Analytics at the National
+            University of Singapore, I combine technical expertise with
+            leadership as President of the NUS Computing Club. My experience
+            spans international collaborations and leading high-impact projects.
           </motion.p>
           <motion.p variants={itemVariantsLeft} className="p">
-            when i&apos;m not building new tools or taking on new commitments,
-            you can find me on the golf course, photographing life, or exploring
-            life with my partner in crime. whether it&apos;s project
-            development, coding or any other interests, i&apos;d love to have a
-            chat to see how our passions and dreams can best align to create
-            something amazing!
+            Outside of work, you&apos;ll find me on the golf course / driving
+            range, exploring the engineering marvels of cars, or lost in a good
+            book. I&apos;m always up for connecting with like-minded
+            professionals—whether for innovative collaborations or simply
+            sharing stories over a cup of coffee.
           </motion.p>
           {/* dialog */}
           <motion.div variants={itemVariantsLeft} className="pt-6">
@@ -123,7 +118,7 @@ export default function Page() {
           <motion.h2 variants={itemVariantsLeft} className="h2">
             what others say about me
           </motion.h2>
-          <motion.div variants={containerVariants} className="grid gap-3 pt-3">
+          <motion.div variants={containerVariants} className="grid gap-12 pt-3">
             {TESTIMONIAL_DATA.map(
               ({ image, quote, personel, organisation }) => (
                 <motion.div variants={itemVariantsLeft} key={personel}>
@@ -137,10 +132,14 @@ export default function Page() {
                     />
                     <div className="flex flex-col justify-center">
                       <p className="large">{personel}</p>
-                      <p className="small">{organisation}</p>
+                      <small className="font-light leading-tight">
+                        {organisation}
+                      </small>
                     </div>
                   </div>
-                  <blockquote className="blockquote">{quote}</blockquote>
+                  <blockquote className="blockquote font-extralight">
+                    {quote}
+                  </blockquote>
                 </motion.div>
               ),
             )}

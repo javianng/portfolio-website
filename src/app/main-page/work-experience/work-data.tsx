@@ -23,18 +23,36 @@ export const WORK_DETAILS: Section[] = [
       <article>
         <ul className="ul">
           <li>
-            Developing machine learning algorithms for risk analysis and
-            prediction.
+            Architected and engineered scalable backend schemas and
+            infrastructure, optimizing data storage and retrieval for high
+            efficiency in real-time client applications.
           </li>
-          <li>Enhancing AI-powered analytics for real-time risk management.</li>
           <li>
-            Integrating diverse data sources to improve predictive capabilities.
+            Leveraged AWS Bedrock for Retrieval-Augmented Generation
+            implementations, enhancing document processing and query answering
+            on complex insurance data. Utilized AWS SageMaker to design, train,
+            and deploy machine learning models, achieving a predicted avoidance
+            of 30% of adverse events for clients.
           </li>
-          <li>Automating processes to increase operational efficiency.</li>
-          <li>Refining predictive models for better accuracy.</li>
           <li>
-            Contributing to innovative solutions in dynamic risk assessment and
-            insurance strategies.
+            Built a robust, responsive frontend platform using Next.js,
+            providing user-friendly interfaces for clients and insurers.
+          </li>
+          <li>
+            Integrated AWS Cognito for secure, seamless authentication and
+            authorization, enabling distinct dashboards tailored to clients and
+            insurers.
+          </li>
+          <li>
+            Conceptualized and standardized the company&apos;s design theme and
+            colour scheme, ensuring brand consistency and an intuitive user
+            experience. Boosted usability by implementing cohesive design
+            layouts across the platform, improving navigation and engagement.
+          </li>
+          <li>
+            Deployed large language models by developing intelligent agents to
+            enhance backend flexibility and responsiveness, enabling dynamic
+            data processing and improving system performance and scalability.
           </li>
         </ul>
       </article>
@@ -54,72 +72,74 @@ export const WORK_DETAILS: Section[] = [
         <h4 className="blockquote">
           Project: To advance analytics capabilities for cancer vaccine research
           using Nanopore sequencing technology by developing a real-time
-          analysis pipeline using Oxford Nanopore Technologies in TCR repertoire
-          analysis.
+          analysis pipeline for TCR repertoire analysis.
         </h4>
         <ul className="ul">
           <li>
-            Background Information: Genetic sequences are error prone and hence
-            require extensive cleaning methods to recover the original seqeunce.
-            This recovery has been a challenge in the field of bioinformatics
-            using long-read sequencing technologies such as Nanopore.
+            Background Information: Long-read sequencing technologies, such as
+            Nanopore, are prone to errors and require sophisticated data
+            cleaning methods for accurate sequence recovery. Addressing this
+            challenge is crucial for advancements in bioinformatics and cancer
+            research.
           </li>
           <li>Final Pipeline</li>
           <ol className="ol">
             <li>
-              Utilized Samtools to convert input files into accessible and
-              workable formats, ensuring high data integrity and compatibility.
+              Analysed large-scale genomic datasets exceeding 7 million rows,
+              producing critical insights that influenced shifts in research
+              focus.
             </li>
             <li>
-              Innovatively identified cell barcodes of various sequences with
-              precision using markers such as TSO and Read1 sequences. This was
-              accomplished by leveraging custom Python scripts and CutAdapt,
-              resulting in a{" "}
-              <u>remarkable 200% increase in sequence recovery</u>.
+              Integrated over 11 open-source bioinformatics tools into a custom
+              automated pipeline, streamlining analysis for enhanced efficiency.
             </li>
             <li>
-              Employed and <u>proposed the Levenshtein distance algorithm</u> to
-              rectify cell barcodes not present in the whitelist, thereby
-              enhancing sequence recovery. This novel approach outperforms
-              traditional Hamming distance by accurately measuring sequence
-              variations due to insertions and deletions.
+              Developed Shell and Python automation scripts to extract and group
+              cell barcodes, segment TCR &alpha; and &beta; chains per cell, and
+              reconstruct these chains using de novo assembly. This improved
+              barcode recovery from <u>608,700 to 2,181,878</u>, significantly
+              advancing cell barcode extraction processes.
             </li>
             <li>
-              Developed a Python-based method to categorize sequences of a cell
-              barcode into alpha and beta TCR chains without relying on mapping
-              or references. Utilizing Ward&apos;s Linkage clustering approach,
-              this method <u>achieved an average accuracy of 90%</u>, as
-              validated against MixCR references, marking a significant
-              advancement in the field.
+              Implemented a Python-based method for categorizing sequences into
+              TCR &alpha; and &beta; chains without needing a whitelist. This
+              method used Ward&apos;s Linkage clustering, achieving{" "}
+              <u>an average accuracy of 90%</u> on sequences from 100 unique
+              cell barcodes, demonstrating effectiveness in clonotype
+              identification for long-read sequencing.
             </li>
             <li>
-              Implemented a k-mer based strategy to correct UMI of sequences
-              sharing the same cell barcode and similar UMI, thereby enhancing
-              data accuracy.
+              Proposed a novel approach for separating TCR chains that
+              outperformed traditional methods, aiding in clonotype
+              identification crucial for understanding immune responses in
+              cancer vaccine research.
             </li>
             <li>
-              Customized Shasta for the assembly of alpha and beta TCR
-              sequences, overcoming the lack of pre-existing configurations for
-              TCR assembly and pioneering new methodologies in the process.
+              Customized Shasta for the assembly of TCR &alpha; and &beta;
+              sequences, addressing the lack of pre-existing configurations for
+              TCR-specific assembly and pioneering new methodologies.
             </li>
           </ol>
           <li>Additional Achievements</li>
           <ol className="ol">
             <li>
-              Experimented with over 20 distinct bioinformatics tools and
-              methodologies, iterating the pipeline more than 20 times using
-              Python, R, and Linux Shell scripts to develop a robust trial
-              pipeline that validates multiple hypotheses.
+              Innovated and validated a method that separated TCR &alpha; and
+              &beta; chains without reference mapping, ensuring robustness in
+              diverse data contexts.
             </li>
             <li>
-              Wrote over 84,863 lines of code in slightly over 1 month of
-              internship, with significant findings shifting research directions
-              multiple times through data analysis and findings
+              Conducted multiple iterations of the pipeline, experimenting with
+              over 20 bioinformatics tools and methodologies. This intensive
+              work led to major research shifts based on in-depth data analysis.
             </li>
             <li>
-              3rd co-author of Refining TCR Clonotype Identification With
-              Long-Read Sequencing Technique submitted to Society for
-              Immunotherapy of Cancer for review
+              Co-authored the paper titled{" "}
+              <i>
+                Refining TCR Clonotype Identification With Long-Read Sequencing
+                Technique
+              </i>
+              , submitted to the Society for Immunotherapy of Cancer (SITC),
+              contributing to advancements in cancer vaccine development.
             </li>
           </ol>
         </ul>

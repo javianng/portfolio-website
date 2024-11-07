@@ -51,6 +51,28 @@ export const SKILLSETS_DATA: SkillSet[] = [
     ],
   },
   {
+    category: "machine learning engineering",
+    description:
+      "As a machine learning engineer, I leverage cloud platforms and cutting-edge technologies to build, deploy, and scale machine learning solutions. With experience in tools like AWS SageMaker, Google Cloud AI, and TensorFlow, I develop intelligent systems that solve complex problems.",
+    skills: [
+      { name: "AWS SageMaker", link: "https://aws.amazon.com/sagemaker/" },
+      { name: "AWS Bedrock", link: "https://aws.amazon.com/bedrock/" },
+      {
+        name: "Google Cloud AI Platform",
+        link: "https://cloud.google.com/ai-platform",
+      },
+      { name: "BigQuery", link: "https://cloud.google.com/bigquery" },
+      { name: "TensorFlow", link: "https://www.tensorflow.org/" },
+      { name: "Scikit-learn", link: "https://scikit-learn.org/" },
+      { name: "Keras", link: "https://keras.io/" },
+      { name: "Python", link: "https://www.python.org/" },
+      {
+        name: "Shell Command Language",
+        link: "https://en.wikipedia.org/wiki/Shell_script",
+      },
+    ],
+  },
+  {
     category: "data analytics",
     description:
       "Data analytics is where I uncover valuable insights from raw data. Proficient in Python libraries like Pandas, NumPy, and scikit-learn, I excel in data manipulation, statistical analysis, and machine learning tasks. My passion lies in turning data into actionable insights that drive informed decision-making.",
