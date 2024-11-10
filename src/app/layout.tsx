@@ -35,11 +35,11 @@ const HOME_LINKS = [
 
 export const metadata: Metadata = {
   title: "Javian Ng",
-  description: "Explore Javian Ng's professional work experience.",
+  description: "Explore Javian Ng's professional working experience.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
   openGraph: {
     title:
-      "Javian Ng - Full-Stack Web Developer, ML Data Scientist, Full-Time Adventurer",
+      "Javian Ng - Full-Stack Web Developer, Machine Learning Engineer, Full-Time Adventurer",
     description:
       "I run on espressos and kopi-peng. Am either building a project, or taking on a new challenge.",
     url: "https://www.javianng.com",
@@ -59,7 +59,7 @@ export default function Layout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang="en" className={GeistSans.variable}>
       <body>
         <ThemeProvider
           attribute="class"
@@ -69,8 +69,7 @@ export default function Layout({
         >
           <div className="flex h-screen w-screen flex-col items-center justify-center bg-neutral-100 dark:bg-neutral-800">
             <div className="container flex h-[90vh] gap-3">
-              {/* small screen */}
-
+              {/* Small Screen */}
               <aside
                 className="absolute bottom-16 right-10 z-50 opacity-80 sm:hidden"
                 id="sheet"
@@ -78,9 +77,7 @@ export default function Layout({
                 <Sheet>
                   <SheetTrigger asChild>
                     <Button size="icon">
-                      <div>
-                        <Menu size={16} strokeWidth={1} />
-                      </div>
+                      <Menu size={16} strokeWidth={1} />
                     </Button>
                   </SheetTrigger>
                   <SheetContent
@@ -133,15 +130,14 @@ export default function Layout({
                 </Sheet>
               </aside>
 
-              {/* normal layout */}
-
+              {/* Normal Layout */}
               <aside
                 className="hidden w-80 flex-col justify-between rounded-md bg-white p-10 shadow-md dark:bg-neutral-900 sm:flex"
                 id="sidebar"
               >
                 <ScrollArea>
                   <Accordion type="single" collapsible defaultValue="home">
-                    {/* home */}
+                    {/* Home */}
                     <AccordionItem value="home">
                       <AccordionTrigger>home</AccordionTrigger>
                       {HOME_LINKS.map((link) => (
@@ -155,7 +151,8 @@ export default function Layout({
                         </AccordionContent>
                       ))}
                     </AccordionItem>
-                    {/* projects */}
+
+                    {/* Projects */}
                     <AccordionItem value="projects">
                       <AccordionTrigger>projects</AccordionTrigger>
                       <AccordionContent>
@@ -174,8 +171,9 @@ export default function Layout({
                         </AccordionContent>
                       ))}
                     </AccordionItem>
-                    {/* blog */}
-                    <Link href={"/blog"}>
+
+                    {/* Blog */}
+                    <Link href="/blog">
                       <AccordionItem value="blog">
                         <p className="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline">
                           blog
