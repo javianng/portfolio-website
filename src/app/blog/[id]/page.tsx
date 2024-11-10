@@ -1,3 +1,4 @@
+import parse from "html-react-parser";
 import { type Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -51,7 +52,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <ScrollArea className="w-full rounded-md bg-white shadow-md dark:bg-neutral-700">
-      <main className="flex h-full min-h-[90vh] flex-col gap-2 p-4">
+      <main className="flex h-[90vh] flex-col gap-2 p-4">
         {/* Breadcrumb navigation */}
         <Breadcrumb>
           <BreadcrumbList>
@@ -83,10 +84,7 @@ export default async function PostPage({ params }: PostPageProps) {
         )}
 
         {/* Content */}
-        <div
-          className="nested-style max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className="nested-style pb-12">{parse(post.content)}</div>
       </main>
     </ScrollArea>
   );

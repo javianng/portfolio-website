@@ -329,3 +329,21 @@ td[align="right"] {
 .nested-style td[align="right"] {
   text-align: right;
 }
+
+.nested-style img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  float: right;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nested-style * {
+  text-wrap: wrap;
+}
+
+.nested-style .section-divider * {
+  margin-bottom: 1rem;
+}

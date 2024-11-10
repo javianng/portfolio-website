@@ -184,7 +184,8 @@ export default function Layout({
                 </ScrollArea>
                 <SocialList />
               </aside>
-              {children}
+
+              <div className="sm:w-[calc(100%_-_20rem)]">{children}</div>
             </div>
             <footer className="container flex justify-between">
               <p className="font-thin">
