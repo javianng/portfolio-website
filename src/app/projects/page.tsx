@@ -25,10 +25,7 @@ export default function Page() {
         >
           {PROJECT_DATA.map((project: Project) => (
             <motion.div variants={itemVariantsBotton} key={project.slug}>
-              <Link
-                href={`/main-page/projects/${project.slug}`}
-                className="group h-fit"
-              >
+              <Link href={`/projects/${project.slug}`} className="group h-fit">
                 <Card className="aspect-square w-full rounded-none dark:bg-neutral-700">
                   <figure className="aspect-square w-full overflow-hidden rounded-none bg-black">
                     <Image

@@ -191,3 +191,159 @@ td[align="center"] {
 td[align="right"] {
   text-align: right;
 }
+
+/* Nested CSS */
+
+.nested-style h1 {
+  scroll-margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 1024px) {
+  .nested-style h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.nested-style h2 {
+  scroll-margin-top: 20px;
+  padding-bottom: 0.5rem;
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin-top: 10px;
+}
+
+.nested-style h3 {
+  scroll-margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.nested-style h4 {
+  scroll-margin-top: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.nested-style p:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.nested-style blockquote {
+  margin-top: 1.5rem;
+  border-left: 2px solid;
+  padding-left: 1.5rem;
+}
+
+.nested-style ul {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.nested-style ul > li {
+  margin-top: 0.5rem;
+}
+
+.nested-style ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+.nested-style ol > li {
+  margin-top: 0.5rem;
+}
+
+.nested-style code {
+  position: relative;
+  border-radius: 0.25rem;
+  background-color: var(--muted-bg-color);
+  padding: 0.2rem 0.3rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.nested-style .large {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.nested-style .small {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Table Styles */
+.nested-style table {
+  width: 100%;
+}
+
+/* Row Styles */
+.nested-style tr {
+  margin: 0;
+  border-top: 1px solid;
+  padding: 0;
+}
+
+.nested-style tr:nth-child(even) {
+  background-color: var(--color-muted);
+}
+
+/* Header Cell Styles */
+.nested-style th {
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.nested-style th[align="center"] {
+  text-align: center;
+}
+
+.nested-style th[align="right"] {
+  text-align: right;
+}
+
+/* Data Cell Styles */
+.nested-style td {
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.nested-style td[align="center"] {
+  text-align: center;
+}
+
+.nested-style td[align="right"] {
+  text-align: right;
+}
+
+.nested-style img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  float: right;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nested-style * {
+  text-wrap: wrap;
+}
+
+.nested-style .section-divider * {
+  margin-bottom: 1rem;
+}

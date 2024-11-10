@@ -45,7 +45,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <Link href="/main-page/projects">projects</Link>
+              <Link href="/projects">projects</Link>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
