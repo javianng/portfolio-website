@@ -18,7 +18,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "~/components/ui/sheet";
-import { PROJECT_DATA } from "./projects/project-data";
+import { PROJECT_DATA } from "../main-page/projects/project-data";
 
 const HOME_LINKS = [
   { href: "/main-page", title: "Back to Main" },
@@ -52,10 +52,12 @@ export default function Layout({
           >
             <SheetHeader>
               <SheetTitle className="text-start">javian ng</SheetTitle>
-              <SheetDescription>
-                welcome to my personal website
-              </SheetDescription>
+              <SheetDescription>welcome to my blog</SheetDescription>
             </SheetHeader>
+
+            <Link href="/blog" className="underline-animation p font-light">
+              blog
+            </Link>
 
             <p className="p">home</p>
             {HOME_LINKS.map((link) => (
@@ -84,11 +86,6 @@ export default function Layout({
                 {project.title}
               </Link>
             ))}
-
-            <Link href="/blog" className="p underline-animation">
-              blog
-            </Link>
-
             <SheetFooter className="pt-8">
               <SocialList />
             </SheetFooter>
@@ -103,7 +100,15 @@ export default function Layout({
         id="sidebar"
       >
         <ScrollArea>
-          <Accordion type="single" collapsible defaultValue="home">
+          <Accordion type="single" collapsible>
+            {/* blog */}
+            <Link href={"/blog"}>
+              <AccordionItem value="blog">
+                <p className="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline">
+                  blog
+                </p>
+              </AccordionItem>
+            </Link>
             {/* home */}
             <AccordionItem value="home">
               <AccordionTrigger>home</AccordionTrigger>
@@ -137,14 +142,6 @@ export default function Layout({
                 </AccordionContent>
               ))}
             </AccordionItem>
-            {/* blog */}
-            <Link href={"/blog"}>
-              <AccordionItem value="blog">
-                <p className="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline">
-                  blog
-                </p>
-              </AccordionItem>
-            </Link>
           </Accordion>
         </ScrollArea>
         <SocialList />
