@@ -99,7 +99,7 @@ const SOCIAL_DETAILS = [
     image: "/logos/x.png",
   },
   {
-    website: "/main-page/contact-me",
+    website: "/contact-me",
     websiteName: "Email",
     image: "/logos/gmail.png",
   },

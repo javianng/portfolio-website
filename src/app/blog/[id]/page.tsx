@@ -42,21 +42,21 @@ export default async function PostPage({ params }: PostPageProps) {
   try {
     post = await fetchPostById(postId);
   } catch (error) {
-    console.error(error);
+    console.error("Failed to fetch post:", error);
   }
 
   if (!post) {
-    notFound();
+    return notFound();
   }
 
   return (
     <ScrollArea className="w-full rounded-md bg-white shadow-md dark:bg-neutral-700">
       <main className="flex h-full min-h-[90vh] flex-col gap-2 p-4">
-        {/* breadcrumb */}
+        {/* Breadcrumb navigation */}
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <Link href="/blog">all blogs</Link>
+              <Link href="/blog">All Blogs</Link>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -65,14 +65,15 @@ export default async function PostPage({ params }: PostPageProps) {
           </BreadcrumbList>
         </Breadcrumb>
 
-        {/* title */}
+        {/* Title */}
         <h1 className="h1">{post.title}</h1>
 
-        {/* details */}
-        <p className="text-neutral-300` border-l py-1 pl-2 text-sm">
+        {/* Details */}
+        <p className="border-l py-1 pl-2 text-sm text-neutral-700 dark:text-neutral-300">
           Published on {new Date(post.published).toLocaleDateString()}
         </p>
 
+        {/* Labels */}
         {post.labels && post.labels.length > 0 && (
           <div className="flex flex-wrap gap-1 py-3">
             {post.labels.map((label) => (
@@ -81,10 +82,10 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
         )}
 
-        {/* text content */}
+        {/* Content */}
         <div
-          dangerouslySetInnerHTML={{ __html: post.content }}
           className="nested-style max-w-none"
+          dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </main>
     </ScrollArea>

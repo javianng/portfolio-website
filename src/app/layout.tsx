@@ -1,9 +1,37 @@
 import { GeistSans } from "geist/font/sans";
+import { Menu } from "lucide-react";
 import { type Metadata } from "next";
+import Link from "next/link";
+import { SocialList } from "~/components/social-links";
 import { ThemeProvider } from "~/components/theme-provider";
 import ThemeSwitcher from "~/components/theme-switcher";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "~/components/ui/accordion";
+import { Button } from "~/components/ui/button";
+import { ScrollArea } from "~/components/ui/scroll-area";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "~/components/ui/sheet";
 import { Toaster } from "~/components/ui/toaster";
 import "~/styles/globals.css";
+import { PROJECT_DATA } from "./projects/project-data";
+
+const HOME_LINKS = [
+  { href: "/", title: "Back to Main" },
+  { href: "/about-me", title: "About Me" },
+  { href: "/work-experience", title: "Work Experience" },
+  { href: "/contact-me", title: "Contact Me" },
+];
 
 export const metadata: Metadata = {
   title: "Javian Ng",
@@ -40,7 +68,126 @@ export default function Layout({
           disableTransitionOnChange
         >
           <div className="flex h-screen w-screen flex-col items-center justify-center bg-neutral-100 dark:bg-neutral-800">
-            <div className="container flex h-[90vh] gap-3">{children}</div>
+            <div className="container flex h-[90vh] gap-3">
+              {/* small screen */}
+
+              <aside
+                className="absolute bottom-16 right-10 z-50 opacity-80 sm:hidden"
+                id="sheet"
+              >
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <Button size="icon">
+                      <div>
+                        <Menu size={16} strokeWidth={1} />
+                      </div>
+                    </Button>
+                  </SheetTrigger>
+                  <SheetContent
+                    side="left"
+                    className="flex flex-col items-start overflow-scroll"
+                  >
+                    <SheetHeader>
+                      <SheetTitle className="text-start">javian ng</SheetTitle>
+                      <SheetDescription>
+                        welcome to my personal website
+                      </SheetDescription>
+                    </SheetHeader>
+
+                    <p className="p">home</p>
+                    {HOME_LINKS.map((link) => (
+                      <Link
+                        href={link.href}
+                        key={link.href}
+                        className="underline-animation font-light"
+                      >
+                        {link.title}
+                      </Link>
+                    ))}
+
+                    <p className="p">projects</p>
+                    <Link
+                      href="/projects"
+                      className="underline-animation font-light"
+                    >
+                      all projects
+                    </Link>
+                    {PROJECT_DATA.slice(0, 3).map((project) => (
+                      <Link
+                        href={`/projects/${project.slug}`}
+                        key={project.slug}
+                        className="underline-animation font-light"
+                      >
+                        {project.title}
+                      </Link>
+                    ))}
+
+                    <Link href="/blog" className="p underline-animation">
+                      blog
+                    </Link>
+
+                    <SheetFooter className="pt-8">
+                      <SocialList />
+                    </SheetFooter>
+                  </SheetContent>
+                </Sheet>
+              </aside>
+
+              {/* normal layout */}
+
+              <aside
+                className="hidden w-80 flex-col justify-between rounded-md bg-white p-10 shadow-md dark:bg-neutral-900 sm:flex"
+                id="sidebar"
+              >
+                <ScrollArea>
+                  <Accordion type="single" collapsible defaultValue="home">
+                    {/* home */}
+                    <AccordionItem value="home">
+                      <AccordionTrigger>home</AccordionTrigger>
+                      {HOME_LINKS.map((link) => (
+                        <AccordionContent key={link.href}>
+                          <Link
+                            href={link.href}
+                            className="underline-animation"
+                          >
+                            {link.title}
+                          </Link>
+                        </AccordionContent>
+                      ))}
+                    </AccordionItem>
+                    {/* projects */}
+                    <AccordionItem value="projects">
+                      <AccordionTrigger>projects</AccordionTrigger>
+                      <AccordionContent>
+                        <Link href="/projects" className="underline-animation">
+                          all projects
+                        </Link>
+                      </AccordionContent>
+                      {PROJECT_DATA.slice(0, 3).map((project) => (
+                        <AccordionContent key={project.slug}>
+                          <Link
+                            href={`/projects/${project.slug}`}
+                            className="underline-animation"
+                          >
+                            {project.title}
+                          </Link>
+                        </AccordionContent>
+                      ))}
+                    </AccordionItem>
+                    {/* blog */}
+                    <Link href={"/blog"}>
+                      <AccordionItem value="blog">
+                        <p className="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline">
+                          blog
+                        </p>
+                      </AccordionItem>
+                    </Link>
+                  </Accordion>
+                </ScrollArea>
+                <SocialList />
+              </aside>
+              {children}
+            </div>
             <footer className="container flex justify-between">
               <p className="font-thin">
                 <small>handcrafted by me &#169; twentytwentyfour</small>

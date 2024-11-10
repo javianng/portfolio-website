@@ -5,16 +5,6 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/main-page",
-        permanent: true, // Set to true if the redirect is permanent (301), otherwise false (302)
-      },
-    ];
-  },
-};
+const config = {};
 
 export default config;

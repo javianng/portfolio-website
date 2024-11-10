@@ -1,8 +1,10 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { containerVariants, itemVariantsBotton } from "~/components/animation";
 import {
   Card,
   CardContent,
@@ -30,9 +32,14 @@ export default function BlogPage() {
         <h2 className="pr-4 text-end font-thin">
           just some of the things i am passionate about
         </h2>
-        <div className="grid grid-cols-2 pt-8">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="grid grid-cols-2 pt-8"
+        >
           {posts.map((post) => (
-            <div key={post.id}>
+            <motion.div variants={itemVariantsBotton} key={post.id}>
               <Link href={`/blog/${post.id}`} className="group">
                 <Card className="w-full rounded-none dark:bg-neutral-700">
                   <CardHeader>
@@ -53,9 +60,9 @@ export default function BlogPage() {
                   </CardFooter>
                 </Card>
               </Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </main>
     </ScrollArea>
   );
