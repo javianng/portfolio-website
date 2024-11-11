@@ -185,7 +185,9 @@ export default function Layout({
                 <SocialList />
               </aside>
 
-              <div className="sm:w-[calc(100%_-_20rem)]">{children}</div>
+              <div className="flex w-full sm:w-[calc(100%_-_20rem)]">
+                {children}
+              </div>
             </div>
             <footer className="container flex justify-between">
               <p className="font-thin">

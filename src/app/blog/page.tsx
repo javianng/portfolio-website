@@ -36,12 +36,12 @@ export default function BlogPage() {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="grid grid-cols-2 pt-8"
+          className="mdsm:grid-cols-2 grid grid-cols-1 pt-8"
         >
           {posts.map((post) => (
             <motion.div variants={itemVariantsBotton} key={post.id}>
               <Link href={`/blog/${post.id}`} className="group">
-                <Card className="w-full rounded-none dark:bg-neutral-700">
+                <Card className="h-full w-full rounded-none dark:bg-neutral-700">
                   <CardHeader>
                     <CardTitle>{post.title}</CardTitle>
                     <CardDescription>
@@ -52,7 +52,7 @@ export default function BlogPage() {
                   <CardContent>
                     <div
                       dangerouslySetInnerHTML={{ __html: post.content }}
-                      className="line-clamp-5 border-l pl-3"
+                      className="line-clamp-3 border-l pl-3"
                     />
                   </CardContent>
                   <CardFooter>
