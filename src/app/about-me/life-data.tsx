@@ -6,12 +6,6 @@ interface Life {
 
 export const LIFE_DATA: Life[] = [
   {
-    image: "/about-me/tammy.JPG",
-    title: "my partner in crime",
-    description:
-      "and the one who supports my endeavours and sleepless coding nights",
-  },
-  {
     image: "/about-me/family.jpg",
     title: "My Pillar since Young",
     description: "the faces who have watched me grown.",
