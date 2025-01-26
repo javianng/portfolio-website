@@ -16,7 +16,7 @@ export const WORK_DETAILS: Section[] = [
   {
     title: "Data Scientist Intern",
     companyOrganization: "Parametriks",
-    duration: "August 2024 - Present",
+    duration: "August 2024 - January 2025",
     className: "border-l-[#201E28]",
     location: "Paris, France",
     detail: (
