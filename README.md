@@ -11,7 +11,7 @@
   <h3 align="center">Portfolio Website</h3>
 
   <p align="center">
-    This is a website to showcase my skills, projects, and past works.
+    A modern, minimalist portfolio website showcasing my skills, projects, and experiences.
     <br />
     <a href="https://portfolio-website-pearl-tau.vercel.app/"><strong>Visit the page »</strong></a>
   </p>
@@ -25,9 +25,13 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#objectives">Objectives</a></li>
+        <li><a href="#design-philosophy">Design Philosophy</a></li>
+        <li><a href="#key-features">Key Features</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#implementation">Implementation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -50,20 +54,50 @@ The primary goal of this website is to present a professional and polished view 
 - **Minimalism**: Emphasizing simplicity and clarity, ensuring the content stands out without unnecessary distractions.
 - **Neutral Tone**: Using a subdued color palette to maintain a professional and elegant appearance.
 - **Slide Layout**: Offering a unique browsing experience that engages users through smooth transitions and animations.
+- **Accessibility**: Ensuring the website is accessible to all users with proper ARIA labels and semantic HTML.
+- **Responsive Design**: Providing a seamless experience across all device sizes.
+
+### Key Features
+
+- **Dark/Light Mode**: System-aware theme switching with smooth transitions
+- **Responsive Layout**: Optimized for all screen sizes from mobile to desktop
+- **Modern Animations**: Smooth page transitions and micro-interactions using Framer Motion
+- **Blog Platform**: Integrated blog system for sharing thoughts and experiences
+- **Contact Form**: Interactive contact form with email integration and form validation
+- **Project Showcase**: Detailed project presentations with live demos and descriptions
+- **Performance Optimized**: Fast loading times with optimized images and code splitting
+- **Type-Safe**: Built with TypeScript for enhanced code reliability
+- **SEO Friendly**: Optimized meta tags and semantic structure
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-This project was built using the following major frameworks and libraries:
+This project leverages modern web technologies and frameworks:
 
-- [![Next][Next.js]][Next-url]
-- [![shadcn/ui][shadcn-ui]][shadcn-ui-url]
-- [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
-- [![React][React.js]][React-url]
-- [![TypeScript][TypeScript]][TypeScript-url]
-- [![Framer Motion][Framer Motion]][Framer Motion-url]
-- [![Radix UI][Radix UI]][Radix UI-url]
+- [![Next][Next.js]][Next-url] - React framework for production
+- [![shadcn/ui][shadcn-ui]][shadcn-ui-url] - UI components
+- [![TailwindCSS][TailwindCSS]][TailwindCSS-url] - Utility-first CSS
+- [![React][React.js]][React-url] - UI library
+- [![TypeScript][TypeScript]][TypeScript-url] - Type safety
+- [![Framer Motion][Framer Motion]][Framer Motion-url] - Animations
+- [![Radix UI][Radix UI]][Radix UI-url] - Accessible components
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Implementation
+
+The website is built with several key technical features:
+
+- **Component Architecture**: Modular, reusable components for maintainability
+- **Form Handling**: React Hook Form with Zod validation
+- **State Management**: React hooks for local state management
+- **API Integration**: EmailJS for contact form functionality
+- **Animations**: Framer Motion for page transitions and interactions
+- **Styling**: TailwindCSS with custom theme configuration
+- **Accessibility**: ARIA labels and semantic HTML structure
+- **Performance**: Image optimization and lazy loading
+- **Type Safety**: TypeScript with strict mode enabled
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,10 +105,25 @@ This project was built using the following major frameworks and libraries:
 
 ## Roadmap
 
+Completed:
+
 - [x] Add README.md
 - [x] Implement Mobile Responsiveness
 - [x] Implement Dark Mode
 - [x] Explore Framer Motion
+- [x] Add Blog Platform
+- [x] Implement Contact Form
+- [x] Add Project Showcase
+- [x] Optimize Performance
+- [x] Enhance Accessibility
+
+Future Plans:
+
+- [ ] Add Search Functionality
+- [ ] Implement Blog Comments
+- [ ] Add Analytics Dashboard
+- [ ] Create RSS Feed
+- [ ] Add Internationalization
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
