@@ -120,26 +120,39 @@ const TestimonialSection = () => (
       what others say about me
     </motion.h2>
     <motion.div variants={containerVariants} className="grid gap-12 pt-3">
-      {TESTIMONIAL_DATA.map(({ image, quote, personel, organisation, alt }) => (
-        <motion.div variants={itemVariantsLeft} key={personel}>
-          <div className="flex items-center gap-2">
-            <Image
-              src={image}
-              width={100}
-              height={100}
-              alt={alt ?? `${personel} from ${organisation}`}
-              className="aspect-square h-16 w-16 rounded-md shadow-md"
-            />
-            <div className="flex flex-col justify-center">
-              <p className="large">{personel}</p>
-              <small className="font-light leading-tight">{organisation}</small>
+      {TESTIMONIAL_DATA.map(
+        ({ image, quote, personel, organisation, alt, pdfPath }) => (
+          <motion.div variants={itemVariantsLeft} key={personel}>
+            <div className="flex items-center gap-2">
+              <Image
+                src={image}
+                width={100}
+                height={100}
+                alt={alt ?? `${personel} from ${organisation}`}
+                className="aspect-square h-16 w-16 rounded-md shadow-md"
+              />
+              <div className="flex flex-col justify-center">
+                <p className="large">{personel}</p>
+                <small className="font-light leading-tight">
+                  {organisation}
+                </small>
+              </div>
             </div>
-          </div>
-          <blockquote className="blockquote font-extralight">
-            {quote}
-          </blockquote>
-        </motion.div>
-      ))}
+            <blockquote className="blockquote font-extralight">
+              {quote}
+            </blockquote>
+            {pdfPath && (
+              <div className="mt-4">
+                <Link href={pdfPath} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="sm">
+                    view testimonial
+                  </Button>
+                </Link>
+              </div>
+            )}
+          </motion.div>
+        ),
+      )}
     </motion.div>
   </motion.section>
 );

@@ -6,12 +6,67 @@ export interface Testimonial {
   readonly personel: string;
   readonly organisation: string;
   readonly alt?: string;
+  readonly pdfPath?: string;
 }
 
 export const TESTIMONIAL_DATA: readonly Testimonial[] = [
   {
+    image: "/testimony/thomasfayon.jpeg",
+    alt: "Thomas Fayon profile photo",
+    pdfPath: "/testimony/thomasfayon.pdf",
+    quote: (
+      <article>
+        <p className="p">
+          &quot;Javian&apos;s dedication and seriousness toward his work are
+          evident in every project he undertakes. Whether faced with complex
+          architectural challenges or tight deadlines, Javian consistently
+          delivers solutions that are both robust and innovative. His technical
+          expertise in backend development, particularly in designing scalable
+          and efficient systems, has been instrumental in advancing our
+          platform&apos;s performance and reliability.
+        </p>
+        <p className="p">
+          Javian is a highly skilled and driven backend engineer whose
+          contributions extend far beyond code. He is a team player, a visionary
+          problem-solver, and a cornerstone for any engineering team. I
+          wholeheartedly recommend him for any opportunity, confident that he
+          will make a profound impact wherever he goes.&quot;
+        </p>
+      </article>
+    ),
+    personel: "Thomas Fayon",
+    organisation:
+      "Founder & CEO of PARAMETRIKS, ex-Shift Technology Co-founder & COO",
+  },
+  {
+    image: "/testimony/shivanggupta.jpeg",
+    alt: "Shivang Gupta profile photo",
+    pdfPath: "/testimony/shivanggupta.pdf",
+    quote: (
+      <article>
+        <p className="p">
+          &quot;Javian played a pivotal role in several high-impact projects,
+          especially in the domains of artificial intelligence, database
+          management, and AWS development. His expertise in AI was particularly
+          evident in the design and deployment of intelligent systems that
+          enhanced the performance of our software.
+        </p>
+        <p className="p">
+          Beyond technical skills, Javian exhibited a strong work ethic, an
+          eagerness to learn, and an excellent ability to collaborate with team
+          members. His proactive approach to problem-solving and ability to
+          adapt to challenges made him an invaluable member of the team.&quot;
+        </p>
+      </article>
+    ),
+    personel: "Shivang Gupta",
+    organisation:
+      "Co-Founder & CEO Asia of PARAMETRIKS, Research Fellow at Massachusetts Institute of Technology",
+  },
+  {
     image: "/testimony/laumaichan.jpeg",
     alt: "Mai Chan Lau profile photo",
+    pdfPath: "/testimony/laumaichan.pdf",
     quote: (
       <article>
         <p className="p">
@@ -44,6 +99,7 @@ export const TESTIMONIAL_DATA: readonly Testimonial[] = [
   {
     image: "/testimony/fooshihong.jpeg",
     alt: "Foo Shi Hong profile photo",
+    pdfPath: "/testimony/fooshihong.pdf",
     quote: (
       <article>
         <p className="p">
@@ -80,6 +136,7 @@ export const TESTIMONIAL_DATA: readonly Testimonial[] = [
   },
   {
     image: "/testimony/darrylhan.jpeg",
+    pdfPath: "/testimony/darrylhan.pdf",
     quote: (
       <article>
         <p className="p">
@@ -111,6 +168,7 @@ export const TESTIMONIAL_DATA: readonly Testimonial[] = [
   },
   {
     image: "/testimony/zenacademy.png",
+    pdfPath: "/testimony/zenacademy.pdf",
     quote: (
       <article>
         <p className="p">
