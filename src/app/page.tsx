@@ -1,33 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { containerVariants, itemVariantsRight } from "~/components/animation";
 import { ScrollArea } from "~/components/ui/scroll-area";
 
 export default function HomePage() {
-  // dynamic text sizing
-  useEffect(() => {
-    const setResponsiveTextSize = () => {
-      const container = document.getElementById("responsive-container");
-      const titleElement = document.getElementById("responsive-title-text");
-      const subtitleElement = document.getElementById(
-        "responsive-subtitle-text",
-      );
-      if (container && titleElement && subtitleElement) {
-        const containerWidth = container.clientWidth;
-        const titleFontSize = containerWidth * 0.2;
-        const subtitleFontSize = containerWidth * 0.05;
-        titleElement.style.fontSize = `${titleFontSize}px`;
-        subtitleElement.style.fontSize = `${subtitleFontSize}px`;
-      }
-    };
-    setResponsiveTextSize();
-    window.addEventListener("resize", setResponsiveTextSize);
-    return () => {
-      window.removeEventListener("resize", setResponsiveTextSize);
-    };
+  // dynamic text sizing with debounced resize handler
+  const setResponsiveTextSize = useCallback(() => {
+    const container = document.getElementById("responsive-container");
+    const titleElement = document.getElementById("responsive-title-text");
+    const subtitleElement = document.getElementById("responsive-subtitle-text");
+
+    if (container && titleElement && subtitleElement) {
+      const containerWidth = container.clientWidth;
+      const titleFontSize = Math.min(containerWidth * 0.2, 200); // Cap max size
+      const subtitleFontSize = Math.min(containerWidth * 0.05, 50);
+
+      titleElement.style.fontSize = `${titleFontSize}px`;
+      subtitleElement.style.fontSize = `${subtitleFontSize}px`;
+    }
   }, []);
+
+  useEffect(() => {
+    setResponsiveTextSize();
+
+    let timeoutId: NodeJS.Timeout;
+    const handleResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(setResponsiveTextSize, 100);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(timeoutId);
+    };
+  }, [setResponsiveTextSize]);
+
   return (
     <ScrollArea className="w-full rounded-md shadow-md">
       <main className="flex h-full min-h-[90vh] flex-col justify-between bg-white p-4 text-end dark:bg-neutral-900">
@@ -38,19 +48,23 @@ export default function HomePage() {
           className="flex flex-col"
           variants={containerVariants}
         >
-          <motion.h2 className="font-extralight" variants={itemVariantsRight}>
-            photographer
-          </motion.h2>
-          <motion.h2 className="font-extralight" variants={itemVariantsRight}>
-            problem-solver
-          </motion.h2>
-          <motion.h2 className="font-extralight" variants={itemVariantsRight}>
-            business analyst
-          </motion.h2>
-          <motion.h2 className="font-extralight" variants={itemVariantsRight}>
-            software engineer
-          </motion.h2>
+          {[
+            "photographer",
+            "problem-solver",
+            "business analyst",
+            "software engineer",
+          ].map((role, index) => (
+            <motion.h2
+              key={role}
+              className="font-extralight"
+              variants={itemVariantsRight}
+              transition={{ delay: index * 0.1 }}
+            >
+              {role}
+            </motion.h2>
+          ))}
         </motion.section>
+
         <section id="introduction">
           <div className="w-full" id="responsive-container">
             <motion.p

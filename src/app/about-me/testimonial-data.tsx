@@ -1,15 +1,17 @@
 import { type ReactNode } from "react";
 
-interface Testimonial {
-  image: string;
-  quote: ReactNode;
-  personel: string;
-  organisation: string;
+export interface Testimonial {
+  readonly image: string;
+  readonly quote: ReactNode;
+  readonly personel: string;
+  readonly organisation: string;
+  readonly alt?: string;
 }
 
-export const TESTIMONIAL_DATA: Testimonial[] = [
+export const TESTIMONIAL_DATA: readonly Testimonial[] = [
   {
     image: "/testimony/laumaichan.jpeg",
+    alt: "Mai Chan Lau profile photo",
     quote: (
       <article>
         <p className="p">
@@ -41,6 +43,7 @@ export const TESTIMONIAL_DATA: Testimonial[] = [
   },
   {
     image: "/testimony/fooshihong.jpeg",
+    alt: "Foo Shi Hong profile photo",
     quote: (
       <article>
         <p className="p">
@@ -131,4 +134,4 @@ export const TESTIMONIAL_DATA: Testimonial[] = [
     personel: "Zen Academy",
     organisation: "Taekwondo Club",
   },
-];
+] as const;

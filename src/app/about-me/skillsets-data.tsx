@@ -1,15 +1,15 @@
-interface Skill {
-  name: string;
-  link: string;
+export interface Skill {
+  readonly name: string;
+  readonly link: string;
 }
 
-interface SkillSet {
-  category: string;
-  description: string;
-  skills: Skill[];
+export interface SkillSet {
+  readonly category: string;
+  readonly description: string;
+  readonly skills: readonly Skill[];
 }
 
-export const SKILLSETS_DATA: SkillSet[] = [
+export const SKILLSETS_DATA: readonly SkillSet[] = [
   {
     category: "frontend development",
     description:
@@ -115,4 +115,4 @@ export const SKILLSETS_DATA: SkillSet[] = [
       { name: "ChatGPT Prompt Engineering", link: "https://chat.openai.com/" },
     ],
   },
-];
+] as const;

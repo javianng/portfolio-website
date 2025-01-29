@@ -1,197 +1,248 @@
 import Image from "next/image";
 
-export default function HousingPricingPrediction() {
+interface FeatureTableProps {
+  data: {
+    name: string;
+    description: string;
+    type: string;
+    min: string;
+    max: string;
+    mean: string;
+    median: string;
+    std: string;
+    missing: string;
+  }[];
+}
+
+interface PerformanceTableProps {
+  data: {
+    model: string;
+    r2: string;
+    mae: string;
+    rmse: string;
+    mape: string;
+  }[];
+}
+
+const FeatureTable = ({ data }: FeatureTableProps) => (
+  <div className="w-[50vw] overflow-auto py-3">
+    <table className="min-w-full table-auto border-collapse">
+      <thead>
+        <tr className="border-2 bg-neutral-100 dark:bg-neutral-800">
+          <th className="p-2 text-left">Feature Name</th>
+          <th className="p-2 text-left">Description</th>
+          <th className="p-2 text-left">Value Type/Unit</th>
+          <th className="p-2 text-left">Min</th>
+          <th className="p-2 text-left">Max</th>
+          <th className="p-2 text-left">Mean</th>
+          <th className="p-2 text-left">Median</th>
+          <th className="p-2 text-left">Std</th>
+          <th className="p-2 text-left">Missing Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((feature, index) => (
+          <tr
+            key={feature.name}
+            className={`border-2 ${
+              index % 2 === 0
+                ? "bg-white dark:bg-neutral-900"
+                : "bg-neutral-50 dark:bg-neutral-800"
+            }`}
+          >
+            <td className="p-2">{feature.name}</td>
+            <td className="p-2">{feature.description}</td>
+            <td className="p-2">{feature.type}</td>
+            <td className="p-2">{feature.min}</td>
+            <td className="p-2">{feature.max}</td>
+            <td className="p-2">{feature.mean}</td>
+            <td className="p-2">{feature.median}</td>
+            <td className="p-2">{feature.std}</td>
+            <td className="p-2">{feature.missing}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+
+const PerformanceTable = ({ data }: PerformanceTableProps) => (
+  <div className="w-[50vw] overflow-auto py-3">
+    <table className="min-w-full table-auto border-collapse">
+      <thead>
+        <tr className="border-2 bg-neutral-100 dark:bg-neutral-800">
+          <th className="p-2 text-left">Model</th>
+          <th className="p-2 text-left">R²</th>
+          <th className="p-2 text-left">MAE</th>
+          <th className="p-2 text-left">RMSE</th>
+          <th className="p-2 text-left">MAPE</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((row, index) => (
+          <tr
+            key={row.model}
+            className={`border-2 ${
+              index % 2 === 0
+                ? "bg-white dark:bg-neutral-900"
+                : "bg-neutral-50 dark:bg-neutral-800"
+            }`}
+          >
+            <td className="p-2">{row.model}</td>
+            <td className="p-2">{row.r2}</td>
+            <td className="p-2">{row.mae}</td>
+            <td className="p-2">{row.rmse}</td>
+            <td className="p-2">{row.mape}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+
+const ModelComparisonImages = () => (
+  <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+    {[
+      {
+        name: "CatBoost",
+        path: "/projects/housing-pricing-prediction/CatBoost.jpg",
+      },
+      {
+        name: "Random Forest",
+        path: "/projects/housing-pricing-prediction/RandomForest.jpg",
+      },
+      {
+        name: "XGBoost",
+        path: "/projects/housing-pricing-prediction/XGBoost.jpg",
+      },
+    ].map((model) => (
+      <figure key={model.name} className="flex flex-col items-center">
+        <figcaption className="mb-2 text-center font-medium underline">
+          {model.name}
+        </figcaption>
+        <Image
+          src={model.path}
+          alt={`${model.name} model prediction comparison`}
+          width={800}
+          height={800}
+          className="rounded-md shadow-md"
+        />
+      </figure>
+    ))}
+  </div>
+);
+
+export default function HousingPricePredictionProject() {
   return (
-    <article>
-      <h2 className="h2">Introduction</h2>
-      <p className="p">
-        As Singapore continues to experience high demand in the housing market,
-        accurately predicting future prices of Housing Development Board (HDB)
-        resale flats becomes crucial for effective financial planning. Our
-        project focused on developing a robust time series forecasting model to
-        predict HDB housing prices, integrating historical transaction data with
-        geographical features.
-      </p>
-      <h2 className="h2">Objectives</h2>
-      <ol className="ol">
-        <li>
-          To create accurate forecasting models for HDB resale prices that
-          assist potential buyers and investors in making informed decisions.
-        </li>
-        <li>
-          To leverage multi-source data, including transaction records,
-          geographical points of interest, and economic indicators like the
-          Singapore Overnight Rate Average (SORA).
-        </li>
-      </ol>
-      <h2 className="h2">Methodology</h2>
-      <h3 className="h3">Datasets Used:</h3>
-      <ol className="ol">
-        <li>HDB resale transaction data</li>
-        <li>SORA rates</li>
-        <li>
-          Geographical data on Points of Interest like MRT stations, malls, and
-          schools
-        </li>
-        <li>Data from blogs and government sources on new BTO launches</li>
-      </ol>
-      <h3 className="h3">Models Deployed:</h3>
-      <ul className="ul">
-        <li>Tree ensemble models (Random Forest, XGBoost, CatBoost)</li>
-        <li>Deep learning models (LSTM, GNNWR)</li>
-      </ul>
-      <h3 className="h3">Additional Features Used for ML model training:</h3>
-      <div className="w-[50vw] overflow-scroll py-3">
-        <table>
-          <thead>
-            <tr className="border-2">
-              <th>Feature Name</th>
-              <th>Feature Brief Description</th>
-              <th>Value Type/Unit</th>
-              <th>Min</th>
-              <th>Max</th>
-              <th>Mean</th>
-              <th>Median</th>
-              <th>Std</th>
-              <th>No. Missing data points</th>
-            </tr>
-          </thead>
-          <tbody>
-            {features.map((feature, index) => (
-              <tr className="border-2" key={index}>
-                <td>{feature.name}</td>
-                <td>{feature.description}</td>
-                <td>{feature.type}</td>
-                <td>{feature.min}</td>
-                <td>{feature.max}</td>
-                <td>{feature.mean}</td>
-                <td>{feature.median}</td>
-                <td>{feature.std}</td>
-                <td>{feature.missing}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <h3 className="h3">Features Used for Neural network model training:</h3>
-      <div className="w-[50vw] overflow-scroll py-3">
-        <table className="table overflow-x-scroll">
-          <thead>
-            <tr>
-              <th>Feature Name</th>
-              <th>Feature Brief Description</th>
-              <th>Value Type/Unit</th>
-              <th>Min</th>
-              <th>Max</th>
-              <th>Mean</th>
-              <th>Median</th>
-              <th>Std</th>
-              <th>No. Missing data points</th>
-            </tr>
-          </thead>
-          <tbody>
-            {neuralNetworkFeatures.map((feature, index) => (
-              <tr key={index}>
-                <td>{feature.name}</td>
-                <td>{feature.description}</td>
-                <td>{feature.type}</td>
-                <td>{feature.min}</td>
-                <td>{feature.max}</td>
-                <td>{feature.mean}</td>
-                <td>{feature.median}</td>
-                <td>{feature.std}</td>
-                <td>{feature.missing}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <h2 className="h2">Achievements</h2>
-      <p className="p">
-        Developed a diverse modeling approach that combined both traditional
-        ensemble methods and advanced deep learning techniques to handle the
-        complex nature of the datasets. Successfully integrated
-        multi-dimensional data from various sources, enhancing the model&apos;s
-        input features and predictive accuracy. Our models achieved high
-        accuracy in forecasting, demonstrated by strong performance metrics like
-        R2, RMSE, MAE, and MAPE, particularly on the unseen data for 2024.
-      </p>
-      <h3 className="h3">Ensemble Models Performance on Unseen 2024 Dataset</h3>
-      <div className="w-[50vw] overflow-scroll py-3">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>R²</th>
-              <th>MAE</th>
-              <th>RMSE</th>
-              <th>MAPE</th>
-            </tr>
-          </thead>
-          <tbody>
-            {performaceData.map((row, index) => (
-              <tr key={index}>
-                <td>{row.model}</td>
-                <td>{row.r2}</td>
-                <td>{row.mae}</td>
-                <td>{row.rmse}</td>
-                <td>{row.mape}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <h3 className="h3">
-        Predicted Values against True Values on 2024 Dataset
-      </h3>
-      <div className="columns-3">
-        <figure>
-          <figcaption className="pb-2 text-center underline">
-            CatBoost
-          </figcaption>
-          <Image
-            src={"/projects/housing-pricing-prediction/CatBoost.jpg"}
-            alt={""}
-            width={800}
-            height={800}
-          />
-        </figure>
-        <figure>
-          <figcaption className="pb-2 text-center underline">
-            Random Forest
-          </figcaption>
-          <Image
-            src={"/projects/housing-pricing-prediction/RandomForest.jpg"}
-            alt={""}
-            width={800}
-            height={800}
-          />
-        </figure>
-        <figure>
-          <figcaption className="pb-2 text-center underline">
-            XGBoost
-          </figcaption>
-          <Image
-            src={"/projects/housing-pricing-prediction/XGBoost.jpg"}
-            alt={""}
-            width={800}
-            height={800}
-          />
-        </figure>
-      </div>
-      <h2 className="h2">Impact</h2>
-      <p className="p">
-        The project not only provides a practical tool for potential buyers and
-        investors to estimate future prices but also contributes to the academic
-        field by demonstrating the effectiveness of integrating diverse data
-        sources and advanced modeling techniques in real-world applications.
-      </p>
-      <h2 className="h2">Technologies</h2>
-      <p className="p">
-        Python for data handling and modeling advanced machine learning
-        libraries such as scikit-learn, XGBoost, CatBoost, and TensorFlow Data
-        visualization tools for analyzing model performance and results
-      </p>
+    <article className="prose prose-neutral dark:prose-invert max-w-none">
+      <section>
+        <h2 className="h2">Introduction</h2>
+        <p className="p">
+          As Singapore continues to experience high demand in the housing
+          market, accurately predicting future prices of Housing Development
+          Board (HDB) resale flats becomes crucial for effective financial
+          planning. Our project focused on developing a robust time series
+          forecasting model to predict HDB housing prices, integrating
+          historical transaction data with geographical features.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="h2">Objectives</h2>
+        <ol className="ol">
+          <li>
+            To create accurate forecasting models for HDB resale prices that
+            assist potential buyers and investors in making informed decisions.
+          </li>
+          <li>
+            To leverage multi-source data, including transaction records,
+            geographical points of interest, and economic indicators like the
+            Singapore Overnight Rate Average (SORA).
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 className="h2">Methodology</h2>
+        <div className="space-y-4">
+          <section>
+            <h3 className="h3">Datasets Used</h3>
+            <ol className="ol">
+              <li>HDB resale transaction data</li>
+              <li>SORA rates</li>
+              <li>
+                Geographical data on Points of Interest like MRT stations,
+                malls, and schools
+              </li>
+              <li>
+                Data from blogs and government sources on new BTO launches
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h3 className="h3">Models Deployed</h3>
+            <ul className="ul">
+              <li>Tree ensemble models (Random Forest, XGBoost, CatBoost)</li>
+              <li>Deep learning models (LSTM, GNNWR)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 className="h3">ML Model Training Features</h3>
+            <FeatureTable data={features} />
+          </section>
+
+          <section>
+            <h3 className="h3">Neural Network Training Features</h3>
+            <FeatureTable data={neuralNetworkFeatures} />
+          </section>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="h2">Results and Analysis</h2>
+        <div className="space-y-6">
+          <p className="p">
+            We developed a diverse modeling approach combining both traditional
+            ensemble methods and advanced deep learning techniques. The models
+            achieved high accuracy in forecasting, demonstrated by strong
+            performance metrics on the unseen data for 2024.
+          </p>
+
+          <section>
+            <h3 className="h3">Model Performance on 2024 Dataset</h3>
+            <PerformanceTable data={performaceData} />
+          </section>
+
+          <section>
+            <h3 className="h3">Prediction Visualization</h3>
+            <ModelComparisonImages />
+          </section>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="h2">Impact</h2>
+        <p className="p">
+          The project provides a practical tool for potential buyers and
+          investors to estimate future prices while contributing to the academic
+          field by demonstrating the effectiveness of integrating diverse data
+          sources and advanced modeling techniques in real-world applications.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="h2">Technologies Used</h2>
+        <ul className="ul">
+          <li>Python for data handling and modeling</li>
+          <li>
+            Advanced machine learning libraries (scikit-learn, XGBoost,
+            CatBoost, TensorFlow)
+          </li>
+          <li>Data visualization tools for analyzing model performance</li>
+        </ul>
+      </section>
     </article>
   );
 }

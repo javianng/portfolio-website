@@ -1,22 +1,38 @@
 import { type StaticImageData } from "next/image";
 
-type Section = {
+export type WorkTag =
+  | "Data Science"
+  | "Data Analytics"
+  | "Machine Learning"
+  | "Bioinformatics"
+  | "Research"
+  | "Management"
+  | "Leadership"
+  | "Project Management"
+  | "TypeScript"
+  | "Prisma Studio"
+  | "TRPC"
+  | "React.js"
+  | "Firebase"
+  | "Scrum";
+
+export interface Section {
   title: string;
   companyOrganization: string;
   duration: string;
   className: string;
   location: string;
   detail: React.ReactNode;
-  tags: string[];
+  tags: WorkTag[];
   logo: string;
   image?: string | StaticImageData;
-};
+}
 
-export const WORK_DETAILS: Section[] = [
+export const WORK_DETAILS: readonly Section[] = [
   {
     title: "Data Scientist Intern",
     companyOrganization: "Parametriks",
-    duration: "August 2024 - Present",
+    duration: "August 2024 - January 2025",
     className: "border-l-[#201E28]",
     location: "Paris, France",
     detail: (
@@ -250,4 +266,4 @@ export const WORK_DETAILS: Section[] = [
     logo: "/experience/ABYA.png",
     image: "/experience/ABYAPhoto.jpg",
   },
-];
+] as const;
