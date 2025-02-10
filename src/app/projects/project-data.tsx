@@ -3,6 +3,7 @@ import { type ReactNode } from "react";
 import HousingPricingPrediction from "~/components/projects/housing-pricing-prediction";
 import MemoriesHub from "~/components/projects/memorieshub";
 import Monarch from "~/components/projects/monarch";
+import NetworkingWallpaper from "~/components/projects/networking-wallpaper";
 import PhotographyPortfolio from "~/components/projects/photography-portfolio";
 import StudyGPT from "~/components/projects/studygpt";
 import Twenify from "~/components/projects/twenify";
@@ -102,5 +103,22 @@ export const PROJECT_DATA: Project[] = [
     tags: ["Frontend", "React", "TailwindCSS"],
     content: <PhotographyPortfolio />,
     projectlink: "https://github.com/javianng/photography-website-v2",
+  },
+  {
+    slug: "networking-wallpaper",
+    title: "Networking Lock Screen Generator",
+    description:
+      "A web application that generates custom lock screen wallpapers for networking events.",
+    main_image: "/projects/networking-wallpaper/cover-networking-wallpaper.jpg",
+    tags: [
+      "Frontend",
+      "React",
+      "TypeScript",
+      "Next.js",
+      "TailwindCSS",
+      "Radix UI",
+    ],
+    content: <NetworkingWallpaper />,
+    projectlink: "https://networking-wallpaper-generator.vercel.app/",
   },
 ];
