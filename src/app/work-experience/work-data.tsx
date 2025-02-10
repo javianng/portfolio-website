@@ -68,6 +68,7 @@ export const WORK_DETAILS: readonly Section[] = [
     detail: (
       <article className="space-y-4">
         <div className="achievements-list">
+          <h5 className="mb-2 font-medium">Key Achievements</h5>
           <ul className="ul space-y-3">
             <li>
               Conceptualised and fabricated a full-stack application leveraging
@@ -312,7 +313,7 @@ export const WORK_DETAILS: readonly Section[] = [
   },
   {
     title: "Sergeant",
-    companyOrganization: "Republic Singapore Air Force (Singapore)",
+    companyOrganization: "Republic Singapore Air Force",
     duration: "January 2020 - April 2022",
     className: "border-l-[#F6F2AE]",
     location: "Singapore",
