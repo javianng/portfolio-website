@@ -191,7 +191,7 @@ export default function Layout({
             </div>
             <footer className="container flex justify-between">
               <p className="font-thin">
-                <small>handcrafted by me &#169; twentytwentyfour</small>
+                <small>handcrafted by me &#169; twentytwentyfive</small>
               </p>
               <ThemeSwitcher />
             </footer>

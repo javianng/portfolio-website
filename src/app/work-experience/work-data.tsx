@@ -1,21 +1,50 @@
 import { type StaticImageData } from "next/image";
+import Link from "next/link";
 
-export type WorkTag =
-  | "Data Science"
-  | "Data Analytics"
-  | "Machine Learning"
-  | "Bioinformatics"
-  | "Research"
-  | "Management"
-  | "Leadership"
-  | "Project Management"
+// Define categories of work tags for better organization
+export type TechnicalTag =
   | "TypeScript"
   | "Prisma Studio"
   | "TRPC"
   | "React.js"
   | "Firebase"
+  | "AWS"
+  | "AWS CDK"
+  | "Next.js"
+  | "PostgreSQL"
+  | "DynamoDB";
+
+export type DomainTag =
+  | "Data Science"
+  | "Data Analytics"
+  | "Machine Learning"
+  | "Bioinformatics"
+  | "Research"
+  | "System Architecture"
+  | "Full-Stack";
+
+export type SoftSkillTag =
+  | "Management"
+  | "Leadership"
+  | "Project Management"
   | "Scrum";
 
+export type WorkTag = TechnicalTag | DomainTag | SoftSkillTag;
+
+// Define the structure for achievements
+export interface Achievement {
+  text: string;
+  metrics?: string; // Optional quantifiable results
+}
+
+// Define the structure for project information
+export interface ProjectInfo {
+  title?: string;
+  description?: string;
+  achievements: Achievement[];
+}
+
+// Main section interface with improved structure
 export interface Section {
   title: string;
   companyOrganization: string;
@@ -26,54 +55,81 @@ export interface Section {
   tags: WorkTag[];
   logo: string;
   image?: string | StaticImageData;
+  project?: ProjectInfo; // Optional project-specific information
 }
 
 export const WORK_DETAILS: readonly Section[] = [
   {
-    title: "Data Scientist Intern",
+    title: "Machine Learning and Software Engineer Intern",
     companyOrganization: "Parametriks",
     duration: "August 2024 - January 2025",
     className: "border-l-[#201E28]",
     location: "Paris, France",
     detail: (
-      <article>
-        <ul className="ul">
-          <li>
-            Architected and engineered scalable backend schemas and
-            infrastructure, optimizing data storage and retrieval for high
-            efficiency in real-time client applications.
-          </li>
-          <li>
-            Leveraged AWS Bedrock for Retrieval-Augmented Generation
-            implementations, enhancing document processing and query answering
-            on complex insurance data. Utilized AWS SageMaker to design, train,
-            and deploy machine learning models, achieving a predicted avoidance
-            of 30% of adverse events for clients.
-          </li>
-          <li>
-            Built a robust, responsive frontend platform using Next.js,
-            providing user-friendly interfaces for clients and insurers.
-          </li>
-          <li>
-            Integrated AWS Cognito for secure, seamless authentication and
-            authorization, enabling distinct dashboards tailored to clients and
-            insurers.
-          </li>
-          <li>
-            Conceptualized and standardized the company&apos;s design theme and
-            colour scheme, ensuring brand consistency and an intuitive user
-            experience. Boosted usability by implementing cohesive design
-            layouts across the platform, improving navigation and engagement.
-          </li>
-          <li>
-            Deployed large language models by developing intelligent agents to
-            enhance backend flexibility and responsiveness, enabling dynamic
-            data processing and improving system performance and scalability.
-          </li>
-        </ul>
+      <article className="space-y-4">
+        <div className="achievements-list">
+          <h5 className="mb-2 font-medium">Key Achievements</h5>
+          <ul className="ul space-y-3">
+            <li>
+              Conceptualised and fabricated a full-stack application leveraging
+              on Next.js and AWS, engineering core features such as generative
+              AI capabilities and natural language video querying to boost user
+              experience and functionality
+            </li>
+            <li>
+              Architected and deployed a scalable AWS infrastructure with AWS
+              CDK, including VPC, Aurora Serverless RDS, Lambda, API Gateway,
+              Glue, S3, and Athena, streamlining multi-developer collaboration
+            </li>
+            <li>
+              Conceptualised and programmed advanced AI capabilities with a
+              text-to-SQL workflow using Bedrock, attaining 80% accuracy in
+              natural language query conversion and enabling insights across
+              datasets and document repositories
+            </li>
+            <li>
+              Engineered automated AI/ML data pipelines leveraging Glue
+              Crawlers, Athena, and SageMaker for real-time data ingestion,
+              analysis, and prediction, decreasing operational overhead by 70%
+              and enhancing system efficiency
+            </li>
+            <li>
+              Designed and constructed interactive dashboards with dynamic data
+              visualizations, enhancing usability and potentially reducing time
+              stakeholders spend extracting insights by 50%
+            </li>
+            <li>
+              Developed and tested secure, scalable RESTful APIs using AWS API
+              Gateway, integrating with AWS Lambda, AWS RDS and DynamoDB to
+              enable robust serverless architectures
+            </li>
+            <li>
+              Designed and deployed scalable PostgreSQL and NoSQL databases,
+              ensuring data integrity and adaptability to handle complex
+              datasets from multiple insurers and clients
+            </li>
+            <li>
+              Authored comprehensive technical documentation covering
+              infrastructure, workflows, and architecture, predicted to reduce
+              onboarding time for new developers by 50% and facilitating
+              cross-team collaboration
+            </li>
+          </ul>
+        </div>
       </article>
     ),
-    tags: ["Data Science", "Data Analytics", "Machine Learning"],
+    tags: [
+      "AWS",
+      "AWS CDK",
+      "Machine Learning",
+      "System Architecture",
+      "Full-Stack",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "PostgreSQL",
+      "DynamoDB",
+    ],
     logo: "/experience/Parametriks.png",
     image: "/experience/ParametriksPhoto.jpeg",
   },
@@ -84,81 +140,74 @@ export const WORK_DETAILS: readonly Section[] = [
     className: "border-l-[#102F82]",
     location: "Singapore",
     detail: (
-      <article>
-        <h4 className="blockquote">
-          Project: To advance analytics capabilities for cancer vaccine research
-          using Nanopore sequencing technology by developing a real-time
-          analysis pipeline for TCR repertoire analysis.
-        </h4>
-        <ul className="ul">
-          <li>
-            Background Information: Long-read sequencing technologies, such as
-            Nanopore, are prone to errors and require sophisticated data
+      <article className="space-y-4">
+        <div className="project-overview">
+          <h4 className="blockquote">
+            Project: To advance analytics capabilities for cancer vaccine
+            research using Nanopore sequencing technology by developing a
+            real-time analysis pipeline for TCR repertoire analysis
+          </h4>
+          <h4 className="blockquote">
+            Background Information: <br /> Long-read sequencing technologies,
+            such as Nanopore, are prone to errors and require sophisticated data
             cleaning methods for accurate sequence recovery. Addressing this
             challenge is crucial for advancements in bioinformatics and cancer
-            research.
-          </li>
-          <li>Final Pipeline</li>
-          <ol className="ol">
+            research
+          </h4>
+        </div>
+        <div className="key-achievements">
+          <h5 className="mb-2 font-medium">Key Achievements</h5>
+          <ul className="ul">
             <li>
-              Analysed large-scale genomic datasets exceeding 7 million rows,
-              producing critical insights that influenced shifts in research
-              focus.
+              Spearheaded analysis of large-scale genomic datasets (&gt;7
+              million rows), leveraging advanced bioinformatics techniques to
+              uncover critical insights that directly influenced research
+              directions and decision-making
             </li>
             <li>
-              Integrated over 11 open-source bioinformatics tools into a custom
-              automated pipeline, streamlining analysis for enhanced efficiency.
+              Designed and implemented a custom automated pipeline by
+              integrating 11+ open-source bioinformatics tools, reducing manual
+              intervention by 40% and accelerating data processing timelines by
+              30%
             </li>
             <li>
-              Developed Shell and Python automation scripts to extract and group
-              cell barcodes, segment TCR &alpha; and &beta; chains per cell, and
-              reconstruct these chains using de novo assembly. This improved
-              barcode recovery from <u>608,700 to 2,181,878</u>, significantly
-              advancing cell barcode extraction processes.
+              Engineered robust Shell and Python automation scripts to extract
+              and classify cell barcodes, segment TCR α and β chains at
+              single-cell level, and reconstruct TCR chains via de novo
+              assembly, enhancing reproducibility and scalability
             </li>
             <li>
-              Implemented a Python-based method for categorizing sequences into
-              TCR &alpha; and &beta; chains without needing a whitelist. This
-              method used Ward&apos;s Linkage clustering, achieving{" "}
-              <u>an average accuracy of 90%</u> on sequences from 100 unique
-              cell barcodes, demonstrating effectiveness in clonotype
-              identification for long-read sequencing.
+              Revolutionized cell barcode extraction methodologies, achieving a
+              258% increase in barcode recovery (from 608,700 to 2,181,878),
+              improving data quality and downstream analysis accuracy
             </li>
             <li>
-              Proposed a novel approach for separating TCR chains that
-              outperformed traditional methods, aiding in clonotype
-              identification crucial for understanding immune responses in
-              cancer vaccine research.
+              Pioneered a novel Python-based algorithm to separate TCR &alpha;
+              and &beta; chains without reliance on a whitelist, achieving 90%
+              accuracy across 100 unique cell barcodes using Ward&apos;s linkage
+              clustering, setting a new benchmark for TCR chain analysis
             </li>
             <li>
-              Customized Shasta for the assembly of TCR &alpha; and &beta;
-              sequences, addressing the lack of pre-existing configurations for
-              TCR-specific assembly and pioneering new methodologies.
-            </li>
-          </ol>
-          <li>Additional Achievements</li>
-          <ol className="ol">
-            <li>
-              Innovated and validated a method that separated TCR &alpha; and
-              &beta; chains without reference mapping, ensuring robustness in
-              diverse data contexts.
+              Tailored Shasta for TCR-specific assembly of &alpha; and &beta;
+              sequences, overcoming configuration constraints and pioneering
+              novel methodological advancements
             </li>
             <li>
-              Conducted multiple iterations of the pipeline, experimenting with
-              over 20 bioinformatics tools and methodologies. This intensive
-              work led to major research shifts based on in-depth data analysis.
+              Co-authored &ldquo;
+              <Link
+                href="https://jitc.bmj.com/content/12/Suppl_2/A179"
+                className="underline underline-offset-2"
+              >
+                Refining TCR clonotype identification with long-read sequencing
+                technique
+              </Link>
+              &rdquo; submitted to Society for Immunotherapy of Cancer (SITC),
+              as third author and first intern co-author, positioned among
+              full-time researchers highlighting significant contributions to
+              research project
             </li>
-            <li>
-              Co-authored the paper titled{" "}
-              <i>
-                Refining TCR Clonotype Identification With Long-Read Sequencing
-                Technique
-              </i>
-              , submitted to the Society for Immunotherapy of Cancer (SITC),
-              contributing to advancements in cancer vaccine development.
-            </li>
-          </ol>
-        </ul>
+          </ul>
+        </div>
       </article>
     ),
     tags: ["Bioinformatics", "Data Science", "Machine Learning", "Research"],
@@ -172,36 +221,39 @@ export const WORK_DETAILS: readonly Section[] = [
     className: "border-l-[#2A378A]",
     location: "Singapore",
     detail: (
-      <article>
-        <ul className="ul">
-          <li>
+      <article className="space-y-4">
+        <div className="role-overview">
+          <p className="mb-4">
             In my role as President, I have the privilege of leading a dedicated
             team of Vice Presidents and secretaries. Together, we are committed
             to charting a course towards new heights of excellence for the
-            Computing Club.
-          </li>
-          <li>My tenure as President is driven by a three-fold mission:</li>
-          <ol className="ol">
+            Computing Club
+          </p>
+        </div>
+        <div className="mission">
+          <h5 className="mb-2 font-medium">Mission Focus Areas:</h5>
+          <ol className="ol mb-4">
             <li>Strengthening Internal Bonds</li>
             <li>Establishing Partnerships</li>
             <li>Building Relationships with Advisors</li>
           </ol>
-          <li>Our Achievements:</li>
-          <ol className="ol">
+        </div>
+        <div className="achievements">
+          <h5 className="mb-2 font-medium">Key Achievements:</h5>
+          <ul className="ul">
             <li>
-              Led a team of 30 in organising over 20 club events relating to
-              student life and development, impacting 5,000 undergraduates
+              Directed a team of 30 executives to organize 20+ high-impact
+              events, including orientation camps, hackathons, and networking
+              sessions, reaching 5,000+ undergraduates and achieving a 90%
+              participant satisfaction rate
             </li>
             <li>
-              Allocated and managed club&apos;s finance of up to $300,000 to 4
-              departments organising over 20 events
+              Strategically managed and allocated a $300,000 annual budget
+              across 4 departments, optimizing resource distribution to maximize
+              event quality and club engagement
             </li>
-            <li>
-              Leading exchange program policy change, potentially impacting
-              3,000 undergraduates
-            </li>
-          </ol>
-        </ul>
+          </ul>
+        </div>
       </article>
     ),
     tags: ["Management", "Leadership", "Project Management"],
@@ -215,23 +267,19 @@ export const WORK_DETAILS: readonly Section[] = [
     className: "border-l-[#E50171]",
     location: "Vietnam, Ho Chi Minh City",
     detail: (
-      <article>
+      <article className="space-y-3">
         <ul className="ul">
           <li>
-            Collaborated with 4 development team members to design and implement
-            website and product features
+            Led collaboration with a cross-functional team of 4 developers to
+            design and implement 10+ website features
           </li>
           <li>
-            Wrote over 5,000 lines of clean, efficient, and maintainable code to
-            develop MVP
-          </li>
-          <li>
-            Collaborated with 3 designers to ensure user interface is responsive
-            and user-friendly, aligning design and development team
+            Partnered with 3 UI/UX designers to ensure a 100% responsive and
+            user-friendly interface
           </li>
           <li>
             Conducted business development and product pitching at networking
-            events to VCs.
+            events to VCs
           </li>
         </ul>
       </article>
@@ -247,23 +295,50 @@ export const WORK_DETAILS: readonly Section[] = [
     className: "border-l-[#F6F2AE]",
     location: "Singapore",
     detail: (
-      <article>
+      <article className="space-y-3">
         <ul className="ul">
           <li>
-            Directed a team of 3 website developers, 2 UI/UX designers and 2
-            copywriters from 3 different ASEAN countries in building a new
-            full-stack website application
+            Orchestrated a cross-functional team of 7 (3 developers, 2 UI/UX
+            designers, 2 copywriters) across 3 ASEAN countries to develop and
+            deploy a full-stack web application eliminating monthly downtime
+            from 6% to 0%
           </li>
           <li>Conduct code revisions and optimisation on a bi-weekly basis</li>
-          <li>
-            Wrote over 39,998 lines of code to implement user authentication and
-            key features
-          </li>
         </ul>
       </article>
     ),
     tags: ["TypeScript", "React.js", "Firebase", "Project Management", "Scrum"],
     logo: "/experience/ABYA.png",
     image: "/experience/ABYAPhoto.jpg",
+  },
+  {
+    title: "Sergeant",
+    companyOrganization: "Republic Singapore Air Force",
+    duration: "January 2020 - April 2022",
+    className: "border-l-[#F6F2AE]",
+    location: "Singapore",
+    detail: (
+      <article className="space-y-3">
+        <ul className="ul">
+          <li>
+            Pioneered NSF Council to improve welfare and camaraderie among 20+
+            NSFs across 3 departments, organizing 3 impactful welfare events
+            within 4 months
+          </li>
+          <li>
+            Recognized as &ldquo;Best Airman of the Month&rdquo; in August 2021
+            for exceeding expectations and demonstrating initiative
+          </li>
+          <li>
+            Selected amongst 100+ NSFs to represent RSAF in National Day Parade
+            2021 and SAF Day 2021 as part of Guards of Honour, showcasing
+            discipline, precision, and teamwork in high-profile national events
+          </li>
+        </ul>
+      </article>
+    ),
+    tags: ["Project Management"],
+    logo: "/experience/RSAF.png",
+    image: "/experience/RSAFPhoto.jpeg",
   },
 ] as const;
